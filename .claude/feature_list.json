@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "project": "英语语法笔记站点",
+  "goal": "把用户源 HTML 渲染为 GitHub Pages 站点，支持增量更新",
+  "last_updated": "2026-09-10",
+  "init_verified": "2026-09-10 · bash init.sh 全部通过（环境/烟雾测试/路径/源未被 build 触碰）",
+  "features": [
+    {
+      "id": "F1",
+      "name": "V3 拆页站主流程跑通",
+      "description": "build.js 从干净源拆出每课独立 HTML，目录仅列卡片",
+      "status": "completed",
+      "evidence": [
+        "node scripts/build.js 跑通，dist/ 下生成 16 课独立 HTML",
+        "index.html 13KB，只列卡片不显示正文",
+        "课程页 h1/crumbs/正文/上下页 全部存在"
+      ],
+      "blocked_by": [],
+      "next_action": null
+    },
+    {
+      "id": "F2",
+      "name": "原 HTML 文件污染防护",
+      "description": "build 流程不得写入 零基础语法/、基础语法/、中级语法/、高级语法/ 下的文件",
+      "status": "completed",
+      "evidence": [
+        "scripts/build.js 与 build-source.js 只读这些目录",
+        "git status 显示源 HTML 无 diff"
+      ],
+      "blocked_by": [],
+      "next_action": null
+    },
+    {
+      "id": "F3",
+      "name": "侧栏点击路径正确",
+      "description": "侧栏点 G002 跳到 dist/基础语法/【G02】.html，不跳到原始源",
+      "status": "completed",
+      "evidence": [
+        "href 抽样：'../基础语法/【G02】.html'",
+        "从 dist/基础语法/ 出发：../ 回到 dist/，再进同辈 基础语法/"
+      ],
+      "blocked_by": [],
+      "next_action": null
+    },
+    {
+      "id": "F4",
+      "name": "Harness 文件就位（AGENTS/feature_list/init/progress）",
+      "description": "约束下次增量更新流程",
+      "status": "completed",
+      "evidence": [
+        "AGENTS.md 已写",
+        ".claude/feature_list.json 已写",
+        "init.sh 已写并通过（环境/烟雾测试/路径/源保护）",
+        "progress.md 已写"
+      ],
+      "blocked_by": [],
+      "next_action": null
+    },
+    {
+      "id": "F5",
+      "name": "GitHub Pages 部署",
+      "description": "推到远程，配置 Pages，可在 https://<user>.github.io/english-grammar-notes/ 访问",
+      "status": "pending",
+      "evidence": [],
+      "blocked_by": ["F1"],
+      "next_action": "在 GitHub 建仓库 → git remote → push → 配 Pages"
+    },
+    {
+      "id": "F6",
+      "name": "移动端适配",
+      "description": "窄屏上下叠（已有基础 CSS，但需实际测 iPhone Safari 表现）",
+      "status": "pending",
+      "evidence": [],
+      "blocked_by": ["F1"],
+      "next_action": "实测后调整 .site-layout @media 断点"
+    },
+    {
+      "id": "F7",
+      "name": "暗色主题",
+      "description": "顶栏加切换按钮，CSS 变量覆盖",
+      "status": "pending",
+      "evidence": [],
+      "blocked_by": ["F1"],
+      "next_action": "用 :root[data-theme='dark'] 覆盖 CSS 变量"
+    },
+    {
+      "id": "F8",
+      "name": "站内搜索（Ctrl K）",
+      "description": "顶栏搜索框能跳到含关键词的课程",
+      "status": "pending",
+      "evidence": [],
+      "blocked_by": ["F1"],
+      "next_action": "用 Fuse.js 或纯 JS 模糊匹配课程标题/正文"
+    }
+  ],
+  "active_feature": "F5",
+  "verification": {
+    "build_cmd": "node scripts/build.js",
+    "init_cmd": "bash init.sh",
+    "expected_output": "16 课成功生成到 dist/"
+  }
+}

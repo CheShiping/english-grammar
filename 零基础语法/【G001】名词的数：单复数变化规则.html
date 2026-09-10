@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="assets/site.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语名词单复数规则详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #fff3cd;
+            --note-border: #ffeeba;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rule-box {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+
+        .example {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-left: 10px;
+        }
+
+        /* 注释样式 */
+        .annotation {
+            display: block;
+            margin-top: 8px;
+            padding: 8px 12px;
+            background-color: var(--note-bg);
+            border-left: 4px solid #ffc107;
+            font-size: 0.9em;
+            color: #856404;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+        }
+
+        .warning {
+            background-color: #f8d7da;
+            border-left-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .warning::before {
+            content: "⚠️ 重点提醒：";
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <style>
+      /* 壳页与原页面共存：原 h1 隐藏，原 container 顶 padding 去掉 */
+      .site-shell-hidden-h1 { display: none !important; }
+    </style>
+</head>
+<body>
+<!-- SITE:NAV -->
+
+<header class="site-topbar">
+  <div class="site-topbar-inner">
+    <a class="site-brand" href="../index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4.6" fill="#1B1712"/><rect x="4" y="16" width="16" height="2.4" rx="1.2" fill="#1B1712"/></svg></span>
+      <span class="name">ENG GRAMMAR</span>
+    </a>
+    <nav class="site-topnav">
+      <a href="../index.html">目录</a>
+      <a href="#零基础语法" class="cur">零基础语法</a><a href="#基础语法">基础语法</a><a href="#中级语法">中级语法</a><a href="#高级语法">高级语法</a>
+    </nav>
+    <div class="site-searchbox" role="search">⌕&nbsp;&nbsp;搜索课程…&nbsp;&nbsp;<kbd>Ctrl K</kbd></div>
+  </div>
+</header>
+<div class="site-layout">
+
+<aside class="site-aside">
+  <h2>目录 · INDEX</h2>
+  
+      <div class="group active" id="零基础语法">
+        <h3><span class="dot"></span>零基础语法 · 5 课</h3>
+        <ul><li><a href="../零基础语法/【G001】名词的数：单复数变化规则.html" class="cur"><span class="num">G001</span>名词的数：单复数变化规则</a></li><li><a href="../零基础语法/【G002】Be动词的数（论人与人之间的差距）.html"><span class="num">G002</span>Be动词的数：am / is / are</a></li><li><a href="../零基础语法/【G003】动词的数：第三人称单数.html"><span class="num">G003</span>动词的数：第三人称单数</a></li><li><a href="../零基础语法/【G004】动词的时态：过去时.html"><span class="num">G004</span>动词的时态：过去时</a></li><li><a href="../零基础语法/【G005】形容词副词的比较级和最高级.html"><span class="num">G005</span>形容词副词的比较级和最高级</a></li></ul>
+      </div>
+      <div class="group" id="基础语法">
+        <h3><span class="dot"></span>基础语法 · 11 课</h3>
+        <ul><li><a href="../基础语法/【G01】名词短语：限定词·修饰词·主体词.html"><span class="num">G01</span>名词短语：限定词·修饰词·主体词</a></li><li><a href="../基础语法/【G02】感叹句2026版：解释原版一切困惑.html"><span class="num">G02</span>感叹句2026版：解释原版一切困惑</a></li><li><a href="../基础语法/【G02】感叹句：What 与 How 的极简公式.html"><span class="num">G02</span>感叹句：What 与 How 的极简公式</a></li><li><a href="../基础语法/【G03】可数名词 VS 不可数名词.html"><span class="num">G03</span>可数名词 VS 不可数名词</a></li><li><a href="../基础语法/【G04】人称代词：主格·宾格·形物代·名物代·反身代.html"><span class="num">G04</span>人称代词：主格·宾格·形物代·名物代·反身代</a></li><li><a href="../基础语法/【G05】指示代词：this  that  these  those.html"><span class="num">G05</span>指示代词：this / that / these / those</a></li><li><a href="../基础语法/【G06】other系列基础语法特供版.html"><span class="num">G06</span>other系列基础语法特供版</a></li><li><a href="../基础语法/【G06】不定代词 & 疑问代词：用法详解.html"><span class="num">G06</span>不定代词 & 疑问代词：用法详解</a></li><li><a href="../基础语法/【G07】数词：基数词·序数词·分数·百分数.html"><span class="num">G07</span>数词：基数词·序数词·分数·百分数</a></li><li><a href="../基础语法/【G08】不定式、动名词、句子与形式主语.html"><span class="num">G08</span>不定式、动名词、句子与"形式主语"</a></li><li><a href="../基础语法/【G09】判断主语【主语从句、形式主语】.html"><span class="num">G09</span>判断主语【主语从句、形式主语】</a></li></ul>
+      </div>
+      <div class="group" id="中级语法">
+        <h3><span class="dot"></span>中级语法 · 0 课</h3>
+        <ul><li><span class="empty">尚未收录</span></li></ul>
+      </div>
+      <div class="group" id="高级语法">
+        <h3><span class="dot"></span>高级语法 · 0 课</h3>
+        <ul><li><span class="empty">尚未收录</span></li></ul>
+      </div>
+</aside>
+<main class="site-main">
+  <div class="site-crumbs">零基础语法 <em>›</em> <span>G001</span></div>
+  <h1 class="site-shell-hidden-h1">名词的数：单复数变化规则</h1>
+  <p class="site-lede">零基础语法 · 第 G001 课 · 陈老师语法系列整理与注释版。</p>
+  <div class="site-meta-row">
+    <span class="site-chip accent">G001</span>
+    <span class="site-chip">零基础语法</span>
+    <span class="site-chip">陈老师系列</span>
+  </div>
+<!-- SITE:NAV-END -->
+<div class="container">
+    <h1>【G001】名词的数：单复数变化规则</h1>
+    <p style="text-align: center; color: #666;">来源：Morty教谭警官学英语 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 名词的基本分类</h2>
+        <p>英语名词首先分为<strong>可数名词</strong>和<strong>不可数名词</strong>。</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>特征</th>
+                    <th>示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>不可数名词</strong></td>
+                    <td>永远保持原形，没有复数变化</td>
+                    <td>air (空气), water (水)</td>
+                </tr>
+                <tr>
+                    <td><strong>可数名词 - 单数</strong></td>
+                    <td>表示“一个”，保持原形</td>
+                    <td>a coat, a job, a hat</td>
+                </tr>
+                <tr>
+                    <td><strong>可数名词 - 复数</strong></td>
+                    <td>表示“多个”，需要变形</td>
+                    <td>coats, jobs, hats</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="annotation">
+            在生词表中，我们通常只记录单词的“最远样子”（即原形/单数形式），复数是通过规则加上去的。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 复数的规则变化 (Regular Plurals)</h2>
+        <p>绝大多数可数名词变复数遵循以下5条规则：</p>
+
+        <div class="rule-box">
+            <h3>规则一：直接加 -s</h3>
+            <p>这是最普遍的情况。</p>
+            <ul>
+                <li>coat → <span class="example">coats</span></li>
+                <li>job → <span class="example">jobs</span></li>
+                <li>hat → <span class="example">hats</span></li>
+            </ul>
+        </div>
+
+        <div class="rule-box">
+            <h3>规则二：以 s, x, ch, sh 结尾 → 加 -es</h3>
+            <p>为了发音方便，避免两个嘶嘶声连在一起。</p>
+            <ul>
+                <li>bus → <span class="example">buses</span></li>
+                <li>box → <span class="example">boxes</span></li>
+                <li>watch → <span class="example">watches</span></li>
+                <li>dish → <span class="example">dishes</span></li>
+            </ul>
+        </div>
+
+        <div class="rule-box">
+            <h3>规则三：辅音字母 + y 结尾 → 变 y 为 i 加 -es</h3>
+            <p><strong>关键点：</strong>必须判断 y 前面的字母是元音还是辅音。</p>
+            <ul>
+                <li><strong>辅音 + y:</strong> city (t是辅音) → <span class="example">cities</span>; baby (b是辅音) → <span class="example">babies</span></li>
+                <li><strong>元音 + y:</strong> boy (o是元音) → <span class="example">boys</span>; play (a是元音) → <span class="example">plays</span></li>
+            </ul>
+            <div class="annotation warning">
+                元音字母只有5个：a, e, i, o, u。如果 y 前面是这五个字母之一，直接加 s 即可，不要变 y！
+            </div>
+        </div>
+
+        <div class="rule-box">
+            <h3>规则四：以 o 结尾 → 分情况讨论</h3>
+            <p>讲师采用“有生命”与“无生命”的趣味记忆法（虽不严谨但好记）。</p>
+            <ul>
+                <li><strong>有生命（植物/食物）→ 加 -es:</strong> potato → <span class="example">potatoes</span>; tomato → <span class="example">tomatoes</span></li>
+                <li><strong>无生命 → 加 -s:</strong> photo → <span class="example">photos</span>; zoo → <span class="example">zoos</span></li>
+            </ul>
+            <div class="annotation">
+                土豆和西红柿是植物，会生长，所以算“有生命”；照片洗出来多大就多大，不会自己长大，算“无生命”。
+            </div>
+        </div>
+
+        <div class="rule-box">
+            <h3>规则五：以 f 或 fe 结尾 → 变 f/fe 为 v 加 -es</h3>
+            <ul>
+                <li>wife → <span class="example">wives</span></li>
+                <li>life → <span class="example">lives</span></li>
+                <li>leaf → <span class="example">leaves</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 复数的不规则变化 (Irregular Plurals)</h2>
+        <p>这些变化没有固定公式，需要在日常学习中积累记忆。</p>
+
+        <h3>类型一：完全不规则变化</h3>
+        <ul>
+            <li>man → <span class="example">men</span> (人多了变得很闷)</li>
+            <li>child → <span class="example">children</span> (后面加了ren)</li>
+            <li>foot → <span class="example">feet</span> (脚被踩扁了)</li>
+        </ul>
+        <div class="annotation warning">
+            不要试图一次性死记硬背所有不规则单词。建议在每天阅读文章时，遇到一个记一个，循序渐进。
+        </div>
+
+        <h3>类型二：单复数同形</h3>
+        <p>单数和复数长得一样，不需要加 s。</p>
+        <ul>
+            <li>deer → <span class="example">deer</span> (一只鹿 a deer / 两只鹿 two deer)</li>
+            <li>fish → <span class="example">fish</span> (同一种类的鱼)</li>
+        </ul>
+        <div class="annotation">
+            注意 fish 的特殊情况：如果强调“不同种类”的鱼，可以用 fishes。但在日常口语中，表示数量多条鱼通常仍用 fish。
+        </div>
+
+        <h3>类型三：只有复数形式</h3>
+        <ul>
+            <li>people (人们/群众)：本身就是一个群体概念，没有单数形式。</li>
+        </ul>
+    </div>
+
+    <div class="card" style="background-color: #e8f4fd; border-left: 5px solid #2980b9;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>科学规划：</strong>不要一天背300个单词，那是“不科学”的痛苦根源。</li>
+            <li><strong>语境记忆：</strong>在文章和句子中自然积累不规则变化的单词。</li>
+            <li><strong>理解逻辑：</strong>明白英语名词数的变化是为了表达精确性，掌握规则后能举一反三。</li>
+            <li><strong>跟随路线图：</strong>按照零基础语法系列逐步推进，完成一个知识点再进入下一个。</li>
+        </ol>
+    </div>
+
+</div>
+</main>
+</div>
+<!-- SITE:PREVNEXT -->
+<div class="site-prevnext"><a class="site-disabled"><em>← 上一篇</em><strong>已是第一课</strong></a><a class="next" href="../零基础语法/【G002】Be动词的数（论人与人之间的差距）.html"><em>下一篇 →</em><strong>G002 · Be动词的数：am / is / are</strong></a></div>
+<!-- SITE:PREVNEXT-END -->
+</body>
+</html>

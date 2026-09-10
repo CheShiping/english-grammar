@@ -1,0 +1,20 @@
+# 设计原型：开发阶段的方案对比稿，不需要随站点发布
+_prototypes/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node（虽然本项目不依赖 node_modules，给未来留位）
+node_modules/
+npm-debug.log*
+
+# build 产物：只通过 gh-pages 分支发布，不入 main 历史
+dist/
+
+# 浏览器测试残留
+.playwright-cli/
+_*.png
+_*.tmp

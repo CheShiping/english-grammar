@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="assets/site.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G003 动词的数：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+
+    <style>
+      /* 壳页与原页面共存：原 h1 隐藏，原 container 顶 padding 去掉 */
+      .site-shell-hidden-h1 { display: none !important; }
+    </style>
+</head>
+<body>
+<!-- SITE:NAV -->
+
+<header class="site-topbar">
+  <div class="site-topbar-inner">
+    <a class="site-brand" href="../index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4.6" fill="#1B1712"/><rect x="4" y="16" width="16" height="2.4" rx="1.2" fill="#1B1712"/></svg></span>
+      <span class="name">ENG GRAMMAR</span>
+    </a>
+    <nav class="site-topnav">
+      <a href="../index.html">目录</a>
+      <a href="#零基础语法" class="cur">零基础语法</a><a href="#基础语法">基础语法</a><a href="#中级语法">中级语法</a><a href="#高级语法">高级语法</a>
+    </nav>
+    <div class="site-searchbox" role="search">⌕&nbsp;&nbsp;搜索课程…&nbsp;&nbsp;<kbd>Ctrl K</kbd></div>
+  </div>
+</header>
+<div class="site-layout">
+
+<aside class="site-aside">
+  <h2>目录 · INDEX</h2>
+  
+      <div class="group active" id="零基础语法">
+        <h3><span class="dot"></span>零基础语法 · 5 课</h3>
+        <ul><li><a href="../零基础语法/【G001】名词的数：单复数变化规则.html"><span class="num">G001</span>名词的数：单复数变化规则</a></li><li><a href="../零基础语法/【G002】Be动词的数（论人与人之间的差距）.html"><span class="num">G002</span>Be动词的数：am / is / are</a></li><li><a href="../零基础语法/【G003】动词的数：第三人称单数.html" class="cur"><span class="num">G003</span>动词的数：第三人称单数</a></li><li><a href="../零基础语法/【G004】动词的时态：过去时.html"><span class="num">G004</span>动词的时态：过去时</a></li><li><a href="../零基础语法/【G005】形容词副词的比较级和最高级.html"><span class="num">G005</span>形容词副词的比较级和最高级</a></li></ul>
+      </div>
+      <div class="group" id="基础语法">
+        <h3><span class="dot"></span>基础语法 · 11 课</h3>
+        <ul><li><a href="../基础语法/【G01】名词短语：限定词·修饰词·主体词.html"><span class="num">G01</span>名词短语：限定词·修饰词·主体词</a></li><li><a href="../基础语法/【G02】感叹句2026版：解释原版一切困惑.html"><span class="num">G02</span>感叹句2026版：解释原版一切困惑</a></li><li><a href="../基础语法/【G02】感叹句：What 与 How 的极简公式.html"><span class="num">G02</span>感叹句：What 与 How 的极简公式</a></li><li><a href="../基础语法/【G03】可数名词 VS 不可数名词.html"><span class="num">G03</span>可数名词 VS 不可数名词</a></li><li><a href="../基础语法/【G04】人称代词：主格·宾格·形物代·名物代·反身代.html"><span class="num">G04</span>人称代词：主格·宾格·形物代·名物代·反身代</a></li><li><a href="../基础语法/【G05】指示代词：this  that  these  those.html"><span class="num">G05</span>指示代词：this / that / these / those</a></li><li><a href="../基础语法/【G06】other系列基础语法特供版.html"><span class="num">G06</span>other系列基础语法特供版</a></li><li><a href="../基础语法/【G06】不定代词 & 疑问代词：用法详解.html"><span class="num">G06</span>不定代词 & 疑问代词：用法详解</a></li><li><a href="../基础语法/【G07】数词：基数词·序数词·分数·百分数.html"><span class="num">G07</span>数词：基数词·序数词·分数·百分数</a></li><li><a href="../基础语法/【G08】不定式、动名词、句子与形式主语.html"><span class="num">G08</span>不定式、动名词、句子与"形式主语"</a></li><li><a href="../基础语法/【G09】判断主语【主语从句、形式主语】.html"><span class="num">G09</span>判断主语【主语从句、形式主语】</a></li></ul>
+      </div>
+      <div class="group" id="中级语法">
+        <h3><span class="dot"></span>中级语法 · 0 课</h3>
+        <ul><li><span class="empty">尚未收录</span></li></ul>
+      </div>
+      <div class="group" id="高级语法">
+        <h3><span class="dot"></span>高级语法 · 0 课</h3>
+        <ul><li><span class="empty">尚未收录</span></li></ul>
+      </div>
+</aside>
+<main class="site-main">
+  <div class="site-crumbs">零基础语法 <em>›</em> <span>G003</span></div>
+  <h1 class="site-shell-hidden-h1">动词的数：第三人称单数</h1>
+  <p class="site-lede">零基础语法 · 第 G003 课 · 陈老师语法系列整理与注释版。</p>
+  <div class="site-meta-row">
+    <span class="site-chip accent">G003</span>
+    <span class="site-chip">零基础语法</span>
+    <span class="site-chip">陈老师系列</span>
+  </div>
+<!-- SITE:NAV-END -->
+<div class="container">
+    <h1>【G003】动词的数：第三人称单数</h1>
+    <p style="text-align: center; color: #666;">来源：Morty教谭警官学英语 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G003 是「零基础语法」系列第三课，对应学习地图第108步，在新概念英语第一册第49课 <em>At the butchers</em> 中首次出现动词的第三人称单数形式（如 <code>likes</code>、<code>doesn't like</code>），此后频繁出现（如 <code>it rains</code>、<code>sun shines</code>、<code>it snows</code>），需要在此节点系统讲解。</p>
+        
+        <div class="annotation">
+            本节课将之前 Be 动词（am/is/are）的「数的变化」延伸到更广泛的<strong>实义动词</strong>（即表示具体动作的动词，如 like、go、study 等）。Be 动词只表示"是什么/怎么样"，没有具体动作；而实义动词才有本节讨论的第三人称单数变化。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心规则：两个条件必须同时满足</h2>
+        <p>谓语动词需要变成<strong>第三人称单数形式</strong>，必须同时满足以下两个条件：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件</th>
+                    <th>要求</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>条件一：时态</strong></td>
+                    <td>必须是一般现在时（Simple Present Tense）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件二：主语</strong></td>
+                    <td>必须是第三人称单数（He / She / It 或可转化为这三者的名词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>两个条件必须同真！</strong><br>
+            - 一般现在时 + 主语不是三单 → 谓语<strong>不用</strong>变（如：I learn English）<br>
+            - 主语是三单 + 时态不是一般现在时 → 谓语<strong>不用</strong>变<br>
+            - 两个条件都满足 → 谓语<strong>必须</strong>用第三人称单数形式
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 什么是一般现在时？</h2>
+        <p>老师用<strong>"规律"</strong>来解释一般现在时——即可以重复观测、有规律地发生的事情：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>标志词/短语</th>
+                    <th>含义</th>
+                    <th>示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>always</code></td>
+                    <td>总是</td>
+                    <td>He always comes on time.</td>
+                </tr>
+                <tr>
+                    <td><code>usually</code></td>
+                    <td>通常</td>
+                    <td>She usually gets up early.</td>
+                </tr>
+                <tr>
+                    <td><code>often</code></td>
+                    <td>经常</td>
+                    <td>They often play basketball.</td>
+                </tr>
+                <tr>
+                    <td><code>sometimes</code></td>
+                    <td>有时</td>
+                    <td>He sometimes arrives late.</td>
+                </tr>
+                <tr>
+                    <td><code>never</code></td>
+                    <td>从不（也非常规律！）</td>
+                    <td>He never says sorry.</td>
+                </tr>
+                <tr>
+                    <td><code>every day/minute/time</code></td>
+                    <td>每天/每分/每次</td>
+                    <td>I learn English every day.</td>
+                </tr>
+                <tr>
+                    <td><code>once/twice/three times a week</code></td>
+                    <td>一周一次/两次/三次</td>
+                    <td>Morty teaches English twice a week.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            老师的幽默解释：即使"100万年一次"也很规律——因为规律不等于频率高，而是<strong>可以重复观测</strong>。如果说"爱过"（已完成，不可重复），那就不是规律，不属于一般现在时。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 谓语动词变第三人称单数的规则（四种变化）</h2>
+
+        <h3>规则一：直接加 -s（最简单、最普遍）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>rain</code> → <code>rains</code>（下雨）</div>
+            <div class="example-item">✅ <code>snow</code> → <code>snows</code>（下雪）</div>
+            <div class="example-item">✅ <code>shine</code> → <code>shines</code>（照耀）</div>
+            <div class="example-item">✅ <code>like</code> → <code>likes</code>（喜欢）</div>
+        </div>
+        <div class="annotation">
+            这是最简单的情况，与名词复数直接加 -s 的规则一样。但注意：这里是<strong>动词的第三人称单数</strong>，不是名词的复数。
+        </div>
+
+        <h3>规则二：以 s、x、sh、ch、o 结尾 → 加 -es</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>guess</code> → <code>guesses</code>（猜）【s 结尾】</div>
+            <div class="example-item">✅ <code>fix</code> → <code>fixes</code>（修理）【x 结尾】</div>
+            <div class="example-item">✅ <code>wash</code> → <code>washes</code>（洗）【sh 结尾】</div>
+            <div class="example-item">✅ <code>teach</code> → <code>teaches</code>（教）【ch 结尾】</div>
+            <div class="example-item">✅ <code>go</code> → <code>goes</code>（去）【o 结尾】</div>
+            <div class="example-item">✅ <code>do</code> → <code>does</code>（做）【o 结尾】</div>
+        </div>
+        <div class="annotation">
+            原因与名词复数相同：这些结尾发音本身较重，直接加 s 不好发音，加 -es 更顺口。
+        </div>
+
+        <h3>规则三：以「辅音字母 + y」结尾 → 变 y 为 i 加 -es</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>fly</code> → <code>flies</code>（飞）【l 是辅音字母】</div>
+            <div class="example-item">✅ <code>carry</code> → <code>carries</code>（携带）【r 是辅音字母】</div>
+            <div class="example-item">✅ <code>study</code> → <code>studies</code>（学习）【d 是辅音字母】</div>
+        </div>
+        <div class="annotation warning">
+            <strong>与名词复数规则完全一致：</strong><br>
+            元音字母（a、e、i、o、u）+ y 结尾 → 直接加 -s，<strong>不要变 y 为 i</strong>！<br>
+            例如：boy → boys（但这是名词，动词同理：play → plays）
+        </div>
+
+        <h3>规则四：特殊变化 — have → has</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>have</code> → <code>has</code>（有）</div>
+        </div>
+        <div class="annotation warning">
+            <strong>have 是不规则变化！</strong><br>
+            它不遵循以上任何规则，第三人称单数形式是 <code>has</code>，不是 "haves"。<br>
+            例句：Morty <code>has</code> a dream.（Morty 有一个梦想。）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 综合例句解析（判断时态 + 判断人称 → 确定动词形式）</h2>
+
+        <h3>例句一：I learn English every day.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>I learn</code> English every day.（我每天学英语。）</div>
+        </div>
+        <div class="annotation">
+            时态：every day → 一般现在时 ✅<br>
+            主语：I → 不是第三人称单数 ❌<br>
+            结论：只满足一个条件，谓语<strong>不用变</strong>，用原形 learn。
+        </div>
+
+        <h3>例句二：Morty studies English twice a week.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Morty studies</code> English twice a week.（Morty 一周学两次英语。）</div>
+        </div>
+        <div class="annotation">
+            时态：twice a week → 一般现在时 ✅<br>
+            主语：Morty → 可转化为 he → 第三人称单数 ✅<br>
+            两个条件都满足 → 谓语变三单：study →（辅音+y）→ <strong>studies</strong>
+        </div>
+
+        <h3>例句三：Morty teaches English on the internet.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Morty teaches</code> English on the internet.（Morty 在网上教英语。）</div>
+        </div>
+        <div class="annotation">
+            时态：虽然句中没有时间标志词，但根据句意——Morty 在网上教英语是一个可重复的规律性动作 → 一般现在时 ✅<br>
+            主语：Morty → he → 第三人称单数 ✅<br>
+            两个条件都满足 → teach →（ch 结尾）→ <strong>teaches</strong>
+        </div>
+
+        <h3>例句四：Summer goes to school by bike.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Summer goes</code> to school by bike.（Summer 骑自行车去学校。）</div>
+        </div>
+        <div class="annotation">
+            时态：骑自行车上学是可重复的规律性动作 → 一般现在时 ✅<br>
+            主语：Summer → she → 第三人称单数 ✅<br>
+            两个条件都满足 → go →（o 结尾）→ <strong>goes</strong>
+        </div>
+
+        <h3>例句五：The sun never shines.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>The sun never shines</code>.（太阳从不照耀。——幽默例句）</div>
+        </div>
+        <div class="annotation">
+            时态：never（从不）也是规律 → 一般现在时 ✅<br>
+            主语：the sun → it → 第三人称单数 ✅<br>
+            两个条件都满足 → shine →（直接加 s）→ <strong>shines</strong>
+        </div>
+
+        <h3>例句六：We have a dream. / Morty has a dream.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ We <code>have</code> a dream.（我们有梦想。）→ 主语 we 不是三单 → 用原形 have</div>
+            <div class="example-item">✅ Morty <code>has</code> a dream.（Morty 有梦想。）→ 主语 Morty → he → 三单 → have 的特殊三单形式 <strong>has</strong></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 否定形式：don't / doesn't</h2>
+        <p>实义动词的否定不能直接在动词后加 not（如 <code>like not</code> 是错误的），需要借助<strong>助动词</strong> do/does 来帮忙：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主语类型</th>
+                    <th>否定助动词</th>
+                    <th>结构</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>非第三人称单数</strong><br>(I / You / We / They)</td>
+                    <td><code>don't</code> (= do not)</td>
+                    <td>don't + <strong>动词原形</strong></td>
+                    <td>I don't like English.</td>
+                </tr>
+                <tr>
+                    <td><strong>第三人称单数</strong><br>(He / She / It / 人名)</td>
+                    <td><code>doesn't</code> (= does not)</td>
+                    <td>doesn't + <strong>动词原形</strong></td>
+                    <td>He doesn't like English.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>最核心的易错点！</strong><br>
+            用了 <code>doesn't</code> 之后，后面的动词<strong>必须变回原形</strong>！<br>
+            因为第三人称单数的功能已经被 does 体现出来了，动词不需要再变。<br>
+            ✅ He doesn't <strong>like</strong> English.（不是 "likes"）<br>
+            ✅ Morty doesn't <strong>have</strong> a dream.（不是 "has"，has 要变回 have）<br>
+            ✅ Summer doesn't <strong>go</strong> to school by bike.（不是 "goes"，goes 要变回 go）
+        </div>
+
+        <div class="annotation">
+            老师的抽象方法：把第三人称单数的动词（likes、goes、teaches、studies 等）全部抽象成 <code>does</code>，然后再把 does 变成否定 doesn't，后面的动词就恢复原型。这个方法以后在 G19（非谓语）中会深入讲解。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+动词的数（第三人称单数）
+├── 两个条件必须同时满足
+│   ├── 条件一：时态 = 一般现在时（规律性动作）
+│   └── 条件二：主语 = 第三人称单数（he/she/it）
+├── 谓语变化规则（4种）
+│   ├── 规则一：直接加 -s（like → likes）
+│   ├── 规则二：s/x/sh/ch/o 结尾加 -es（go → goes, teach → teaches）
+│   ├── 规则三：辅音+y → 变y为i加 -es（study → studies, fly → flies）
+│   └── 规则四：have → has（特殊变化）
+└── 否定形式
+    ├── 非三单：don't + 动词原形（I don't like...）
+    └── 三单：doesn't + 动词原形（He doesn't like...）
+        └── 重点：doesn't 后面的动词必须恢复原形！
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记两个条件：</strong>一般现在时 + 第三人称单数主语，缺一不可。先判断时态，再判断主语，最后决定动词形式。</li>
+            <li><strong>否定句最易错：</strong>用了 doesn't 就要把动词打回原形（doesn't like / doesn't have / doesn't go），这是初学者第一大错误。</li>
+            <li><strong>时态不总显式标注：</strong>有些句子没有 every day 等时间标志词，需要根据句意判断是否为一般现在时（如 "Morty teaches English on the internet"）。</li>
+            <li><strong>循序渐进积累：</strong>把 have → has 等特殊变化在日常学习中逐步记忆，不需要一次性全部记住。</li>
+            <li><strong>打好地基：</strong>老师说"开始走在正确的道路上，永远不会搞错"——基础阶段养成好习惯，后面会轻松很多。</li>
+        </ol>
+    </div>
+
+</div>
+</main>
+</div>
+<!-- SITE:PREVNEXT -->
+<div class="site-prevnext"><a href="../零基础语法/【G002】Be动词的数（论人与人之间的差距）.html"><em>← 上一篇</em><strong>G002 · Be动词的数：am / is / are</strong></a><a class="next" href="../零基础语法/【G004】动词的时态：过去时.html"><em>下一篇 →</em><strong>G004 · 动词的时态：过去时</strong></a></div>
+<!-- SITE:PREVNEXT-END -->
+</body>
+</html>

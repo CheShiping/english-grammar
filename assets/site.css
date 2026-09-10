@@ -1,0 +1,555 @@
+/* =====================================================================
+   ENG GRAMMAR · 共享站点样式（V2 · 单页内嵌版）
+   ---------------------------------------------------------------------
+   站点结构：
+     <body>
+       <header.site-topbar>          ← 顶栏
+       <div.site-layout>
+         <aside.site-aside>          ← 左侧目录（页内锚点）
+         <main.site-main>            ← 右侧内容（连续课程）
+       </div>
+     </body>
+   设计令牌来自 ecommerce-product-template：
+     --bg 米色底 / --ink 墨黑字 / --accent 藏红 / Space Mono 强调
+   ===================================================================== */
+
+:root{
+  --bg:#F5F1E6;
+  --bg-soft:#EFE9DA;
+  --bg-card:#FBF8F0;
+  --bg-overlay:rgba(245,241,230,.88);
+  --ink:#1B1712;
+  --ink-soft:#5A5346;
+  --ink-muted:#98907E;
+  --accent:#E8A317;
+  --accent-deep:#C98C10;
+  --accent-soft:#FBF1D6;
+  --accent-ink:#8B6B0F;
+  --border:#E6DFCE;
+  --border-soft:#EAE3D2;
+  --shadow:0 14px 30px -18px rgba(27,23,18,.35);
+  --shadow-soft:0 1px 2px rgba(27,23,18,.04);
+  --topbar-h:60px;
+  --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out:cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer:cubic-bezier(0.32, 0.72, 0, 1);
+  --mono:"Space Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --sans:"Familjen Grotesk","Inter","PingFang SC","Microsoft YaHei",sans-serif;
+}
+
+/* 暗色主题：在 <html data-theme="dark"> 时覆盖所有令牌 */
+[data-theme="dark"]{
+  --bg:#16140F;
+  --bg-soft:#221F19;
+  --bg-card:#2A261F;
+  --bg-overlay:rgba(22,20,15,.88);
+  --ink:#F5F1E6;
+  --ink-soft:#BFB7A6;
+  --ink-muted:#7A7261;
+  --accent:#F4B83C;
+  --accent-deep:#E8A317;
+  --accent-soft:#3D2E0E;
+  --accent-ink:#F4B83C;
+  --border:#3A352E;
+  --border-soft:#2F2B25;
+  --shadow:0 14px 30px -18px rgba(0,0,0,.55);
+  --shadow-soft:0 1px 2px rgba(0,0,0,.25);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{padding:0 0 80px}
+
+/* ── 顶栏 ── */
+.site-topbar{position:sticky;top:0;z-index:70;background:var(--bg-overlay);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.site-topbar-inner{max-width:1500px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:14px 24px}
+.site-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.site-brand .mark{width:32px;height:32px;border-radius:7px;background:var(--accent);display:grid;place-items:center}
+.site-brand .mark svg{width:18px;height:18px}
+.site-brand .name{font-family:var(--mono);font-weight:700;letter-spacing:.24em;font-size:14px}
+.site-topnav{display:flex;gap:26px;margin-left:18px;flex:1}
+.site-topnav a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500}
+.site-topnav a:hover{color:var(--ink)}
+.site-topnav a.cur{color:var(--ink);font-weight:600}
+.site-searchbox{flex:0 1 320px;display:flex;align-items:center;gap:8px;background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:8px 14px;color:var(--ink-soft);font-size:13px}
+.site-searchbox kbd{font-family:var(--mono);font-size:10px;border:1px solid var(--border);border-radius:4px;padding:1px 6px;background:var(--bg-card)}
+
+/* 顶栏图标按钮：暗色切换 + 汉堡菜单 */
+.site-iconbtn{
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:10px;
+  background:transparent;border:1px solid var(--border);
+  color:var(--ink-soft);cursor:pointer;
+  transition:
+    background .12s var(--ease-out),
+    color .12s var(--ease-out),
+    border-color .12s var(--ease-out),
+    transform .16s var(--ease-out);
+  flex-shrink:0;
+  padding:0;
+}
+.site-iconbtn:hover{background:var(--bg-soft);color:var(--ink);border-color:var(--ink-muted)}
+.site-iconbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.site-iconbtn:active{transform:scale(.94)}
+.site-iconbtn svg{width:18px;height:18px;display:block;transition:transform .2s var(--ease-out)}
+.site-iconbtn:hover svg{transform:rotate(-8deg)}
+.site-theme-toggle:hover svg{transform:rotate(-30deg)}
+
+/* 暗色切换按钮：图标按主题切换 */
+.site-theme-toggle{position:relative}
+.site-theme-toggle .icon-sun,.site-theme-toggle .icon-moon{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+[data-theme="light"] .site-theme-toggle .icon-moon,
+:root:not([data-theme="dark"]) .site-theme-toggle .icon-moon{display:grid}
+[data-theme="light"] .site-theme-toggle .icon-sun,
+:root:not([data-theme="dark"]) .site-theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .site-theme-toggle .icon-moon{display:none}
+[data-theme="dark"] .site-theme-toggle .icon-sun{display:grid}
+
+/* 汉堡按钮（窄屏才显示） */
+.site-burger{display:none}
+
+/* ── 主体两栏 ── */
+.site-layout{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:0;padding:0 24px;align-items:start}
+
+/* 抽屉蒙层（窄屏用） */
+.site-scrim{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.4);
+  z-index:40;
+  opacity:0;transition:opacity .2s ease;
+}
+.site-scrim.is-open{opacity:1}
+
+/* 左目录 */
+.site-aside{position:sticky;top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h));overflow-y:auto;padding:32px 18px 40px 0;border-right:1px solid var(--border-soft);font-size:14px}
+.site-aside h2{font-size:11px;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;font-family:var(--mono);margin:0 0 12px 12px}
+.site-aside .group{margin-bottom:24px}
+.site-aside .group h3{display:flex;align-items:center;gap:8px;padding:6px 12px;font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.5px;border-radius:6px}
+.site-aside .group h3 .dot{width:6px;height:6px;border-radius:50%;background:var(--ink-muted)}
+.site-aside ul{list-style:none;margin-top:4px}
+.site-aside li a{display:flex;align-items:baseline;gap:10px;padding:8px 12px;color:var(--ink-soft);text-decoration:none;border-radius:6px;font-size:14px;transition:background .12s var(--ease-out), color .12s var(--ease-out), transform .16s var(--ease-out)}
+.site-aside li a .num{font-family:var(--mono);font-size:11px;color:var(--ink-muted);min-width:36px;letter-spacing:.04em;flex-shrink:0;transition:color .12s var(--ease-out)}
+.site-aside li a:hover{background:var(--bg-soft);color:var(--ink)}
+.site-aside li a:active{transform:scale(.98)}
+.site-aside li a.cur{background:var(--bg-soft);color:var(--ink);font-weight:600}
+.site-aside li a.cur .num{color:var(--accent-deep)}
+.site-aside .empty{padding:6px 12px;color:var(--ink-muted);font-style:italic;font-size:13px}
+
+/* 右内容 */
+.site-main{padding:36px 0 40px 44px;min-width:0;max-width:960px}
+.site-crumbs{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ink-muted);margin-bottom:18px}
+.site-crumbs span{color:var(--accent)}
+.site-crumbs em{font-style:normal;color:var(--ink-soft);margin:0 6px}
+.site-intro{margin-bottom:50px;padding-bottom:36px;border-bottom:1px solid var(--border)}
+.site-intro h1{font-size:48px;font-weight:600;letter-spacing:-.015em;line-height:1.08;margin:10px 0 16px}
+.site-lede{font-size:16.5px;color:var(--ink-soft);max-width:680px;line-height:1.7;margin-bottom:24px}
+.site-meta-row{display:flex;flex-wrap:wrap;gap:8px}
+.site-chip{font-family:var(--mono);font-size:10px;letter-spacing:.18em;padding:5px 10px;border:1px solid var(--border);border-radius:999px;color:var(--ink-soft);text-transform:uppercase;background:var(--bg-card);display:inline-block}
+.site-chip.accent{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ── 章节与课程 ── */
+.site-shelf{margin-bottom:48px;scroll-margin-top:80px}
+.site-shelf-head{display:flex;align-items:baseline;gap:14px;margin:0 0 22px;padding:0 4px}
+.site-shelf-head .idx{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.18em}
+.site-shelf-head h2{font-size:24px;font-weight:600;letter-spacing:-.005em;color:var(--ink);margin:0}
+.site-shelf-head .cnt{font-family:var(--mono);font-size:11px;color:var(--ink-muted);letter-spacing:.12em;margin-left:auto}
+
+/* 首页课程卡片网格 */
+.site-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.site-card{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 18px;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  color:var(--ink);
+  text-decoration:none;
+  transition:
+    transform .18s var(--ease-out),
+    box-shadow .18s var(--ease-out),
+    border-color .18s var(--ease-out),
+    background .18s var(--ease-out);
+}
+.site-card:hover{
+  border-color:var(--accent);
+  box-shadow:var(--shadow);
+  transform:translateY(-2px);
+  background:var(--bg);
+}
+.site-card:active{transform:translateY(0) scale(.99)}
+.site-card .code{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  color:var(--accent-deep);letter-spacing:.06em;
+  background:var(--bg-soft);
+  border:1px solid var(--border);
+  border-radius:6px;padding:4px 8px;flex-shrink:0;
+}
+.site-card .ttl{flex:1;font-size:15px;font-weight:600;line-height:1.4}
+.site-card .arrow{font-size:18px;color:var(--ink-muted);transition:transform .15s ease, color .15s ease;flex-shrink:0}
+.site-card:hover .arrow{color:var(--accent);transform:translateX(2px)}
+
+.site-empty{
+  padding:18px 22px;
+  background:var(--bg-card);
+  border:1px dashed var(--border);
+  border-radius:14px;
+  color:var(--ink-muted);
+  font-style:italic;
+  text-align:center;
+  font-size:14px;
+}
+
+/* 课程页 · 上一篇 / 下一篇 */
+.site-prevnext{display:flex;justify-content:space-between;gap:16px;margin-top:36px;padding-top:24px;border-top:1px solid var(--border)}
+.site-prevnext a{
+  flex:1;text-decoration:none;
+  padding:16px 20px;
+  border:1px solid var(--border);border-radius:12px;
+  background:var(--bg-card);color:var(--ink-soft);
+  transition:
+    border-color .15s var(--ease-out),
+    background .15s var(--ease-out),
+    color .15s var(--ease-out),
+    transform .18s var(--ease-out),
+    box-shadow .18s var(--ease-out);
+}
+.site-prevnext a.next{text-align:right}
+.site-prevnext a:not(.site-disabled):hover{
+  border-color:var(--accent);
+  background:var(--bg-soft);
+  color:var(--ink);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+.site-prevnext a:not(.site-disabled):active{transform:translateY(0) scale(.99)}
+.site-prevnext a.site-disabled{opacity:.5;cursor:not-allowed}
+.site-prevnext a em{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ink-muted);text-transform:uppercase;margin-bottom:6px;font-style:normal}
+.site-prevnext a strong{display:block;color:var(--ink);font-size:14.5px;font-weight:600}
+
+/* 翻页箭头 hover slide */
+.site-prevnext .arrow{
+  display:inline-block;
+  transition:transform .2s var(--ease-out);
+  font-family:var(--mono);
+}
+.site-prevnext a:not(.site-disabled):hover .arrow{transform:translateX(-4px)}
+.site-prevnext a.next:not(.site-disabled):hover .arrow{transform:translateX(4px)}
+
+/* 一课 */
+.site-lesson{
+  margin:0 0 36px;
+  padding:0 0 30px;
+  border-bottom:1px dashed var(--border);
+  scroll-margin-top:80px;
+}
+.site-lesson:last-child{border-bottom:none}
+.site-lesson-title{
+  display:flex;align-items:center;gap:12px;
+  font-size:22px;font-weight:600;letter-spacing:-.005em;
+  color:var(--ink);
+  margin:0 0 18px;padding:0 4px;
+}
+.site-lesson-title .site-chip{font-size:11px;flex-shrink:0}
+
+/* ── 正文元素统一站点暖色风格（.site-main 作用域） ── */
+.site-main .container{max-width:none;margin:0;padding:0;background:transparent;border:none;box-shadow:none}
+.site-main p[style*="text-align:center"]{color:var(--ink-muted);font-size:14px;margin-bottom:8px}
+
+.site-main h2{
+  font-size:20px;font-weight:600;color:var(--ink);
+  margin:28px 0 12px;letter-spacing:-.005em;
+  display:flex;align-items:center;gap:10px;
+}
+.site-main h2::before{content:"";width:4px;height:18px;background:var(--accent);border-radius:2px;flex-shrink:0}
+.site-main h2:not([class]):not([id])::before{display:none}
+.site-main h3{font-size:16px;font-weight:600;color:var(--ink-soft);margin:22px 0 8px}
+.site-main p{color:var(--ink-soft);font-size:15.5px;margin-bottom:12px;line-height:1.85}
+.site-main p strong, .site-main p b{color:var(--ink);font-weight:600}
+.site-main a{color:var(--accent-deep);text-decoration:none;border-bottom:1px solid transparent}
+.site-main a:hover{border-bottom-color:var(--accent)}
+
+/* 卡片：原 .card 蓝色背景/边框 → 站点暖色 */
+.site-main .card{
+  background:var(--bg-card) !important;
+  border:1px solid var(--border) !important;
+  border-left:4px solid var(--accent) !important;
+  border-radius:14px !important;
+  padding:22px 24px !important;
+  margin:18px 0 !important;
+  box-shadow:var(--shadow-soft);
+  color:var(--ink) !important;
+}
+.site-main .card[style*="background-color"]{
+  background-color:var(--bg-card) !important;
+}
+.site-main .card h2{font-size:18px;margin-top:0}
+
+/* 注释 / 重点易错 */
+.site-main .annotation{
+  display:block;
+  background:var(--bg-soft) !important;
+  border-left:4px solid var(--accent) !important;
+  border-radius:0 10px 10px 0 !important;
+  padding:14px 18px !important;
+  margin:14px 0 !important;
+  color:var(--ink) !important;
+  font-size:14.5px;
+}
+.site-main .annotation::before{
+  content:"讲师注释";
+  display:block;font-weight:600;color:var(--accent-deep);margin-bottom:6px;font-size:13px;letter-spacing:.04em;
+}
+.site-main .annotation.warning{background:var(--accent-soft) !important;border-left-color:var(--accent-deep) !important}
+.site-main .annotation.warning::before{content:"重点易错";color:var(--accent-ink)}
+
+/* 例句框 */
+.site-main .example-box{
+  background:var(--bg-soft) !important;
+  border:1px solid var(--border-soft) !important;
+  border-radius:10px !important;
+  padding:14px 18px !important;
+  margin:10px 0 !important;
+  font-size:14.5px;
+}
+.site-main .example-item{margin-bottom:6px;color:var(--ink-soft)}
+.site-main .example-item:last-child{margin-bottom:0}
+.site-main .example-item code{color:var(--accent-deep)}
+
+/* 表格 */
+.site-main table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:var(--bg-card);border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.site-main th{background:var(--ink);color:var(--bg);text-align:left;padding:10px 14px;font-weight:600;font-size:13px;letter-spacing:.04em}
+.site-main td{border-top:1px solid var(--border);padding:10px 14px;color:var(--ink-soft);vertical-align:top}
+.site-main tr:nth-child(even) td{background:var(--bg-soft)}
+.site-main td strong,.site-main td b{color:var(--ink)}
+
+/* 行内 code */
+.site-main code{
+  font-family:var(--mono);font-size:.92em;
+  background:var(--bg-soft);color:var(--ink);
+  padding:2px 7px;border-radius:4px;border:1px solid var(--border-soft);
+}
+
+/* 列表 */
+.site-main ul, .site-main ol{margin:8px 0 14px 22px;color:var(--ink-soft);font-size:15px}
+.site-main li{margin-bottom:6px}
+.site-main li strong, .site-main li b{color:var(--ink)}
+
+/* blockquote */
+.site-main blockquote{
+  border-left:3px solid var(--accent);
+  background:var(--bg-soft);
+  padding:10px 18px;margin:14px 0;
+  color:var(--ink-soft);font-style:italic;
+  border-radius:0 10px 10px 0;
+}
+
+/* ── 移动端 / 平板（≤980px） ──
+   策略：
+   · 顶栏高度 60px，sticky
+   · 顶部导航收成汉堡按钮
+   · 搜索框保留（缩短）
+   · 暗色切换按钮保留
+   · 侧栏变成抽屉：默认隐藏，.is-open 时滑入
+   · 蒙层 .site-scrim 显示并可点击关闭
+   · 触摸友好：行高 1.8、链接 padding 加大、字号收紧
+   ── */
+@media (max-width:980px){
+  body{padding-bottom:60px}
+
+  .site-topbar-inner{padding:10px 14px;gap:10px}
+  .site-brand .name{display:none}
+  .site-topnav{display:none}
+  .site-searchbox{flex:1;padding:7px 12px;font-size:12px}
+  .site-searchbox kbd{display:none}
+  .site-iconbtn{display:inline-flex}
+  .site-burger{display:inline-flex}
+  .site-theme-toggle{display:inline-flex}
+
+  /* 抽屉化侧栏 */
+  .site-layout{grid-template-columns:1fr;padding:0 14px}
+  .site-aside{
+    position:fixed;top:0;left:0;
+    width:82vw;max-width:320px;height:100vh;
+    background:var(--bg);
+    border-right:1px solid var(--border);
+    box-shadow:var(--shadow);
+    transform:translateX(-105%);
+    transition:transform .25s cubic-bezier(.4,0,.2,1);
+    z-index:60;
+    padding:calc(var(--topbar-h) + 12px) 16px 32px 16px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .site-aside.is-open{transform:translateX(0)}
+  .site-aside h2{padding-left:8px}
+  .site-aside li a{padding:10px 12px;font-size:15px}
+
+  /* 蒙层 */
+  .site-scrim{display:block;pointer-events:none}
+  .site-scrim.is-open{pointer-events:auto}
+
+  /* 主内容 */
+  .site-main{padding:24px 4px 0 4px}
+  .site-intro h1{font-size:30px;line-height:1.12}
+  .site-intro{margin-bottom:36px;padding-bottom:24px}
+  .site-lede{font-size:15.5px}
+
+  .site-shelf{margin-bottom:36px}
+  .site-shelf-head h2{font-size:20px}
+  .site-cards{grid-template-columns:1fr;gap:10px}
+  .site-card{padding:14px 16px}
+  .site-card .ttl{font-size:14.5px}
+
+  .site-lesson{margin-bottom:24px;padding-bottom:20px}
+  .site-lesson-title{font-size:18px;gap:10px}
+  .site-prevnext{flex-direction:column;gap:10px;margin-top:28px;padding-top:20px}
+  .site-prevnext a,.site-prevnext a.next{text-align:left}
+
+  /* 正文元素 */
+  .site-main h2{font-size:18px}
+  .site-main h3{font-size:15px}
+  .site-main p{font-size:15px;line-height:1.8}
+  .site-main .card{padding:18px 16px !important;margin:14px 0 !important;min-width:0;max-width:100%}
+  .site-main .annotation{padding:12px 14px !important;font-size:14px}
+  .site-main .example-box{padding:12px 14px !important}
+  .site-main table{font-size:13px}
+  .site-main th,.site-main td{padding:8px 10px}
+
+  /* ---- 移动端溢出修复 ----
+     原 HTML 内联了 style="white-space:pre / font-family:monospace" 渲染
+     ASCII 思维导图，且 <code> 内长英文不换行；窄屏下会撑爆 viewport。
+     用 !important 覆盖 inline style。 */
+  .site-main pre,
+  .site-main .example-box,
+  .site-main [style*="white-space"]{
+    white-space:pre-wrap !important;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+    max-width:100%;
+    font-size:13px;
+  }
+  .site-main code{overflow-wrap:anywhere;word-break:break-word}
+  .site-main table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  /* 卡片允许横向滚动而不撑爆整页 */
+  .site-main .card{overflow-x:auto}
+  /* grid/flex 子项最小尺寸收敛，避免内容把父级撑开 */
+  .site-main .card,
+  .site-main .example-box,
+  .site-main .annotation,
+  .site-main pre,
+  .site-main table{min-width:0}
+
+  /* 顶栏下方留出滚动余量，避免 anchor 跳转被顶栏挡住 */
+  .site-shelf,.site-lesson{scroll-margin-top:calc(var(--topbar-h) + 12px)}
+}
+
+/* 更窄的手机屏（≤560px） */
+@media (max-width:560px){
+  .site-topbar-inner{padding:8px 12px}
+  .site-iconbtn{width:36px;height:36px;border-radius:9px}
+  .site-searchbox{display:none}      /* 极窄屏省地，搜索后期再加 */
+  .site-intro h1{font-size:26px}
+  .site-card{padding:12px 14px;gap:10px}
+  .site-card .code{padding:3px 6px;font-size:10px}
+  .site-card .ttl{font-size:14px}
+}
+
+/* 防止 iOS Safari 在抽屉打开时底层滚动 */
+body.site-no-scroll{overflow:hidden}
+
+/* =====================================================================
+   浮动按钮：移动端右下角 · 回到顶部
+   ---------------------------------------------------------------------
+   · 默认隐藏（opacity 0 + translateY(20px)），scrollY > 240 时显示
+   · 仅窄屏显示（桌面端用 sticky 顶栏和长滚动，不打扰）
+   · scroll listener 用 rAF 节流，避免每帧改 DOM
+   · reduced-motion 下保留 opacity 渐变，去掉 transform-based motion
+   ===================================================================== */
+.site-to-top{
+  position:fixed;
+  right:16px;
+  bottom:24px;
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--accent);
+  color:var(--bg);
+  border:none;
+  display:grid;
+  place-items:center;
+  font-family:var(--mono);
+  font-size:20px;font-weight:700;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  z-index:50;
+  opacity:0;
+  transform:translateY(16px) scale(.92);
+  pointer-events:none;
+  transition:
+    opacity .2s var(--ease-out),
+    transform .2s var(--ease-out),
+    background .12s var(--ease-out);
+}
+.site-to-top.is-visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+.site-to-top:hover{background:var(--accent-deep)}
+.site-to-top:active{transform:translateY(0) scale(.94)}
+.site-to-top:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* 桌面端隐藏 */
+@media (min-width:981px){
+  .site-to-top{display:none}
+}
+
+/* 极窄屏位置稍微收敛 */
+@media (max-width:560px){
+  .site-to-top{right:12px;bottom:16px;width:42px;height:42px;font-size:18px}
+}
+
+/* =====================================================================
+   动画 / Motion
+   ---------------------------------------------------------------------
+   · 页面 mount：主内容从下方 12px 滑入 + 淡入（280ms ease-out）
+     适用：目录切换、上一篇/下一篇翻页
+   · 按钮 press：scale(0.94~0.99) on :active（160~180ms ease-out）
+   · 翻页箭头 hover：translateX(±4px)（200ms ease-out）
+   · 全部 respect prefers-reduced-motion
+   ---------------------------------------------------------------------
+   注意：`.site-aside` 不挂 mount 动画 — 移动端抽屉默认隐藏靠
+   `transform: translateX(-105%)`，而 mount 动画会把这个 transform
+   强制覆盖为 `translateY(0)`，导致抽屉永远停在左侧可见位置。
+   ===================================================================== */
+
+@keyframes site-page-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 主内容 mount 动画 */
+.site-main{
+  animation: site-page-enter 280ms var(--ease-out) both;
+  will-change: opacity, transform;
+}
+
+/* 减少动效偏好：保留必要的状态指示，去掉 transform-based motion */
+@media (prefers-reduced-motion: reduce){
+  .site-main { animation: none; }
+  .site-iconbtn:active,
+  .site-prevnext a:not(.site-disabled):active,
+  .site-card:active,
+  .site-aside li a:active,
+  .site-to-top:active { transform: none; }
+  .site-card:hover, .site-prevnext a:not(.site-disabled):hover { transform: none; }
+  .site-iconbtn:hover svg, .site-theme-toggle:hover svg { transform: none; }
+  .site-prevnext .arrow { transition: none; }
+  /* to-top 显隐：保留 opacity，去掉 translateY/scale */
+  .site-to-top { transform: none; }
+  .site-to-top.is-visible { transform: none; }
+}
