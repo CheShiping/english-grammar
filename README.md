@@ -2,23 +2,40 @@
 
 陈老师语法系列整理版，部署在 GitHub Pages 上随时翻阅。
 
+**线上地址**：<https://cheshiping.github.io/english-grammar/>
+
 ## 站点形态
 
-**单页文档站**：`index.html` 一页容纳所有 16 课，左侧目录点击即可滚动到对应课程。源 HTML 文件保留在 `零基础语法/` `基础语法/` 等目录中作为素材库，不在站点里展示。
+**多页拆页站**：`index.html` 是首页（只列课程卡片），每课独立页面在 `dist/<level>/<file>.html`。源 HTML 文件保留在 `零基础语法/` `基础语法/` 等目录中作为素材库，build 脚本提取正文后生成 dist/ 下的站点页。
 
 ## 目录结构
 
 ```
 .
-├── index.html              # 站点页面（自动生成，所有课程都在里面）
-├── assets/site.css         # 共享样式
-├── scripts/build.js        # 生成脚本（核心）
-├── 零基础语法/             # 5 课的源 HTML（仅作素材，不链接）
-├── 基础语法/               # 11 课的源 HTML
+├── index.html              # 首页（build 生成，列课程卡片）
+├── assets/
+│   ├── site.css            # 共享样式（暖色主题 + 暗色 + 移动端）
+│   └── site.js             # 暗色切换 + 抽屉 + 回到顶部
+├── scripts/
+│   ├── build.js            # 站点生成主入口（拆页 + 首页）
+│   └── build-source.js     # 重建干净源（中间产物）
+├── dist/                   # build 产物（16 课独立页，已跟踪到 main）
+│   ├── 零基础语法/
+│   └── 基础语法/
+├── 零基础语法/             # 源 HTML（只读，build 不碰）
+├── 基础语法/               # 源 HTML
 ├── 中级语法/               # 待更新
 ├── 高级语法/               # 待更新
-└── _prototypes/            # 设计原型（已废弃，被 .gitignore 排除）
+└── _prototypes/            # 设计原型（.gitignore 排除）
 ```
+
+## 部署
+
+**GitHub Pages Source = main 分支 / 根目录**
+
+main 分支直接包含 build 产物（`dist/` + `index.html` + `assets/`），push 后自动部署。无需 gh-pages 分支。
+
+访问地址：<https://cheshiping.github.io/english-grammar/>
 
 ## 课程文件命名规范
 
@@ -35,9 +52,14 @@
 
 脚本按"目录顺序 + 编号数字"自动排序。
 
-## 怎么用
+## 增量更新流程
 
-### 1. 本地预览
+1. 把新 HTML 丢进对应目录（命名规范见上）
+2. `node scripts/build.js`
+3. `git add .` → `git commit` → `git push`
+5. GitHub Pages 自动部署，几分钟后生效
+
+## 本地预览
 
 ```bash
 python -m http.server 8000
@@ -46,51 +68,15 @@ python -m http.server 8000
 
 > 不要直接双击 `index.html` 打开，否则 CSS 路径会错。
 
-### 2. 跑生成脚本
-
-修改课程文件后（新增 / 删除 / 重命名 / 改标题），都跑一次：
-
-```bash
-node scripts/build.js
-```
-
-脚本会扫描 `零基础语法/` `基础语法/` `中级语法/` `高级语法/` 下所有 HTML，**提取每课正文**（去掉原 H1、去链接）后按编号顺序拼到 `index.html`。
-
-### 3. 增量更新内容
-
-最常见的流程：
-
-1. 把新 HTML 丢进对应目录（命名规范见上）
-2. 跑 `node scripts/build.js`
-3. `git add .` → `git commit` → `git push`
-
-新课程会出现在首页对应层级的章节里，左侧目录也会自动加上。
-
-## 怎么部署到 GitHub Pages
-
-1. 在 GitHub 上新建一个空仓库，例如 `english-grammar-notes`
-2. 本地首次推送：
-
-   ```bash
-   git remote add origin https://github.com/<你的用户名>/english-grammar-notes.git
-   git branch -M main
-   git add .
-   git commit -m "init: 语法笔记站点"
-   git push -u origin main
-   ```
-
-3. GitHub 仓库 → **Settings** → **Pages** → Source 选 `Deploy from a branch` → Branch 选 `main` / `(root)` → Save
-4. 几分钟后访问 `https://<你的用户名>.github.io/english-grammar-notes/`
-
 ## 设计 / 实现
 
 - 布局风格基于 `ecommerce-product-template`（暖米色 `#F5F1E6` + 墨黑 `#1B1712` + 藏红 `#E8A317`）
-- 布局：左目录 + 右内容
+- 布局：左目录（粘性）+ 右内容
 - 暗色主题：顶栏右侧太阳/月亮按钮切换，记忆在 `localStorage`，首次跟随系统；首屏 inline 脚本防闪烁
-- 移动端：≤980px 触发；侧栏抽屉化 + 汉堡按钮 + 蒙层；顶栏 z-index=70 保证可重复点击关闭；触摸友好间距
+- 移动端：≤980px 触发；侧栏抽屉化 + 汉堡按钮 + 蒙层；右下角浮动"回到顶部"按钮
+- 动画：页面 mount 入场（translateY 12px + opacity，280ms ease-out）、按钮 press scale、翻页箭头 hover slide
 - 站点零依赖：纯静态 HTML/CSS/JS，部署 = GitHub Pages
 
 ## 后续 TODO
 
 - 站内搜索（`Ctrl K`）
-- GitHub Pages 部署
