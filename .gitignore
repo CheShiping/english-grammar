@@ -11,8 +11,8 @@ Thumbs.db
 node_modules/
 npm-debug.log*
 
-# build 产物：只通过 gh-pages 分支发布，不入 main 历史
-dist/
+# build 产物：已跟踪到 main，Pages Source = main / root
+# dist/
 
 # 浏览器测试残留
 .playwright-cli/
