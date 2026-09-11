@@ -105,4 +105,3 @@
 - 烟雾测试：CSS/侧栏 20 链接/上一篇下一篇/无误路径 ✓
 - 源 HTML mtime < dist/ mtime（build 未触碰源）✓
 - git status：干净（main 分支，3 commits，无未提交修改）
-- 部署：main 分支已 push，Pages Source 待用户配置为 main / root
