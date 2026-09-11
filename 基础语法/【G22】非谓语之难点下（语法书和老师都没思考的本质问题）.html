@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G22 非谓语之难点下（语法书和老师都没思考的本质问题）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G22】非谓语之难点下（语法书和老师都没思考的本质问题）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G22 是「基础语法」系列第22课，由陈老师主讲。本节课是动词部分的<strong>本质突破课（下）</strong>，专门讲解非谓语中一个困扰无数学生的"本质问题"——<strong>为什么 see somebody do something 表示"看见全过程"，以及"主动省to被动还原"背后的深层逻辑</strong>。</p>
+        <p>在此之前，同学们已经学习了非谓语的基础概念（G19，抽象思维秒判三种形式）、非谓语的本质（G20，不定式=不确定、动名词=确定、现在分词=分身、过去分词=完成），以及非谓语难点上（G21，找谓语+改非谓语的完整解题流程）。本节课将挑战大家的世界观，揭示一个连语法书和老师都没深入思考的本质问题。</p>
+
+        <div class="annotation">
+            本节课的核心目标：用非谓语的本质（不确定/确定/分身/完成）重新理解 remember/forget/stop + to do vs doing，以及彻底搞清 see somebody do something 为什么用 to do（且 to 被省略），并理解"主动省to被动还原"的本质原因。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」、G19「非谓语之上帝视角」、G20「非谓语的本质」、G21「非谓语之难点（上）」的基础上。需要理解非谓语的三种形式及其本质含义，以及"一山不容二虎"原则。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：传统背公式 vs 本质思维</h2>
+        <p>老师首先回顾了同学们当年是怎么背这些固定搭配的，然后展示了用本质思维重新理解它们的方法：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>固定搭配（传统背法）</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>remember to do</strong></td>
+                    <td>记住要做某事</td>
+                </tr>
+                <tr>
+                    <td><strong>remember doing</strong></td>
+                    <td>记住已经做过某事</td>
+                </tr>
+                <tr>
+                    <td><strong>forget to do</strong></td>
+                    <td>忘记要做某事</td>
+                </tr>
+                <tr>
+                    <td><strong>forget doing</strong></td>
+                    <td>忘记已经做过某事</td>
+                </tr>
+                <tr>
+                    <td><strong>stop to do</strong></td>
+                    <td>停下来去做另外一件事</td>
+                </tr>
+                <tr>
+                    <td><strong>stop doing</strong></td>
+                    <td>停止正在做的事情</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>传统背法的痛点：</strong><br>
+            同学们靠死记硬背来区分这些搭配，背了又忘，忘了又背。但用本质思维（to do = 不确定，doing = 确定）来理解，一切豁然开朗，再也不用背了！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 用本质思维重新理解 remember/forget/stop</h2>
+        <p>老师用非谓语的本质——<strong>不定式 = 不确定，动名词 = 确定</strong>——来逐一解释：</p>
+
+        <h3>remember to do vs remember doing</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>remember to do</strong> → to do 是不确定的 → "记住要做某事"（要做的事还没做，不确定）</div>
+            <div class="example-item"><strong>remember doing</strong> → doing 是确定的 → "记住已经做过某事"（已经做了，确定的事）</div>
+        </div>
+
+        <h3>forget to do vs forget doing</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>forget to do</strong> → to do 是不确定的 → "忘记要做某事"（要做的事不确定，没去做）</div>
+            <div class="example-item"><strong>forget doing</strong> → doing 是确定的 → "忘记已经做过某事"（已经做了，确定的事）</div>
+        </div>
+
+        <h3>stop to do vs stop doing</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>stop to do</strong> → to do 是不确定的 → "停下来去做另外一件事"（去做的事不确定，不一定做得到）</div>
+            <div class="example-item"><strong>stop doing</strong> → doing 是确定的 → "停止正在做的事情"（正在做的事，非常确定）</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：to do 永远表示"不确定"——要做的、将去的、临时的、一次性的；doing 永远表示"确定"——已经发生的、长期的、习惯的、稳定的。用本质去理解，再也不用死记硬背了！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. I remember saw him that day → 错误分析</h2>
+        <p>老师用一个经典错题引入本节课的核心内容：</p>
+
+        <div class="example-box">
+            <div class="example-item">❌ I remember <code>saw</code> him that day.</div>
+            <div class="example-item">→ remember 是谓语动词</div>
+            <div class="example-item">→ saw 前面没有连接词+主语 → 必须用非谓语（一山不容二虎）</div>
+        </div>
+
+        <h3>选择非谓语形式</h3>
+        <div class="example-box">
+            <div class="example-item">→ "我那天见到过他" → 见到过 = 已经发生了 → 确定的事</div>
+            <div class="example-item">→ 确定的 → 用 doing 形式</div>
+            <div class="example-item">→ saw 的原形是 see → 变成 doing 是 seeing</div>
+        </div>
+
+        <div class="example-box" style="border-left: 5px solid #1abc9c; background-color: #e8f6f3;">
+            <div class="example-item"><strong>✅ I remember seeing him that day.</strong>（我那天见过他。）</div>
+            <div class="example-item">→ remember（谓语）+ seeing（动名词，作宾语）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心易错点：saw → seeing 的变化</strong><br>
+            - saw 的原形是 see（不是 swing！）<br>
+            - 变成 doing 要先还原原形：see → seeing<br>
+            - 很多同学错误地写成 swing（把 saw 当成了 swing 的过去式）<br>
+            - 也有同学直接写 sawing（没有还原原形）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 核心难点：看见某人做某事（see somebody do something）</h2>
+        <p>老师提出了本节课最具颠覆性的内容——<strong>看见某人做某事</strong>的本质分析。</p>
+
+        <h3>看见某人做某事有几种可能性？</h3>
+        <p>从逻辑上讲，"看见某人做某事"有四种可能性：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>可能性</th>
+                    <th>含义</th>
+                    <th>非谓语形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>① 看见某人正在做</td>
+                    <td>看见的同时，他正在做</td>
+                    <td>doing（现在分词，与谓语同步）</td>
+                </tr>
+                <tr>
+                    <td>② 看见某人做完了（全过程）</td>
+                    <td>看见了整个动作的完成</td>
+                    <td>to do（不定式，但 to 被省略）</td>
+                </tr>
+                <tr>
+                    <td>③ 看见某人被做</td>
+                    <td>看见他被打/被表扬/被照顾</td>
+                    <td>done（过去分词，表完成+被动）</td>
+                </tr>
+                <tr>
+                    <td>④ 看见某人要做某事</td>
+                    <td>看见他将要做某事</td>
+                    <td><strong>不可能！</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心颠覆：看见某人要做某事是不可能的！</strong><br>
+            - 你不能"看见"将要发生的事情（未来）<br>
+            - 你只能说"我看见他鼻子在抽，推测他要哭"——这是推测，不是看见<br>
+            - 英语是门严谨客观的语言，你不能看见未来<br>
+            - 所以 ④ 被排除，只有 ①②③ 三种可能
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 三种可能性的形式分配</h2>
+        <p>在三种可能性中，三种非谓语形式被分配如下：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语形式</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>doing</strong></td>
+                    <td>看见某人正在做（与谓语同步）</td>
+                    <td>I saw him <code>walking</code> into the building.</td>
+                </tr>
+                <tr>
+                    <td><strong>done</strong></td>
+                    <td>看见某人被做（vt done 表完成+被动）</td>
+                    <td>I saw him <code>beaten</code> by a stone.</td>
+                </tr>
+                <tr>
+                    <td><strong>to do（to被省略）</strong></td>
+                    <td>看见某人做完了（全过程）</td>
+                    <td>I saw him <code>go</code> into the room.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            doing 被"正在做"抢走了，done 被"被做"抢走了，只剩下 to do 给"做完了"。但"做完了"是确定的，to do 的本质是不确定的，这里产生了矛盾——这就是本节课要解决的核心问题！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心矛盾：确定的事为什么用不确定的 to do？</h2>
+        <p>老师揭示了本节课最颠覆的矛盾：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>矛盾：</strong>看见某人做完了某事 → 确定的事 → 应该用 doing（确定）</div>
+            <div class="example-item"><strong>现实：</strong>英语却用了 to do（不确定）→ I saw him go into the room.</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>矛盾的本质：</strong><br>
+            - to do 的本质 = 不确定<br>
+            - "看见某人做完了" = 确定的事<br>
+            - 确定的事用了不确定的形式 → 矛盾！<br>
+            - 语法书和老师都没深入思考过这个问题，今天我们来解决它！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 解决方案：主动省to（退而求其次的妥协）</h2>
+        <p>老师的解决方案颠覆了大家对英语的认知：</p>
+
+        <h3>妥协的逻辑链</h3>
+        <div class="example-box">
+            <div class="example-item">① "看见某人做完了"是确定的 → 理论上应该用 doing（确定）</div>
+            <div class="example-item">② 但 doing 已经被"正在做"抢走了</div>
+            <div class="example-item">③ 只能用 to do（剩下的唯一选择）</div>
+            <div class="example-item">④ 但 to do 是不确定的，与"确定的事"矛盾</div>
+            <div class="example-item">⑤ 不能直接用 do（= 谓语），因为一山不容二虎</div>
+            <div class="example-item">⑥ <strong>妥协方案：把 to 省略掉！</strong> → 承认它是 to do，但把 to 去掉</div>
+        </div>
+
+        <div class="annotation">
+            这就是"主动省to"的本质——一个退而求其次的妥协结果。既承认它是 to do（不定式），又通过省略 to 来表示一种比较确定的概念。就像中超球员为了上场，用衣服遮住纹身一样——形式上遮住了，但本质还在。
+        </div>
+
+        <h3>适用动词</h3>
+        <p>除了 see，以下动词也遵循"主动省to"的规则：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>see</strong></td>
+                    <td>看见</td>
+                </tr>
+                <tr>
+                    <td><strong>let</strong></td>
+                    <td>让</td>
+                </tr>
+                <tr>
+                    <td><strong>make</strong></td>
+                    <td>使/让</td>
+                </tr>
+                <tr>
+                    <td><strong>watch</strong></td>
+                    <td>观看</td>
+                </tr>
+                <tr>
+                    <td><strong>notice</strong></td>
+                    <td>注意到</td>
+                </tr>
+                <tr>
+                    <td><strong>have</strong></td>
+                    <td>让/叫</td>
+                </tr>
+                <tr>
+                    <td><strong>observe</strong></td>
+                    <td>观察</td>
+                </tr>
+                <tr>
+                    <td><strong>listen to</strong></td>
+                    <td>听</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心公式：</strong><br>
+            see/let/make/watch/notice/have/observe/listen to + somebody + do（省略to的不定式）<br>
+            表示看见/让/注意某人做完了某事（全过程）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 被动还原：为什么被动要加回 to？</h2>
+        <p>老师进一步解释了"主动省to，被动还原"的完整逻辑：</p>
+
+        <h3>主动句 → 被动句的转换</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>主动：</strong>I saw him go into the room.</div>
+            <div class="example-item">→ go 是不定式 to go 省略了 to</div>
+            <div class="example-item"><strong>被动：</strong>He was seen <code>to go</code> into the room.</div>
+            <div class="example-item">→ 变成被动后，to 要还原回来！</div>
+        </div>
+
+        <h3>doing 在被动句中不变</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>主动：</strong>I saw him walking into the room.</div>
+            <div class="example-item">→ walking 是现在分词（正在走进）</div>
+            <div class="example-item"><strong>被动：</strong>He was seen <code>walking</code> into the room.</div>
+            <div class="example-item">→ doing 在被动句中不变（因为 doing 本身就没有 to 可还原）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 主动省to：I saw him go into the room.（to 被省略）<br>
+            - 被动还原：He was seen to go into the room.（to 还原回来）<br>
+            - doing 不变：He was seen walking into the room.（doing 本来就没有 to）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 深层本质：为什么被动倾向于不确定？</h2>
+        <p>老师进一步解释了"被动还原"的深层原因——<strong>英语的被动语态倾向于不确定</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item">→ 被动语态 = 从另一个角度看待事件</div>
+            <div class="example-item">→ 就像"据说/据报道"——道听途说，有可能是假的</div>
+            <div class="example-item">→ 被动语态渗透着一丝不确定的色彩</div>
+            <div class="example-item">→ 所以被动语态倾向于"不确定" → 用 to do（不定式）</div>
+        </div>
+
+        <div class="annotation">
+            这是本节课最颠覆的认知——被动语态的本质倾向是"不确定"。就像"据报道"（it is reported that）可能是假的，被动语态是从另一个角度转述事件，渗透着不确定色彩。所以被动句要还原 to do——因为被动本身就不确定，和 to do 的不确定本质契合。
+        </div>
+
+        <div class="annotation warning">
+            <strong>主动省to被动还原的本质总结：</strong><br>
+            - 主动省to的原因：确定的事（看见全过程）用了不确定的 to do，妥协省略 to<br>
+            - 被动还原的原因：被动语态本身倾向于不确定，和 to do 的不确定本质契合，所以 to 要还原回来<br>
+            - 这就是语法书和老师都没深入思考过的"本质问题"！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 综合例句分析</h2>
+        <p>老师用多个例句演示如何运用本质思维分析：</p>
+
+        <h3>例句一：I remember seeing him that day.</h3>
+        <div class="example-box">
+            <div class="example-item">→ remember（谓语）+ seeing（非谓语，作宾语）</div>
+            <div class="example-item">→ "那天见过他" = 已经发生的确定事 → 用 doing（确定）</div>
+            <div class="example-item">→ seeing 是动名词，作 remember 的宾语</div>
+        </div>
+
+        <h3>例句二：I saw him walk into the building.</h3>
+        <div class="example-box">
+            <div class="example-item">→ saw（谓语）+ him（宾语）+ walk（非谓语，作宾补）</div>
+            <div class="example-item">→ "我看见他走进建筑" = 看见全过程（走进去了）→ to do（省略to）</div>
+            <div class="example-item">→ walk 是不定式 to walk 省略了 to</div>
+        </div>
+
+        <h3>例句三：I saw him walking into the building.</h3>
+        <div class="example-box">
+            <div class="example-item">→ saw（谓语）+ him（宾语）+ walking（非谓语，作宾补）</div>
+            <div class="example-item">→ "我看见他正在走进建筑" = 与谓语同步发生 → 现在分词 doing</div>
+            <div class="example-item">→ walking 是现在分词，与 saw 同步发生</div>
+        </div>
+
+        <h3>例句四：He was seen to go into the room.</h3>
+        <div class="example-box">
+            <div class="example-item">→ 主动句：I saw him go into the room.</div>
+            <div class="example-item">→ 变成被动：He was seen to go into the room.</div>
+            <div class="example-item">→ 被动还原 to：go → to go（to 还原回来）</div>
+        </div>
+
+        <h3>例句五：He was seen walking into the room.</h3>
+        <div class="example-box">
+            <div class="example-item">→ 主动句：I saw him walking into the room.</div>
+            <div class="example-item">→ 变成被动：He was seen walking into the room.</div>
+            <div class="example-item">→ doing 不变：walking 在被动句中保持不变</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：walk vs walking</strong><br>
+            - I saw him walk into the building. → 看见他走进去（全过程，to 省略）<br>
+            - I saw him walking into the building. → 看见他正在走进（同步发生，现在分词）<br>
+            - 两种说法都对，但含义不同！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. see somebody do/doing/done 总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>形式</th>
+                    <th>本质</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>see somebody do</strong></td>
+                    <td>to do（省略to）</td>
+                    <td>看见某人做完了（全过程）</td>
+                    <td>I saw him go into the room.</td>
+                </tr>
+                <tr>
+                    <td><strong>see somebody doing</strong></td>
+                    <td>doing（现在分词）</td>
+                    <td>看见某人正在做（与谓语同步）</td>
+                    <td>I saw him walking into the room.</td>
+                </tr>
+                <tr>
+                    <td><strong>see somebody done</strong></td>
+                    <td>done（过去分词）</td>
+                    <td>看见某人被做（完成+被动）</td>
+                    <td>I saw him beaten by a stone.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>13. 主动省to vs 被动还原 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>主动句</th>
+                    <th>被动句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>全过程（to do）</strong></td>
+                    <td>I saw him <code>go</code> into the room.</td>
+                    <td>He was seen <code>to go</code> into the room.</td>
+                </tr>
+                <tr>
+                    <td><strong>正在做（doing）</strong></td>
+                    <td>I saw him <code>walking</code> into the room.</td>
+                    <td>He was seen <code>walking</code> into the room.</td>
+                </tr>
+                <tr>
+                    <td><strong>被做（done）</strong></td>
+                    <td>I saw him <code>beaten</code> by a stone.</td>
+                    <td>He was seen <code>beaten</code> by a stone.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 主动省to：I saw him go...（to 被省略）<br>
+            - 被动还原：He was seen to go...（to 还原回来）<br>
+            - doing/done 在被动句中不变<br>
+            - 被动语态倾向于不确定 → 和 to do 的不确定本质契合 → 所以被动要还原 to
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>14. 核心判断逻辑总结</h2>
+        <p>老师总结了运用本质思维分析 see somebody do/doing/done 的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：判断含义（正在做/做完了/被做）→ 第二步：选择对应的非谓语形式<br>第三步：如果是"做完了"，记住 to 被省略了（主动）/ 要还原（被动）</strong>
+        </div>
+
+        <h3>三步判断法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>判断含义：正在做 → doing；做完了 → to do（省略to）；被做 → done</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>判断语态：主动句 → to 省略；被动句 → to 还原（doing/done 不变）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>理解本质：被动语态倾向于不确定 → 和 to do 的不确定本质契合</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 正在做 → doing（现在分词，同步发生）<br>
+            - 做完了 → to do（不定式，to 被省略）<br>
+            - 被做 → done（过去分词，完成+被动）<br>
+            - 主动省to，被动还原<br>
+            - 被动语态 → 倾向于不确定 → 和 to do 本质契合
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>15. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+非谓语之难点下（语法书和老师都没思考的本质问题）
+├── 传统背公式 vs 本质思维
+│   ├── remember/forget/stop + to do（不确定）/ doing（确定）
+│   └── 用本质理解，再也不用死记硬背
+├── I remember saw him → I remember seeing him
+│   ├── saw 是谓语形式 → 必须用非谓语（一山不容二虎）
+│   ├── "见过"=确定的事 → 用 doing
+│   └── saw → see → seeing（先还原原形再变doing）
+├── 看见某人做某事的三种可能性
+│   ├── 正在做 → doing（现在分词）
+│   ├── 做完了（全过程） → to do（省略to）← 核心矛盾！
+│   ├── 被做 → done（过去分词）
+│   └── 要做某事 → 不可能！（看不见未来）
+├── 核心矛盾：确定的事用了不确定的 to do
+│   ├── doing 被"正在做"抢走
+│   ├── done 被"被做"抢走
+│   └── 只能用 to do，但 to do 是不确定的 → 矛盾！
+├── 解决方案：主动省to（退而求其次的妥协）
+│   ├── 承认它是 to do，但把 to 省略掉
+│   ├── 既承认不定式身份，又表示比较确定的概念
+│   └── 适用动词：see, let, make, watch, notice, have, observe, listen to
+├── 被动还原
+│   ├── 主动：I saw him go into the room.
+│   ├── 被动：He was seen to go into the room.（to 还原）
+│   └── doing 在被动句中不变
+├── 深层本质：被动语态倾向于不确定
+│   ├── 被动 = 从另一个角度转述 → 渗透不确定色彩
+│   ├── 就像"据说/据报道" → 可能是假的
+│   └── 被动倾向于不确定 → 和 to do 的不确定本质契合
+└── 核心口诀
+    ├── 正在做 → doing
+    ├── 做完了 → to do（主动省to，被动还原）
+    ├── 被做 → done
+    └── 被动 → 倾向于不确定
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>用本质思维取代死记硬背：</strong>remember/forget/stop + to do vs doing，用"不确定/确定"来理解，再也不用背了。</li>
+            <li><strong>掌握 see somebody do/doing/done 三种形式：</strong>正在做 → doing；做完了 → to do（省略to）；被做 → done。</li>
+            <li><strong>理解"主动省to"的本质：</strong>确定的事（看见全过程）用了不确定的 to do，妥协省略 to。既承认不定式身份，又表示比较确定的概念。</li>
+            <li><strong>掌握"被动还原"：</strong>主动句省略的 to，在被动句中还原回来。doing/done 在被动句中不变。</li>
+            <li><strong>理解被动语态的本质倾向：</strong>被动语态倾向于不确定（道听途说、可能是假的），所以和 to do 的不确定本质契合，被动句要还原 to。</li>
+            <li><strong>注意 saw → seeing 的变化：</strong>先还原原形 see，再变 doing → seeing。不要写成 swing 或 sawing。</li>
+            <li><strong>walk vs walking 的辨析：</strong>I saw him walk（全过程）vs I saw him walking（正在走进），两种都对但含义不同。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

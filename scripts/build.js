@@ -63,19 +63,20 @@ const TO_TOP_BTN = `<button class="site-to-top" type="button" aria-label="回到
 // 从干净源里拆出所有 <article class="site-lesson" id="...">...</article>
 function extractArticles(html) {
   const out = [];
-  const re = /<article\b[^>]*class="site-lesson"[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g;
+  const re = /<article\b[^>]*class="site-lesson"[^>]*\bid="([^"]+)"[^>]*\bdata-level="([^"]*)"[^>]*>([\s\S]*?)<\/article>/g;
   let m;
   while ((m = re.exec(html)) !== null) {
     // 提取 h2 里的 Gxx chip 和标题
     const code = m[1];
-    const body = m[2];
+    const level = m[2] || "中级语法";
+    const body = m[3];
     // title: 抓 <span>标签</span> 后面那个 <span>
     const titleMatch = body.match(/<span class="site-chip">[^<]*<\/span>\s*<span>([\s\S]*?)<\/span>/);
     const title = titleMatch ? titleMatch[1].trim() : code;
     // body-inner: 抓 <div class="site-lesson-body">...</div>
     const innerMatch = body.match(/<div class="site-lesson-body">([\s\S]*?)<\/div>\s*$/);
     const inner = innerMatch ? innerMatch[1] : body;
-    out.push({ code, title, inner });
+    out.push({ code, level, title, inner });
   }
   return out;
 }
@@ -83,14 +84,9 @@ function extractArticles(html) {
 const articles = extractArticles(src);
 console.log(`✓ 从干净源提取 ${articles.length} 课`);
 
-// 3. 决定每课放在哪个 level：从代码前缀 + 顺序判断
-//    G001-G005 → 零基础；G01-G09 → 基础；G10+ → 中级（暂）
-//    实际更稳：从干净源里的 .site-shelf id 拿到分组
-function detectLevel(code, idx) {
-  if (/^G0{2}\d/.test(code)) return "零基础语法";       // G001~G009
-  if (/^G0[1-9]\b/.test(code) || /^G0[1-9]$/.test(code)) return "基础语法"; // G01~G09
-  return "中级语法";
-}
+// 3. 决定每课放在哪个 level：直接用干净源里按源目录打好的 data-level
+//    build-source.js 在写 <article> 时，按课所在目录（src/<level>/）写入层级，
+//    这里直接用它即可，不再按编号硬编码（编号不唯一决定层级）
 
 // 4. 工具：HTML 编码
 function esc(s) {
@@ -266,12 +262,12 @@ ${jsLink("assets/site.js")}
 }
 
 // 6. 把每篇文章映射到 level / file / 排序 → 写入 dist/
-const coursesForPages = articles.map((a, i) => ({
+const coursesForPages = articles.map((a) => ({
   code: a.code,
   title: a.title,
   inner: a.inner,
-  level: detectLevel(a.code, i),
-  levelLabel: LEVELS.find((l) => l.dir === detectLevel(a.code, i)).label,
+  level: a.level,
+  levelLabel: LEVELS.find((l) => l.dir === a.level)?.label || a.level,
   file: `【${a.code}】${a.title}.html`,
 }));
 

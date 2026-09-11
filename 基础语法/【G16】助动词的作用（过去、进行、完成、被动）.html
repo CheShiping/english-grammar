@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G16 助动词的作用（过去、进行、完成、被动）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G16】助动词的作用（过去、进行、完成、被动）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G16 是「基础语法」系列第16课，由陈老师主讲。本节课是动词部分的<strong>核心深入课</strong>，专门讲解助动词的具体辅助作用——即助动词在句子中到底"帮忙"做了什么。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12）、be动词辨析（G13）、及物动词与不及物动词（G14）、谓语的构成（G15）。本节课将聚焦助动词，彻底搞清楚助动词的六大辅助作用。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清楚助动词的六大辅助作用——构成时态（进行/完成）、构成否定和疑问、构成被动语态、构成强调，以及区分助动词和实义动词。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」的基础上。需要理解助动词的四类（be动词、情态动词、狭义助动词、完成助动词），以及助动词+实义动词/系动词构成谓语的规则。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：助动词的分类与组合规则</h2>
+        <p>在讲助动词的具体作用之前，老师先快速回顾助动词的分类和组合规则：</p>
+
+        <h3>助动词的四类</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>类别</th>
+                    <th>成员</th>
+                    <th>后接形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>be动词</strong></td>
+                    <td>am / is / are / was / were / be</td>
+                    <td>doing（进行）或 done（被动）</td>
+                </tr>
+                <tr>
+                    <td><strong>情态动词</strong></td>
+                    <td>can / could / will / would / shall / should / may / might / must / need / dare / had better</td>
+                    <td>动词原形</td>
+                </tr>
+                <tr>
+                    <td><strong>狭义助动词</strong></td>
+                    <td>do / does / did</td>
+                    <td>do（动词原形）</td>
+                </tr>
+                <tr>
+                    <td><strong>完成助动词</strong></td>
+                    <td>have / has / had</td>
+                    <td>done（过去分词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>助动词的组合规则</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 最多三个助动词 + 一个实义动词</div>
+            <div class="example-item">✅ 情态动词 + have/has/had + be + doing/done + 实义动词</div>
+        </div>
+
+        <div class="annotation">
+            助动词可以叠加，但最多三个。最核心的实义动词只有一个——因为实义动词是"外科医生"，做具体动作的。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心前提：助动词 vs 实义动词的区分</h2>
+        <p>在讲助动词的作用之前，老师强调了一个基本判断方法——<strong>把助动词去掉，看句子是否还成立</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ You <code>can</code> help me. → 去掉 can → You help me.（成立）→ can 是助动词，help 是实义动词</div>
+            <div class="example-item">✅ You can help me. → 去掉 help → You can me.（不成立！）→ help 不能单独构成谓语 → help 是实义动词</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心判断方法：</strong><br>
+            - 去掉后句子成立 → 该词是助动词（辅助作用）<br>
+            - 去掉后句子不成立 → 该词是实义动词（核心动作）<br>
+            - 助动词不能单独构成谓语，必须和实义动词/系动词一起配合
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 助动词的辅助作用一：帮助构成时态</h2>
+        <p>助动词的第一个核心作用是帮助构成时态——包括进行体和完成体。</p>
+
+        <h3>构成进行时（be + doing）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The boy <code>is crying</code>.（男孩正在哭。）</div>
+            <div class="example-item">→ is（be动词，助动词）+ crying（实义动词，具体动作是"哭"）</div>
+            <div class="example-item">→ is 的辅助作用：帮助构成进行</div>
+        </div>
+
+        <h3>构成完成时（have + done）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He <code>has arrived</code>.（他已经到达了。）</div>
+            <div class="example-item">→ has（完成助动词）+ arrived（实义动词，具体动作是"到达"）</div>
+            <div class="example-item">→ has 的辅助作用：帮助构成完成</div>
+        </div>
+
+        <h3>构成完成进行时（have + been + doing）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>have been painting</code> all day.（我一整天都在画画。）</div>
+            <div class="example-item">→ have（完成助动词，起完成作用）+ been（be动词，助动词，起进行作用）+ painting（实义动词，具体动作是"画画"）</div>
+            <div class="example-item">→ have 帮助构成完成，been 帮助构成进行 → 完成进行时</div>
+        </div>
+
+        <div class="annotation">
+            关键逻辑：实义动词才是发出具体动作的词（crying、arrived、painting），而助动词（is、has、have、been）只是"护士"，辅助表示时态。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 助动词的辅助作用二：帮助构成否定和疑问句</h2>
+        <p>助动词的第二个核心作用是帮助构成否定句和疑问句——这主要是狭义助动词（do/does/did）的功能。</p>
+
+        <h3>构成疑问句</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Does</code> he <code>like</code> English?（他喜欢英语吗？）</div>
+            <div class="example-item">→ does（狭义助动词，起疑问作用）+ like（实义动词，具体动作是"喜欢"）</div>
+            <div class="example-item">→ does 提到主语前面 → 构成疑问句</div>
+        </div>
+
+        <h3>构成否定句</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He <code>doesn't</code> <code>have</code> a long neck.（他没有长脖子。）</div>
+            <div class="example-item">→ doesn't（狭义助动词，起否定作用）+ have（实义动词，具体动作是"有"）</div>
+            <div class="example-item">→ 注意：这里的 have 是实义动词（有），不是助动词！</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心易错点：He doesn't have a long neck.</strong><br>
+            很多同学看到 have 就以为是助动词，这是错误的！这里的 have 是实义动词（拥有），doesn't 才是助动词（起否定作用）。判断方法：去掉 doesn't → He have a long neck.（语法上需要改为 has，但意思成立）→ doesn't 是助动词，have 是实义动词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 助动词的辅助作用三：帮助构成被动语态</h2>
+        <p>助动词的第三个核心作用是帮助构成被动语态——be + done 表示被动。</p>
+
+        <h3>一般现在时被动</h3>
+        <div class="example-box">
+            <div class="example-item">✅ Trees <code>are planted</code> in spring.（树在春天被种下。）</div>
+            <div class="example-item">→ are（be动词，助动词，起被动作用）+ planted（实义动词，具体动作是"种"）</div>
+        </div>
+
+        <h3>现在完成时被动</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The house <code>has been pulled down</code>.（房子已经被推倒了。）</div>
+            <div class="example-item">→ has（完成助动词，起完成作用）+ been（be动词，起被动作用）+ pulled down（实义动词，具体动作是"推倒"）</div>
+        </div>
+
+        <div class="annotation">
+            被动语态的核心公式：be + done。be 动词在这里起被动作用，而 have/has/had 如果出现在被动语态中，则是帮助构成完成时。所以 has been pulled down = has（完成）+ been（被动）+ pulled down（实义动词）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 助动词的辅助作用四：帮助虚拟（预告下节课）</h2>
+        <p>老师提到助动词还有一个作用是帮助构成虚拟语气，但这个知识点比较复杂，留到下一节课（虚拟与倒装）详细讲解。</p>
+
+        <div class="annotation">
+            虚拟语气是助动词的第四个辅助作用，但难度较大，本节课不做展开，预告下节课讲解。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 助动词的辅助作用五：帮助强调</h2>
+        <p>助动词的第五个核心作用是帮助强调——用 do/does/did 加动词原形来表示"确实……"</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ He <code>did come</code> yesterday.（他昨天确实来了。）</div>
+            <div class="example-item">→ 一般过去时可以直接说 He came yesterday.（他昨天来了。）</div>
+            <div class="example-item">→ 加 did + 动词原形 → He did come yesterday.（强调"确实来了"）</div>
+            <div class="example-item">→ did（狭义助动词，起强调作用）+ come（实义动词，动词原形）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 强调用 do/does/did + 动词原形<br>
+            - did 是助动词（起强调作用），come 是实义动词（具体动作）<br>
+            - 强调句的意思比一般过去时更强，表示"确实……"
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心实战：区分助动词与实义动词</h2>
+        <p>老师给出了一系列句子，让同学们判断每个词是助动词还是实义动词，并指出助动词起了哪种辅助作用。</p>
+
+        <h3>实战例句逐一分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>词</th>
+                    <th>词性</th>
+                    <th>辅助作用</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Does</code> he like swimming?</td>
+                    <td>Does</td>
+                    <td><strong>助动词</strong></td>
+                    <td>疑问（提到主语前构成疑问句）</td>
+                </tr>
+                <tr>
+                    <td>He likes swimming.</td>
+                    <td>likes</td>
+                    <td><strong>实义动词</strong></td>
+                    <td>具体动作"喜欢"</td>
+                </tr>
+                <tr>
+                    <td>He <code>does</code> like swimming.</td>
+                    <td>does</td>
+                    <td><strong>助动词</strong></td>
+                    <td>强调（"确实喜欢"）</td>
+                </tr>
+                <tr>
+                    <td>Where <code>does</code> he <code>live</code>?</td>
+                    <td>does</td>
+                    <td><strong>助动词</strong></td>
+                    <td>疑问</td>
+                </tr>
+                <tr>
+                    <td>He <code>does</code> some washing.</td>
+                    <td>does</td>
+                    <td><strong>实义动词</strong></td>
+                    <td>具体动作"做（洗衣服）"</td>
+                </tr>
+                <tr>
+                    <td>I <code>have</code> had supper already.</td>
+                    <td>have</td>
+                    <td><strong>助动词</strong></td>
+                    <td>完成（"已经"）</td>
+                </tr>
+                <tr>
+                    <td>I have <code>had</code> supper.</td>
+                    <td>had</td>
+                    <td><strong>实义动词</strong></td>
+                    <td>具体动作"吃"</td>
+                </tr>
+                <tr>
+                    <td>The bridge <code>has</code> <code>been</code> built on...</td>
+                    <td>has</td>
+                    <td><strong>助动词</strong></td>
+                    <td>完成</td>
+                </tr>
+                <tr>
+                    <td>The bridge has <code>been</code> built.</td>
+                    <td>been</td>
+                    <td><strong>助动词</strong></td>
+                    <td>被动（be + done 表被动）</td>
+                </tr>
+                <tr>
+                    <td>I have <code>been</code> waiting for you.</td>
+                    <td>been</td>
+                    <td><strong>助动词</strong></td>
+                    <td>进行（be + doing 表进行）</td>
+                </tr>
+                <tr>
+                    <td>I have been <code>waiting</code> for you.</td>
+                    <td>waiting</td>
+                    <td><strong>实义动词</strong></td>
+                    <td>具体动作"等"</td>
+                </tr>
+                <tr>
+                    <td>He was <code>struck</code> by a stone.</td>
+                    <td>was</td>
+                    <td><strong>助动词</strong></td>
+                    <td>被动（be + done）</td>
+                </tr>
+                <tr>
+                    <td>He was struck by a stone.</td>
+                    <td>struck</td>
+                    <td><strong>实义动词</strong></td>
+                    <td>具体动作"击中"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心易错点汇总：</strong><br>
+            1. He does some washing. → does 是实义动词（做洗衣服的事），不是助动词！<br>
+            2. I have had supper. → 第一个 have 是助动词（完成），第二个 had 是实义动词（吃）<br>
+            3. The bridge has been built. → has 是助动词（完成），been 是助动词（被动），built 是实义动词（建）<br>
+            4. I have been waiting. → have 是助动词（完成），been 是助动词（进行），waiting 是实义动词（等）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. be + doing / be + done 快速判断表</h2>
+        <p>老师提供了一个快速判断 be 动词辅助作用的技巧：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>be 的辅助作用</th>
+                    <th>时态/语态</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>be + doing</td>
+                    <td><strong>进行</strong></td>
+                    <td>进行时</td>
+                    <td>He is crying.</td>
+                </tr>
+                <tr>
+                    <td>be + done</td>
+                    <td><strong>被动</strong></td>
+                    <td>被动语态</td>
+                    <td>He was struck by a stone.</td>
+                </tr>
+                <tr>
+                    <td>have + been + doing</td>
+                    <td>have（完成）+ been（进行）</td>
+                    <td>完成进行时</td>
+                    <td>I have been waiting for you.</td>
+                </tr>
+                <tr>
+                    <td>have + been + done</td>
+                    <td>have（完成）+ been（被动）</td>
+                    <td>完成被动语态</td>
+                    <td>The bridge has been built.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            快速判断口诀：be 后面接 doing → 进行；be 后面接 done → 被动。have/has/had 出现 → 完成。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 助动词六大辅助作用总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>辅助作用</th>
+                    <th>主要使用的助动词</th>
+                    <th>核心标志</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>构成时态（进行）</strong></td>
+                    <td>be动词（is/are/was/were + doing）</td>
+                    <td>be + doing</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>构成时态（完成）</strong></td>
+                    <td>完成助动词（have/has/had + done）</td>
+                    <td>have + done</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>构成否定和疑问</strong></td>
+                    <td>狭义助动词（do/does/did）</td>
+                    <td>do/does/did 提前或加 not</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>构成被动语态</strong></td>
+                    <td>be动词（be + done）</td>
+                    <td>be + done</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>构成虚拟语气</strong></td>
+                    <td>情态动词等</td>
+                    <td>（下节课详细讲解）</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>构成强调</strong></td>
+                    <td>狭义助动词（do/does/did + 动词原形）</td>
+                    <td>do/does/did + 动词原形</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+助动词的作用（过去、进行、完成、被动）
+├── 核心回顾
+│   ├── 助动词四类：be动词、情态动词、狭义助动词(do)、完成助动词(have)
+│   └── 组合规则：最多3个助动词 + 1个实义动词
+├── 核心前提：区分助动词 vs 实义动词
+│   └── 去掉后句子成立 → 助动词；去掉后不成立 → 实义动词
+├── 辅助作用一：构成时态（进行/完成）
+│   ├── be + doing → 进行（The boy is crying）
+│   ├── have + done → 完成（He has arrived）
+│   └── have + been + doing → 完成进行时（I have been painting all day）
+├── 辅助作用二：构成否定和疑问
+│   ├── Does he like English? → does 起疑问作用
+│   └── He doesn't have a long neck. → doesn't 起否定作用（have 是实义动词）
+├── 辅助作用三：构成被动语态
+│   ├── Trees are planted in spring. → are 起被动作用
+│   └── The house has been pulled down. → has(完成) + been(被动) + pulled down(实义动词)
+├── 辅助作用四：构成虚拟（预告下节课）
+├── 辅助作用五：构成强调
+│   └── He did come yesterday. → did + 动词原形（"确实来了"）
+├── 核心实战：区分助动词与实义动词
+│   ├── Does he like swimming? → Does(助/疑问) / like(实义)
+│   ├── He does some washing. → does(实义/做洗衣服的事) ← 易错！
+│   ├── I have had supper. → have(助/完成) / had(实义/吃)
+│   └── The bridge has been built. → has(助/完成) / been(助/被动) / built(实义/建)
+└── 快速判断口诀
+    └── be + doing → 进行；be + done → 被动；have → 完成
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记助动词的六大辅助作用：</strong>构成时态（进行/完成）、构成否定和疑问、构成被动语态、构成虚拟、构成强调。这是全课的核心框架。</li>
+            <li><strong>区分助动词和实义动词的核心方法：</strong>去掉后句子成立 → 助动词；去掉后不成立 → 实义动词。如 He does some washing 中，去掉 does → He some washing（不成立），但 does 在这里是实义动词（做），不是助动词。</li>
+            <li><strong>be + doing → 进行；be + done → 被动：</strong>这是快速判断 be 动词辅助作用的口诀。have/has/had 出现 → 完成。</li>
+            <li><strong>注意多助动词叠加：</strong>I have been waiting. → have（完成助动词）+ been（be动词，进行作用）+ waiting（实义动词）。最多三个助动词。</li>
+            <li><strong>核心易错：He does some washing. → does 是实义动词！</strong>不是助动词。do 做实义动词时，意思是"做（某事）"，如 do some washing（洗衣服）、do homework（做作业）。</li>
+            <li><strong>核心易错：I have had supper. → 两个 have/had 词性不同！</strong>第一个 have 是助动词（完成），第二个 had 是实义动词（吃）。</li>
+            <li><strong>强调句公式：</strong>do/does/did + 动词原形。He did come yesterday.（他昨天确实来了。）</li>
+            <li><strong>被动语态公式：</strong>be + done。The bridge has been built. → has（完成）+ been（被动）+ built（实义动词）。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

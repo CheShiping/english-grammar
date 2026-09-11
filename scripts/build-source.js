@@ -99,7 +99,7 @@ const sections = LEVELS.map((lv) => {
     </section>`;
   }
   const lessonsHtml = inLevel.map((c) => `
-        <article class="site-lesson" id="${esc(c.code)}">
+        <article class="site-lesson" id="${esc(c.code)}" data-level="${esc(lv.dir)}">
           <h2 class="site-lesson-title">
             <span class="site-chip">${esc(c.code)}</span>
             <span>${esc(c.title)}</span>

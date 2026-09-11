@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G18 倒装句基础（部分倒装、完全倒装）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G18】倒装句基础（部分倒装、完全倒装）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G18 是「基础语法」系列第18课，由陈老师主讲。本节课是动词部分的<strong>进阶课</strong>，专门讲解<strong>倒装句的基础概念</strong>。</p>
+        <p>在 G17 中，老师提到助动词的作用时遗留了"虚拟"和"倒装"两个问题，说这两个有点难，需要单独来讲。本节课先讲倒装句的基础部分。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清倒装的本质——倒装就是"谓语提到主语前面"，区分完全倒装和部分倒装的触发条件。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」、G16「助动词的作用」的基础上。需要理解谓语构成的三种方式（实义动词单独构成、系动词+表语、助动词+实义动词/系动词），以及助动词和实义动词的区别。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：什么是倒装？什么是陈述？</h2>
+        <p>课程首先区分了"陈述句"和"倒装句"的区别，这是理解倒装的基础：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>含义</th>
+                    <th>结构</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>陈述句</strong></td>
+                    <td>正常的语序——主语在前，谓语在后</td>
+                    <td>主语 + 谓语（S + V）</td>
+                </tr>
+                <tr>
+                    <td><strong>倒装句</strong></td>
+                    <td>谓语（或部分谓语）提到主语前面</td>
+                    <td>谓语 + 主语（V + S）或 助动词 + 主语 + 实义动词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            很多同学搞不清楚"什么是陈述句"，老师说：陈述句就是"顺着说"——主语在前，谓语在后。倒装就是"不顺着说"——把谓语（或部分谓语）提到主语前面去。
+        </div>
+
+        <h3>倒装 vs 陈述：比例关系</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 陈述句占 90% 以上（正常的、日常的表达）</div>
+            <div class="example-item">✅ 倒装句占少数（不是你想倒就能倒的，必须有触发条件）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 陈述句 = 主语 + 谓语（正常的语序）<br>
+            - 倒装句 = 谓语（或部分谓语）提到主语前面<br>
+            - 倒装不是随便用的，必须有<strong>触发条件</strong>（诱发倒装的东西）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 倒装的两种类型：完全倒装 vs 部分倒装</h2>
+        <p>倒装分为两种，判断标准非常简单：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>全称</th>
+                    <th>含义</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>完全倒装</strong></td>
+                    <td>完整倒装</td>
+                    <td>整个谓语提到主语前面</td>
+                    <td>谓语（整个）+ 主语</td>
+                </tr>
+                <tr>
+                    <td><strong>部分倒装</strong></td>
+                    <td>不完全倒装</td>
+                    <td>只有谓语的一部分提到主语前面</td>
+                    <td>助动词 + 主语 + 实义动词/系动词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>为什么分"完全"和"部分"？</h3>
+        <p>这取决于谓语是怎么构成的（回顾 G15 谓语构成的三种方式）：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>谓语构成方式</th>
+                    <th>倒装类型</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>实义动词单独构成谓语</td>
+                    <td><strong>完全倒装</strong></td>
+                    <td>实义动词整个提到主语前面 → 整个谓语都移动了</td>
+                </tr>
+                <tr>
+                    <td>助动词 + 实义动词/系动词</td>
+                    <td><strong>部分倒装</strong></td>
+                    <td>只把助动词提到主语前面，实义动词/系动词留在主语后面</td>
+                </tr>
+                <tr>
+                    <td>系动词单独构成谓语</td>
+                    <td><strong>完全倒装 或 部分倒装</strong></td>
+                    <td>系动词提到主语前面，既是完全也是部分（特殊）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            关键逻辑：实义动词单独构成谓语时，整个动词提到主语前面 → 完全倒装。助动词+实义动词时，只提助动词 → 部分倒装。系动词比较特殊，既算完全也算部分。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 完全倒装的触发条件</h2>
+        <p>完全倒装不是随便用的，必须有触发条件。老师总结了一个六字口诀：<strong>"方位、介词、提前"</strong>——三个条件必须同时满足：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件序号</th>
+                    <th>条件</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>条件一</td>
+                    <td><strong>方位词</strong></td>
+                    <td>必须有表示方位的词（如 under、in、on、up、down 等）</td>
+                </tr>
+                <tr>
+                    <td>条件二</td>
+                    <td><strong>介词</strong></td>
+                    <td>方位词后面必须是介词（方位介词），如 under the tree</td>
+                </tr>
+                <tr>
+                    <td>条件三</td>
+                    <td><strong>提前</strong></td>
+                    <td>方位介词/方位副词必须提到句首</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            六字口诀："方位、介词、提前"——三个条件同时满足，才会诱发完全倒装。缺一不可。
+        </div>
+
+        <h3>触发条件一：方位介词提前</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 陈述句：The boy <code>sits</code> <code>under the tree</code>.</div>
+            <div class="example-item">→ under（方位词）+ the tree（介词宾语）→ 方位介词</div>
+            <div class="example-item">→ sits 是实义动词，单独构成谓语</div>
+            <div class="example-item">→ 但 under the tree 在后面 → 不满足"提前"条件 → 陈述句</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ <code>Under the tree</code> <code>sits</code> <code>the boy</code>.</div>
+            <div class="example-item">→ under the tree（方位介词）提前到句首 → 满足三个条件</div>
+            <div class="example-item">→ sits（实义动词，整个谓语）提到 the boy（主语）前面 → 完全倒装</div>
+            <div class="example-item">→ 翻译：树下坐着那个男孩</div>
+        </div>
+
+        <div class="annotation">
+            完全倒装的结构：方位介词（句首）+ 实义动词（整个谓语）+ 主语。sits 是实义动词，单独构成谓语，整个提到主语 the boy 前面 → 完全倒装。
+        </div>
+
+        <h3>触发条件二：方位副词提前</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 陈述句：The bus <code>comes</code> <code>here</code>.</div>
+            <div class="example-item">→ here（这里）是方位词，修饰 comes → 方位副词</div>
+            <div class="example-item">→ comes 是不及物动词，实义动词，单独构成谓语</div>
+            <div class="example-item">→ but here 在后面 → 不满足"提前"条件 → 陈述句</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ <code>Here</code> <code>comes</code> <code>the bus</code>.</div>
+            <div class="example-item">→ here（方位副词）提前到句首 → 满足三个条件</div>
+            <div class="example-item">→ comes（实义动词，整个谓语）提到 the bus（主语）前面 → 完全倒装</div>
+            <div class="example-item">→ 翻译：公交车来了</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心易错点：人称代词主语的例外</strong><br>
+            如果主语是<strong>人称代词</strong>（he/she/it/they 等），即使满足三个条件，也<strong>不倒装</strong>！<br>
+            - ✅ Here <strong>comes</strong> the bus.（the bus 是名词 → 倒装）<br>
+            - ✅ Here <strong>he</strong> comes.（he 是代词 → 不倒装，主语 he 仍在谓语 comes 前面）<br>
+            这是完全倒装唯一的例外规则。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 部分倒装的触发条件</h2>
+        <p>部分倒装的触发条件与完全倒装不同，核心关键词从"方位"变成了"<strong>否定</strong>"。老师讲了两种触发方式：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>触发方式</th>
+                    <th>核心特征</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>否定介词提前</strong></td>
+                    <td>含有否定含义的介词短语</td>
+                    <td>否定介词短语提前到句首 → 只把助动词提到主语前面</td>
+                </tr>
+                <tr>
+                    <td><strong>否定副词提前</strong></td>
+                    <td>含有否定含义的副词</td>
+                    <td>否定副词提前到句首 → 只把助动词提到主语前面</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            部分倒装 vs 完全倒装的核心区别：部分倒装的触发词是"否定"（by no means、never 等），完全倒装的触发词是"方位"（under、here 等）。看到否定词提前 → 部分倒装；看到方位词提前 → 完全倒装。
+        </div>
+
+        <h3>触发条件一：否定介词提前（by no means）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 陈述句：I <code>will</code> <code>forget</code> her <code>by no means</code>.</div>
+            <div class="example-item">→ by no means（绝不）是含有否定含义的介词短语</div>
+            <div class="example-item">→ will（助动词）+ forget（实义动词）→ 助动词+实义动词构成谓语</div>
+            <div class="example-item">→ by no means 在中间 → 不满足"提前"条件 → 陈述句</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ <code>By no means</code> <code>will</code> <code>I</code> <code>forget</code> her.</div>
+            <div class="example-item">→ by no means（否定介词短语）提前到句首 → 触发部分倒装</div>
+            <div class="example-item">→ 只把助动词 will 提到主语 I 前面 → 实义动词 forget 留在主语后面</div>
+            <div class="example-item">→ 翻译：我绝不可能忘记她</div>
+        </div>
+
+        <div class="annotation">
+            部分倒装的结构：否定介词短语（句首）+ 助动词 + 主语 + 实义动词（留在后面）。只提助动词，不提整个谓语 → 部分倒装。
+        </div>
+
+        <h3>触发条件二：否定副词提前（never）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 陈述句：I <code>will</code> <code>never</code> <code>forget</code> her.</div>
+            <div class="example-item">→ never（绝不）是否定副词，修饰 forget</div>
+            <div class="example-item">→ will（助动词）+ never + forget（实义动词）</div>
+            <div class="example-item">→ never 在中间 → 不满足"提前"条件 → 陈述句</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ <code>Never</code> <code>will</code> <code>I</code> <code>forget</code> her.</div>
+            <div class="example-item">→ never（否定副词）提前到句首 → 触发部分倒装</div>
+            <div class="example-item">→ 只把助动词 will 提到主语 I 前面 → 实义动词 forget 留在主语后面</div>
+            <div class="example-item">→ 翻译：我绝不可能忘记她</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：部分倒装 = 只提助动词</strong><br>
+            - never 提前到句首 → 触发部分倒装<br>
+            - 只把助动词 will 提到主语 I 前面 → will I<br>
+            - 实义动词 forget 留在主语后面 → I forget<br>
+            - 不是把 will forget 整个提到前面（那是完全倒装，错误！）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 完全倒装 vs 部分倒装 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>完全倒装</th>
+                    <th>部分倒装</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>触发词</strong></td>
+                    <td>方位词（under、here 等）</td>
+                    <td>否定词（by no means、never 等）</td>
+                </tr>
+                <tr>
+                    <td><strong>操作</strong></td>
+                    <td>整个谓语提到主语前面</td>
+                    <td>只把助动词提到主语前面</td>
+                </tr>
+                <tr>
+                    <td><strong>结构</strong></td>
+                    <td>方位词 + 实义动词 + 主语</td>
+                    <td>否定词 + 助动词 + 主语 + 实义动词</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>Under the tree sits the boy.</td>
+                    <td>Never will I forget her.</td>
+                </tr>
+                <tr>
+                    <td><strong>例外</strong></td>
+                    <td>主语是人称代词时不倒装（Here he comes）</td>
+                    <td>无例外</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心判断逻辑总结</h2>
+        <p>老师反复强调判断倒装类型的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>看触发词：方位词提前 → 完全倒装；否定词提前 → 部分倒装</strong>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看句首是什么词：方位词（under/here/there）→ 完全倒装；否定词（never/by no means）→ 部分倒装</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>判断谓语构成：实义动词单独 → 完全倒装（整个动词提前）；助动词+实义动词 → 部分倒装（只提助动词）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>检查主语：如果是人称代词，完全倒装不适用（Here he comes，不倒装）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到方位词提前 → 完全倒装 → 整个谓语（实义动词）提到主语前面<br>
+            - 看到否定词提前 → 部分倒装 → 只把助动词提到主语前面<br>
+            - 主语是代词 → 完全倒装不适用（Here he comes，不是 Here comes he）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+倒装句基础（部分倒装、完全倒装）
+├── 核心概念
+│   ├── 陈述句 = 主语 + 谓语（正常的语序，占90%以上）
+│   └── 倒装句 = 谓语（或部分谓语）提到主语前面（必须有触发条件）
+├── 两种倒装类型
+│   ├── 完全倒装：整个谓语提到主语前面
+│   │   └── 实义动词单独构成谓语 → 整个动词提前
+│   └── 部分倒装：只把谓语的一部分（助动词）提到主语前面
+│       └── 助动词+实义动词 → 只提助动词
+├── 完全倒装的触发条件（六字口诀：方位、介词、提前）
+│   ├── 条件一：方位词（under、here 等）
+│   ├── 条件二：介词（方位介词，如 under the tree）
+│   ├── 条件三：提前（放到句首）
+│   ├── 触发方式一：方位介词提前 → Under the tree sits the boy.
+│   ├── 触发方式二：方位副词提前 → Here comes the bus.
+│   └── 例外：主语是人称代词时不倒装 → Here he comes.
+├── 部分倒装的触发条件
+│   ├── 否定介词提前 → By no means will I forget her.
+│   └── 否定副词提前 → Never will I forget her.
+├── 核心判断逻辑
+│   ├── 方位词提前 → 完全倒装（整个谓语提前）
+│   ├── 否定词提前 → 部分倒装（只提助动词）
+│   └── 主语是代词 → 完全倒装不适用
+└── 与陈述句的关系
+    └── 陈述是常态（90%+），倒装是例外（有触发条件才倒）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记倒装的本质：</strong>倒装 = 谓语（或部分谓语）提到主语前面。陈述句 = 主语+谓语（正常语序），倒装句 = 谓语提前（不正常的语序）。</li>
+            <li><strong>完全倒装 vs 部分倒装的区别：</strong>完全倒装 = 整个谓语提到主语前面（实义动词单独构成谓语时）；部分倒装 = 只把助动词提到主语前面（助动词+实义动词时）。</li>
+            <li><strong>完全倒装的触发条件（六字口诀）：</strong>"方位、介词、提前"——三个条件同时满足才会触发。方位词 + 介词 + 提前到句首。</li>
+            <li><strong>部分倒装的触发条件：</strong>否定词提前。否定介词（by no means）或否定副词（never）提前到句首 → 只提助动词。</li>
+            <li><strong>核心易错：人称代词主语的例外。</strong>Here comes the bus.（名词主语 → 倒装）但 Here he comes.（代词主语 → 不倒装）。</li>
+            <li><strong>判断倒装类型的速查：</strong>看到方位词 → 完全倒装；看到否定词 → 部分倒装。这是最快的判断方法。</li>
+            <li><strong>循序渐进：</strong>按照学习路线图一步步走，在课文中观察倒装的用法，保证不走弯路。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

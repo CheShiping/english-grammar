@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G12 动词分类（助动词、实义动词、系动词）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G12】动词分类（助动词、实义动词、系动词）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G12 是「基础语法」系列第12课，由陈老师主讲。本节课是动词部分的<strong>开篇之课</strong>，系统讲解动词的分类体系。</p>
+        <p>在此之前，同学们已经学习了名词基础（G01-G07）、不定式/动名词/句子（G08）、判断主语（G09）、定语（G10-G11）。动词是句子中最重要的词性——<strong>一个句子之所以成为句子，一定要有主语加谓语，而谓语就是动词的词性</strong>。所以老师说"动词大词"。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清楚动词的分类体系，以及动词和谓语之间的关系。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G01「名词短语」的基础上。需要理解名词可以做主语、宾语，以及谓语由动词构成的基本概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心前提：动词与谓语的关系</h2>
+        <p>课程首先区分了动词和谓语之间的关系，这是理解动词分类的基础：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>谓语一定由动词构成，但动词不一定构成谓语（还可以构成非谓语）</strong>
+        </div>
+
+        <div class="annotation">
+            动词可以构成谓语，也可以构成非谓语动词。所以"谓语→动词"是成立的，但"动词→谓语"不一定成立。这是不可逆的关系。
+        </div>
+
+        <div class="annotation warning">
+            <strong>动词分类的"术语大乱炖"：</strong><br>
+            同学们可能听说过很多动词相关的术语：行为动词、谓语动词、非谓语动词、实义动词、短暂动词、瞬间动词、be动词、延续动词、非延续性动词、及物动词、不及物动词、情态动词、助动词、系动词、感官动词……<br>
+            本节课的目标就是把这些术语全部理清，建立清晰的分类体系。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 动词的三大分类总览</h2>
+        <p>本节课将动词分为三大类：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>核心特征</th>
+                    <th>比喻</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>起辅助作用，不能单独构成谓语</td>
+                    <td>护士（辅助医生做手术）</td>
+                </tr>
+                <tr>
+                    <td><strong>实义动词</strong>（行为动词）</td>
+                    <td>表示具体的动作，能单独构成谓语</td>
+                    <td>外科医生（做具体手术）</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>不表示具体动作，表示状态/感官/变化/似乎</td>
+                    <td>内科医生（看内在的东西）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            老师的比喻非常形象：助动词像护士，只能辅助不能单独手术；实义动词像外科医生，做具体的动作；系动词像内科医生，看的是内在的东西（状态、感官等）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 助动词详解</h2>
+        <p>助动词的核心特征是：<strong>不能单独构成谓语，只能辅助别人</strong>。助动词分为四类：</p>
+
+        <h3>第一类：be动词</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>形式</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>am / is / are</code></td>
+                    <td>现在时</td>
+                </tr>
+                <tr>
+                    <td><code>was / were</code></td>
+                    <td>过去时</td>
+                </tr>
+                <tr>
+                    <td><code>be</code></td>
+                    <td>原形（be动词的原型是 be，不是 am/is/are！）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心易错点：</strong><br>
+            很多同学认为 be动词的原型是 am/is/are，这是错的！be动词的原型就是 <code>be</code>。am/is/are 是 be动词的不同人称/时态变化形式。
+        </div>
+
+        <h3>第二类：情态动词</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>代词</th>
+                    <th>原形</th>
+                    <th>过去式/委婉形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>能够</td>
+                    <td><code>can</code></td>
+                    <td><code>could</code></td>
+                </tr>
+                <tr>
+                    <td>将要</td>
+                    <td><code>will</code></td>
+                    <td><code>would</code></td>
+                </tr>
+                <tr>
+                    <td>应该</td>
+                    <td><code>shall</code></td>
+                    <td><code>should</code></td>
+                </tr>
+                <tr>
+                    <td>可以/可能</td>
+                    <td><code>may</code></td>
+                    <td><code>might</code></td>
+                </tr>
+                <tr>
+                    <td>必须</td>
+                    <td><code>must</code></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>不得不</td>
+                    <td><code>have to</code></td>
+                    <td><code>had to</code></td>
+                </tr>
+                <tr>
+                    <td>需要</td>
+                    <td><code>need</code></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>敢</td>
+                    <td><code>dare</code></td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>最好</td>
+                    <td><code>had better</code></td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            情态动词有四个核心属性：① 不单独构成谓语；② 后面接动词原形；③ 无人称变化（he can 不是 he cans）；④ 有自身含义（能够、将要、可能、必须、需要等）。
+        </div>
+
+        <h3>第三类：狭义助动词</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>助动词</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>do / does / did</code></td>
+                    <td>老师自取名为"狭义助动词"——因为我们最早学的助动词就是这三个。狭义相对论嘛，狭义听起来比较精确。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            狭义助动词 do/does/did 是我们最早接触的助动词，主要用于构成疑问句和否定句。
+        </div>
+
+        <h3>第四类：完成助动词</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>助动词</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>have / has / had</code></td>
+                    <td>帮助构成完成时（have/has + 过去分词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            完成助动词 have/has/had 的名字就揭示了它的功能——帮助构成完成时。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 实义动词详解</h2>
+        <p>实义动词又称<strong>行为动词</strong>，它的核心特征是：<strong>表示具体的动作</strong>。实义动词分为两类：</p>
+
+        <h3>外部动作 vs 内部动作</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>说明</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>外部动作</strong></td>
+                    <td>身体外部的可见动作</td>
+                    <td>打球、吃饭、爬山、游泳</td>
+                </tr>
+                <tr>
+                    <td><strong>内部动作</strong></td>
+                    <td>内心的动作/情感</td>
+                    <td>想你、爱你、恨你</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            实义动词就像"外科医生"，要做具体的动作。外部动作是身体看得见的动作，内部动作是内心的情感活动。
+        </div>
+
+        <h3>及物动词（vt）vs 不及物动词（vi）</h3>
+        <p>这是实义动词最重要的分类，老师强调"非常重要"：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>全称</th>
+                    <th>含义</th>
+                    <th>结构</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>及物动词</strong></td>
+                    <td>Transitive Verb</td>
+                    <td>"及物"=要接物体（宾语）</td>
+                    <td>主语 + 动词 + 宾语</td>
+                    <td>I love you.（主谓宾结构）</td>
+                </tr>
+                <tr>
+                    <td><strong>不及物动词</strong></td>
+                    <td>Intransitive Verb</td>
+                    <td>"不及物"=不接物体</td>
+                    <td>主语 + 动词（主谓结构）</td>
+                    <td>Time flies.（时间飞逝）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>不及物动词的两种情况：</strong><br>
+            情况一：不接宾语，直接构成主谓结构（如 Time flies）<br>
+            情况二：不能直接接宾语，但可以加一个<strong>介词</strong>（中介）来连接宾语 → 构成"主谓+介词+宾语"结构<br>
+            例如：look 是不及物动词，不能说 look the man，要加 at → look at the man
+        </div>
+
+        <div class="annotation">
+            及物动词直接加宾语（I love you），不及物动词加介词再加宾语（look at the man）。所以有两种宾语：动宾（直接接）和介宾（通过介词连接）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 系动词详解</h2>
+        <p>系动词的核心特征是：<strong>不表示具体动作，而是表示主语"是什么"或"怎么样"</strong>。系动词后面一定要加一个<strong>表语</strong>。</p>
+
+        <h3>表语的作用</h3>
+        <div class="annotation">
+            表语虽然叫"表语"，但它不表示具体动作，而是表示主语"是什么"或"怎么样"。例如 He is a student（他是学生）——不是具体动作，只是一种状态。
+        </div>
+
+        <h3>系动词的四大分类</h3>
+
+        <h4>一、表状态</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>系动词</th>
+                    <th>含义</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>be</code></td>
+                    <td>是（最基本的系动词）</td>
+                    <td>He is a student.</td>
+                </tr>
+                <tr>
+                    <td><code>stay</code></td>
+                    <td>保持某种状态</td>
+                    <td>Stay calm.（保持冷静。）</td>
+                </tr>
+                <tr>
+                    <td><code>keep</code></td>
+                    <td>保持某种状态</td>
+                    <td>Keep quiet.（保持安静。）</td>
+                </tr>
+                <tr>
+                    <td><code>remain</code></td>
+                    <td>保持某种状态</td>
+                    <td>Remain seated.（保持坐姿。）</td>
+                </tr>
+                <tr>
+                    <td><code>stand</code></td>
+                    <td>站立（处于某种状态）</td>
+                    <td>He stands there.</td>
+                </tr>
+                <tr>
+                    <td><code>exist</code></td>
+                    <td>存在</td>
+                    <td>Justice exists.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>二、表感官（感官动词）</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>感官</th>
+                    <th>系动词</th>
+                    <th>含义</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>触觉</td>
+                    <td><code>feel</code></td>
+                    <td>感觉</td>
+                    <td>I feel tired.</td>
+                </tr>
+                <tr>
+                    <td>嗅觉</td>
+                    <td><code>smell</code></td>
+                    <td>闻起来</td>
+                    <td>It smells good.</td>
+                </tr>
+                <tr>
+                    <td>味觉</td>
+                    <td><code>taste</code></td>
+                    <td>尝起来</td>
+                    <td>It tastes delicious.</td>
+                </tr>
+                <tr>
+                    <td>视觉</td>
+                    <td><code>look</code></td>
+                    <td>看起来</td>
+                    <td>She looks beautiful.</td>
+                </tr>
+                <tr>
+                    <td>听觉</td>
+                    <td><code>sound</code></td>
+                    <td>听起来</td>
+                    <td>That sounds interesting.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>三、表变化（内在状态的变化）</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>系动词</th>
+                    <th>含义</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>become</code></td>
+                    <td>变成</td>
+                    <td>He became a doctor.</td>
+                </tr>
+                <tr>
+                    <td><code>go</code></td>
+                    <td>变得（通常指变坏）</td>
+                    <td>The milk went bad.</td>
+                </tr>
+                <tr>
+                    <td><code>get</code></td>
+                    <td>变得</td>
+                    <td>It's getting dark.</td>
+                </tr>
+                <tr>
+                    <td><code>turn</code></td>
+                    <td>变得（颜色变化）</td>
+                    <td>The leaves turned yellow.</td>
+                </tr>
+                <tr>
+                    <td><code>fall</code></td>
+                    <td>陷入（某种状态）</td>
+                    <td>He fell asleep.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>四、表似乎</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>系动词</th>
+                    <th>含义</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>seem</code></td>
+                    <td>似乎、好像</td>
+                    <td>He seems tired.</td>
+                </tr>
+                <tr>
+                    <td><code>appear</code></td>
+                    <td>似乎、好像</td>
+                    <td>She appears happy.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 三大动词分类对比总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>助动词</th>
+                    <th>实义动词</th>
+                    <th>系动词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心功能</strong></td>
+                    <td>辅助，不能单独构成谓语</td>
+                    <td>表示具体动作，能单独构成谓语</td>
+                    <td>不表具体动作，表状态/感官/变化/似乎</td>
+                </tr>
+                <tr>
+                    <td><strong>比喻</strong></td>
+                    <td>护士（辅助医生）</td>
+                    <td>外科医生（做具体手术）</td>
+                    <td>内科医生（看内在东西）</td>
+                </tr>
+                <tr>
+                    <td><strong>后接成分</strong></td>
+                    <td>动词原形/分词/不定式等</td>
+                    <td>宾语（及物）或不接宾语（不及物）</td>
+                    <td>表语（主语是什么/怎么样）</td>
+                </tr>
+                <tr>
+                    <td><strong>句子结构</strong></td>
+                    <td>助动词 + 动词原形</td>
+                    <td>主谓宾 / 主谓</td>
+                    <td>主系表</td>
+                </tr>
+                <tr>
+                    <td><strong>举例</strong></td>
+                    <td>He can swim. / It is raining.</td>
+                    <td>I love you. / Time flies.</td>
+                    <td>He is a student. / She looks happy.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+动词分类（助动词、实义动词、系动词）
+├── 核心前提
+│   └── 谓语一定由动词构成，但动词不一定构成谓语（还可构成非谓语）
+├── 三大分类
+│   ├── 助动词（护士：辅助，不能单独构成谓语）
+│   │   ├── be动词：am/is/are/was/were/be（原型是be！）
+│   │   ├── 情态动词：can/could, will/would, shall/should, may/might, must, have to, need, dare, had better
+│   │   │   └── 四个属性：不单独构成谓语 + 后接动词原形 + 无人称变化 + 有自身含义
+│   │   ├── 狭义助动词：do/does/did
+│   │   └── 完成助动词：have/has/had（帮助构成完成时）
+│   ├── 实义动词/行为动词（外科医生：表示具体动作）
+│   │   ├── 外部动作：打球、吃饭、爬山、游泳
+│   │   ├── 内部动作：想你、爱你、恨你
+│   │   └── 及物动词(vt) vs 不及物动词(vi)
+│   │       ├── 及物：直接接宾语 → 主谓宾（I love you）
+│   │       └── 不及物：不接宾语 → 主谓（Time flies）
+│   │           └── 或加介词再接宾语 → 主谓+介词+宾语（look at the man）
+│   └── 系动词（内科医生：不表具体动作）
+│       ├── 表状态：be, stay, keep, remain, stand, exist
+│       ├── 表感官：feel, smell, taste, look, sound
+│       ├── 表变化：become, go, get, turn, fall
+│       └── 表似乎：seem, appear
+└── 系动词后接表语（主语是什么/怎么样，不表具体动作）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记三大分类：</strong>助动词（辅助）、实义动词（具体动作）、系动词（状态/感官/变化/似乎）。用"护士/外科医生/内科医生"的比喻来记忆。</li>
+            <li><strong>助动词四类：</strong>be动词（原型是be！）、情态动词（can/could/will/would/shall/should/may/might/must/have to/need/dare/had better）、狭义助动词（do/does/did）、完成助动词（have/has/had）。</li>
+            <li><strong>情态动词四属性：</strong>不单独构成谓语 + 后接动词原形 + 无人称变化 + 有自身含义。</li>
+            <li><strong>及物 vs 不及物（非常重要）：</strong>及物动词直接接宾语（主谓宾），不及物动词不接宾语（主谓）或加介词再接宾语（look at the man）。</li>
+            <li><strong>系动词不表具体动作：</strong>系动词后接表语，表示主语"是什么"或"怎么样"。四大类：表状态、表感官、表变化、表似乎。</li>
+            <li><strong>区分主谓宾和主系表：</strong>大部分同学搞不清楚这两者。主谓宾的动词是实义动词（有具体动作），主系表的动词是系动词（无具体动作，只表状态）。</li>
+            <li><strong>循序渐进：</strong>按照学习路线图一步步走，在课文中观察动词的用法，保证不走弯路。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G14 及物动词 VS 不及物动词：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G14】及物动词 VS 不及物动词</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G14 是「基础语法」系列第14课，由陈老师主讲。本节课是动词部分的<strong>核心实战课</strong>，系统讲解<strong>及物动词（vt）与不及物动词（vi）的区别</strong>。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12），其中提到了及物动词和不及物动词的概念，但只是简要提及。本节课将深入展开，通过大量例句练习，彻底搞清两者的判断方法。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清楚及物动词和不及物动词的区别，掌握判断方法，尤其是"vi + 介词"的两种不同结构（主谓宾 vs 主谓）的区分。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类（助动词、实义动词、系动词）」的基础上。需要理解实义动词分为及物动词（vt）和不及物动词（vi），以及主谓宾、主谓等句子结构的基本概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：动词三大分类</h2>
+        <p>在深入及物/不及物之前，老师先快速回顾 G12 讲过的动词分类体系：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>核心特征</th>
+                    <th>比喻</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>起辅助作用，不能单独构成谓语</td>
+                    <td>护士（辅助医生）</td>
+                </tr>
+                <tr>
+                    <td><strong>实义动词（行为动词）</strong></td>
+                    <td>表示具体动作，能单独构成谓语</td>
+                    <td>外科医生（做具体手术）</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>不表具体动作，表状态/感官/变化/似乎</td>
+                    <td>内科医生（看内在东西）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            及物动词和不及物动词都属于<strong>实义动词（行为动词）</strong>的子分类。及物动词后面必须直接加宾语，不及物动词要么不加宾语（主谓结构），要么加介词再加宾语。
+        </div>
+
+        <h3>及物动词（vt）vs 不及物动词（vi）基本定义</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>全称</th>
+                    <th>含义</th>
+                    <th>结构</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>及物动词</strong></td>
+                    <td>Transitive Verb</td>
+                    <td>"及物"=要接物体（宾语）</td>
+                    <td>主语 + 动词 + 宾语（主谓宾）</td>
+                </tr>
+                <tr>
+                    <td><strong>不及物动词</strong></td>
+                    <td>Intransitive Verb</td>
+                    <td>"不及物"=不接物体</td>
+                    <td>主语 + 动词（主谓）或 主语 + 动词 + 介词 + 宾语</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 及物动词（vt）与不及物动词（vi）的例句对比</h2>
+        <p>老师通过一系列例句，逐一分析哪些是及物动词、哪些是不及物动词：</p>
+
+        <h3>例句一：open — 及物 vs 不及物</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The door <code>opened</code>.（门开了。）→ 门开了就完了，没有宾语 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">✅ He <code>opened</code> the door.（他打开了门。）→ 开了具体的东西"门" → 有宾语 → <strong>及物动词（vt）</strong></div>
+        </div>
+        <div class="annotation">
+            open 这个词既可以及物也可以不及物，关键看后面有没有直接接宾语。"门开了"不需要宾语，是 vi；"他开了门"直接接了宾语 the door，是 vt。
+        </div>
+
+        <h3>例句二：begin — 及物 vs 不及物</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The meeting <code>began</code> at six.（会议在六点开始。）→ "会议开始"就完了，at six 是状语修饰动词 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">✅ We <code>began</code> the meeting.（我们开始了会议。）→ began 后面接了具体宾语 the meeting → <strong>及物动词（vt）</strong></div>
+        </div>
+        <div class="annotation warning">
+            <strong>核心判断方法：</strong><br>
+            判断 at six 是不是宾语：你能"开始六点"吗？不能！六点是一个抽象的时间概念，你没法把"六点"给开始掉。所以 at six 不是宾语，是状语。began 在这里是不及物动词。
+        </div>
+
+        <h3>例句三：walk — 及物 vs 不及物</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The man <code>walked</code> away.（那个男人走开了。）→ 走了就完了，没有宾语 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">✅ He <code>walked</code> the dog.（他遛狗。）→ walked 后面接了具体宾语 the dog → <strong>及物动词（vt）</strong></div>
+        </div>
+        <div class="annotation">
+            walk 表示"走"时是不及物动词（走了就完了）；但表示"遛（某物）"时是及物动词（遛了狗，有宾语）。
+        </div>
+
+        <h3>例句四：wash — 及物 vs 不及物</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She <code>washed</code> clothes.（她洗了衣服。）→ washed 后面接了具体宾语 clothes → <strong>及物动词（vt）</strong></div>
+            <div class="example-item">✅ The clothes <code>washed</code> well.（这衣服很好洗/洗起来很好。）→ washed 后面没有接宾语，well 是副词修饰 washed → <strong>不及物动词（vi）</strong></div>
+        </div>
+        <div class="annotation warning">
+            <strong>核心判断方法：</strong><br>
+            判断 well 是不是宾语：你能把"好"给洗了吗？不能！well 是副词，修饰 wash，表示"洗得好"，不是宾语。所以 washed 在这里是不及物动词。
+        </div>
+
+        <h3>例句五：listen — 不及物（必须加介词）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He <code>listens to</code> the music.（他听音乐。）→ listen 后面加了介词 to 才接宾语 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">❌ He listens the music.（错误！listen 不能直接接宾语）</div>
+        </div>
+        <div class="annotation warning">
+            <strong>重要判断标志：</strong><br>
+            看到动词后面加了介词（如 to）才接宾语 → 这个动词是不及物动词！<br>
+            listen 不能直接加宾语，必须加 to → listen to → 所以 listen 是不及物动词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心难点：vi + 介词的两种不同结构</h2>
+        <p>这是本节课<strong>最重要、最核心</strong>的知识点。老师提出了一个关键问题：</p>
+
+        <h3>两个句子，都是 vi + 介词，但结构完全不同</h3>
+
+        <div class="example-box">
+            <div class="example-item">✅ He <code>looked at</code> the man.（他看着那个男人。）→ 主谓宾结构</div>
+            <div class="example-item">✅ The meeting <code>began</code> at six.（会议在六点开始。）→ 主谓结构</div>
+        </div>
+
+        <div class="annotation">
+            两个句子中，looked 和 began 都是不及物动词（vi），后面都加了介词（at）。但它们的句子结构完全不同！
+        </div>
+
+        <h3>关键区别：施加关系（Agency Relationship）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>He looked at the man.</th>
+                    <th>The meeting began at six.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>句子结构</strong></td>
+                    <td>主谓宾（SVO）</td>
+                    <td>主谓（SV）</td>
+                </tr>
+                <tr>
+                    <td><strong>looked/began 的词性</strong></td>
+                    <td>不及物动词（vi）</td>
+                    <td>不及物动词（vi）</td>
+                </tr>
+                <tr>
+                    <td><strong>at 的作用</strong></td>
+                    <td>帮助动词接宾语（look 没有能力直接接宾语，所以招 at 帮忙）</td>
+                    <td>引出状语（at six 是时间状语，修饰 began）</td>
+                </tr>
+                <tr>
+                    <td><strong>核心区别</strong></td>
+                    <td>look 和 man 之间有<strong>施加关系</strong>（看着→施加在 man 身上）</td>
+                    <td>began 和 six 之间<strong>没有施加关系</strong>（不能"开始六点"）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心判断标准：施加关系</strong><br>
+            - 谓语和宾语之间一定有一个<strong>施加关系</strong>（施加动作）<br>
+            - look 想施加在 man 身上，但 look 没有能力直接接宾语，所以招 at 帮忙 → look at the man → 主谓宾<br>
+            - begin 不想施加在 six 身上（你不能"开始六点"）→ at six 是状语 → 主谓结构<br>
+            - <strong>有施加关系 → 主谓宾；没有施加关系 → 主谓 + 状语</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 实战练习：判断及物/不及物</h2>
+        <p>老师给出了一系列句子，让同学们练习判断及物还是不及物：</p>
+
+        <h3>练习一：fly</h3>
+        <div class="example-box">
+            <div class="example-item">✅ Most birds can <code>fly</code>.（大多数鸟能飞。）→ 飞了就完了，没有宾语 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">✅ The kids are <code>flying</code> a kite.（孩子们在放风筝。）→ flew 后面接了具体宾语 a kite → <strong>及物动词（vt）</strong></div>
+        </div>
+
+        <h3>练习二：happen</h3>
+        <div class="example-box">
+            <div class="example-item">✅ It <code>happened</code> yesterday.（它昨天发生了。）→ happened 后面没有宾语，yesterday 是状语 → <strong>不及物动词（vi）</strong></div>
+        </div>
+        <div class="annotation warning">
+            <strong>核心判断：</strong><br>
+            你能"发生昨天"吗？不能！你没有开天辟地的能力把"昨天"给发生出来。所以 yesterday 不是宾语，是状语。happen 是不及物动词。
+        </div>
+
+        <h3>练习三：stop</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The baby <code>stopped</code> crying.（婴儿停止哭泣了。）→ stopped 后面接了具体宾语 crying（动名词做宾语）→ <strong>及物动词（vt）</strong></div>
+        </div>
+        <div class="annotation">
+            注意：crying 是动名词（动词+ing），在这里做 stopped 的宾语。动名词可以做宾语，这是 G08 讲过的知识点。stopped 直接接了宾语，所以是及物动词。
+        </div>
+
+        <h3>练习四：speak</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She <code>spoke</code> at the meeting.（她在会议上发言了。）→ spoke 后面没有宾语，at the meeting 是状语 → <strong>不及物动词（vi）</strong></div>
+        </div>
+        <div class="annotation">
+            她"在会议上发言"——发言了就完了，at the meeting 是地点状语，不是宾语。你不能"发言会议"。
+        </div>
+
+        <h3>练习五：begin</h3>
+        <div class="example-box">
+            <div class="example-item">✅ Can I <code>begin</code> at once?（我可以立刻开始吗？）→ began 后面没有宾语，at once 是状语 → <strong>不及物动词（vi）</strong></div>
+            <div class="example-item">✅ He <code>began</code> working.（他开始工作了。）→ began 后面接了具体宾语 working（动名词）→ <strong>及物动词（vt）</strong></div>
+        </div>
+
+        <h3>练习六：leave</h3>
+        <div class="example-box">
+            <div class="example-item">✅ They <code>left</code> Beijing.（他们离开了北京。）→ left 后面接了具体宾语 Beijing → <strong>及物动词（vt）</strong></div>
+            <div class="example-item">✅ They <code>left</code> last week.（他们上周离开了。）→ left 后面没有宾语，last week 是状语 → <strong>不及物动词（vi）</strong></div>
+        </div>
+        <div class="annotation warning">
+            <strong>核心判断：</strong><br>
+            你能"离开上周"吗？不能！你没有扭转时空的能力把"上周"给离开。所以 last week 不是宾语，是状语。left 在这里是不及物动词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 实战练习总览表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>动词</th>
+                    <th>词性</th>
+                    <th>判断依据</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The door opened.</td>
+                    <td>opened</td>
+                    <td><strong>vi</strong></td>
+                    <td>开了就完了，没有宾语</td>
+                </tr>
+                <tr>
+                    <td>He opened the door.</td>
+                    <td>opened</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 the door</td>
+                </tr>
+                <tr>
+                    <td>The meeting began at six.</td>
+                    <td>began</td>
+                    <td><strong>vi</strong></td>
+                    <td>at six 是状语（不能"开始六点"）</td>
+                </tr>
+                <tr>
+                    <td>We began the meeting.</td>
+                    <td>began</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 the meeting</td>
+                </tr>
+                <tr>
+                    <td>The man walked away.</td>
+                    <td>walked</td>
+                    <td><strong>vi</strong></td>
+                    <td>走了就完了，没有宾语</td>
+                </tr>
+                <tr>
+                    <td>He walked the dog.</td>
+                    <td>walked</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 the dog（遛狗）</td>
+                </tr>
+                <tr>
+                    <td>She washed clothes.</td>
+                    <td>washed</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 clothes</td>
+                </tr>
+                <tr>
+                    <td>The clothes washed well.</td>
+                    <td>washed</td>
+                    <td><strong>vi</strong></td>
+                    <td>well 是副词修饰（不能"洗好"）</td>
+                </tr>
+                <tr>
+                    <td>He listens to the music.</td>
+                    <td>listens</td>
+                    <td><strong>vi</strong></td>
+                    <td>加了介词 to 才接宾语</td>
+                </tr>
+                <tr>
+                    <td>He looked at the man.</td>
+                    <td>looked</td>
+                    <td><strong>vi</strong></td>
+                    <td>加了介词 at，有施加关系 → 主谓宾</td>
+                </tr>
+                <tr>
+                    <td>Most birds can fly.</td>
+                    <td>fly</td>
+                    <td><strong>vi</strong></td>
+                    <td>飞了就完了，没有宾语</td>
+                </tr>
+                <tr>
+                    <td>The kids are flying a kite.</td>
+                    <td>flying</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 a kite（放风筝）</td>
+                </tr>
+                <tr>
+                    <td>It happened yesterday.</td>
+                    <td>happened</td>
+                    <td><strong>vi</strong></td>
+                    <td>yesterday 是状语（不能"发生昨天"）</td>
+                </tr>
+                <tr>
+                    <td>The baby stopped crying.</td>
+                    <td>stopped</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 crying（动名词）</td>
+                </tr>
+                <tr>
+                    <td>She spoke at the meeting.</td>
+                    <td>spoke</td>
+                    <td><strong>vi</strong></td>
+                    <td>at the meeting 是状语</td>
+                </tr>
+                <tr>
+                    <td>Can I begin at once?</td>
+                    <td>begin</td>
+                    <td><strong>vi</strong></td>
+                    <td>at once 是状语（不能"开始立刻"）</td>
+                </tr>
+                <tr>
+                    <td>He began working.</td>
+                    <td>began</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 working（动名词）</td>
+                </tr>
+                <tr>
+                    <td>They left Beijing.</td>
+                    <td>left</td>
+                    <td><strong>vt</strong></td>
+                    <td>直接接了宾语 Beijing</td>
+                </tr>
+                <tr>
+                    <td>They left last week.</td>
+                    <td>left</td>
+                    <td><strong>vi</strong></td>
+                    <td>last week 是状语（不能"离开上周"）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心判断逻辑总结</h2>
+        <p>老师反复强调判断及物/不及物的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>判断方法：看动词后面有没有"宾语"，以及动词和宾语之间有没有"施加关系"</strong>
+        </div>
+
+        <h3>三步判断法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看动词后面有没有直接接名词（宾语）→ 有 → 可能是 vt</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>如果没有直接接名词，而是加了介词（如 at, to）才接名词 → 这个动词是 vi</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断"施加关系"：动词和后面的名词之间有没有施加关系？有 → 主谓宾；没有 → 主谓 + 状语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>施加关系速查</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>动词 + 名词</th>
+                    <th>有施加关系？</th>
+                    <th>句子结构</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He looked at the man.</td>
+                    <td>look at + man</td>
+                    <td>✅ 有（看着→施加在 man 身上）</td>
+                    <td>主谓宾（SVO）</td>
+                </tr>
+                <tr>
+                    <td>The meeting began at six.</td>
+                    <td>began + at six</td>
+                    <td>❌ 没有（不能"开始六点"）</td>
+                    <td>主谓（SV）+ 状语</td>
+                </tr>
+                <tr>
+                    <td>They left Beijing.</td>
+                    <td>left + Beijing</td>
+                    <td>✅ 有（离开→施加在北京）</td>
+                    <td>主谓宾（SVO）</td>
+                </tr>
+                <tr>
+                    <td>They left last week.</td>
+                    <td>left + last week</td>
+                    <td>❌ 没有（不能"离开上周"）</td>
+                    <td>主谓（SV）+ 状语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 能"X 某物"→ 及物动词（vt）<br>
+            - 不能"X 某物"→ 不及物动词（vi），后面的成分是状语<br>
+            - 加了介词才接宾语 → 这个动词是 vi<br>
+            - 有施加关系 → 主谓宾；没有施加关系 → 主谓 + 状语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+及物动词 VS 不及物动词
+├── 核心回顾：动词三大分类
+│   ├── 助动词（辅助，不能单独构成谓语）
+│   ├── 实义动词（具体动作，可单独构成谓语）→ 及物(vt) + 不及物(vi)
+│   └── 系动词（不表具体动作，表状态/感官/变化/似乎）
+├── 及物动词（vt）
+│   ├── 后面必须直接接宾语
+│   ├── 构成主谓宾结构（SVO）
+│   └── 动词和宾语之间有"施加关系"
+├── 不及物动词（vi）
+│   ├── 要么不加宾语 → 主谓结构（SV）
+│   ├── 要么加介词再加宾语 → 但介词是vi自带的
+│   └── 常见标志：looked at, listened to, began at...
+├── 核心难点：vi + 介词的两种结构
+│   ├── 有施加关系 → 主谓宾（He looked at the man）
+│   └── 没有施加关系 → 主谓 + 状语（The meeting began at six）
+├── 判断方法：三步走
+│   ├── 第一步：看有没有直接接宾语
+│   ├── 第二步：加了介词才接宾语 → vi
+│   └── 第三步：有没有施加关系？
+├── 实战练习（19个例句）
+│   ├── open: opened（vi）/ opened the door（vt）
+│   ├── begin: began at six（vi）/ began the meeting（vt）
+│   ├── walk: walked away（vi）/ walked the dog（vt）
+│   ├── wash: washed clothes（vt）/ washed well（vi）
+│   ├── listen: listens to the music（vi）
+│   ├── fly: can fly（vi）/ flying a kite（vt）
+│   ├── happen: happened yesterday（vi）
+│   ├── stop: stopped crying（vt）
+│   ├── speak: spoke at the meeting（vi）
+│   ├── leave: left Beijing（vt）/ left last week（vi）
+└── 核心口诀
+    └── 能"X 某物"→ vt；不能"X 某物"→ vi，后面是状语
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记及物/不及物的基本定义：</strong>及物动词（vt）后面必须直接接宾语，构成主谓宾结构；不及物动词（vi）要么不加宾语（主谓结构），要么加介词再加宾语。</li>
+            <li><strong>核心判断方法——施加关系：</strong>动词和后面的名词之间有没有"施加关系"？有 → 主谓宾；没有 → 主谓 + 状语。比如 look at the man（看着→施加在 man 身上）有施加关系；began at six（开始六点）没有施加关系。</li>
+            <li><strong>口诀：能"X 某物"→ vt；不能"X 某物"→ vi：</strong>能"开北京"→ vt；不能"开上周"→ vi。这个口诀贯穿全课所有例句。</li>
+            <li><strong>介词是 vi 的标志：</strong>看到动词后面加了介词（at, to）才接宾语 → 这个动词是不及物动词。listen to、look at 都是 vi。</li>
+            <li><strong>注意动名词做宾语：</strong>stopped crying、began working 中，crying 和 working 是动名词做宾语。动名词（动词+ing）可以做宾语，这是 G08 的知识点。</li>
+            <li><strong>同一个动词可能既是 vt 又是 vi：</strong>open、begin、walk、wash、fly、leave 等词在不同语境中可能及物也可能不及物，关键看后面有没有直接接宾语。</li>
+            <li><strong>循序渐进：</strong>按照学习路线图一步步走，在课文中观察及物/不及物的用法，保证不走弯路。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

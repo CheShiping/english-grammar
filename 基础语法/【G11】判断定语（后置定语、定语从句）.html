@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G11 判断定语（后置定语、定语从句）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G11】判断定语（后置定语、定语从句）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G11 是「基础语法」系列第11课，由陈老师主讲。本节课是名词基础的<strong>实战操作课</strong>，聚焦如何判断后置定语和定语从句。</p>
+        <p>在此之前，同学们已经学习了名词短语（G01）、代词（G04-G06）、数词（G07）、不定式/动名词/句子（G08）、判断主语（G09）、定语的本质与分类（G10）。本节课将定语的知识付诸实战，通过大量例句练习，训练同学们判断后置定语和定语从句的能力。</p>
+
+        <div class="annotation">
+            本节课的核心目标：不忘初心——牢记"太阳系的模型"，找到笼统的名词，找到把它变小的东西，提到前面翻译。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G01「名词短语」、G07「数词」、G09「判断主语」、G10「定语的本质与分类」的基础上。需要理解名词短语的构成、七种限定词、定语的本质（把笼统的名词变小），以及前置定语和后置定语的区别。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：太阳系的模型与"不忘初心"</h2>
+        <p>在判断定语之前，老师先快速回顾之前讲过的核心概念，称之为"不忘初心"：</p>
+
+        <h3>三种笼统的名词</h3>
+        <p>老师强调有三种"笼统的名词"，要用一生来咀嚼：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>类型</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一种</strong></td>
+                    <td><strong>名词短语</strong></td>
+                    <td>如 letter、woman、place、basket、book、city、money、man、tigers、boy、wallet、places、singers、day</td>
+                </tr>
+                <tr>
+                    <td><strong>第二种</strong></td>
+                    <td><strong>代词</strong></td>
+                    <td>如 most（大多数）→ 不定代词，也是笼统的概念</td>
+                </tr>
+                <tr>
+                    <td><strong>第三种</strong>（最重要）</td>
+                    <td><strong>数词</strong></td>
+                    <td>如 one third（1/3）→ 无穷无尽的集合概念</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            "不忘初心"就是：不要忘记我们要找的是"笼统的名词"，然后找到"把它变小的东西"（短语或句子），提到它前面翻译。这就是定语的本质。
+        </div>
+
+        <h3>前置定语 vs 后置定语回顾</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>构成</th>
+                    <th>位置</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>前置定语</strong></td>
+                    <td>单个独立的词</td>
+                    <td>名词前面</td>
+                    <td>不变序</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>短语或句子</td>
+                    <td>名词后面</td>
+                    <td>要调序（提到名词前面翻译）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 后置定语判断实战（8个例句逐句分析）</h2>
+
+        <h3>例句一：the letter on the desk is for Mr. 5</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>letter</code>（信，有很多种信）</div>
+            <div class="example-item">✅ 后置定语：<code>on the desk</code>（介词短语，把 letter 变小了）</div>
+            <div class="example-item">→ 翻译：桌上的信是给吴先生的</div>
+        </div>
+        <div class="annotation">
+            on the desk 是介词短语，放在 letter 后面做后置定语，翻译时要提到名词前面 → "桌上的信"。
+        </div>
+
+        <h3>例句二：the woman with a baby in her arm is his mother</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>woman</code>（女人，很多女人）</div>
+            <div class="example-item">✅ 后置定语：<code>with a baby in her arm</code>（介词短语，把 woman 变小了）</div>
+            <div class="example-item">✅ 嵌套定语：<code>in her arm</code> 修饰 <code>baby</code>（把 baby 变小）</div>
+            <div class="example-item">→ 翻译：手里抱着一个小孩的女人是他的妈妈</div>
+        </div>
+        <div class="annotation">
+            这是一个嵌套结构：with a baby in her arm 整体修饰 woman，而 in her arm 又修饰 baby。翻译时要层层提到前面 → "手里抱着一个小孩的女人"。
+        </div>
+
+        <h3>例句三：We need a place twice larger than this one</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>place</code>（地方，很多地方）</div>
+            <div class="example-item">✅ 后置定语：<code>twice larger than this one</code>（形容词短语，把 place 变小了）</div>
+            <div class="example-item">→ 翻译：我们需要一个两倍于比这个大两倍的地方</div>
+        </div>
+        <div class="annotation">
+            twice larger than this one 是形容词短语做后置定语，修饰 place。翻译时提到前面 → "两倍于比这个大两倍的地方"。
+        </div>
+
+        <h3>例句四：He picked up a basket full of eggs</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>basket</code>（篮子，很多篮子）</div>
+            <div class="example-item">✅ 后置定语：<code>full of eggs</code>（形容词短语，把 basket 变小了）</div>
+            <div class="example-item">→ 翻译：他捡起了一个装满鸡蛋的篮子</div>
+        </div>
+        <div class="annotation">
+            full of eggs 是形容词短语（full 是形容词），做后置定语修饰 basket。翻译时提到前面 → "装满鸡蛋的篮子"。
+        </div>
+
+        <h3>例句五：It's a book worth no more than one dollar</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>book</code>（书，很多书）</div>
+            <div class="example-item">✅ 后置定语：<code>worth no more than one dollar</code>（形容词短语，把 book 变小了）</div>
+            <div class="example-item">→ 翻译：这是一本价值不超过一美元的书</div>
+        </div>
+        <div class="annotation">
+            worth no more than one dollar 是形容词短语，做后置定语修饰 book。worth 本身是形容词，后面接金额表示"值……钱"。
+        </div>
+
+        <h3>例句六：This is a city far from the coast</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>city</code>（城市，很多城市）</div>
+            <div class="example-item">✅ 后置定语：<code>far from the coast</code>（介词短语，把 city 变小了）</div>
+            <div class="example-item">→ 翻译：这是离海岸线很远的一座城市</div>
+        </div>
+        <div class="annotation">
+            far from the coast 是介词短语，做后置定语修饰 city。翻译时提到前面 → "离海岸线很远的城市"。
+        </div>
+
+        <h3>例句七：He has money enough to buy a car</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>money</code>（钱，很多钱）</div>
+            <div class="example-item">✅ 后置定语：<code>enough to buy a car</code>（形容词短语，把 money 变小了）</div>
+            <div class="example-item">→ 翻译：他有足够买一架车的钱</div>
+        </div>
+        <div class="annotation">
+            enough 是形容词，enough to buy a car 是形容词短语，做后置定语修饰 money。注意 enough 做形容词时放在名词后面（与 very 不同，very 放在名词前面）。
+        </div>
+
+        <h3>例句八：The man downstairs tried to sleep</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 笼统的名词：<code>man</code>（男人，很多男人）</div>
+            <div class="example-item">✅ 后置定语：<code>downstairs</code>（副词，省略了 living → the man living downstairs）</div>
+            <div class="example-item">→ 翻译：楼下的男人尝试要睡觉</div>
+        </div>
+        <div class="annotation">
+            downstairs 是副词，做后置定语修饰 man。这是省略结构，完整形式是 the man (who is) living downstairs。副词做后置定语是省略形式的典型例子。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 特殊结构分析</h2>
+
+        <h3>特殊结构一：places of interest</h3>
+        <div class="example-box">
+            <div class="example-item">✅ There are lots of <code>places of interest</code> leading repairing in our city.</div>
+            <div class="example-item">→ places of interest = 风景名胜/旅游景点（已固化为固定短语）</div>
+        </div>
+        <div class="annotation">
+            places of interest 最早造词时，interest 是修饰 places 的后置定语（of interest 把 places 变小）。但由于长期使用，已经固化为一个整体，意思是"风景名胜/旅游景点"。所以可以整体当作一个笼统的名词短语来理解。后面的 leading repairing 修饰的是整个 places of interest。
+        </div>
+
+        <h3>特殊结构二：leading repairing in our city</h3>
+        <div class="example-box">
+            <div class="example-item">✅ leading repairing → 需要修缮的（修饰 places of interest）</div>
+            <div class="example-item">✅ in our city → 修饰 leading repairing（在咱们城市的）</div>
+            <div class="example-item">→ 翻译：咱们城市需要修缮的风景名胜</div>
+        </div>
+        <div class="annotation">
+            leading repairing 是现在分词短语做后置定语，修饰 places of interest。in our city 修饰 leading repairing（表示地点）。这里涉及状语的概念，后面课程会细讲。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 三大核心易错点</h2>
+
+        <h3>易错点一：把谓语当定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Tigers</code> <code>belonging to meat eating animals</code> <code>feed</code> on meat.</div>
+            <div class="example-item">→ 主语：Tigers（笼统的名词）</div>
+            <div class="example-item">→ 后置定语：belonging to meat eating animals（把 tigers 变小了 → 属于肉食动物的老虎）</div>
+            <div class="example-item">→ 谓语：<code>feed</code>（吃）</div>
+            <div class="example-item">→ 翻译：属于肉食动物的老虎吃肉</div>
+        </div>
+        <div class="annotation">
+            很多同学看到 animals 后面的 feed 就把它划为定语，这是错误的！feed 是谓语动词，不是定语。我们要找的是定语，不是主谓宾。belonging to meat eating animals 才是修饰 tigers 的后置定语（现在分词短语）。
+        </div>
+
+        <h3>易错点二：定语 vs 状语混淆</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He picked up <code>a wallet</code> <code>on the ground</code> <code>on the way back home</code>.</div>
+            <div class="example-item">→ on the ground → 修饰 wallet（掉在地上的钱包）→ <strong>定语</strong></div>
+            <div class="example-item">→ on the way back home → 修饰 picked up（在回家路上捡的）→ <strong>状语</strong></div>
+            <div class="example-item">→ 翻译：他在回家的路上捡起了一个掉在地上的钱包</div>
+        </div>
+        <div class="annotation warning">
+            <strong>判断方法：</strong><br>
+            - on the ground → 钱包掉在地上 → 修饰 wallet（名词）→ 定语<br>
+            - on the way back home → 不是在"回家路上的钱包"（钱包没有"回家"的概念）→ 修饰 picked up（动词）→ 状语<br>
+            定语修饰名词，提到名词前面翻译；状语修饰动词，提到动词前面翻译。
+        </div>
+
+        <h3>易错点三：most 也是笼统的名词（代词）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Most</code> of the <code>singers</code> <code>invited to the party</code> were from America.</div>
+            <div class="example-item">→ most → 不定代词（大多数）→ 笼统的概念</div>
+            <div class="example-item">→ singers → 把 most 的范围变小了 → most 的后置定语</div>
+            <div class="example-item">→ invited to the party → 把 singers 的范围变小了 → singers 的后置定语</div>
+            <div class="example-item">→ 谓语：were from America</div>
+            <div class="example-item">→ 翻译：被邀请到这个 party 的歌手的大多数是来自美国的</div>
+        </div>
+        <div class="annotation warning">
+            <strong>这是最挑战世界观的一点！</strong><br>
+            most（大多数）是一个不定代词，它本身也是一个笼统的概念。singers 把 most 的范围变小了，所以 singers 是 most 的后置定语。invited to the party 又把 singers 变小了。这是一个三层嵌套的定语链：<br>
+            invited to the party → 修饰 singers → singers → 修饰 most<br>
+            谓语是 were（系动词+表语），不是定语！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 定语从句的引入</h2>
+        <p>当定语是一个完整的句子时，就构成了<strong>定语从句</strong>。本节课通过一个经典例句引入：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ He still remembers <code>the day</code> <code>he first stepped into Old Trafford</code>.</div>
+            <div class="example-item">→ 笼统的名词：<code>the day</code>（那一天，生命中有很多天）</div>
+            <div class="example-item">→ 定语从句：<code>he first stepped into Old Trafford</code>（完整的句子，把 day 变小了）</div>
+            <div class="example-item">→ 翻译：他仍然记得他第一次踏进老特拉福德的那一天</div>
+        </div>
+        <div class="annotation">
+            he first stepped into Old Trafford 是一个完整的句子（有主语 he、谓语 stepped into、宾语 Old Trafford），做后置定语修饰 the day。Old Trafford 是曼联队的主场。这就是"定语从句"——用完整的句子来做定语。
+        </div>
+
+        <div class="annotation warning">
+            <strong>定语从句的本质：</strong><br>
+            - 定语从句 = 一个完整的句子做定语<br>
+            - 它修饰一个笼统的名词，把它从大变小<br>
+            - 因为句子太长，必须放在名词后面（后置定语）<br>
+            - 翻译时要绕到名词前面<br>
+            - 这就是英文阅读"绕"的根源之一！
+        </div>
+
+        <h3>定语从句的识别方法</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到笼统的名词（如 the day）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看后面有没有一个完整的句子在修饰它</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>检查：这个句子有主语、有谓语 → 是句子 → 做定语 → 定语从句</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 后置定语构成方式总览表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>构成方式</th>
+                    <th>例句</th>
+                    <th>被修饰的名词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>the letter <code>on the desk</code></td>
+                    <td>letter</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>介词短语（嵌套）</strong></td>
+                    <td>the woman <code>with a baby in her arm</code></td>
+                    <td>woman</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>形容词短语</strong></td>
+                    <td>a place <code>twice larger than this one</code></td>
+                    <td>place</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>形容词短语</strong></td>
+                    <td>a basket <code>full of eggs</code></td>
+                    <td>basket</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>形容词短语</strong></td>
+                    <td>a book <code>worth no more than one dollar</code></td>
+                    <td>book</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>a city <code>far from the coast</code></td>
+                    <td>city</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>形容词短语</strong></td>
+                    <td>money <code>enough to buy a car</code></td>
+                    <td>money</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>副词（省略结构）</strong></td>
+                    <td>the man <code>downstairs</code></td>
+                    <td>man</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>现在分词短语</strong></td>
+                    <td>tigers <code>belonging to meat eating animals</code></td>
+                    <td>tigers</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>现在分词短语</strong></td>
+                    <td>a boy <code>calling himself John</code></td>
+                    <td>boy</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>a wallet <code>on the ground</code></td>
+                    <td>wallet</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><strong>过去分词短语</strong></td>
+                    <td>singers <code>invited to the party</code></td>
+                    <td>singers</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><strong>定语从句（完整句子）</strong></td>
+                    <td>the day <code>he first stepped into Old Trafford</code></td>
+                    <td>the day</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><strong>of 短语</strong></td>
+                    <td>places <code>of interest</code></td>
+                    <td>places</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 定语 vs 谓语 vs 状语 快速判断表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>定语</th>
+                    <th>状语</th>
+                    <th>谓语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>修饰对象</strong></td>
+                    <td>名词</td>
+                    <td>动词/形容词/副词/句子</td>
+                    <td>主语（陈述主语的动作/状态）</td>
+                </tr>
+                <tr>
+                    <td><strong>位置</strong></td>
+                    <td>后置定语在名词后面</td>
+                    <td>通常在句末或句首</td>
+                    <td>主语后面</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译位置</strong></td>
+                    <td>提到名词前面</td>
+                    <td>提到动词前面</td>
+                    <td>不变</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>把后面的内容放到名词前面，语义通顺 → 定语</td>
+                    <td>把后面的内容放到动词前面，语义通顺 → 状语</td>
+                    <td>句子的核心动词，不能省略</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>a wallet <code>on the ground</code>（掉在地上的钱包）</td>
+                    <td>picked up <code>on the way back home</code>（在回家路上捡的）</td>
+                    <td>feed on meat（吃肉）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+判断定语（后置定语、定语从句）
+├── 不忘初心：太阳系的模型
+│   ├── 三种笼统的名词：名词短语 / 代词 / 数词
+│   ├── 找到把它变小的东西（短语或句子）
+│   └── 提到前面翻译
+├── 后置定语判断实战（8个例句）
+│   ├── 介词短语：the letter on the desk
+│   ├── 介词短语（嵌套）：the woman with a baby in her arm
+│   ├── 形容词短语：a place twice larger than this one
+│   ├── 形容词短语：a basket full of eggs
+│   ├── 形容词短语：a book worth no more than one dollar
+│   ├── 介词短语：a city far from the coast
+│   ├── 形容词短语：money enough to buy a car
+│   └── 副词（省略）：the man downstairs
+├── 特殊结构
+│   ├── places of interest → 固定短语（风景名胜）
+│   └── leading repairing in our city → 分词短语 + 介词短语
+├── 三大易错点
+│   ├── 易错一：把谓语当定语（feed 是谓语，不是定语）
+│   ├── 易错二：定语 vs 状语混淆（on the ground→定语，on the way→状语）
+│   └── 易错三：most 也是笼统的名词（代词），singers 修饰 most
+├── 定语从句的引入
+│   ├── 完整的句子做定语 = 定语从句
+│   ├── the day he first stepped into Old Trafford
+│   └── 识别方法：找笼统名词 → 看后面有没有完整句子修饰它
+└── 定语 vs 谓语 vs 状语 快速判断
+    ├── 定语 → 修饰名词 → 提到名词前面
+    ├── 状语 → 修饰动词 → 提到动词前面
+    └── 谓语 → 句子的核心动词 → 不能省略
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>不忘初心：</strong>找定语时，始终牢记"太阳系的模型"——找到笼统的名词，找到把它变小的东西，提到前面翻译。</li>
+            <li><strong>三种笼统的名词：</strong>名词短语、代词、数词。看到 any 笼统的词都要警惕，它可能是定语的被修饰对象。</li>
+            <li><strong>勿忘初心，不要找错成分：</strong>找定语 ≠ 找主谓宾。谓语动词（如 feed、were）不是定语。要区分定语、谓语和状语。</li>
+            <li><strong>定语 vs 状语的判断：</strong>把后面的内容放到名词前面，语义通顺 → 定语；放到动词前面，语义通顺 → 状语。如 on the ground 修饰 wallet（定语），on the way back home 修饰 picked up（状语）。</li>
+            <li><strong>most 也是笼统的名词：</strong>most（大多数）是不定代词，也是笼统的概念。singers 把 most 变小了 → singers 是 most 的后置定语。invited to the party 又把 singers 变小了。</li>
+            <li><strong>定语从句的识别：</strong>找到笼统的名词 → 看后面有没有一个完整的句子（有主语有谓语）在修饰它 → 有 → 定语从句。</li>
+            <li><strong>固定短语整体理解：</strong>places of interest 等长期使用的结构已固化为整体，可以直接当作一个名词短语理解。</li>
+            <li><strong>循序渐进：</strong>按照学习路线图一步步走，在课文中观察定语的用法，保证不走弯路。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

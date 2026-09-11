@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G15 谓语的构成：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G15】谓语的构成</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G15 是「基础语法」系列第15课，由陈老师主讲。本节课是动词部分的<strong>核心综合课</strong>，系统讲解<strong>谓语的构成方式</strong>——即助动词、实义动词、系动词以何种方式组合构成谓语。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12）、be动词辨析（G13）、及物动词与不及物动词（G14）。本节课将之前所有动词知识融会贯通，回答一个核心问题：<strong>谓语到底是怎么构成的？</strong></p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清楚谓语构成的三种情况，以及复合谓语的公式（最多三个助动词 + 实义动词/系动词）。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G13「Be动词」、G14「及物动词 VS 不及物动词」的基础上。需要理解助动词（四类）、实义动词（及物/不及物）、系动词（四类）的基本分类。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：动词三大分类</h2>
+        <p>在讲谓语构成之前，老师快速回顾 G12 讲过的动词分类体系：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>核心特征</th>
+                    <th>比喻</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>起辅助作用，不能单独构成谓语</td>
+                    <td>护士（辅助医生做手术）</td>
+                </tr>
+                <tr>
+                    <td><strong>实义动词（行为动词）</strong></td>
+                    <td>表示具体动作，能单独构成谓语</td>
+                    <td>外科医生（做具体手术）</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>不表具体动作，表状态/感官/变化/似乎</td>
+                    <td>内科医生（看内在东西）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            助动词分为四类：be动词、情态动词、狭义助动词（do/does/did）、完成助动词（have/has/had）。本节课要研究的就是：这三种动词在什么情况下、以何种方式能构成谓语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 谓语构成的三种情况</h2>
+        <p>老师提出：谓语构成有三种"粗糙"情况（即三种基本模式）：</p>
+
+        <h3>第一种：实义动词（或词组）单独构成谓语</h3>
+        <p>实义动词可以单独构成谓语，不需要任何辅助。此外，实义动词的词组（如及物动词短语、不及物动词+介词）也可以单独构成谓语。</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ I <code>like</code> English.（我喜欢英语。）→ like 是实义动词，单独构成谓语</div>
+            <div class="example-item">✅ He <code>practices</code> running.（他练习跑步。）→ practices 是实义动词，单独构成主谓宾</div>
+            <div class="example-item">✅ He <code>finds out</code> the truth.（他找到了真相。）→ find out 是及物动词短语，单独构成谓语</div>
+            <div class="example-item">✅ I <code>look at</code> the bird.（我看着那只鸟。）→ look at 是不及物动词+介词，一起构成谓语</div>
+        </div>
+
+        <div class="annotation">
+            关键词组（如 find out、look at）也可以单独构成谓语。不及物动词加介词（如 look at）整体充当谓语，这属于"实义动词的词组"单独构成谓语的情况。
+        </div>
+
+        <h3>第二种：系动词 + 表语构成谓语（主系表结构）</h3>
+        <p>系动词不能单独构成谓语，必须后接表语，构成"主系表"结构。</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ He <code>is</code> a student.（他是一个学生。）→ is 是系动词，a student 是表语 → 表状态</div>
+            <div class="example-item">✅ Your idea <code>sounds</code> great.（你的主意听起来很棒。）→ sounds 是系动词，great 是表语 → 表感官</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心判断方法：替换法</strong><br>
+            判断一个动词是不是系动词，把它换成 be 动词，看意思是否基本不变：<br>
+            - Your idea <strong>sounds</strong> great → Your idea <strong>is</strong> great → 意思差别不大 → sounds 是系动词<br>
+            - I <strong>have</strong> a dream → I <strong>am</strong> a dream → 意思完全不同！→ have 不是系动词，是实义动词（拥有）
+        </div>
+
+        <h3>第三种：助动词 + 实义动词/系动词 一起构成谓语</h3>
+        <p>助动词不能单独构成谓语，必须和实义动词或系动词一起配合构成谓语。</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ You <code>can help</code> me.（你能帮我。）→ can（情态动词）+ help（实义动词）→ 助动词 + 实义动词</div>
+            <div class="example-item">✅ You <code>may keep</code> quiet.（你可以保持安静。）→ may（情态动词）+ keep（系动词）→ 助动词 + 系动词</div>
+            <div class="example-item">✅ He <code>has caught</code> a cold.（他感冒了。）→ has（完成助动词）+ caught（实义动词）→ 助动词 + 实义动词</div>
+            <div class="example-item">✅ She <code>is crying</code>.（她正在哭。）→ is（be动词）+ crying（实义动词）→ 助动词 + 实义动词</div>
+            <div class="example-item">✅ I <code>have been waiting</code>.（我一直在等。）→ have（完成助动词）+ been（be动词）+ waiting（实义动词）→ 两个助动词 + 实义动词</div>
+            <div class="example-item">✅ I <code>will stay</code> at home.（我会待在家里。）→ will（情态动词）+ stay（实义动词）→ 助动词 + 实义动词</div>
+        </div>
+
+        <div class="annotation">
+            助动词可以有两个（如 have been waiting），但最多三个。助动词+系动词的组合也是可能的，如 he has been a student（他当学生已经五年了）。
+        </div>
+
+        <h3>助动词 + 系动词 的详细分析</h3>
+        <p>老师用 he is a student 为基础，逐一演示四类助动词如何与系动词 is 搭配：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>助动词类型</th>
+                    <th>例句</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>be动词</strong></td>
+                    <td>He <code>is being</code> a student.</td>
+                    <td>is（助动词）+ being（be的doing形式，表进行）→ 强调"他确实正在是一个学生"</td>
+                </tr>
+                <tr>
+                    <td><strong>情态动词</strong></td>
+                    <td>He <code>can be</code> a student.</td>
+                    <td>can（情态动词）+ be（动词原形）→ "他可以是一个学生"</td>
+                </tr>
+                <tr>
+                    <td><strong>狭义助动词</strong></td>
+                    <td>He <code>does be</code> a student.</td>
+                    <td>does（狭义助动词）+ be（动词原形）→ 语法正确但很少这么说，通常用 really 代替</td>
+                </tr>
+                <tr>
+                    <td><strong>完成助动词</strong></td>
+                    <td>He <code>has been</code> a student (for five years).</td>
+                    <td>has（完成助动词）+ been（be的过去分词）→ "他当学生已经五年了"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心易错点：keep 的词性辨析</strong><br>
+            - You <strong>keep</strong> quiet. → 换成 be 动词：You be quiet. → 意思差不多 → keep 是系动词（表状态）<br>
+            - You <strong>keep</strong> the book. → 换成 be 动词：You be the book. → 意思完全不同 → keep 是实义动词（保持/拿住）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 复合谓语公式（终极总结）</h2>
+        <p>老师用"手术"的比喻来总结谓语构成的终极公式：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>最多三个"护士"（助动词）+ 一个"外科医生"（实义动词/系动词）</strong>
+        </div>
+
+        <h3>复合谓语结构示例（从简单到复杂）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>构成</th>
+                    <th>例句</th>
+                    <th>时态/语态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1助动词</td>
+                    <td>助动词 + 实义动词</td>
+                    <td>He <code>is looking</code> for it.</td>
+                    <td>现在进行时</td>
+                </tr>
+                <tr>
+                    <td>2助动词</td>
+                    <td>助动词 + 助动词 + 实义动词</td>
+                    <td>He <code>has been looking</code> for it.</td>
+                    <td>现在完成进行时</td>
+                </tr>
+                <tr>
+                    <td>3助动词（最复杂）</td>
+                    <td>情态动词 + 助动词 + 助动词 + 实义动词</td>
+                    <td>He <code>could have been looking</code> for it.</td>
+                    <td>过去将来完成进行时</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            以 look for 为例，层层叠加助动词：<br>
+            - look for（实义动词短语）→ 基础<br>
+            - is looking for（加 be 动词 → 进行时）→ 1个助动词<br>
+            - has been looking for（加完成助动词 have + be 的 been → 完成进行时）→ 2个助动词<br>
+            - could have been looking for（加情态动词 could → 过去将来完成进行时）→ 3个助动词（最复杂）
+        </div>
+
+        <div class="annotation warning">
+            <strong>终极公式：</strong><br>
+            情态动词 + have/has/had + be + doing/done + 实义动词/系动词<br>
+            这是英语中最复杂的谓语结构，最多三个助动词。学完这个，谓语动词你就学到头了！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 谓语构成方式总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>构成方式</th>
+                    <th>结构</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>实义动词单独构成</strong></td>
+                    <td>主语 + 实义动词</td>
+                    <td>I like English.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>实义动词词组单独构成</strong></td>
+                    <td>主语 + 实义动词短语</td>
+                    <td>He finds out the truth.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>不及物动词 + 介词</strong></td>
+                    <td>主语 + vi + 介词 + 宾语</td>
+                    <td>I look at the bird.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>系动词 + 表语</strong></td>
+                    <td>主语 + 系动词 + 表语</td>
+                    <td>He is a student.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>助动词 + 实义动词</strong></td>
+                    <td>助动词 + 实义动词</td>
+                    <td>You can help me.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>助动词 + 系动词</strong></td>
+                    <td>助动词 + 系动词 + 表语</td>
+                    <td>You may keep quiet.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>两个助动词 + 实义动词</strong></td>
+                    <td>助动词 + 助动词 + 实义动词</td>
+                    <td>I have been waiting.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>三个助动词 + 实义动词</strong></td>
+                    <td>情态 + 助 + 助 + 实义动词</td>
+                    <td>He could have been looking for it.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>6. 系动词判断技巧：替换法</h2>
+        <p>老师提供了一个非常实用的判断技巧——用 be 动词替换原动词，看意思是否基本不变：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>原句</th>
+                    <th>替换为 be 动词</th>
+                    <th>意思变化</th>
+                    <th>结论</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Your idea <code>sounds</code> great.</td>
+                    <td>Your idea <code>is</code> great.</td>
+                    <td>差别不大</td>
+                    <td><strong>sounds 是系动词</strong></td>
+                </tr>
+                <tr>
+                    <td>I <code>have</code> a dream.</td>
+                    <td>I <code>am</code> a dream.</td>
+                    <td>完全不同！"我有梦想"≠"我就是个梦想"</td>
+                    <td><strong>have 不是系动词，是实义动词</strong></td>
+                </tr>
+                <tr>
+                    <td>You <code>keep</code> quiet.</td>
+                    <td>You <code>be</code> quiet.</td>
+                    <td>差别不大</td>
+                    <td><strong>keep 是系动词（表状态）</strong></td>
+                </tr>
+                <tr>
+                    <td>You <code>keep</code> the book.</td>
+                    <td>You <code>be</code> the book.</td>
+                    <td>完全不同！"你拿着书"≠"你就是书"</td>
+                    <td><strong>keep 不是系动词，是实义动词</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            把动词换成 be 动词，意思差不多 → 系动词；意思差很多 → 实义动词（或其他词性）。<br>
+            这个技巧贯穿整个 G15，是判断系动词最实用的方法。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+谓语的构成
+├── 核心回顾：动词三大分类
+│   ├── 助动词（护士：辅助，不能单独构成谓语）
+│   ├── 实义动词（外科医生：具体动作，可单独构成谓语）
+│   └── 系动词（内科医生：不表具体动作，表状态/感官/变化/似乎）
+├── 谓语构成的三种情况
+│   ├── 第一种：实义动词（或词组）单独构成谓语
+│   │   ├── 实义动词单独：I like English.
+│   │   ├── 实义动词词组：He finds out the truth.
+│   │   └── 不及物动词+介词：I look at the bird.
+│   ├── 第二种：系动词 + 表语（主系表结构）
+│   │   ├── He is a student.（表状态）
+│   │   └── Your idea sounds great.（表感官）
+│   └── 第三种：助动词 + 实义动词/系动词
+│       ├── 助动词 + 实义动词：You can help me. / He is crying.
+│       └── 助动词 + 系动词：You may keep quiet. / He has been a student.
+├── 系动词判断技巧：替换法
+│   ├── sounds → is（意思差不多）→ 系动词
+│   ├── have → am（意思差很多）→ 实义动词
+│   └── keep → be（看语境：quiet→系动词，the book→实义动词）
+├── 复合谓语公式
+│   ├── 最多三个"护士"（助动词）+ 一个"外科医生"
+│   ├── 1助动词：is looking for（进行时）
+│   ├── 2助动词：has been looking for（完成进行时）
+│   └── 3助动词：could have been looking for（过去将来完成进行时）
+└── 终极公式
+    └── 情态动词 + have/has/had + be + doing/done + 实义动词/系动词
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记谓语构成的三种情况：</strong>① 实义动词（或词组）单独构成；② 系动词+表语；③ 助动词+实义动词/系动词。这是全课的核心框架。</li>
+            <li><strong>助动词不能单独构成谓语：</strong>它必须和实义动词或系动词一起配合。助动词最多三个，实义动词/系动词只有一个（"外科医生"）。</li>
+            <li><strong>掌握替换法判断系动词：</strong>把动词换成 be 动词，意思差不多 → 系动词；意思差很多 → 实义动词。这是 G15 最实用的技巧。</li>
+            <li><strong>注意 keep 的双重身份：</strong>keep quiet → 系动词（表状态）；keep the book → 实义动词（拥有/拿住）。关键看后面接什么。</li>
+            <li><strong>理解复合谓语的叠加逻辑：</strong>从 look for 出发，一层层加助动词：is looking for → has been looking for → could have been looking for。最多三个助动词。</li>
+            <li><strong>助动词+系动词的组合：</strong>be动词→being（doing形式）；情态动词→be（原形）；狭义助动词→be（原形）；完成助动词→been（过去分词）。</li>
+            <li><strong>谓语动词学到头了：</strong>学完 G15，谓语动词的知识就全部讲完了。后续课程会在此基础上展开各种时态和语态的应用。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

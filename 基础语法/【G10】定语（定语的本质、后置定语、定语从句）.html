@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G10 定语（定语的本质、后置定语、定语从句）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G10】定语（定语的本质、后置定语、定语从句）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G10 是「基础语法」系列第10课，由陈老师主讲。本节课是名词基础的<strong>深度拓展课</strong>，从 G09 简要提到的"定语"概念出发，系统讲解<strong>定语的本质、前置定语与后置定语的区别</strong>，以及定语的多种构成方式。</p>
+        <p>在此之前，同学们已经学习了名词短语（G01）、代词（G04-G06）、数词（G07）、不定式/动名词/句子（G08）、判断主语与定语初步概念（G09）。本节课将定语的知识全面展开，为后续学习定语从句打下坚实基础。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清"定语"的本质——把一个笼统的名词从大变小，并掌握前置定语和后置定语的判断规则。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G01「名词短语」、G07「数词」、G09「判断主语」的基础上。需要理解名词短语的构成、七种限定词、数词可以做主语，以及定语的基本概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：词性 vs 句子成分</h2>
+        <p>课程首先区分了两个容易混淆的概念——<strong>词性</strong>和<strong>句子成分</strong>的区别，这是理解定语的关键：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>含义</th>
+                    <th>举例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>一个词的"性质"，形容词是一种词性</td>
+                    <td>beautiful（美丽的）→ 词性是形容词</td>
+                </tr>
+                <tr>
+                    <td><strong>句子成分</strong></td>
+                    <td>一个词在句子中"扮演的角色"，定语是一种成分</td>
+                    <td>同一个形容词可以做定语、状语等</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            形容词是词性，定语是句子成分。一个词可以做定语，但定语不一定只是形容词——副词、介词短语、分词短语、不定式等都可以做定语。
+        </div>
+
+        <h3>用"身份"比喻词性与成分</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 你的"词性"是男的 → 但你的"成分"可能是男朋友、女朋友、猪队友、备胎……</div>
+            <div class="example-item">✅ 你的"词性"是女的 → 但你的"成分"可能是女朋友、小仙女、小姐姐、女神、女神经……</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 词性 = 性质（形容词是一种词性）<br>
+            - 成分 = 角色（定语是一种成分）<br>
+            - 形容词可以做定语，但定语不一定是形容词<br>
+            - 有的词只能扮演一种成分，有的可以扮演多种成分
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 定语的本质：太阳系模型</h2>
+        <p>定语的核心功能是：<strong>把一个笼统的名词从大变小，从笼统变得具体。</strong></p>
+
+        <h3>太阳系模型比喻</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 女孩 → 范围很大（全世界约35亿女性）→ 这是"太阳"（最笼统的核心名词）</div>
+            <div class="example-item">✅ 中国的女孩 → 范围变小了（中国女性）</div>
+            <div class="example-item">✅ 中国四川的女孩 → 范围更小</div>
+            <div class="example-item">✅ 中国四川成都的女孩 → 范围更小</div>
+            <div class="example-item">✅ 中国四川成都哪个学校哪排扎马尾辫穿什么衣服的女孩 → 精确到一个人</div>
+        </div>
+
+        <div class="annotation">
+            这就是"太阳系模型"：核心名词是太阳，定语像行星一样围绕它转，一层一层地把范围缩小。每加一个定语，范围就变小一点，最终精确到你要指的那个具体对象。
+        </div>
+
+        <h3>定语的"反向操作"</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 你和男朋友逛街被看到 → 说"这是我的朋友" → 把"男朋友"（一个）变成了"朋友"（很多个）→ 范围变大了</div>
+        </div>
+
+        <div class="annotation">
+            虽然定语通常把范围变小，但有时也会反向操作把范围变大。不过大多数情况下，定语的作用就是把名词从大变小、从笼统变具体。
+        </div>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>定语的本质 = 把一个笼统的名词从大变小（或从笼统变具体）</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 回顾：one third of the students 的定语分析</h2>
+        <p>老师用"太阳系模型"重新分析了 G09 的核心难点：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ <code>One third of the students in this class are girls.</code></div>
+            <div class="example-item">→ "one third" 是太阳（最核心的概念，无穷大的范围）</div>
+            <div class="example-item">→ "of the students" 把 one third 的范围变小了 → students 是 one third 的<strong>后置定语</strong></div>
+            <div class="example-item">→ "in this class" 把 students 的范围变小了 → in this class 是 students 的<strong>定语</strong></div>
+            <div class="example-item">→ 主干：One third are girls.（1/3 是女生 → 语法正确！）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>定语链（层层缩小）：</strong><br>
+            in this class → 修饰 students（把 students 范围变小）<br>
+            of the students → 修饰 one third（把 one third 范围变小）<br>
+            核心词是 one third，其他都是定语
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ 类比：beautiful girls → beautiful 是定语，把 girls 的范围变小</div>
+            <div class="example-item">✅ 类比：1/3 of the water → water 是定语，把 1/3 的范围变小</div>
+            <div class="example-item">✅ 类比：1/3 of the money → money 是定语，把 1/3 的范围变小</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 定语的分类：前置定语 vs 后置定语</h2>
+        <p>定语主要分为两类，判断标准非常简单：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>位置</th>
+                    <th>构成</th>
+                    <th>翻译时是否调序</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>前置定语</strong></td>
+                    <td>名词前面</td>
+                    <td>单个的、独立的词</td>
+                    <td>不变序（中文也放前面）</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>名词后面</td>
+                    <td>短语或句子</td>
+                    <td>要调序（中文要绕到名词前面）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            判断前置还是后置的秘诀：看定语是"单个的、独立的词"还是"短语/句子"。单个独立的词放名词前面（前置定语），短语和句子放名词后面（后置定语）。
+        </div>
+
+        <h3>为什么英语有后置定语，中文没有？</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 中文定语永远在名词前面：美丽的女孩、树下的男孩</div>
+            <div class="example-item">✅ 英语单个词也在名词前面：beautiful girl、good boy</div>
+            <div class="example-item">✅ 英语短语/句子在名词后面：a boy <em>under the tree</em></div>
+            <div class="example-item">→ 翻译时要调序：树下的男孩（把后面的定语绕到前面）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>后置定语是阅读困难的根源之一：</strong><br>
+            为什么有些英文句子读起来很顺，有些很绕？很大的原因就是后置定语！<br>
+            英语把修饰成分放到名词后面，中文习惯把修饰成分放前面，翻译时就要"绕回去"，所以感觉绕口。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 前置定语的判断：单个的、独立的词</h2>
+        <p>前置定语的核心特征是：<strong>单个的、独立的词</strong>。"独立"的意思是：每个词都可以单独修饰名词，它们之间没有直接的修饰关系，只是简单堆叠。</p>
+
+        <h3>独立词的判断方法</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>American</code> country music → 挡住 American → country music（通）</div>
+            <div class="example-item">✅ <code>Country</code> music → 挡住 country → American music（通）</div>
+            <div class="example-item">→ 两个词各自独立修饰 music，简单堆叠 → 都是前置定语</div>
+        </div>
+
+        <h3>前置定语 vs 后置定语的对比</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>定语</th>
+                    <th>类型</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Good</code> boy</td>
+                    <td>Good（单个形容词）</td>
+                    <td>前置定语</td>
+                    <td>好男孩（不变序）</td>
+                </tr>
+                <tr>
+                    <td><code>American</code> country music</td>
+                    <td>American / country（独立的词）</td>
+                    <td>前置定语</td>
+                    <td>美国乡村音乐（不变序）</td>
+                </tr>
+                <tr>
+                    <td>The boy <code>under the tree</code></td>
+                    <td>Under the tree（介词短语）</td>
+                    <td>后置定语</td>
+                    <td>树下的男孩（要调序）</td>
+                </tr>
+                <tr>
+                    <td>The <code>next</code> man</td>
+                    <td>Next（单个形容词）</td>
+                    <td>前置定语</td>
+                    <td>下一个男人（不变序）</td>
+                </tr>
+                <tr>
+                    <td>The man <code>next to me</code></td>
+                    <td>Next to me（介词短语）</td>
+                    <td>后置定语</td>
+                    <td>我旁边的男人（要调序）</td>
+                </tr>
+                <tr>
+                    <td>The <code>tallest</code> boy</td>
+                    <td>Tallest（单个形容词最高级）</td>
+                    <td>前置定语</td>
+                    <td>最高的男孩（不变序）</td>
+                </tr>
+                <tr>
+                    <td>The boy <code>in this class</code></td>
+                    <td>In this class（介词短语）</td>
+                    <td>后置定语</td>
+                    <td>这个班里的男孩（要调序）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 定语的构成方式</h2>
+        <p>定语可以由多种词性或结构充当，老师逐一讲解：</p>
+
+        <h3>构成一：副词作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ People <code>there</code>（那儿的人们）→ there 是副词，放在名词后面做后置定语</div>
+            <div class="example-item">✅ He didn't like the man <code>downstairs</code>.（他不喜欢住在楼下的男人。）→ downstairs 是副词</div>
+        </div>
+
+        <div class="annotation">
+            副词主要修饰动词，怎么会修饰名词做定语？原因是这是一种省略结构：people there = people living there（住在那儿的人们），there 原本修饰的是 living（动词），省略后直接放在 people 后面做定语。
+        </div>
+
+        <h3>构成二：形容词作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Good</code> boy（好男孩）→ 单个形容词 → 前置定语</div>
+            <div class="example-item">✅ The <code>next</code> man（下一个男人）→ 单个形容词 → 前置定语</div>
+            <div class="example-item">✅ The man <code>next to me</code>（我旁边的男人）→ 介词短语 → 后置定语</div>
+        </div>
+
+        <h3>构成三：介词短语作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The boy <code>under the tree</code>（树下的男孩）→ under the tree 是介词短语 → 后置定语</div>
+            <div class="example-item">✅ The tallest boy <code>in this class</code>（这个班里最高的男孩）→ in this class 是介词短语 → 后置定语</div>
+        </div>
+
+        <h3>构成四：现在分词短语作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The boy <code>crying over there</code>（在那边哭的男孩）→ crying over there 是现在分词短语 → 后置定语</div>
+        </div>
+
+        <h3>构成五：过去分词短语作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The house <code>built last year</code>（去年建的房子）→ built last year 是过去分词短语 → 后置定语</div>
+        </div>
+
+        <h3>构成六：不定式作定语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I have something <code>to say</code>.（我有话要说。）→ to say 是不定式 → 后置定语</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>不定式 to say 怎么可能是定语？</strong><br>
+            抓住定语的本质：something 是笼统的概念（某些事情，什么事？），to say 把它变小了（不是 to do、不是 to eat、不是 to sell，而是"来说的"事情）→ 所以 to say 是 something 的定语！<br>
+            翻译："我有话要说"（后置定语变序翻译成中文）或"我有些要说的话"（不变序也通）。
+        </div>
+
+        <h3>定语构成方式总览</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>构成方式</th>
+                    <th>位置</th>
+                    <th>举例</th>
+                    <th>是否调序</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>副词</strong></td>
+                    <td>后置</td>
+                    <td>People <code>there</code>（那儿的人们）</td>
+                    <td>要调序 → 那儿的人们</td>
+                </tr>
+                <tr>
+                    <td><strong>形容词（单个/独立）</strong></td>
+                    <td>前置</td>
+                    <td><code>Good</code> boy / <code>American</code> country music</td>
+                    <td>不变序</td>
+                </tr>
+                <tr>
+                    <td><strong>介词短语</strong></td>
+                    <td>后置</td>
+                    <td>The boy <code>under the tree</code></td>
+                    <td>要调序 → 树下的男孩</td>
+                </tr>
+                <tr>
+                    <td><strong>现在分词短语</strong></td>
+                    <td>后置</td>
+                    <td>The boy <code>crying over there</code></td>
+                    <td>要调序 → 在那边哭的男孩</td>
+                </tr>
+                <tr>
+                    <td><strong>过去分词短语</strong></td>
+                    <td>后置</td>
+                    <td>The house <code>built last year</code></td>
+                    <td>要调序 → 去年建的房子</td>
+                </tr>
+                <tr>
+                    <td><strong>不定式</strong></td>
+                    <td>后置</td>
+                    <td>Something <code>to say</code></td>
+                    <td>要调序 → 要说的话</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心难点：定语从句的引入</h2>
+        <p>当定语是一个完整的句子时，就构成了<strong>定语从句</strong>。这是本节课为后续学习做的铺垫。</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ The boy <code>who is crying over there</code>（在那边哭的那个男孩）</div>
+            <div class="example-item">→ who is crying over there 是一个完整的句子 → 做后置定语 → 定语从句</div>
+        </div>
+
+        <div class="annotation">
+            定语从句的本质：用一个完整的句子来做定语，把名词从大变小。因为句子太长，必须放在名词后面（后置定语），翻译时要绕到名词前面。
+        </div>
+
+        <div class="annotation warning">
+            <strong>为什么定语从句是阅读困难的根源？</strong><br>
+            定语从句 = 一个完整的句子做定语 → 放在名词后面 → 翻译时要绕回去 → 句子越长越绕<br>
+            这就是为什么很多同学觉得英文阅读"绕"——后置定语（尤其是定语从句）造成的！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 前置定语 vs 后置定语 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>前置定语</th>
+                    <th>后置定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>位置</strong></td>
+                    <td>名词前面</td>
+                    <td>名词后面</td>
+                </tr>
+                <tr>
+                    <td><strong>构成</strong></td>
+                    <td>单个的、独立的词</td>
+                    <td>短语或句子</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译调序</strong></td>
+                    <td>不变序（中文也放前面）</td>
+                    <td>要调序（绕到名词前面）</td>
+                </tr>
+                <tr>
+                    <td><strong>举例</strong></td>
+                    <td>good boy / American country music</td>
+                    <td>the boy under the tree / something to say</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+定语（定语的本质、后置定语、定语从句）
+├── 词性 vs 句子成分
+│   ├── 词性 = 性质（形容词是一种词性）
+│   └── 成分 = 角色（定语是一种成分）
+│   └── 形容词可以做定语，但定语不一定是形容词
+├── 定语的本质：太阳系模型
+│   ├── 核心：把一个笼统的名词从大变小（从笼统变具体）
+│   ├── 女孩 → 中国的女孩 → 四川的女孩 → 成都的女孩 → 精确到一个人
+│   └── 偶尔也可以反向操作（把范围变大）
+├── one third of the students 的定语分析
+│   ├── one third = 太阳（最核心的概念，无穷大）
+│   ├── of the students → students 是 one third 的后置定语
+│   ├── in this class → in this class 是 students 的定语
+│   └── 主干：One third are girls.（正确！）
+├── 定语分类：前置 vs 后置
+│   ├── 前置定语：单个的、独立的词 → 名词前面 → 不变序
+│   └── 后置定语：短语或句子 → 名词后面 → 要调序
+├── 定语的六种构成方式
+│   ├── 副词（there）→ 后置 → 省略结构
+│   ├── 形容词（good）→ 前置 → 单个/独立
+│   ├── 介词短语（under the tree）→ 后置
+│   ├── 现在分词短语（crying over there）→ 后置
+│   ├── 过去分词短语（built last year）→ 后置
+│   └── 不定式（to say）→ 后置 → 缩小 something 的范围
+└── 定语从句（铺垫）
+    └── 完整的句子做定语 → 后置定语 → 翻译时要绕回去
+        └── 这就是英文阅读"绕"的根源之一！
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记定语的本质：</strong>定语 = 把一个笼统的名词从大变小（或从笼统变具体）。不管定语是什么形式，抓住这个本质就不会错。</li>
+            <li><strong>区分词性和成分：</strong>形容词是词性，定语是成分。形容词可以做定语，但定语不一定是形容词——副词、介词短语、分词短语、不定式等都可以做定语。</li>
+            <li><strong>前置 vs 后置的判断秘诀：</strong>单个的、独立的词 → 前置定语（不变序）；短语或句子 → 后置定语（要调序）。"独立"的判断方法：挡住一个词，看另一个词是否还能单独修饰名词。</li>
+            <li><strong>理解"独立"的含义：</strong>American country music 中，挡住 American 剩下 country music（通），挡住 country 剩下 American music（通）→ 两个词各自独立修饰 music → 都是前置定语。</li>
+            <li><strong>后置定语是阅读困难的根源：</strong>英语把短语/句子做定语放在名词后面，中文习惯放前面，翻译时要"绕回去"，所以感觉绕口。明白这一点，读长句就不会慌了。</li>
+            <li><strong>不定式也可以做定语：</strong>to say 把 something 的范围变小了（不是 to do、不是 to eat，而是"来说的"）→ to say 是 something 的定语。</li>
+            <li><strong>定语从句是后续重点：</strong>本节课为定语从句做了铺垫——完整的句子做定语 = 定语从句。后续课程会详细展开。</li>
+            <li><strong>循序渐进：</strong>按照学习路线图一步步走，在课文中观察定语的用法，保证不走弯路。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

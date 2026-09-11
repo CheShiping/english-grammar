@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G20 非谓语的本质：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G20】非谓语的本质</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G20 是「基础语法」系列第20课，由陈老师主讲。本节课是动词部分的<strong>本质突破课</strong>，专门讲解<strong>非谓语的本质</strong>——即不定式、动名词、分词为什么存在、各自代表什么含义。</p>
+        <p>在此之前，同学们已经学习了非谓语的基础概念（G19），掌握了用"抽象思维"秒判非谓语三种形式（to do / doing / done）的方法。本节课将深入探讨非谓语的<strong>本质含义</strong>和<strong>运用逻辑</strong>，从"知其然"到"知其所以然"。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清非谓语的三种形式各自的本质含义（不确定/确定/分身），以及谓语的产生条件（一山不容二虎原则），并能运用本质逻辑分析例句。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」、G19「非谓语之上帝视角」的基础上。需要理解谓语构成的三种方式、非谓语的三种形式，以及助动词和实义动词的区别。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：谓语与非谓语的关系</h2>
+        <p>在讲非谓语的本质之前，老师先简要回顾动词、谓语与非谓语之间的关系：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>含义</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>动词</strong></td>
+                    <td>可以构成谓语，也可以构成非谓语</td>
+                    <td>动词是一个大类</td>
+                </tr>
+                <tr>
+                    <td><strong>谓语动词</strong></td>
+                    <td>动词构成谓语</td>
+                    <td>谓语一定是动词构成的</td>
+                </tr>
+                <tr>
+                    <td><strong>非谓语动词</strong></td>
+                    <td>动词不构成谓语</td>
+                    <td>动词不一定构成谓语，也可以构成非谓语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：动词 → 要么构成谓语，要么构成非谓语。这是一个二分法。谓语可以正面找（三种构成方式），非谓语可以用"正难则反"的方法——排除非谓语后，剩下的就是谓语。
+        </div>
+
+        <h3>谓语构成的三种方式（回顾 G15）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>构成方式</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>实义动词单独构成</strong></td>
+                    <td>主语 + 实义动词（如 I like English）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>系动词单独构成</strong></td>
+                    <td>主语 + 系动词 + 表语（如 He is a student）</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>助动词 + 实义动词/系动词</strong></td>
+                    <td>助动词 + 实义动词或系动词（如 You can help me）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>非谓语的抽象形式（回顾 G19）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语形式</th>
+                    <th>抽象归类</th>
+                    <th>判断标志</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>to do</strong></td>
+                    <td>to + 动词原形</td>
+                    <td>前面两个字母是 to</td>
+                </tr>
+                <tr>
+                    <td><strong>doing</strong></td>
+                    <td>以 -ing 结尾</td>
+                    <td>以 -ing 结尾</td>
+                </tr>
+                <tr>
+                    <td><strong>done</strong></td>
+                    <td>过去分词</td>
+                    <td>过去分词形式（尤其 ABC 型）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 谓语的产生条件（核心前提）</h2>
+        <p>谓语不是你想产生就能产生的，它必须有特定的条件。老师总结了<strong>三种产生谓语的条件</strong>：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件序号</th>
+                    <th>条件</th>
+                    <th>结构</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>条件一</strong></td>
+                    <td><strong>主语 + 谓语</strong></td>
+                    <td>S + V</td>
+                    <td>主语名正言顺可以产生一个谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>条件二</strong></td>
+                    <td><strong>主语 + 谓语 + 连接词 + 谓语</strong></td>
+                    <td>S + V, V and/or/but V</td>
+                    <td>主语产生一个谓语后，加连接词（and/or/but）可以再接一个谓语（共用主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件三</strong></td>
+                    <td><strong>主语 + 谓语 + 连接词 + 主语 + 谓语</strong></td>
+                    <td>S + V, conj + S + V</td>
+                    <td>主语产生一个谓语后，加连接词+新主语+新谓语（并列句或从句）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：归根到底，<strong>只有主语才可以产生谓语</strong>。条件二是"共用主语"的并列谓语，条件三是"新主语"引导的新谓语。连接词可以是并列连词（and/or/but → 并列句），也可以是从属连词（that/which/when → 从句）。
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心结论：</strong><br>
+            除以上三种情况外，句中出现的动词<strong>必须用非谓语形式</strong>。这就是"一山不容二虎"原则——一个主谓结构中只能有一个谓语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 英语第一原则：一山不容二虎</h2>
+        <p>老师提出了一个核心原则——<strong>"一山不容二虎"</strong>，用来理解谓语和非谓语的关系：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ 一个主谓结构中，只能有一个谓语</div>
+            <div class="example-item">✅ 主语 S 可以产生一个谓语</div>
+            <div class="example-item">✅ 如果还要出现动词，且没有连接词+主语 → 必须用非谓语</div>
+        </div>
+
+        <h3>"一山不容二虎"的三种结构模式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>模式</th>
+                    <th>结构</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>模式一</strong></td>
+                    <td>S + 谓语 + 非谓语</td>
+                    <td>非谓语在谓语后面（如 I like swimming）</td>
+                </tr>
+                <tr>
+                    <td><strong>模式二</strong></td>
+                    <td>非谓语 + S + 谓语</td>
+                    <td>非谓语在句首（如 Smoking is bad）</td>
+                </tr>
+                <tr>
+                    <td><strong>模式三</strong></td>
+                    <td>S + 非谓语 + ... + 谓语</td>
+                    <td>非谓语在主语和谓语之间（如 I found him crying）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 主语 → 产生谓语<br>
+            - 加连接词（and/or/but）→ 可以再产生谓语<br>
+            - 加连接词 + 新主语 → 可以产生新谓语（从句）<br>
+            - 以上都不是 → 必须用非谓语（一山不容二虎）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 非谓语的三种形式：名称、抽象与本质</h2>
+        <p>老师从三个层面来理解非谓语：名称、抽象、本质。这是本节课最核心的部分。</p>
+
+        <h3>第一层：名称</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>不定式</strong></td>
+                    <td>to do（to + 动词原形）</td>
+                </tr>
+                <tr>
+                    <td><strong>动名词</strong></td>
+                    <td>doing（以 -ing 结尾）</td>
+                </tr>
+                <tr>
+                    <td><strong>现在分词</strong></td>
+                    <td>doing（以 -ing 结尾）</td>
+                </tr>
+                <tr>
+                    <td><strong>过去分词</strong></td>
+                    <td>done（过去分词形式）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            注意：动名词和现在分词形式一样（都是 doing），但本质不同。这是很多同学困惑的地方，本节课将从本质层面加以区分。
+        </div>
+
+        <h3>第二层：抽象</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语</th>
+                    <th>抽象形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>不定式</td>
+                    <td>to do</td>
+                </tr>
+                <tr>
+                    <td>动名词</td>
+                    <td>doing</td>
+                </tr>
+                <tr>
+                    <td>现在分词</td>
+                    <td>doing</td>
+                </tr>
+                <tr>
+                    <td>过去分词</td>
+                    <td>done</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>第三层：本质（最核心）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语形式</th>
+                    <th>本质关键词</th>
+                    <th>核心含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>不定式（to do）</strong></td>
+                    <td><strong>不确定</strong></td>
+                    <td>不确定的、临时的、将来的、一次性的</td>
+                </tr>
+                <tr>
+                    <td><strong>动名词（doing）</strong></td>
+                    <td><strong>确定</strong></td>
+                    <td>确定的、长期的、稳定的、习惯性的</td>
+                </tr>
+                <tr>
+                    <td><strong>现在分词（doing）</strong></td>
+                    <td><strong>分身</strong></td>
+                    <td>与谓语动词同步发生（谓语的分身）</td>
+                </tr>
+                <tr>
+                    <td><strong>过去分词（done）</strong></td>
+                    <td><strong>完成</strong></td>
+                    <td>vi done 表完成；vt done 表完成 + 被动</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心本质总结：</strong><br>
+            - 不定式 = 不确定 → 表将来、目的、临时、一次性<br>
+            - 动名词 = 确定 → 表长期、习惯、稳定<br>
+            - 现在分词 = 谓语的分身 → 与谓语同步发生<br>
+            - 过去分词 = 完成 → vi done 表完成；vt done 表完成 + 被动
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 不定式的本质：不确定</h2>
+        <p>不定式的名字已经告诉了一切——<strong>"不定"=不确定</strong>。它的本质是不确定的，因此它用于表达不确定的概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>不确定表现</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>表将来</strong></td>
+                    <td>还没发生，不确定的事</td>
+                    <td>I want to go.（我想去 → 还没去）</td>
+                </tr>
+                <tr>
+                    <td><strong>表目的</strong></td>
+                    <td>目的是将来的，不确定的</td>
+                    <td>I came to help you.（我来帮你 → 目的是帮你）</td>
+                </tr>
+                <tr>
+                    <td><strong>表临时/一次性</strong></td>
+                    <td>临时起意，不稳定的</td>
+                    <td>I'd like to come.（我想来 → 口头说说，不一定真的来）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            不定式 = 不确定 = 临时的、一次性的、将来的、目的性的。比如 I'd like to come to your party（我想来参加你的派对）——只是口头说说，不一定真的能来，所以用不定式。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 动名词的本质：确定</h2>
+        <p>与不定式相反，动名词表达的是<strong>确定的、长期的、稳定的、习惯性的</strong>概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>确定表现</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>表长期/习惯</strong></td>
+                    <td>经常性的、稳定的行为</td>
+                    <td>Smoking is bad.（吸烟有害健康 → 不是一次吸，是长期习惯）</td>
+                </tr>
+                <tr>
+                    <td><strong>表一般性概念</strong></td>
+                    <td>泛指某一类行为</td>
+                    <td>Reading is fun.（阅读很有趣 → 泛指阅读这件事）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心对比：不定式 vs 动名词</strong><br>
+            - I like to swim. → 我想去游泳（一次性的、临时的）<br>
+            - I like swimming. → 我喜欢游泳（长期的、习惯性的爱好）<br>
+            - 不定式 = 不确定/临时；动名词 = 确定/长期/习惯
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 现在分词的本质：谓语的分身</h2>
+        <p>现在分词的本质是<strong>谓语的分身</strong>——它与谓语动词<strong>同步发生</strong>。注意：这里的"现在"不是指真正的现在，而是指与谓语动词的时间一致：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>谓语时间</th>
+                    <th>现在分词时间</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>现在（is/was 等）</td>
+                    <td>同步发生在现在</td>
+                    <td>I sit there, thinking of her.（我坐在那里，想着她。）</td>
+                </tr>
+                <tr>
+                    <td>过去（did 等）</td>
+                    <td>同步发生在过去</td>
+                    <td>He ran away, crying.（他跑开了，哭着。）</td>
+                </tr>
+                <tr>
+                    <td>将来（will 等）</td>
+                    <td>同步发生在将来</td>
+                    <td>He will come, smiling.（他会来的，微笑着。）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            现在分词 = 谓语的分身。它不是独立的谓语，而是从谓语"分"出来的一个动作，与谓语同步发生。谓语发生在什么时间，现在分词就发生在什么时间。
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心区分：动名词 doing vs 现在分词 doing</strong><br>
+            虽然形式一样（都是 -ing），但本质不同：<br>
+            - 动名词 doing → 确定、长期、习惯 → 可以作主语（Smoking is bad）<br>
+            - 现在分词 doing → 与谓语同步发生的分身 → 作伴随状语（I sit there, thinking of her）<br>
+            判断方法：看它在句中的功能——作主语/宾语 → 动名词；作伴随状语/定语 → 现在分词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 过去分词的本质：完成（+ 被动）</h2>
+        <p>过去分词的本质是<strong>完成</strong>。但过去分词需要分为两种情况：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>含义</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>vi + done</strong></td>
+                    <td><strong>表完成</strong></td>
+                    <td>不及物动词的过去分词，只表完成，不表被动（因为不及物动词没有宾语，没有被动）</td>
+                    <td>I found her gone.（我发现她走了/消失了。）</td>
+                </tr>
+                <tr>
+                    <td><strong>vt + done</strong></td>
+                    <td><strong>表完成 + 被动</strong></td>
+                    <td>及物动词的过去分词，既表完成又表被动（及物动词有宾语，可以变成被动）</td>
+                    <td>I found my bike stolen.（我发现我的自行车被偷了。）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - vi（不及物动词）→ 没有宾语 → 没有被动 → vi done 只表完成<br>
+            - vt（及物动词）→ 有宾语 → 可以有被动 → vt done 表完成 + 被动<br>
+            - 判断是 vi 还是 vt：看后面是否需要加介词才能接宾语。go to school（加 to → vi）；steal a bike（直接加宾语 → vt）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 综合应用：5个例句的本质分析</h2>
+        <p>老师用5个典型例句，演示如何运用非谓语的本质来选择正确的形式：</p>
+
+        <h3>例句一：I would like to come to your party.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>would like</code>（谓语）+ to come（非谓语）</div>
+            <div class="example-item">→ I 是主语，would like 是谓语</div>
+            <div class="example-item">→ come 前面没有连接词+主语 → 必须用非谓语（一山不容二虎）</div>
+            <div class="example-item">→ "想来参加派对"是口头上的、不确定的 → 用不定式 to do</div>
+        </div>
+
+        <h3>例句二：Smoking is bad.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Smoking</code>（非谓语，作主语）+ is（谓语）+ bad（表语）</div>
+            <div class="example-item">→ is 是谓语，smoking 在主语位置 → 必须用非谓语</div>
+            <div class="example-item">→ "吸烟有害健康"是长期的、习惯性的、一般性的真理 → 用动名词 doing</div>
+            <div class="example-item">→ smoking 作主语，看作单数</div>
+        </div>
+
+        <h3>例句三：I sat there, thinking of her.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I（主语）+ sat（谓语）+ there, <code>thinking</code>（非谓语）</div>
+            <div class="example-item">→ sat 是谓语，thinking 前面没有连接词+主语 → 必须用非谓语</div>
+            <div class="example-item">→ "坐"和"想"是同时发生的 → 用现在分词 doing（谓语的分身）</div>
+            <div class="example-item">→ 注意：这里的 smoking（动名词）和 thinking（现在分词）形式一样但本质不同</div>
+        </div>
+
+        <h3>例句四：I found her gone.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I（主语）+ found（谓语）+ her（宾语）+ <code>gone</code>（非谓语）</div>
+            <div class="example-item">→ go 是不及物动词（go to school，需要加 to）→ vi</div>
+            <div class="example-item">→ "我发现她已经走了" → 走了是已经完成的动作 → 用 vi + done（表完成）</div>
+            <div class="example-item">→ gone 只表完成，不表被动（go 是不及物动词，没有被动）</div>
+        </div>
+
+        <h3>例句五：I found my bike stolen.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I（主语）+ found（谓语）+ my bike（宾语）+ <code>stolen</code>（非谓语）</div>
+            <div class="example-item">→ steal 是及物动词（直接加宾语 steal a bike）→ vt</div>
+            <div class="example-item">→ "我发现我的自行车被偷了" → 自行车是被偷的 → 用 vt + done（表完成 + 被动）</div>
+            <div class="example-item">→ stolen 既表完成（已经偷了）又表被动（被偷）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>5个例句核心对比：</strong><br>
+            - 例句一：to come → 不定式（不确定/口头说说）<br>
+            - 例句二：smoking → 动名词（确定的长期习惯，作主语）<br>
+            - 例句三：thinking → 现在分词（与谓语 sat 同步发生，作伴随状语）<br>
+            - 例句四：gone → vi done（完成，无被动）<br>
+            - 例句五：stolen → vt done（完成 + 被动）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 非谓语本质总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语形式</th>
+                    <th>名称</th>
+                    <th>抽象</th>
+                    <th>本质</th>
+                    <th>核心含义</th>
+                    <th>典型用法</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>to do</strong></td>
+                    <td>不定式</td>
+                    <td>to + 动词原形</td>
+                    <td><strong>不确定</strong></td>
+                    <td>将来的、临时的、一次性的、目的性的</td>
+                    <td>want to do, like to do, 表目的</td>
+                </tr>
+                <tr>
+                    <td><strong>doing</strong></td>
+                    <td>动名词</td>
+                    <td>以 -ing 结尾</td>
+                    <td><strong>确定</strong></td>
+                    <td>长期的、稳定的、习惯性的</td>
+                    <td>smoking is bad（作主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>doing</strong></td>
+                    <td>现在分词</td>
+                    <td>以 -ing 结尾</td>
+                    <td><strong>分身</strong></td>
+                    <td>与谓语同步发生</td>
+                    <td>I sat there, thinking of her.</td>
+                </tr>
+                <tr>
+                    <td><strong>done</strong></td>
+                    <td>过去分词</td>
+                    <td>过去分词</td>
+                    <td><strong>完成</strong></td>
+                    <td>vi done 表完成；vt done 表完成+被动</td>
+                    <td>I found her gone / my bike stolen</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+        <p>老师总结了运用非谓语本质的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：判断是否需要非谓语（一山不容二虎）→ 第二步：根据本质选择形式</strong>
+        </div>
+
+        <h3>两步判断法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步：是否需要非谓语？</strong></td>
+                    <td>看是否满足谓语产生条件：① 主语+谓语 ② 主语+谓语+连接词+谓语 ③ 主语+谓语+连接词+主语+谓语。不满足 → 用非谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步：选哪种非谓语？</strong></td>
+                    <td>不确定/将来/目的/临时 → to do；确定/长期/习惯 → doing（动名词）；与谓语同步 → doing（现在分词）；已完成 → done（过去分词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>非谓语选择速查</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>语境特征</th>
+                    <th>选择</th>
+                    <th>理由</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>想去做某事（还没做）</td>
+                    <td><strong>to do</strong></td>
+                    <td>不确定、将来</td>
+                </tr>
+                <tr>
+                    <td>长期爱好/习惯</td>
+                    <td><strong>doing（动名词）</strong></td>
+                    <td>确定、稳定</td>
+                </tr>
+                <tr>
+                    <td>主语位置（泛指某行为）</td>
+                    <td><strong>doing（动名词）</strong></td>
+                    <td>确定、一般性概念</td>
+                </tr>
+                <tr>
+                    <td>伴随动作（与谓语同时）</td>
+                    <td><strong>doing（现在分词）</strong></td>
+                    <td>谓语的分身，同步发生</td>
+                </tr>
+                <tr>
+                    <td>动作已经完成</td>
+                    <td><strong>done（过去分词）</strong></td>
+                    <td>完成</td>
+                </tr>
+                <tr>
+                    <td>动作已完成 + 被动</td>
+                    <td><strong>done（过去分词，vt）</strong></td>
+                    <td>完成 + 被动</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 不确定 → to do（将来/目的/临时）<br>
+            - 确定 → doing（长期/习惯/一般性）<br>
+            - 同步发生 → doing（现在分词，谓语的分身）<br>
+            - 已完成 → done（过去分词）<br>
+            - vi done → 只表完成；vt done → 表完成 + 被动
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+非谓语的本质
+├── 核心回顾：动词、谓语、非谓语的关系
+│   ├── 动词 → 要么构成谓语，要么构成非谓语
+│   ├── 谓语 → 可以正面找（三种构成方式）
+│   └── 非谓语 → 正难则反（排除法）
+├── 谓语的产生条件（三种）
+│   ├── 条件一：主语 + 谓语（S + V）
+│   ├── 条件二：主语 + 谓语 + 连接词 + 谓语（S + V, V and V）
+│   └── 条件三：主语 + 谓语 + 连接词 + 主语 + 谓语（S + V, conj + S + V）
+├── 英语第一原则：一山不容二虎
+│   ├── 一个主谓结构中只能有一个谓语
+│   ├── 不满足三种产生条件 → 必须用非谓语
+│   └── 三种模式：S+谓语+非谓语 / 非谓语+S+谓语 / S+非谓语+...+谓语
+├── 非谓语的三个层面
+│   ├── 名称：不定式/动名词/现在分词/过去分词
+│   ├── 抽象：to do / doing / doing / done
+│   └── 本质（最核心）
+│       ├── 不定式 → 不确定 → 将来/目的/临时/一次性
+│       ├── 动名词 → 确定 → 长期/习惯/稳定
+│       ├── 现在分词 → 分身 → 与谓语同步发生
+│       └── 过去分词 → 完成 → vi done(完成) / vt done(完成+被动)
+├── 综合应用（5个例句）
+│   ├── I would like to come to your party. → to do（不确定）
+│   ├── Smoking is bad. → doing 动名词（确定的长期习惯，作主语）
+│   ├── I sat there, thinking of her. → doing 现在分词（与sat同步）
+│   ├── I found her gone. → vi done（完成，无被动）
+│   └── I found my bike stolen. → vt done（完成+被动）
+└── 核心口诀
+    ├── 不确定 → to do
+    ├── 确定 → doing（动名词）
+    ├── 同步 → doing（现在分词）
+    └── 完成 → done（过去分词）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记谓语产生的三种条件：</strong>① 主语+谓语 ② 主语+谓语+连接词+谓语 ③ 主语+谓语+连接词+主语+谓语。不满足 → 用非谓语。</li>
+            <li><strong>一山不容二虎：</strong>一个主谓结构中只能有一个谓语。多余的动词必须用非谓语形式。</li>
+            <li><strong>掌握非谓语的四个本质：</strong>不定式=不确定（将来/目的/临时）；动名词=确定（长期/习惯）；现在分词=分身（与谓语同步）；过去分词=完成（vi done表完成，vt done表完成+被动）。</li>
+            <li><strong>区分动名词和现在分词：</strong>虽然形式都是 doing，但动名词是"确定的名词"（可作主语/宾语），现在分词是"谓语的分身"（作伴随状语/定语），与谓语同步发生。</li>
+            <li><strong>区分 vi done 和 vt done：</strong>vi（不及物动词）没有宾语，没有被动 → vi done 只表完成；vt（及物动词）有宾语，可以有被动 → vt done 表完成+被动。判断 vi/vt 看是否需要加介词接宾语。</li>
+            <li><strong>运用本质分析例句：</strong>不要死记硬背 "like doing / want to do"，而是理解背后的逻辑——want to do 是因为"想去做"是不确定的、将来的；like doing 是因为"喜欢做"是长期的、习惯的。</li>
+            <li><strong>思维方式：</strong>本节课最重要的是用"本质思维"理解非谓语，而不是死记硬背。理解了"为什么"，运用起来就自然了。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
