@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G29 宾语补足语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G29】宾语补足语</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G29 是「基础语法」系列第29课，由陈老师主讲。本节课是句子成分部分的<strong>核心辨析课</strong>，专门讲解<strong>宾语补足语（Object Complement，简称"宾补"）的产生机制及其与双宾语结构的区别</strong>。</p>
+        <p>在此之前，同学们已经学习了宾语的产生机制（G26，VT1/VT2的分类）、动词宾语和介词宾语（G27，狭义宾语与广义宾语）、间接宾语IO和直接宾语DO（G28，双宾语的三要素）。本节课将引入一个新的句子结构——主谓宾宾补（SVT1 OC），并通过三个核心维度彻底区分它与主谓间宾直宾（SVIO DO）结构。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握宾补的产生机制（VT1 + 宾语 + 宾补），理解宾补与双宾语三大区别（动词类型不同/一个主体vs两个主体/不可变序vs可变序），并能准确判断宾补与后置定语。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G26「宾语」、G27「动词宾语和介词宾语」、G28「间接宾语IO和直接宾语DO」的基础上。需要理解 VT1/VT2 动词的区别，以及双宾语的三要素（准生证/两个主体/可变顺序）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：动词与宾语的关系</h2>
+        <p>在讲宾补之前，老师先回顾了动词分类与宾语的关系框架：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>结构</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>VT1（及物动词一类）</strong></td>
+                    <td>SVT1 + 宾语 → 主谓宾</td>
+                    <td>后面只接一个宾语（如 I play football）</td>
+                </tr>
+                <tr>
+                    <td><strong>VT1（及物动词一类）</strong></td>
+                    <td>SVT1 + 宾语 + 宾补 → 主谓宾宾补</td>
+                    <td>后面接宾语还要加宾补（如 She made me sad）</td>
+                </tr>
+                <tr>
+                    <td><strong>VT2（及物动词二类）</strong></td>
+                    <td>SVT2 + IO + DO → 主谓间宾直宾</td>
+                    <td>后面接两个宾语（如 She told me a joke）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：VT1 有两种情况——直接加宾语（主谓宾），或者加宾语还要加宾补（主谓宾宾补）。VT2 则产生间宾和直宾（双宾语结构）。宾补和双宾语看起来很像，但本质不同。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心难点：宾补 vs 双宾语 三大区别</h2>
+        <p>老师用抽象公式对比了双宾语（SVIO DO）和宾补（SVT1 OC）的三大区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>区别维度</th>
+                    <th>双宾语（SVIO DO）</th>
+                    <th>宾补（SVT1 OC）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>① 谓语动词类型</strong></td>
+                    <td>VT2（能接双宾语的动词，如 tell/give/show）</td>
+                    <td>VT1（只接一个宾语的动词，如 make/find/see）</td>
+                </tr>
+                <tr>
+                    <td><strong>② 主体数量</strong></td>
+                    <td>两个主体（间宾和直宾是不同的人/物）</td>
+                    <td>一个主体（宾语和宾补描述的是同一个主体）</td>
+                </tr>
+                <tr>
+                    <td><strong>③ 可变顺序</strong></td>
+                    <td>可以变序（V+IO+DO ↔ V+DO+to/for+IO）</td>
+                    <td>不可变序（宾语和宾补不能调换顺序）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 双宾语：VT2 + 两个主体 + 可变序<br>
+            - 宾补：VT1 + 一个主体 + 不可变序<br>
+            - 三个维度必须同时满足，缺一不可！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 经典对比：She told me a joke vs She made me sad</h2>
+        <p>老师用两个看似相似但本质不同的句子来演示三大区别：</p>
+
+        <h3>句子一：She told me a joke（双宾语）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She told me a joke.（她给我讲了一个笑话。）</div>
+            <div class="example-item">→ 谓语动词 told（VT2，有准生证）</div>
+            <div class="example-item">→ me（我）和 a joke（一个笑话）是<strong>两个主体</strong>——我是我，笑话是笑话</div>
+            <div class="example-item">→ 可变序：She told a joke <strong>to</strong> me. ✓</div>
+            <div class="example-item">→ 结论：<strong>主谓间宾直宾（SVIO DO）</strong></div>
+        </div>
+
+        <h3>句子二：She made me sad（宾补）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She made me sad.（她让我伤心了。）</div>
+            <div class="example-item">→ 谓语动词 made（VT1，只能接一个宾语）</div>
+            <div class="example-item">→ me（我）和 sad（伤心的）是<strong>一个主体</strong>——我就是伤心的那个</div>
+            <div class="example-item">→ 不可变序：❌ She made a sad for me.（没有这个说法）</div>
+            <div class="example-item">→ 结论：<strong>主谓宾宾补（SVT1 OC）</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - She told me a joke → me ≠ a joke → 两个主体 → 双宾语<br>
+            - She made me sad → me = sad（我就是伤心的） → 一个主体 → 宾补<br>
+            - 判断方法：问自己"宾语是宾补描述的对象吗？"如果是 → 一个主体 → 宾补
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 补充：see somebody do/doing/done 就是宾补</h2>
+        <p>老师补充说明之前 G22 讲过的"看见某人做某事"本质上就是宾补结构：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>非谓语形式</th>
+                    <th>含义</th>
+                    <th>结构分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>do（省略to的不定式）</strong></td>
+                    <td>看见某人做完了（全过程）</td>
+                    <td>somebody（宾语）+ do（宾补）→ 一个主体</td>
+                </tr>
+                <tr>
+                    <td><strong>doing（现在分词）</strong></td>
+                    <td>看见某人正在做（同步发生）</td>
+                    <td>somebody（宾语）+ doing（宾补）→ 一个主体</td>
+                </tr>
+                <tr>
+                    <td><strong>done（过去分词）</strong></td>
+                    <td>看见某人被做（完成+被动）</td>
+                    <td>somebody（宾语）+ done（宾补）→ 一个主体</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <div class="example-item">✅ I saw him <code>crying</code>.（我看见他在哭。）</div>
+            <div class="example-item">→ him（宾语）+ crying（宾补）→ 一个主体：他就是哭的那个人</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：crying 只是 him 的一个侧面（他不止会哭，还会笑、会闹），但它描述的是 him 本身，不是另一个主体。这就是"补充说明"的含义——补充说明宾语的一个侧面特征或动作。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 宾补的本质：补充说明（一个侧面）</h2>
+        <p>老师深入解释了"宾补"的本质含义——<strong>补充说明</strong>，并给出了判断方法：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ 我认为你很<strong>漂亮</strong> → 漂亮只是你的一个侧面（不是你的全部）</div>
+            <div class="example-item">✅ 我认为你很<strong>帅</strong> → 帅只是你的一个侧面</div>
+            <div class="example-item">✅ 我认为你很<strong>聪明</strong> → 聪明只是你的一个侧面</div>
+            <div class="example-item">✅ 我看见他<strong>进入房间</strong> → 进入房间只是他的一个动作侧面</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 宾补 = 补充说明 → 描述宾语的一个侧面（不是全部）<br>
+            - 宾补依附于一个主体（宾语）→ 一个主体<br>
+            - 宾补不会把宾语"变小"（这是与定语的关键区别，见下一节）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 实战练习：判断宾补还是双宾语</h2>
+        <p>老师给出了一系列句子，让同学们判断是宾补还是双宾语结构：</p>
+
+        <h3>练习一：His father named him Dong Ming</h3>
+        <div class="example-box">
+            <div class="example-item">✅ His father named him Dong Ming.（他父亲给他取名为董明。）</div>
+            <div class="example-item">→ him（宾语）+ Dong Ming（宾补）→ 一个主体：他就是董明</div>
+            <div class="example-item">→ 不可变序：❌ His father named Dong Ming to him.</div>
+            <div class="example-item">→ 结论：<strong>宾补</strong></div>
+        </div>
+
+        <h3>练习二：Paint the boat white</h3>
+        <div class="example-box">
+            <div class="example-item">✅ (We) painted the boat white.（我们把船漆成了白色。）</div>
+            <div class="example-item">→ the boat（宾语）+ white（宾补）→ 一个主体：船就是白色的</div>
+            <div class="example-item">→ 不可变序：❌ Painted white the boat.</div>
+            <div class="example-item">→ 结论：<strong>宾补</strong></div>
+        </div>
+
+        <h3>练习三：Let the fresh air in</h3>
+        <div class="example-box">
+            <div class="example-item">✅ Let the fresh air in.（让新鲜空气进来。）</div>
+            <div class="example-item">→ the fresh air（宾语）+ in（宾补）→ 一个主体：新鲜空气就是"进来"的那个</div>
+            <div class="example-item">→ 结论：<strong>宾补</strong></div>
+        </div>
+
+        <h3>练习四：Can't force him to lend you money</h3>
+        <div class="example-box">
+            <div class="example-item">✅ Can't force him to lend you money.（不能强迫他借钱给你。）</div>
+            <div class="example-item">→ him（宾语）+ to lend you money（宾补）→ 一个主体：他就是借钱的那个人</div>
+            <div class="example-item">→ 结论：<strong>宾补</strong></div>
+        </div>
+
+        <h3>练习五：I saw him enter the room</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I saw him enter the room.（我看见他进了房间。）</div>
+            <div class="example-item">→ him（宾语）+ enter the room（宾补）→ 一个主体：他就是进房间的那个人</div>
+            <div class="example-item">→ 结论：<strong>宾补</strong>（see somebody do something 的 do 就是宾补）</div>
+        </div>
+
+        <div class="annotation">
+            这五个练习的共同点：宾语和后面的词/短语描述的是同一个主体，且不可变序 → 都是宾补结构。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心难点：宾补 vs 后置定语（in the lab vs in good order）</h2>
+        <p>老师用了一个复杂例句来演示宾补和后置定语的区别，这是本节课最烧脑的部分：</p>
+
+        <h3>例句：We found everything in the lab in good order.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ We found everything in the lab in good order.</div>
+            <div class="example-item">→ we（主语）+ found（谓语）+ everything（宾语）</div>
+            <div class="example-item">→ 后面有两个介词短语：in the lab 和 in good order</div>
+            <div class="example-item">→ 哪个是后置定语？哪个是宾补？</div>
+        </div>
+
+        <h3>判断方法：定语 vs 宾补 的核心区别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>定语（修饰语）</th>
+                    <th>宾补（补语）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>功能</strong></td>
+                    <td>把名字从大变小（缩小范围）</td>
+                    <td>补充说明（描述一个侧面，不缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>效果</strong></td>
+                    <td>缩小宾语所指的范围</td>
+                    <td>不缩小宾语所指的范围</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>加了之后范围变小了 → 定语</td>
+                    <td>加了之后只是补充描述 → 宾补</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>具体分析</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>in the lab</strong> → 后置定语</div>
+            <div class="example-item">→ "everything"（所有东西）范围很大</div>
+            <div class="example-item">→ "in the lab"（在实验室里的）缩小了范围 → 实验室的东西（不是所有的东西）</div>
+            <div class="example-item">→ 范围变小了 → 定语 ✓</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>in good order</strong> → 宾补</div>
+            <div class="example-item">→ "everything in the lab"（实验室里的每样东西）</div>
+            <div class="example-item">→ "in good order"（摆放整齐）描述的是状态</div>
+            <div class="example-item">→ 放整齐了东西会变少吗？不会！范围没变小 → 宾补 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - in the lab → 缩小范围（从"所有东西"到"实验室的东西"）→ 后置定语<br>
+            - in good order → 不缩小范围（只是描述状态）→ 宾补<br>
+            - 判断口诀：定语变小，宾补不变
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 补语从句（Complement Clause）</h2>
+        <p>老师补充了一个较少出现的概念——补语从句：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ We will soon make our city <code>what it was</code>.</div>
+            <div class="example-item">→ our city（宾语）+ what it was（补语从句）</div>
+            <div class="example-item">→ what it was 是一个完整的句子（有主语 it + 谓语 was）</div>
+            <div class="example-item">→ 它不是不定式/动名词，而是一个完整的从句 → 补语从句</div>
+        </div>
+
+        <div class="annotation">
+            补语从句 = 一个完整句子作宾补。类似宾语从句，但它是作补语而不是作宾语。这种结构在英语中比较少见，一辈子可能也见不到几个，了解即可。
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ I want your homework <code>done</code>.</div>
+            <div class="example-item">→ your homework（宾语）+ done（宾补，过去分词）→ 一个主体：作业被做完</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item">✅ We all think it's a pity that she didn't come here.</div>
+            <div class="example-item">→ 这个句子留到下节课综合讲解（稍难）</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 宾补 vs 双宾语 实战总览</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>句子</th>
+                    <th>结构</th>
+                    <th>分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>She told me a joke.</td>
+                    <td><strong>双宾语</strong></td>
+                    <td>me ≠ a joke（两个主体）；可变为 She told a joke to me</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>She made me sad.</td>
+                    <td><strong>宾补</strong></td>
+                    <td>me = sad（一个主体）；不可变序</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>His father named him Dong Ming.</td>
+                    <td><strong>宾补</strong></td>
+                    <td>him = Dong Ming（一个主体）；不可变序</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Paint the boat white.</td>
+                    <td><strong>宾补</strong></td>
+                    <td>the boat = white（一个主体）；不可变序</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Let the fresh air in.</td>
+                    <td><strong>宾补</strong></td>
+                    <td>the fresh air = in（一个主体）；不可变序</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>I saw him enter the room.</td>
+                    <td><strong>宾补</strong></td>
+                    <td>him = enter the room（一个主体）；see sb do 就是宾补</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>We found everything in the lab in good order.</td>
+                    <td><strong>宾补+后置定语</strong></td>
+                    <td>in the lab → 定语（变小）；in good order → 宾补（补充说明）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+        <p>老师总结了宾补判断的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：判断一个主体 vs 两个主体<br>
+            第二步：判断可变序 vs 不可变序<br>
+            第三步：判断是宾补还是后置定语（变小 vs 不变）</strong>
+        </div>
+
+        <h3>宾补判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看宾语和后面的词是否是"一个主体"→ 是 → 宾补；否 → 双宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>试可变序→ 可变换 → 双宾语；不可变换 → 宾补</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>如果有两个修饰成分 → 判断哪个变小（定语）哪个不变（宾补）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 宾补 = 一个主体 + 补充说明 + 不可变序<br>
+            - 双宾语 = 两个主体 + 可变序<br>
+            - 定语 = 把名字从大变小（缩小范围）<br>
+            - 宾补 = 补充说明（不缩小范围，只是描述一个侧面）<br>
+            - 定语变小，宾补不变
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+宾语补足语
+├── 核心回顾：动词与宾语的关系
+│   ├── VT1 + 宾语 → 主谓宾
+│   ├── VT1 + 宾语 + 宾补 → 主谓宾宾补（SVT1 OC）
+│   └── VT2 + IO + DO → 主谓间宾直宾（SVIO DO）
+├── 宾补 vs 双宾语 三大区别
+│   ├── ① 谓语动词：VT1（宾补） vs VT2（双宾语）
+│   ├── ② 主体数量：一个主体（宾补） vs 两个主体（双宾语）
+│   └── ③ 可变顺序：不可变序（宾补） vs 可变序（双宾语）
+├── 经典对比
+│   ├── She told me a joke → 双宾语（me ≠ a joke，可变为 to me）
+│   └── She made me sad → 宾补（me = sad，不可变序）
+├── see somebody do/doing/done 就是宾补
+│   ├── do（省略to的不定式）→ 看见全过程
+│   ├── doing（现在分词）→ 看见正在做
+│   └── done（过去分词）→ 看见被做
+├── 宾补的本质：补充说明（一个侧面）
+│   └── 宾补描述宾语的一个侧面，不是全部
+├── 核心难点：宾补 vs 后置定语
+│   ├── 定语 = 把名字从大变小（缩小范围）
+│   ├── 宾补 = 补充说明（不缩小范围）
+│   └── in the lab → 定语（变小）；in good order → 宾补（不变）
+├── 补语从句
+│   └── 一个完整句子作宾补（较少见）
+└── 核心口诀
+    ├── 一个主体+不可变序→宾补
+    ├── 两个主体+可变序→双宾语
+    └── 定语变小，宾补不变
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记宾补 vs 双宾语三大区别：</strong>① 谓语动词类型（VT1 vs VT2）；② 主体数量（一个 vs 两个）；③ 可变顺序（不可 vs 可）。三个维度同时满足才能判断。</li>
+            <li><strong>核心判断方法——"一个主体"测试：</strong>宾语和后面的词描述的是同一个人/物吗？是 → 宾补；否 → 双宾语。比如 She made me sad → 我就是伤心的 → 一个主体 → 宾补。</li>
+            <li><strong>可变序是最终检验：</strong>双宾语可以变序（V+IO+DO ↔ V+DO+to/for+IO），宾补不可变序。如果变序后意思变了或不通顺 → 宾补。</li>
+            <li><strong>see somebody do/doing/done 就是宾补：</strong>do/doing/done 补充说明宾语的一个侧面（哭/笑/被做），是一个主体，不可变序。</li>
+            <li><strong>宾补 vs 后置定语（最重要）：</strong>定语 = 把名字从大变小（缩小范围）；宾补 = 补充说明（不缩小范围）。in the lab → 变小 → 定语；in good order → 不变 → 宾补。口诀：定语变小，宾补不变。</li>
+            <li><strong>补语从句：</strong>一个完整句子作宾补（如 make our city what it was），较少见，了解即可。</li>
+            <li><strong>思维方式：</strong>本节课最重要的是用"抽象公式"（SVT1 OC vs SVIO DO）来理解句子结构，而不是死记硬背。理解了本质，判断就自然了。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G36 同位语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G36】同位语（金龙鱼1:1:1模型）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G36 是「基础语法」系列第36课，由陈老师主讲。本节课是句子成分部分的<strong>新概念引入课</strong>，专门讲解<strong>同位语（Appositive）的产生机制与判断方法</strong>。</p>
+        <p>在此之前，同学们已经学习了宾语（G26）、间接宾语IO和直接宾语DO（G28）、宾语补足语（G29）、表语（G33）、表语的构成（G34）、there be句型（G35）等知识。本节课将引入一个新的句子成分——同位语，并重点讲解其核心特征：同位语一定是名词词性，且与它所说明的名词是"一比一"的关系。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握同位语的定义（名词词性 + 与另一名词一比一关系）、识别方法（逗号分隔、可互换），并能准确判断同位语与主语/宾语的区分。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G33「表语」、G34「表语的构成」的基础上。需要理解名词、代词的主格/宾格区别，以及主系表结构的基本概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：什么是同位语？</h2>
+        <p>老师从字面含义入手，解释"同位语"的概念：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>同位语（Appositive）</strong> = 位于相同位置的成分</div>
+            <div class="example-item">→ 同位语一定是<strong>名词</strong>的词性</div>
+            <div class="example-item">→ 同位语与它所说明的名词之间是<strong>一比一</strong>的关系（即：A就是B，B就是A）</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：同位语之所以叫"同位"，是因为它和它所说明的名词位于句子的同一个位置（都做主语、都做宾语等），两者可以互相替换，指代的是同一个人或物。就像化学中的"同位素"——名字不同但本质相同。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 经典例句分析</h2>
+        <p>老师用多个经典例句来演示同位语的识别方法：</p>
+
+        <h3>例句一：Milt, a seventeen-year-old boy, is a good student.</h3>
+        <div class="example-box">
+            <div class="example-item">→ Milt（主语，名词）+ <strong>a seventeen-year-old boy</strong>（同位语，名词短语）+ is（系动词）+ a good student（表语）</div>
+            <div class="example-item">→ Milt = a seventeen-year-old boy（一比一关系）→ 同位语 ✓</div>
+            <div class="example-item">→ 中间用逗号隔开，可以省略不影响句子主干完整性</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：a seventeen-year-old boy 是 Milt 的同位语，两者指代同一个人。Milt 是主语，同位语也位于主语位置（所以叫"同位"）。is 才是系动词，a good student 是表语。
+        </div>
+
+        <h3>例句二：我们中国人是很善良的。</h3>
+        <div class="example-box">
+            <div class="example-item">→ 我们（主语，代词=名词）+ 中国人（同位语，名词）</div>
+            <div class="example-item">→ 我们 = 中国人（一比一关系）→ 同位语 ✓</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：中文中也有同位语。"我们"和"中国人"指代同一群体，"你们"和"日本人"指代同一群体。名词一比一的关系，这就是同位语。
+        </div>
+
+        <h3>例句三：We students should study hard now.</h3>
+        <div class="example-box">
+            <div class="example-item">→ We（主语，主格代词=名词）+ students（同位语，名词）</div>
+            <div class="example-item">→ We = students（一比一关系）→ 同位语 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：We students 中 student 的词性</strong><br>
+            - We 是主格代词，代词也是名词词性<br>
+            - students 是名词，做 We 的同位语<br>
+            - 注意：student 不是宾语！虽然 We 有宾格 me，但这里的 student 不是宾格，而是同位语<br>
+            - 同位语和它说明的名词必须是<strong>同一个词性</strong>（都是名词）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 同位语 vs 主语/宾语的区分</h2>
+        <p>老师通过选择题来检验同学们是否能准确区分同位语与主语/宾语：</p>
+
+        <h3>选择题一：The young man, ___ , works in a hospital.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 答案：<strong>my brother</strong>（选项B）</div>
+            <div class="example-item">→ The young man（主语）+ my brother（同位语）</div>
+            <div class="example-item">→ 需要名词词性 → my brother 是名词短语 ✓</div>
+            <div class="example-item">→ me（宾格）不能做主语位置的成分 ✗</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - The young man 是主语 → 同位语也必须是名词词性<br>
+            - my brother（名词短语）✓ → me（宾格代词）✗<br>
+            - 虽然 we 的宾格是 me，但这里需要的是名词（同位语），不是宾格<br>
+            - 主谓一致：The young man（单数）→ works（单数）✓
+        </div>
+
+        <h3>选择题二：Our English teacher, ___ , often helps us.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 答案：<strong>a Miss Wang</strong>（选项A）</div>
+            <div class="example-item">→ Our English teacher（主语）+ a Miss Wang（同位语）</div>
+            <div class="example-item">→ 需要名词词性 → a Miss Wang 是名词短语 ✓</div>
+            <div class="example-item">→ Mrs Wang / Mr Wang / Wang's 都不对 ✗</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - Our English teacher（单数）→ 同位语也必须是名词<br>
+            - a Miss Wang（一位王女士）✓ → 名词短语<br>
+            - Mrs Wang / Mr Wang 前面不能加冠词 a<br>
+            - Wang's 是所有格，不是名词 ✗
+        </div>
+
+        <h3>选择题三：Some railway workers, ___ , are very tired.</h3>
+        <div class="example-box">
+            <div class="example-item">✅ 答案：<strong>they</strong>（选项C，主格）</div>
+            <div class="example-item">→ Some railway workers（主语）+ they（同位语，主格代词=名词）</div>
+            <div class="example-item">→ 需要主格代词 → they ✓</div>
+            <div class="example-item">→ them（宾格）不能做主语位置的成分 ✗</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - Some railway workers（复数主语）→ 同位语也必须是名词词性<br>
+            - they（主格代词=名词）✓ → them（宾格代词）✗<br>
+            - 主谓一致：Some railway workers（复数）→ are（复数）✓
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 同位语的核心特征总结</h2>
+        <p>老师总结了同位语的几个核心特征：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>特征</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>同位语一定是名词（包括名词短语、代词等名词性成分）</td>
+                </tr>
+                <tr>
+                    <td><strong>关系</strong></td>
+                    <td>同位语与它所说明的名词是"一比一"的关系（A=B，B=A）</td>
+                </tr>
+                <tr>
+                    <td><strong>位置</strong></td>
+                    <td>位于它所说明的名词旁边，通常用逗号隔开</td>
+                </tr>
+                <tr>
+                    <td><strong>可省略性</strong></td>
+                    <td>去掉同位语后，句子主干仍然完整</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：同位语 = 名词词性 + 一比一关系 + 位于相同位置。三个特征同时满足，才能判断为同位语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 同位语 vs 宾补 的区分</h2>
+        <p>老师补充了一个重要的辨析——同位语和宾语补足语的区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>一定是名词</td>
+                    <td>可以是形容词、名词、不定式、分词等</td>
+                </tr>
+                <tr>
+                    <td><strong>关系</strong></td>
+                    <td>一比一（A=B，可互换）</td>
+                    <td>一个主体（描述宾语的一个侧面，不可互换）</td>
+                </tr>
+                <tr>
+                    <td><strong>位置</strong></td>
+                    <td>紧邻所说明的名词</td>
+                    <td>在宾语后面</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>Milt, <strong>a seventeen-year-old boy</strong>, is a good student.</td>
+                    <td>She made me <strong>sad</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - Milt = a seventeen-year-old boy（可互换，都是名词）→ 同位语 ✓<br>
+            - She made me sad → me ≠ sad（sad 是形容词，不是名词）→ 宾补 ✓<br>
+            - 判断方法：看后面的词是不是名词，以及是否能和前面的名词互换
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 同位语的形式总览</h2>
+        <p>老师总结了同位语可以由哪些形式充当：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>同位语形式</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>名词/名词短语</strong></td>
+                    <td>最常见的同位语形式</td>
+                    <td>Milt, <code>a seventeen-year-old boy</code>, is a good student.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>代词</strong></td>
+                    <td>主格代词（=名词）</td>
+                    <td>We <code>students</code> should study hard.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>名词短语（含冠词）</strong></td>
+                    <td>带冠词的名词短语</td>
+                    <td>Our English teacher, <code>a Miss Wang</code>, often helps us.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：同位语的核心是名词词性。只要是名词性的成分，且与所说明的名词是一比一关系，就可以做同位语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 实战练习总览表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>句子</th>
+                    <th>同位语</th>
+                    <th>被说明的名词</th>
+                    <th>关系</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Milt, a seventeen-year-old boy, is a good student.</td>
+                    <td>a seventeen-year-old boy</td>
+                    <td>Milt</td>
+                    <td>Milt = a seventeen-year-old boy（一比一）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>我们中国人是很善良的。</td>
+                    <td>中国人</td>
+                    <td>我们</td>
+                    <td>我们 = 中国人（一比一）</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>We students should study hard now.</td>
+                    <td>students</td>
+                    <td>We</td>
+                    <td>We = students（一比一）</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>The young man, my brother, works in a hospital.</td>
+                    <td>my brother</td>
+                    <td>The young man</td>
+                    <td>The young man = my brother（一比一）</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Our English teacher, a Miss Wang, often helps us.</td>
+                    <td>a Miss Wang</td>
+                    <td>Our English teacher</td>
+                    <td>Our English teacher = a Miss Wang（一比一）</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Some railway workers, they, are very tired.</td>
+                    <td>they</td>
+                    <td>Some railway workers</td>
+                    <td>Some railway workers = they（一比一）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心判断逻辑总结</h2>
+        <p>老师总结了同位语判断的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找到名词 → 第二步：看后面有没有另一个名词（用逗号隔开）<br>第三步：判断两者是否是一比一关系（A=B，B=A）→ 是则同位语</strong>
+        </div>
+
+        <h3>同位语判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到名词（主语或宾语位置的名词/代词）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看名词后面（或前面/旁边）有没有另一个名词性成分（通常用逗号隔开）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断两者是否是一比一关系（A=B 且 B=A）→ 是 → 同位语；否 → 其他成分</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 同位语一定是名词（名词短语/代词）<br>
+            - 同位语与被说明的名词是一比一关系（A=B，B=A）<br>
+            - 同位语位于相同的位置（都做主语/都做宾语）<br>
+            - 去掉同位语，句子主干仍然完整<br>
+            - 同位语 vs 宾补：同位语=名词+一比一；宾补=形容词/名词+一个主体
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+同位语
+├── 核心定义
+│   ├── 同位语一定是名词词性
+│   └── 与所说明的名词是一比一的关系（A=B，B=A）
+├── 名称来源："同位"=位于相同的位置
+│   ├── 同位语和它说明的名词在句子的同一个位置
+│   └── 就像化学中的"同位素"——名字不同但本质相同
+├── 经典例句
+│   ├── Milt, a seventeen-year-old boy, is a good student.
+│   │   └── Milt = a seventeen-year-old boy（同位语）
+│   ├── 我们中国人是很善良的。
+│   │   └── 我们 = 中国人（同位语）
+│   └── We students should study hard now.
+│       └── We = students（同位语）
+├── 实战选择题（3道）
+│   ├── The young man, my brother, works... → 选 my brother（名词）
+│   ├── Our English teacher, a Miss Wang, often helps... → 选 a Miss Wang（名词短语）
+│   └── Some railway workers, they, are very tired. → 选 they（主格代词=名词）
+├── 同位语 vs 宾补
+│   ├── 同位语：名词 + 一比一（可互换）
+│   └── 宾补：形容词/名词 + 一个主体（不可互换）
+└── 核心口诀
+    ├── 同位语=名词 + 一比一 + 同位
+    ├── A=B且B=A → 同位语
+    └── 去掉同位语，句子主干仍完整
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记同位语的核心定义：</strong>同位语一定是名词词性，且与所说明的名词是一比一的关系（A=B，B=A）。这是判断同位语的根本标准。</li>
+            <li><strong>掌握"同位"的含义：</strong>同位语位于它所说明的名词的同一个位置（都做主语/都做宾语），所以叫"同位"。</li>
+            <li><strong>识别技巧：</strong>找到名词 → 看旁边有没有另一个名词（通常逗号隔开）→ 判断是否一比一关系。</li>
+            <li><strong>区分同位语和宾补：</strong>同位语=名词+一比一（可互换）；宾补=形容词/名词+一个主体（不可互换）。如 Milt = a boy（同位语）vs She made me sad（宾补，me ≠ sad）。</li>
+            <li><strong>注意代词词性：</strong>主格代词（I/you/we/they）= 名词，可以做同位语；宾格代词（me/him/us/them）= 名词，但不能做主语位置的成分。</li>
+            <li><strong>实战检验：</strong>做选择题时，注意主谓一致（单数/复数），以及同位语必须是名词词性（排除宾格、所有格等）。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

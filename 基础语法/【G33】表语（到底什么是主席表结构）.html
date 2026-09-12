@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G33 表语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G33】表语（到底什么是主席表结构）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G33 是「基础语法」系列第33课，由陈老师主讲。本节课是句子成分部分的<strong>核心突破课</strong>，专门讲解<strong>表语（Predicative）的产生机制及其与宾语的区分</strong>。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12，助动词/实义动词/系动词）、宾语的产生机制（G26）、间接宾语IO和直接宾语DO（G28）、宾语补足语（G29）、被动即完整（G31）、主语补足语（G32）等知识。本节课将从动词分类出发，系统讲解系动词的识别方法、表语的产生条件，以及"主系表"与"主谓宾"的本质区别。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握系动词的分类（表状态/表感官/表变化/表表象）和识别技巧（替换为be动词看意思变化），理解表语的产生机制（系动词后面不表具体动作的成分就是表语），并能准确区分"主系表"和"主谓宾"结构。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」、G26「宾语」的基础上。需要理解助动词/实义动词/系动词的区别，以及主谓宾结构的构成。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：动词分类</h2>
+        <p>老师首先回顾了动词的大分类，这是理解表语的基础：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>全称</th>
+                    <th>含义</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>Auxiliary Verb</td>
+                    <td>起辅助作用</td>
+                    <td>不能单独构成谓语，必须加在实义动词/系动词前面（如 has/is/will/can）</td>
+                </tr>
+                <tr>
+                    <td><strong>实义动词</strong></td>
+                    <td>Real Verb</td>
+                    <td>表具体动作</td>
+                    <td>表示具体的动作行为（如 play/look at/eat）</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>Linking Verb</td>
+                    <td>不表具体动作，表状态/感官/变化/表象</td>
+                    <td>后面接表语，构成主系表结构</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：助动词辅助构成谓语，实义动词表具体动作，系动词不表动作而表状态/感官/变化/表象，后面接表语。抓住动词分类，就能理解表语的产生机制。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 系动词的分类</h2>
+        <p>老师系统讲解了系动词的四大分类，每类都配有典型动词：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>含义</th>
+                    <th>典型动词</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>表状态</strong></td>
+                    <td>表示主语的状态</td>
+                    <td>stay, keep, remain, exist, stand</td>
+                    <td>表示持续存在的状态</td>
+                </tr>
+                <tr>
+                    <td><strong>表感官</strong></td>
+                    <td>表示感官感受</td>
+                    <td>feel, smell, taste, look, sound</td>
+                    <td>表示"看起来/闻起来/尝起来/听起来"</td>
+                </tr>
+                <tr>
+                    <td><strong>表变化</strong></td>
+                    <td>表示状态的变化</td>
+                    <td>become, go, get, turn</td>
+                    <td>表示从一种状态变为另一种状态</td>
+                </tr>
+                <tr>
+                    <td><strong>表表象</strong></td>
+                    <td>表示表面现象</td>
+                    <td>seem, appear</td>
+                    <td>表示"似乎/看起来"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>最核心的系动词：</strong><br>
+            - <strong>be动词</strong>是最常见、最核心的系动词<br>
+            - 其他系动词（feel/smell/taste/look/sound/become/go/get/turn/seem/appear等）在"不表具体动作"时才是系动词<br>
+            - 判断方法：替换为be动词，看意思变化大不大
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心技巧：如何识别系动词</h2>
+        <p>老师提供了一个简单实用的判断技巧——<strong>"替换为be动词法"</strong>：</p>
+
+        <h3>例句对比</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>替换为be动词</th>
+                    <th>意思变化</th>
+                    <th>判断</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>You <code>look</code> great.</td>
+                    <td>You <strong>are</strong> great.</td>
+                    <td>变化不大（都是"你很棒"）</td>
+                    <td><strong>系动词</strong> ✓</td>
+                </tr>
+                <tr>
+                    <td><code>Look</code> at the man.</td>
+                    <td><strong>Be</strong> at the man.</td>
+                    <td>变化极大（"看那个人"→"在那个男人那里"）</td>
+                    <td><strong>实义动词</strong> ✗</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心判断方法：</strong><br>
+            - 把动词替换为be动词（are/is/was/were）<br>
+            - 意思变化不大 → 原词是<strong>系动词</strong> → 后面跟表语<br>
+            - 意思变化很大 → 原词是<strong>实义动词</strong> → 后面跟宾语（或其他成分）<br>
+            - 这个技巧对 look/feel/taste/smell/sound 等感官动词特别有效
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 实战练习：判断表语</h2>
+        <p>老师给出了一系列句子，让同学们找出表语：</p>
+
+        <h3>练习一：The machine is under repairs</h3>
+        <div class="example-box">
+            <div class="example-item">✅ The machine <code>is</code> <code>under repairs</code>.</div>
+            <div class="example-item">→ is（系动词）+ under repairs（表语）→ 机器正在维修中</div>
+            <div class="example-item">→ is 是系动词，不表具体动作 → under repairs 是表语</div>
+        </div>
+
+        <h3>练习二：Is it yours?</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Is</code> it <code>yours</code>?</div>
+            <div class="example-item">→ 疑问语序，先还原为陈述语序：it is yours</div>
+            <div class="example-item">→ is（系动词）+ yours（表语）→ yours 是表语</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：抓住系动词 is，后面不表具体动作的成分就是表语。疑问句中要先还原为陈述语序再判断。
+        </div>
+
+        <h3>练习三：He has turned 21（核心易错）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He <code>has turned</code> <code>21</code>.</div>
+            <div class="example-item">→ has（助动词）+ turned（系动词）→ 一起构成谓语</div>
+            <div class="example-item">→ 21（表语）→ 他21岁了</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心易错点：</strong><br>
+            - has 是<strong>助动词</strong>（完成时助动词），不是系动词<br>
+            - turned 是<strong>系动词</strong>（表变化）<br>
+            - has + turned 一起构成谓语（助动词+系动词）<br>
+            - 21 是表语<br>
+            - 很多同学会画错：要么画 has，要么画 turned，要么画 has turned，都错了！正确是画 turned 和 21
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心难点：主系表 vs 主谓宾</h2>
+        <p>这是本节课最重要的辨析——很多同学分不清"主系表"和"主谓宾"的区别：</p>
+
+        <h3>经典对比</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句子</th>
+                    <th>结构</th>
+                    <th>分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>His hobby is <code>playing football</code>.</td>
+                    <td><strong>主系表</strong></td>
+                    <td>is（系动词）+ playing football（表语）→ 不表具体动作，表"是什么"</td>
+                </tr>
+                <tr>
+                    <td>He is <code>playing</code> football.</td>
+                    <td><strong>主谓宾</strong></td>
+                    <td>is（助动词）+ playing（实义动词）→ 表具体动作"正在踢球"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - "他的爱好是踢球" → is 是系动词 → 主系表 → 不表具体动作<br>
+            - "他正在踢球" → is 是助动词 + playing 是实义动词 → 主谓宾 → 表具体动作<br>
+            - 同样的词（is/playing），但语法功能完全不同！<br>
+            - 判断关键：看 is 是系动词（不表动作）还是助动词（表进行时）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 进阶练习：The machine must be under repairs</h2>
+        <p>老师用了一个包含助动词+系动词的复杂例句来检验同学们的掌握程度：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ The machine <code>must be</code> <code>under repairs</code>.</div>
+            <div class="example-item">→ must（助动词）+ be（系动词）→ 一起构成谓语</div>
+            <div class="example-item">→ under repairs（表语）→ 表示"正在维修中"</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心易错点：</strong><br>
+            - must 是<strong>助动词</strong>（情态助动词），不是系动词<br>
+            - be 是<strong>系动词</strong>（最核心的系动词）<br>
+            - must + be 一起构成谓语（助动词+系动词）<br>
+            - under repairs 是表语<br>
+            - 很多同学只画 be 而忽略 must，或者只画 must 而忽略 be，都错了！正确是 must be 一起构成谓语，under repairs 是表语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心难点：表语从句</h2>
+        <p>老师引入了一个进阶概念——当表语本身是一个完整的句子时，就是"表语从句"：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ The truth <code>is</code> <code>that he has never been abroad</code>.</div>
+            <div class="example-item">→ is（系动词）</div>
+            <div class="example-item">→ that he has never been abroad（表语从句）→ 一个完整的句子作表语</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：that he has never been abroad 本身就是一个完整的句子（有主语 he + 谓语 has been），它作 is 的表语，所以叫"表语从句"。这和"宾语从句"（一个句子作宾语）的原理完全一样，只是位置不同——表语从句在系动词后面，宾语从句在及物动词后面。
+        </div>
+
+        <div class="annotation warning">
+            <strong>深入分析 that 从句内部：</strong><br>
+            - that（引导词，可省略）<br>
+            - he（从句主语）<br>
+            - has（助动词）+ been（系动词）→ 一起构成从句谓语<br>
+            - abroad（表语）→ 从句内部又是一个主系表结构<br>
+            - 这就是"句子套句子"——大句子是主系表，小从句也是主系表
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 表语的形式总览</h2>
+        <p>老师总结了表语可以是哪些形式：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>表语形式</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>名词/代词</strong></td>
+                    <td>最常见的表语形式</td>
+                    <td>He is <code>a teacher</code>. / Is it <code>yours</code>?</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>形容词</strong></td>
+                    <td>描述主语的状态</td>
+                    <td>You look <code>great</code>.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>表示状态/位置</td>
+                    <td>The machine is <code>under repairs</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>数词</strong></td>
+                    <td>表示年龄/数量</td>
+                    <td>He has turned <code>21</code>.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>动名词/不定式</strong></td>
+                    <td>表示抽象概念</td>
+                    <td>His hobby is <code>playing football</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>句子（表语从句）</strong></td>
+                    <td>一个完整句子作表语</td>
+                    <td>The truth is <code>that he has never been abroad</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：表语跟在系动词后面，描述主语的状态或特征。它可以是名词、形容词、介词短语、数词、动名词/不定式，甚至一个完整的句子（表语从句）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 系动词 vs 实义动词 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>系动词</th>
+                    <th>实义动词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>含义</strong></td>
+                    <td>不表具体动作，表状态/感官/变化/表象</td>
+                    <td>表具体动作</td>
+                </tr>
+                <tr>
+                    <td><strong>后面成分</strong></td>
+                    <td>表语</td>
+                    <td>宾语（或其他成分）</td>
+                </tr>
+                <tr>
+                    <td><strong>与be动词替换</strong></td>
+                    <td>替换后意思变化不大</td>
+                    <td>替换后意思变化很大</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>You look great. → You are great.（变化不大）</td>
+                    <td>Look at the man. → Be at the man.（变化很大）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+        <p>老师总结了表语判断的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找到系动词（be/表状态/表感官/表变化/表表象）<br>
+            第二步：看系动词后面不表具体动作的成分 → 就是表语<br>
+            第三步：如果系动词后面是一个完整句子 → 表语从句</strong>
+        </div>
+
+        <h3>表语判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到系动词（be / stay/keep/remind / feel/smell/taste/look/sound / become/go/get/turn / seem/appear）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>确认系动词不表具体动作（用替换为be动词法检验）→ 后面的成分就是表语</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断表语形式：名词/形容词/介词短语/数词/动名词/句子（表语从句）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 抓住系动词 → 后面不表动作的就是表语<br>
+            - 助动词+系动词 → 一起构成谓语（如 has turned / must be）<br>
+            - 替换为be动词 → 意思变化不大=系动词；变化很大=实义动词<br>
+            - 主系表（不表动作）vs 主谓宾（表动作）→ 关键看 is 是系动词还是助动词<br>
+            - 表语可以是句子 → 表语从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+表语
+├── 核心回顾：动词分类
+│   ├── 助动词 → 辅助作用（has/is/will/can）
+│   ├── 实义动词 → 表具体动作（play/look at/eat）
+│   └── 系动词 → 不表动作，表状态/感官/变化/表象
+├── 系动词的四大分类
+│   ├── 表状态：stay, keep, remain, exist, stand
+│   ├── 表感官：feel, smell, taste, look, sound
+│   ├── 表变化：become, go, get, turn
+│   └── 表表象：seem, appear
+│   └── 最核心：be动词
+├── 识别系动词的技巧：替换为be动词法
+│   ├── 意思变化不大 → 系动词 → 后面跟表语
+│   └── 意思变化很大 → 实义动词 → 后面跟宾语
+├── 实战练习（找表语）
+│   ├── The machine is under repairs → is(系动词) + under repairs(表语)
+│   ├── Is it yours? → is(系动词) + yours(表语)
+│   ├── He has turned 21 → has(助动词)+turned(系动词) + 21(表语) ← 易错！
+│   ├── His hobby is playing football → 主系表（不表动作）
+│   ├── He is playing football → 主谓宾（表动作）
+│   ├── The machine must be under repairs → must(助动词)+be(系动词) + under repairs(表语)
+│   └── The truth is that he has never been abroad → 表语从句
+├── 主系表 vs 主谓宾
+│   ├── 主系表：is是系动词，不表动作（His hobby is playing football）
+│   └── 主谓宾：is是助动词+playing是实义动词，表动作（He is playing football）
+├── 表语从句
+│   └── 表语本身是一个完整句子（that he has never been abroad）
+│   └── 从句内部又可以是主系表结构（has been(系动词)+abroad(表语)）
+└── 核心口诀
+    ├── 抓住系动词 → 后面不表动作的就是表语
+    ├── 助动词+系动词 → 一起构成谓语
+    ├── 替换be动词 → 变化不大=系动词
+    └── 主系表vs主谓宾 → 看is是系动词还是助动词
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记系动词的四大分类：</strong>表状态（stay/keep/remains/stand）、表感官（feel/smell/taste/look/sound）、表变化（become/go/get/turn）、表表象（seem/appear），最核心的是be动词。</li>
+            <li><strong>掌握"替换为be动词法"：</strong>把动词替换为be动词，意思变化不大→系动词→后面跟表语；变化很大→实义动词→后面跟宾语。这个技巧对look/feel/taste等感官动词特别有效。</li>
+            <li><strong>区分助动词和系动词：</strong>has/must/can等是助动词，turn/be等是系动词，助动词+系动词一起构成谓语。如 He has turned 21 → has(助)+turned(系)+21(表语)。</li>
+            <li><strong>主系表 vs 主谓宾：</strong>关键看 is 是系动词还是助动词。His hobby is playing football → is是系动词→主系表；He is playing football → is是助动词+playing是实义动词→主谓宾。</li>
+            <li><strong>表语从句：</strong>当表语本身是一个完整句子时，就是表语从句。如 The truth is that he has never been abroad. 从句内部又可以有主系表结构。</li>
+            <li><strong>思维拓展：</strong>本节课最重要的是从"动词分类"出发理解表语，而不是死记硬背。理解了系动词不表具体动作的本质，判断表语就自然了。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

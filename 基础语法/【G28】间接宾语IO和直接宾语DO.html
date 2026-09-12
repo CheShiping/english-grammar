@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G28 间接宾语IO和直接宾语DO：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G28】间接宾语IO和直接宾语DO</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G28 是「基础语法」系列第28课，由陈老师主讲。本节课是句子成分部分的<strong>实战课</strong>，专门讲解<strong>间接宾语（IO）和直接宾语（DO）的判断方法</strong>，即双宾语结构。</p>
+        <p>在此之前，同学们已经学习了宾语的产生机制（G26，VT2动词生两个"孩子"）、动词宾语和介词宾语（G27，狭义宾语与广义宾语的区别）。本节课将深入讲解判断双宾语的三个核心要素，以及"参与 vs 不参与"这一关键区分——决定用 do 还是 for。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握判断双宾语的三个要素（双胞胎准生证、两个主体、可变顺序），理解"参与用do、不参与用for"的本质逻辑，并能准确判断 IO 和 DO。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G26「宾语」、G27「动词宾语和介词宾语」的基础上。需要理解 VT2 动词的概念，以及间接宾语和直接宾语的基本定义。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：什么是双宾语结构？</h2>
+        <p>双宾语结构（Double Object Construction）是指一个及物动词后面跟两个宾语的结构。但<strong>不是每个动词都能接双宾语</strong>，必须同时满足三个要素：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>要素序号</th>
+                    <th>要素名称</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>要素一</strong></td>
+                    <td><strong>双胞胎准生证</strong></td>
+                    <td>动词必须是 VT2（及物动词二类），有资质接两个宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>要素二</strong></td>
+                    <td><strong>两个主体</strong></td>
+                    <td>两个宾语必须是不同的实体（不是同一个人/物）</td>
+                </tr>
+                <tr>
+                    <td><strong>要素三</strong></td>
+                    <td><strong>可变顺序</strong></td>
+                    <td>IO 和 DO 可以变换顺序（V+IO+DO ↔ V+DO+for/to+IO）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：三个要素缺一不可。只有同时满足"准生证（VT2）"+"两个主体"+"可变顺序"，才是主谓间宾直宾结构。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 要素一：双胞胎准生证（VT2 动词）</h2>
+        <p>第一个要素是"双胞胎准生证"——动词必须有资质接两个宾语。老师用了一个生动的比喻：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>比喻</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>VI（不及物动词）</strong></td>
+                    <td>不想生孩子/生不出孩子</td>
+                    <td>不能直接接宾语，需要介词帮助</td>
+                </tr>
+                <tr>
+                    <td><strong>VT1（及物动词一类）</strong></td>
+                    <td>正常结婚生一个孩子</td>
+                    <td>后面只能接一个宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>VT2（及物动词二类）</strong></td>
+                    <td>有资质生两个孩子</td>
+                    <td>后面可以接两个宾语（间宾+直宾）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>常见 VT2 动词（可接双宾语的动词）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词</th>
+                    <th>含义</th>
+                    <th>双宾结构</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>allow</strong></td>
+                    <td>允许</td>
+                    <td>allow somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>bring</strong></td>
+                    <td>带来</td>
+                    <td>bring somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>give</strong></td>
+                    <td>给</td>
+                    <td>give somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>hand</strong></td>
+                    <td>递给</td>
+                    <td>hand somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>leave</strong></td>
+                    <td>留下/留给</td>
+                    <td>leave somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>lend</strong></td>
+                    <td>借出</td>
+                    <td>lend somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>promise</strong></td>
+                    <td>承诺</td>
+                    <td>promise somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>sell</strong></td>
+                    <td>卖</td>
+                    <td>sell somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>send</strong></td>
+                    <td>发送</td>
+                    <td>send somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>show</strong></td>
+                    <td>展示</td>
+                    <td>show somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>teach</strong></td>
+                    <td>教</td>
+                    <td>teach somebody something</td>
+                </tr>
+                <tr>
+                    <td><strong>tell</strong></td>
+                    <td>告诉</td>
+                    <td>tell somebody something</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 不是每个动词都能接双宾语，必须是 VT2 动词<br>
+            - 以上列出的动词都有"接两个宾语"的资质（准生证）<br>
+            - 但有了准生证还不够，还要满足要素二和要素三
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 要素二：两个主体</h2>
+        <p>第二个要素是两个宾语必须是<strong>两个不同的主体</strong>，不能是同一个人或物。</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>She told me a joke.</strong>（她给我讲了一个笑话。）</div>
+            <div class="example-item">→ me（我）和 a joke（一个笑话）是两个不同的主体</div>
+            <div class="example-item">→ 我是我，笑话是笑话 → 两个主体 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - "我"不是"一个笑话" → me ≠ a joke → 两个主体 ✓<br>
+            - 同理，"你"不是"一本字典" → 中文有拟人手法，但逻辑上必须是两个不同实体<br>
+            - 如果两个宾语指向同一个事物 → 不满足要素二 → 不是双宾语结构
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 要素三：可变顺序</h2>
+        <p>第三个要素是 IO 和 DO 的顺序可以变换。有两种变换方式：</p>
+
+        <h3>变换方式一：用 do（参与）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She told <strong>me</strong> a joke.</div>
+            <div class="example-item">→ 可变序为：She told a joke <strong>to</strong> me.</div>
+        </div>
+
+        <h3>变换方式二：用 for（不参与）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ She bought <strong>me</strong> a book.</div>
+            <div class="example-item">→ 可变序为：She bought a book <strong>for</strong> me.</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：可变顺序是双宾语结构的最终检验标准。如果一个结构满足"准生证"+"两个主体"，但不能变换顺序 → 不是双宾语结构。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心难点：参与 vs 不参与（do vs for）</h2>
+        <p>这是本节课最重要的区分——决定变序时用 do 还是 for。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>参与（用 do）</th>
+                    <th>不参与（用 for）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>含义</strong></td>
+                    <td>间接宾语（人）参与整个动作过程</td>
+                    <td>间接宾语（人）不参与动作过程</td>
+                </tr>
+                <tr>
+                    <td><strong>逻辑</strong></td>
+                    <td>动作要传到这个人身上</td>
+                    <td>动作是替这个人做的，他未参与</td>
+                </tr>
+                <tr>
+                    <td><strong>介词</strong></td>
+                    <td>to</td>
+                    <td>for</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>She told me a joke. → She told a joke <strong>to</strong> me.</td>
+                    <td>She bought me a book. → She bought a book <strong>for</strong> me.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 参与 → do（to）<br>
+            - 不参与 → for<br>
+            - 参与 = 动作传到这个人身上（给他/告诉他/递给他）<br>
+            - 不参与 = 替这个人做（给他买/给他做/替他订）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. "参与"的详细解释</h2>
+        <p>参与的意思是：间接宾语（人）直接参与整个动作过程，动作要传到这个人身上。</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>tell somebody a joke</strong> → 笑话是要讲到这个人的耳朵里的 → 他参与了 ✓ → 用 to</div>
+            <div class="example-item"><strong>give somebody a book</strong> → 书是要交到他手里的 → 他参与了 ✓ → 用 to</div>
+            <div class="example-item"><strong>show somebody something</strong> → 要拿给他看 → 他参与了 ✓ → 用 to</div>
+            <div class="example-item"><strong>lend somebody something</strong> → 真的要借给他 → 他参与了 ✓ → 用 to</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：这些动词描述的动作，都需要"接受者"亲自参与——听到、接到、看到、用到。没有他的参与，动作就不完整。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. "不参与"的详细解释</h2>
+        <p>不参与的意思是：间接宾语（人）是动作的受益者，但并没有参与动作过程本身。</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>buy somebody a book</strong> → 他去买书的时候，这个人没有参与 → 用 for</div>
+            <div class="example-item"><strong>make somebody something</strong> → 替他做的，他可能不知道 → 用 for</div>
+            <div class="example-item"><strong>cook somebody something</strong> → 替他做的饭，他可能在外面没参与 → 用 for</div>
+            <div class="example-item"><strong>order somebody something</strong> → 替他点的，他可能没参与点单过程 → 用 for</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：order herself 的特殊情况</strong><br>
+            - She ordered herself a new dress. → 她给自己点了一条新裙子<br>
+            - 这里的 herself 要看作和 she 不同的"另一个人"<br>
+            - 就像你剁手时，是为"另一个自己"点的 → 所以用 for：She ordered a new dress for herself<br>
+            - 即使她"参与"了，逻辑上也要把她当成两个人
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 实战练习：判断双宾语结构</h2>
+        <p>老师给出了一系列句子，让同学们判断是否满足双宾语的三个要素：</p>
+
+        <h3>练习一：She ordered herself a new dress</h3>
+        <div class="example-box">
+            <div class="example-item">✅ order 是 VT2（有准生证）</div>
+            <div class="example-item">✅ she 和 a new dress 是两个主体（她不是裙子）</div>
+            <div class="example-item">✅ 可变序：She ordered a new dress <strong>for</strong> herself.</div>
+            <div class="example-item">→ 虽然 herself 和 she 是同一个人，但逻辑上看作两个主体</div>
+            <div class="example-item">→ order 用 for（不参与）</div>
+        </div>
+
+        <h3>练习二：She cooked her husband a delicious meal</h3>
+        <div class="example-box">
+            <div class="example-item">✅ cook 是 VT2（有准生证）</div>
+            <div class="example-item">✅ her husband 和 a delicious meal 是两个主体（她丈夫不是美食）</div>
+            <div class="example-item">✅ 可变序：She cooked a delicious meal <strong>for</strong> her husband.</div>
+            <div class="example-item">→ cook 用 for（不参与）</div>
+        </div>
+
+        <h3>练习三：He brought me a dictionary</h3>
+        <div class="example-box">
+            <div class="example-item">✅ bring 是 VT2（有准生证）</div>
+            <div class="example-item">✅ me 和 a dictionary 是两个主体</div>
+            <div class="example-item">✅ 可变序：He brought a dictionary <strong>to</strong> me.</div>
+            <div class="example-item">→ bring 用 to（参与）</div>
+        </div>
+
+        <h3>练习四：She denied him nothing</h3>
+        <div class="example-box">
+            <div class="example-item">✅ deny 是 VT2（有准生证）</div>
+            <div class="example-item">✅ him 和 nothing 是两个主体</div>
+            <div class="example-item">✅ 可变序：She denied nothing <strong>to</strong> him.</div>
+            <div class="example-item">→ deny 用 to（参与）</div>
+        </div>
+
+        <h3>练习五：I told him that the bus was late</h3>
+        <div class="example-box">
+            <div class="example-item">✅ tell 是 VT2（有准生证）</div>
+            <div class="example-item">✅ him 和 that the bus was late 是两个主体</div>
+            <div class="example-item">✅ 可变序：I told that the bus was late <strong>to</strong> him.</div>
+            <div class="example-item">→ tell 用 to（参与）</div>
+            <div class="example-item">→ that the bus was late 是一个句子 → <strong>宾语从句</strong>（直宾从句）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：直宾 vs 宾语从句</strong><br>
+            - I told him that the bus was late. → that the bus was late 是句子（有主语+谓语）→ 直宾从句<br>
+            - She showed me how to run the machine. → how to run the machine 没有主谓结构（to run 是非谓语）→ 是直宾，不是宾语从句<br>
+            - 判断标准：看"宾语"部分是否有完整的主谓结构
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 实战练习总览表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>句子</th>
+                    <th>VT2</th>
+                    <th>两个主体</th>
+                    <th>可变序</th>
+                    <th>用 do/for</th>
+                    <th>IO</th>
+                    <th>DO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>She ordered herself a new dress.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>for</strong></td>
+                    <td>herself</td>
+                    <td>a new dress</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>She cooked her husband a delicious meal.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>for</strong></td>
+                    <td>her husband</td>
+                    <td>a delicious meal</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>He brought me a dictionary.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>to</strong></td>
+                    <td>me</td>
+                    <td>a dictionary</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>She denied him nothing.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>to</strong></td>
+                    <td>him</td>
+                    <td>nothing</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>I told him that the bus was late.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>to</strong></td>
+                    <td>him</td>
+                    <td>that the bus was late（宾语从句）</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>She showed me how to run the machine.</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td><strong>to</strong></td>
+                    <td>me</td>
+                    <td>how to run the machine（直宾，非宾从）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+        <p>老师总结了判断双宾语结构的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找VT2（准生证）→ 第二步：验两个主体 → 第三步：试可变顺序<br>第三步a：参与→用to；不参与→用for</strong>
+        </div>
+
+        <h3>双宾语判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>判断动词是否是 VT2（有资质接两个宾语）→ 准生证</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>判断两个宾语是否是不同的主体（不是同一个人/物）→ 两个主体</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断可变顺序：参与（动作传到这个人身上）→ 用 to；不参与（替这个人做）→ 用 for</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 准生证（VT2）+ 两个主体 + 可变顺序 = 双宾语结构<br>
+            - 参与 → to（tell/give/show/hand/lend/deny）<br>
+            - 不参与 → for（buy/make/cook/order）<br>
+            - 直宾可以是名词、不定式、动名词、句子（宾语从句）<br>
+            - 有主谓 = 宾语从句；无非谓语 = 直宾
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+间接宾语IO和直接宾语DO
+├── 双宾语结构的三个要素（缺一不可）
+│   ├── 要素一：双胞胎准生证 → 动词必须是VT2
+│   ├── 要素二：两个主体 → 两个宾语必须是不同实体
+│   └── 要素三：可变顺序 → IO和DO可以变换顺序
+├── 常见VT2动词
+│   ├── 参与类（用to）：tell/give/show/hand/lend/deny/allow/send
+│   └── 不参与类（用for）：buy/make/cook/order
+├── 核心区分：参与 vs 不参与
+│   ├── 参与 = 动作传到这个人身上 → to
+│   └── 不参与 = 替这个人做，他未参与 → for
+├── 特殊注意：herself 看作另一个人
+│   └── She ordered a new dress for herself
+├── 实战练习（6个例句）
+│   ├── ordered herself a dress → for（不参与）
+│   ├── cooked husband a meal → for（不参与）
+│   ├── brought me a dictionary → to（参与）
+│   ├── denied him nothing → to（参与）
+│   ├── told him that the bus was late → to（参与）+ 宾语从句
+│   └── showed me how to run the machine → to（参与）+ 直宾（非宾从）
+├── 直宾 vs 宾语从句
+│   ├── 有主谓结构 → 宾语从句（that the bus was late）
+│   └── 无非谓语结构 → 直宾（how to run the machine）
+└── 核心口诀
+    ├── 准生证+两个主体+可变顺序=双宾语
+    ├── 参与→to；不参与→for
+    └── 有主谓=从句；无非谓语=直宾
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记双宾语三要素：</strong>准生证（VT2）+ 两个主体 + 可变顺序，缺一不可。判断时按顺序逐一验证。</li>
+            <li><strong>掌握"参与 vs 不参与"的核心逻辑：</strong>参与 = 动作传到这个人身上（给他/告诉他/递给他）→ 用 to；不参与 = 替这个人做（给他买/给他做/替他订）→ 用 for。</li>
+            <li><strong>记忆常见VT2动词：</strong>参与类（tell/give/show/hand/lend/deny/allow/send）和不参与类（buy/make/cook/order）。</li>
+            <li><strong>特殊注意 herself：</strong>在双宾语结构中，herself/himself 等反身代词要看作和主语不同的"另一个人"，所以 She ordered herself a dress → She ordered a dress for herself。</li>
+            <li><strong>直宾 vs 宾语从句：</strong>有主谓结构 → 宾语从句（that the bus was late）；无非谓语结构 → 直宾（how to run the machine，to run 是非谓语）。</li>
+            <li><strong>可变顺序是最终检验：</strong>即使满足前两个要素，如果不能变换顺序，也不是双宾语结构。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

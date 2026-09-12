@@ -1,5 +1,7 @@
 # 设计原型：开发阶段的方案对比稿，不需要随站点发布
 _prototypes/
+prototype.html
+prototype-*.html
 
 # 系统 / 编辑器
 .DS_Store

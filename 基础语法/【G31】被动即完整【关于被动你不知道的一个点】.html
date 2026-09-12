@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G31 被动即完整【关于被动你不知道的一个点】：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G31】被动即完整【关于被动你不知道的一个点】</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G31 是「基础语法」系列第31课，由陈老师主讲。本节课是被动语态部分的<strong>本质突破课</strong>，专门讲解<strong>「被动即完整」这一核心概念</strong>。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12）、谓语的构成（G15）、宾语的产生机制（G26）、间接宾语IO和直接宾语DO（G28）、宾语补足语（G29）等知识。本节课将从一个全新的角度重新理解被动语态——被动语态的谓语在语法上已经是"完整"的，不需要再加其他成分。</p>
+
+        <div class="annotation">
+            本节课的核心目标：理解「被动即完整」的本质含义——主动句变被动句后，原来的宾语提前做主语，谓语用 be + done，句子在语法上就已经完整了。唯一的例外是"间宾被动除外"——双宾语结构中把间宾提前做主语时，后面还需要保留直宾。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」、G26「宾语」、G28「间接宾语IO和直接宾语DO」的基础上。需要理解被动语态的构成（be + done）、双宾语结构（VT2 + IO + DO），以及间宾和直宾的区别。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：什么是「被动即完整」？</h2>
+        <p>老师用一个最简单的句子来演示「被动即完整」的含义：</p>
+
+        <h3>主动句 → 被动句的转换过程</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到主动句的宾语 → 提前做主语</td>
+                    <td>The room（原来的宾语 → 新的主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>谓语动词变为 be + done（被动语态）</td>
+                    <td>cleaned（过去时）→ was cleaned（was 是 be 的过去式，cleaned 是过去分词）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>动作发出者用 by 短语（可有可无）</td>
+                    <td>by us（方式状语，可省略）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box" style="border-left: 5px solid #1abc9c; background-color: #e8f6f3;">
+            <div class="example-item"><strong>✅ The room was cleaned (by us).</strong>（房间被（我们）打扫了。）</div>
+            <div class="example-item">→ 句子到这里已经<strong>语法完整</strong>了，不需要再加任何成分</div>
+            <div class="example-item">→ by us 是方式状语（回答"以何种方式被打扫"），可有可无</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：「被动即完整」的意思是——主动句变成被动句后，原来的宾语提前做主语，谓语用 be + done，句子在语法上就已经完整了。不需要再加其他宾语或补语。by 短语是方式状语，是"幸福摩天轮"中的一个格子，可有可无。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 被动语态的构成回顾</h2>
+        <p>老师快速回顾了被动语态的构成公式：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>组成部分</th>
+                    <th>说明</th>
+                    <th>示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>be 动词</strong></td>
+                    <td>助动词，表被动，根据时态和主语变化</td>
+                    <td>was/were（过去时）/ is/are（现在时）/ will be（将来时）</td>
+                </tr>
+                <tr>
+                    <td><strong>done（过去分词）</strong></td>
+                    <td>实义动词的过去分词形式</td>
+                    <td>clean → cleaned / tell → told / give → given</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - be 是助动词（辅助作用），done 是实义动词的过去分词<br>
+            - 助动词 + 实义动词 → 一起构成谓语<br>
+            - 被动语态的谓语 = be + done（这是被动语态的固定公式）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心例外：间宾被动除外</h2>
+        <p>这是本节课最核心的内容。老师提出了一个重要的例外——<strong>「间宾被动除外」</strong>：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>被动即完整，间宾被动除外</strong>
+        </div>
+
+        <div class="annotation">
+            核心含义：在双宾语结构（VT2 + IO + DO）中，如果把<strong>间宾（IO，通常是"人"）</strong>提前做主语变成被动句，句子<strong>不完整</strong>，后面还需要保留直宾（DO）。这是「被动即完整」的唯一例外。
+        </div>
+
+        <h3>间宾被动：句子不完整，需要加直宾</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主动句</strong></td>
+                    <td>She told me a joke.</td>
+                    <td>she（主语）+ told（谓语 VT2）+ me（间宾 IO）+ a joke（直宾 DO）</td>
+                </tr>
+                <tr>
+                    <td><strong>间宾变主语</strong></td>
+                    <td>me → I（主语）</td>
+                    <td>把间宾 me 提前做主语</td>
+                </tr>
+                <tr>
+                    <td><strong>谓语变被动</strong></td>
+                    <td>told → was told</td>
+                    <td>过去时 + 单数 → was + told（过去分词）</td>
+                </tr>
+                <tr>
+                    <td><strong>检验完整性</strong></td>
+                    <td>I was told.</td>
+                    <td>❌ <strong>不完整！</strong>「我被告诉了」→ 告诉了什么？没说！</td>
+                </tr>
+                <tr>
+                    <td><strong>补充直宾</strong></td>
+                    <td>I was told <strong>a joke</strong> (by her).</td>
+                    <td>✅ 完整！「我被她讲了一个笑话。」</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - 双宾语结构有两个宾语（IO + DO）<br>
+            - 把间宾（IO）提前做主语后，直宾（DO）还留在后面<br>
+            - 但句子在语法上"不完整"——「我被告诉了」话没说完<br>
+            - 必须加上直宾 a joke 才完整 → I was told a joke (by her).
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 对比：直宾被动 → 句子完整</h2>
+        <p>老师进一步对比：如果把<strong>直宾（DO）</strong>提前做主语变成被动句，句子是完整的。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主动句</strong></td>
+                    <td>She told me a joke.</td>
+                    <td>she（主语）+ told（谓语 VT2）+ me（间宾 IO）+ a joke（直宾 DO）</td>
+                </tr>
+                <tr>
+                    <td><strong>直宾变主语</strong></td>
+                    <td>a joke → 主语</td>
+                    <td>把直宾 a joke 提前做主语</td>
+                </tr>
+                <tr>
+                    <td><strong>谓语变被动</strong></td>
+                    <td>told → was told</td>
+                    <td>过去时 + 单数 → was + told</td>
+                </tr>
+                <tr>
+                    <td><strong>检验完整性</strong></td>
+                    <td>A joke was told.</td>
+                    <td>✅ <strong>完整！</strong>「一个笑话被讲了」→ 意思已经表达清楚了</td>
+                </tr>
+                <tr>
+                    <td><strong>补充间宾（用 to）</strong></td>
+                    <td>A joke was told <strong>to me</strong> (by her).</td>
+                    <td>✅ 更完整，但 to me 是可有可无的补充</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心对比：直宾 a joke 提前做主语 → A joke was told → 句子完整（被动即完整）。间宾 me 提前做主语 → I was told → 句子不完整，需要加 a joke。这就是「间宾被动除外」的含义。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 间宾被动 vs 直宾被动 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>间宾被动（IO → 主语）</th>
+                    <th>直宾被动（DO → 主语）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主动句</strong></td>
+                    <td>She told me a joke.</td>
+                    <td>She told me a joke.</td>
+                </tr>
+                <tr>
+                    <td><strong>变被动</strong></td>
+                    <td>I was told <u>a joke</u> (by her).</td>
+                    <td>A joke was told to me (by her).</td>
+                </tr>
+                <tr>
+                    <td><strong>句子完整性</strong></td>
+                    <td>❌ <strong>不完整</strong>（需要保留直宾）</td>
+                    <td>✅ <strong>完整</strong>（不需要再加直宾）</td>
+                </tr>
+                <tr>
+                    <td><strong>间宾的处理</strong></td>
+                    <td>保留在后面（不做介词短语）</td>
+                    <td>加 to → to me（方式状语，可有可无）</td>
+                </tr>
+                <tr>
+                    <td><strong>是否符合「被动即完整」</strong></td>
+                    <td>❌ <strong>例外（除外）</strong></td>
+                    <td>✅ 符合</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 被动即完整 → 主动变被动后，句子在语法上已经完整<br>
+            - 间宾被动除外 → 双宾语中把间宾（人）提前做主语时，句子不完整，需要保留直宾<br>
+            - 直宾被动符合 → 把直宾（物）提前做主语时，句子完整，符合「被动即完整」
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 实战练习：判断被动句是否完整</h2>
+        <p>老师通过多个例子来检验同学们是否掌握了「被动即完整」和「间宾被动除外」：</p>
+
+        <h3>练习一：They built a bridge last year → A bridge was built last year</h3>
+        <div class="example-box">
+            <div class="example-item">✅ A bridge was built last year.（一座桥去年被建了。）</div>
+            <div class="example-item">→ build（VT1，及物动词一类）+ a bridge（宾语）</div>
+            <div class="example-item">→ a bridge 提前做主语 → A bridge was built → 句子完整 ✅</div>
+            <div class="example-item">→ 符合「被动即完整」</div>
+        </div>
+
+        <h3>练习二：She gave him a book → He was given a book</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He was given a book.（他被给了书。）</div>
+            <div class="example-item">→ give（VT2，双宾语）+ him（间宾 IO）+ a book（直宾 DO）</div>
+            <div class="example-item">→ him（间宾）提前做主语 → He was given → 句子不完整 ❌</div>
+            <div class="example-item">→ 需要保留直宾 a book → He was given a book ✅</div>
+            <div class="example-item">→ 符合「间宾被动除外」</div>
+        </div>
+
+        <h3>练习三：She gave him a book → A book was given to him</h3>
+        <div class="example-box">
+            <div class="example-item">✅ A book was given to him.（一本书被给了他。）</div>
+            <div class="example-item">→ give（VT2，双宾语）+ him（间宾 IO）+ a book（直宾 DO）</div>
+            <div class="example-item">→ a book（直宾）提前做主语 → A book was given → 句子完整 ✅</div>
+            <div class="example-item">→ 符合「被动即完整」</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - He was given → 不完整（间宾被动除外，需要加 a book）<br>
+            - A book was given → 完整（直宾被动符合被动即完整）<br>
+            - 判断方法：把宾语提前做主语后，问自己「句子说完了吗？」→ 说完了 = 完整；没说完 = 不完整
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心判断逻辑总结</h2>
+        <p>老师总结了判断被动句完整性的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：把宾语提前做主语 → 第二步：谓语变 be + done<br>第三步：问自己「句子说完了吗？」→ 说完了 = 完整；没说完 = 需要加成分</strong>
+        </div>
+
+        <h3>被动句完整性判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>把主动句的宾语提前做主语，谓语变为 be + done</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>判断原句是哪种宾语结构：单宾语 / 双宾语（VT2）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>如果是单宾语或直宾 → 句子完整；如果是间宾 → 句子不完整，需保留直宾</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 被动即完整 → 主动变被动后，句子在语法上已经完整<br>
+            - 间宾被动除外 → 双宾语中把间宾（人）提前做主语时，句子不完整<br>
+            - 直宾被动符合 → 把直宾（物）提前做主语时，句子完整<br>
+            - 判断方法：问自己「句子说完了吗？」
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+被动即完整
+├── 核心概念：被动即完整
+│   ├── 主动句变被动句 → 宾语提前做主语 + be + done
+│   ├── 句子在语法上已经完整
+│   └── by 短语（方式状语）可有可无
+├── 被动语态构成
+│   ├── be 动词（助动词，表被动，随 tense/主语变化）
+│   └── done（实义动词过去分词）
+├── 核心例外：间宾被动除外
+│   ├── 双宾语结构（VT2 + IO + DO）
+│   ├── 间宾（IO，人）提前做主语 → 句子不完整
+│   │   └── She told me a joke → I was told (a joke) by her.（不完整！需加 a joke）
+│   └── 直宾（DO，物）提前做主语 → 句子完整
+│       └── She told me a joke → A joke was told to me (by her).（完整！）
+├── 实战练习
+│   ├── They built a bridge → A bridge was built（完整，VT1）
+│   ├── She gave him a book → He was given a book（不完整，VT2间宾除外）
+│   └── She gave him a book → A book was given to him（完整，VT2直宾）
+└── 核心口诀
+    ├── 被动即完整 → 主动变被动后句子已完整
+    └── 间宾被动除外 → 双宾语间宾提前需保留直宾
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记「被动即完整」的核心概念：</strong>主动句变成被动句后，原来的宾语提前做主语，谓语用 be + done，句子在语法上就已经完整了。不需要再加其他宾语或补语。</li>
+            <li><strong>掌握「间宾被动除外」的例外：</strong>双宾语结构（VT2 + IO + DO）中，把间宾（IO，通常是"人"）提前做主语时，句子不完整，后面还需要保留直宾（DO）。如 I was told a joke（不能只说 I was told）。</li>
+            <li><strong>区分间宾被动和直宾被动：</strong>间宾（人）提前 → 不完整（除外）；直宾（物）提前 → 完整（符合被动即完整）。判断方法：问自己「句子说完了吗？」</li>
+            <li><strong>by 短语是方式状语：</strong>by us / by her 是方式状语（回答"以何种方式"），可有可无，不影响句子的完整性。</li>
+            <li><strong>实战检验：</strong>遇到被动句时，用「被动即完整」来检验句子是否完整。如果句子不完整，说明可能是间宾被动，需要保留直宾。</li>
+            <li><strong>思维方式：</strong>本节课最重要的是用「完整性检验」来理解被动语态，而不是死记硬背被动句的构成公式。理解了「被动即完整」的本质，判断被动句就自然了。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

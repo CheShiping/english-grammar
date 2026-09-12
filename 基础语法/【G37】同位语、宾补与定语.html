@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G37 同位语、宾补与定语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G37】同位语、宾补与定语</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G37 是「基础语法」系列第37课，由陈老师主讲。本节课是句子成分部分的<strong>辨析对比课</strong>，专门讲解<strong>同位语（Appositive）、宾语补足语（Object Complement）和定语（Attributive）三者之间的区别与辨析方法</strong>。</p>
+        <p>在此之前，同学们已经学习了同位语（G36）、宾语补足语（G29）、表语（G33）等知识。本节课将从词性、翻译顺序、范围三个维度，系统对比同位语、宾补和定语的区别，解决很多同学容易混淆的问题。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握同位语、宾补和定语在词性、翻译顺序、范围三个维度的区别，能够准确辨析三者。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G36「同位语」、G29「宾语补足语」的基础上。需要理解同位语（名词+一比一关系）、宾补（补充说明宾语）、定语（修饰名词）的基本概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：三者对比总览</h2>
+        <p>老师从三个维度来对比同位语、宾补和定语的区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                    <th>定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>只能是名词（名词短语、反身代词、不定代词等）</td>
+                    <td>可以是名词、形容词、副词、介词短语、不定式、分词等（词性最多）</td>
+                    <td>可以是形容词、介词短语、分词短语、不定式等（词性也很多）</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译顺序</strong></td>
+                    <td>不变序（中文和英文语序一致）</td>
+                    <td>不变序（属于五大基本句型，语序不变）</td>
+                    <td>变序（英语后置定语需提到名词前面翻译）</td>
+                </tr>
+                <tr>
+                    <td><strong>范围</strong></td>
+                    <td>不变范围（一比一关系，不缩小概念）</td>
+                    <td>不变范围（不缩小宾语的概念）</td>
+                    <td>变范围（缩小被修饰名词的概念范围）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 同位语：名词 + 不变序 + 不变范围（一比一）<br>
+            - 宾补：多种词性 + 不变序 + 不变范围（补充说明）<br>
+            - 定语：多种词性 + 变序 + 变范围（缩小概念）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 同位语：词性详解</h2>
+        <p>老师首先强调同位语的词性限制——同位语只能是名词词性：</p>
+
+        <h3>同位语的词性范围</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>词性类型</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词/名词短语</strong></td>
+                    <td>最常见的同位语形式</td>
+                    <td>Tom, <code>a high school student</code>, is a good boy.</td>
+                </tr>
+                <tr>
+                    <td><strong>反身代词</strong></td>
+                    <td>反身代词也属于名词词性</td>
+                    <td>He himself will come.（他自己会来）</td>
+                </tr>
+                <tr>
+                    <td><strong>不定代词</strong></td>
+                    <td>不定代词也属于名词词性</td>
+                    <td>We all think so.（我们所有人都这么认为）→ all 是 we 的同位语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：同位语的词性是最简单的——只有名词。但"名词"的范围很广，包括名词短语、反身代词（himself）、不定代词（all）等。不要以为同位语只有"a boy/a girl"这种名词短语。
+        </div>
+
+        <h3>进阶：形式宾语与宾补、真正宾语的区分</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>We consider it a pity that...</strong></div>
+            <div class="example-item">→ We（主语）+ consider（谓语）+ it（形式宾语）+ a pity（宾补）+ that从句（真正的宾语）</div>
+            <div class="example-item">→ it 是形式宾语，a pity 是宾补，that从句是真正的宾语</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - it 是形式宾语（代替后面的that从句）<br>
+            - a pity 是宾补（补充说明宾语，形容词性）<br>
+            - that从句是真正的宾语<br>
+            - 很多同学会混淆：it 不是同位语，a pity 也不是同位语（它是形容词性的宾补）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 宾补：词性详解</h2>
+        <p>老师系统讲解了宾语补足语可以是哪些词性，这是三者中词性最多的：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>宾补词性</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>名词</strong></td>
+                    <td>他让我成为了一个傻瓜</td>
+                    <td>He made me <code>a fool</code>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>形容词</strong></td>
+                    <td>我发现这本书有趣</td>
+                    <td>I found the book <code>interesting</code>.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>副词/数词</strong></td>
+                    <td>我发现他在外面/在教室里</td>
+                    <td>I found him <code>out</code>. / I found him <code>in the classroom</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>不定式（to do）</strong></td>
+                    <td>我叫他来</td>
+                    <td>I asked him <code>to come</code>.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>现在分词（doing）</strong></td>
+                    <td>我发现他在读书</td>
+                    <td>I found him <code>reading a book</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>过去分词（done）</strong></td>
+                    <td>我发现自行车被修好了</td>
+                    <td>I found my bike <code>repaired</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 宾补的词性是最多的，几乎可以是任何词性<br>
+            - 宾补的核心功能：补充说明宾语，和宾语是"一个主体"的关系<br>
+            - 不加宾补的话，句子感觉没说完（"我发现他……"→ 怎么样？）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 定语：词性详解</h2>
+        <p>老师讲解了定语的各种词性，重点强调定语是"后置修饰"的情况：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>定语词性</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>后置定语，修饰名词</td>
+                    <td>The man <code>next to me</code>.（我旁边的那个男人）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>后置定语，修饰名词</td>
+                    <td>The boy <code>under the tree</code>.（树下的那个男孩）</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>不定式</strong></td>
+                    <td>后置定语，修饰不定代词</td>
+                    <td>I have something <code>to tell you</code>.（我有些话要告诉你）</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>现在分词短语</strong></td>
+                    <td>后置定语，主动含义</td>
+                    <td>The girl <code>sitting over there</code>.（坐在那边的女孩）</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>过去分词短语</strong></td>
+                    <td>后置定语，被动含义</td>
+                    <td>The house <code>built last year</code>.（去年建的房子）</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>省略形式的分词</strong></td>
+                    <td>people here = people living here</td>
+                    <td>The people <code>here</code>.（这里的人们）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：定语的词性也很多，但最核心的特征是——定语要"缩小"被修饰名词的概念范围。比如"人们"是一个大概念，"这里的人们"就缩小了范围。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心对比一：词性对比</h2>
+        <p>老师从词性角度对比三者：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                    <th>定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性数量</strong></td>
+                    <td>最简单——只有名词</td>
+                    <td>最多——名词、形容词、副词、介词短语、不定式、分词等</td>
+                    <td>很多——介词短语、分词短语、不定式等</td>
+                </tr>
+                <tr>
+                    <td><strong>核心特征</strong></td>
+                    <td>名词 + 一比一关系</td>
+                    <td>补充说明宾语 + 一个主体</td>
+                    <td>修饰名词 + 缩小范围</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 同位语最简单：只有名词词性<br>
+            - 宾补词性最多：几乎什么词性都可以<br>
+            - 定语词性也很多：主要是后置修饰的成分
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心对比二：翻译顺序对比</h2>
+        <p>老师从翻译顺序角度对比三者：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                    <th>定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>翻译顺序</strong></td>
+                    <td><strong>不变序</strong></td>
+                    <td><strong>不变序</strong></td>
+                    <td><strong>变序</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>原因</strong></td>
+                    <td>同位语是一比一关系，中英文语序一致</td>
+                    <td>宾补属于五大基本句型，语序不变</td>
+                    <td>中文定语在前，英语后置定语需提前翻译</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语例句</strong></td>
+                    <td colspan="3">Tom, a high school student, is a good boy. → 汤姆，一个高中生，是个好男孩。（不变序 ✓）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾补例句</strong></td>
+                    <td colspan="3">I found him reading. → 我发现他在读书。（不变序 ✓）</td>
+                </tr>
+                <tr>
+                    <td><strong>定语例句</strong></td>
+                    <td colspan="3">The people here. → 这里的人们（变序 ✓，英语是"人们+这里"，中文是"这里的+人们"）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 定语是三者中唯一需要"变序"的<br>
+            - 中文定语永远放在名词前面（"这里的人们"）<br>
+            - 英语后置定语要提到名词前面翻译（"人们+这里"→"这里的人们"）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心对比三：范围对比</h2>
+        <p>老师从范围角度对比三者——这是最本质的区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                    <th>定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>范围变化</strong></td>
+                    <td><strong>不变范围</strong></td>
+                    <td><strong>不变范围</strong></td>
+                    <td><strong>变范围</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>原因</strong></td>
+                    <td>一比一关系，不缩小概念（汤姆 = 一个高中生）</td>
+                    <td>补充说明，不缩小宾语概念（他 = 在读书）</td>
+                    <td>缩小被修饰名词的概念范围</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语例句</strong></td>
+                    <td colspan="3">Tom, a high school student. → 汤姆就是高中生，高中生就是汤姆（一比一，不变范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾补例句</strong></td>
+                    <td colspan="3">I found him reading. → "他"没有变小，"他"就是"在读书"的那个人</td>
+                </tr>
+                <tr>
+                    <td><strong>定语例句</strong></td>
+                    <td colspan="3">The people here. → "人们"是大概念，"这里的人们"缩小了范围（变范围 ✓）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 定语的核心功能：缩小概念范围<br>
+            - "人们"是大概念 → "这里的人们"缩小了范围 → 定语 ✓<br>
+            - "汤姆"就是"高中生" → 没有缩小 → 同位语 ✓<br>
+            - "他"就是"在读书" → 没有缩小 → 宾补 ✓
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 三者完整对比总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>同位语</th>
+                    <th>宾补</th>
+                    <th>定语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>只有名词（名词短语/反身代词/不定代词）</td>
+                    <td>名词、形容词、副词、介词短语、不定式、分词等</td>
+                    <td>介词短语、分词短语、不定式等</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译顺序</strong></td>
+                    <td>不变序</td>
+                    <td>不变序（五大基本句型）</td>
+                    <td>变序（后置定语需提前翻译）</td>
+                </tr>
+                <tr>
+                    <td><strong>范围</strong></td>
+                    <td>不变范围（一比一关系）</td>
+                    <td>不变范围（补充说明）</td>
+                    <td>变范围（缩小概念）</td>
+                </tr>
+                <tr>
+                    <td><strong>核心关系</strong></td>
+                    <td>一比一（A=B，可互换）</td>
+                    <td>一个主体（补充说明宾语的一个侧面）</td>
+                    <td>修饰关系（缩小被修饰名词的范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>Tom, a high school student, is good.</td>
+                    <td>I found him reading.</td>
+                    <td>The girl sitting over there.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 同位语：名词 + 不变序 + 不变范围 + 一比一<br>
+            - 宾补：多种词性 + 不变序 + 不变范围 + 补充说明<br>
+            - 定语：多种词性 + 变序 + 变范围 + 缩小概念
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心判断逻辑总结</h2>
+        <p>老师总结了辨析同位语、宾补和定语的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：看词性——是名词？→ 可能是同位语<br>
+            第二步：看翻译顺序——变序？→ 定语；不变序？→ 继续判断<br>
+            第三步：看范围——缩小了概念？→ 定语；没缩小？→ 同位语或宾补<br>
+            第四步：看关系——一比一？→ 同位语；补充说明？→ 宾补</strong>
+        </div>
+
+        <h3>三者辨析四步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看词性：同位语只有名词；宾补和定语可以是多种词性</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看翻译顺序：定语变序，同位语和宾补不变序</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>看范围：定语变范围（缩小概念），同位语和宾补不变范围</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>看关系：一比一（可互换）→ 同位语；补充说明（一个主体）→ 宾补</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 词性：同位语只有名词，宾补词性最多<br>
+            - 顺序：定语变序，同位语和宾补不变序<br>
+            - 范围：定语变范围（缩小），同位语和宾补不变范围<br>
+            - 关系：一比一→同位语；补充说明→宾补；缩小概念→定语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+同位语、宾补与定语
+├── 同位语
+│   ├── 词性：只有名词（名词短语/反身代词/不定代词）
+│   ├── 翻译顺序：不变序
+│   ├── 范围：不变范围（一比一关系，A=B）
+│   └── 例句：Tom, a high school student, is good.
+│           We all think so.（all 是 we 的同位语）
+│           He himself will come.（himself 是反身代词做同位语）
+├── 宾补
+│   ├── 词性：最多（名词/形容词/副词/介词短语/不定式/分词）
+│   ├── 翻译顺序：不变序（五大基本句型）
+│   ├── 范围：不变范围（补充说明，不缩小概念）
+│   └── 例句：I found him reading.（补充说明"他"）
+│           He made me a fool.（我=傻瓜，一个主体）
+│           I asked him to come.（不定式做宾补）
+├── 定语
+│   ├── 词性：多（介词短语/分词短语/不定式等）
+│   ├── 翻译顺序：变序（后置定语需提前翻译）
+│   ├── 范围：变范围（缩小被修饰名词的概念）
+│   └── 例句：The people here.（这里的人们→缩小范围）
+│           The girl sitting over there.（坐在那边的女孩）
+│           The house built last year.（去年建的房子）
+└── 辨析四步法
+    ├── 第一步：看词性（同位语只有名词）
+    ├── 第二步：看翻译顺序（定语变序）
+    ├── 第三步：看范围（定语变范围）
+    └── 第四步：看关系（一比一→同位语；补充说明→宾补）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记三者核心区别：</strong>同位语=名词+不变序+不变范围+一比一；宾补=多种词性+不变序+不变范围+补充说明；定语=多种词性+变序+变范围+缩小概念。</li>
+            <li><strong>词性判断优先：</strong>看到名词性成分→先想同位语；看到形容词/分词/介词短语→想宾补或定语。</li>
+            <li><strong>翻译顺序检验：</strong>翻译时如果不需要调整语序→同位语或宾补；需要把后面的成分提到前面→定语。</li>
+            <li><strong>范围检验：</strong>看是否缩小了概念范围。"人们"→"这里的人们"（缩小了）→定语；"汤姆"→"高中生"（没缩小，一比一）→同位语。</li>
+            <li><strong>关系检验：</strong>能不能互换（A=B且B=A）？能→同位语；不能互换只是补充说明→宾补。</li>
+            <li><strong>实战检验：</strong>遇到容易混淆的句子，从词性→顺序→范围→关系四个维度逐一检验，就能准确判断。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

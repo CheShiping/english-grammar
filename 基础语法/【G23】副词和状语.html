@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G23 副词和状语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G23】副词和状语</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G23 是「基础语法」系列第23课，由陈老师主讲。本节课是动词部分的<strong>拓展课</strong>，专门讲解<strong>副词（adverb）与状语（adverbial）的关系</strong>，并引入一个核心模型——<strong>「幸福摩天轮模型」</strong>。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12）、谓语构成（G15）、非谓语（G19-G22）。本节课将从词性（副词）和句子成分（状语）两个维度，系统讲解副词的定义、判断方法、频度副词的位置，以及状语的11种分类。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清副词的定义（修饰动词、形容词、副词和整个句子），掌握副词的判断方法，理解频度副词的位置规则，以及用"幸福摩天轮模型"掌握状语的11种分类。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」的基础上。需要理解动词、形容词、副词等基本词性，以及主语+谓语的基本句子结构。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心概念：副词 vs 状语</h2>
+        <p>老师首先区分了两个容易混淆的概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>含义</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>副词（adverb）</strong></td>
+                    <td>词性</td>
+                    <td>修饰动词、形容词、副词和整个句子</td>
+                </tr>
+                <tr>
+                    <td><strong>状语（adverbial）</strong></td>
+                    <td>句子成分</td>
+                    <td>从各种角度修饰动词（时间、地点、原因、目的等）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心区分：副词是"词性"（part of speech），状语是"句子成分"（sentence component）。副词是修饰动词、形容词、副词和整个句子的词；状语是从各种角度修饰动词的句子成分。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 副词的定义与判断</h2>
+        <p>副词（adverb）的定义是：修饰<strong>动词</strong>、<strong>形容词</strong>、<strong>副词</strong>和<strong>整个句子</strong>的词。</p>
+
+        <h3>副词判断练习（逐一分析）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>目标词</th>
+                    <th>修饰对象</th>
+                    <th>词性</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He writes <code>carefully</code>.</td>
+                    <td>carefully</td>
+                    <td>writes（动词）</td>
+                    <td><strong>副词</strong></td>
+                    <td>修饰动词 → 副词</td>
+                </tr>
+                <tr>
+                    <td>He walked <code>slowly</code>.</td>
+                    <td>slowly</td>
+                    <td>walked（动词）</td>
+                    <td><strong>副词</strong></td>
+                    <td>修饰动词 → 副词</td>
+                </tr>
+                <tr>
+                    <td>He is <code>very</code> happy.</td>
+                    <td>very</td>
+                    <td>happy（形容词）</td>
+                    <td><strong>副词</strong></td>
+                    <td>修饰形容词 → 副词</td>
+                </tr>
+                <tr>
+                    <td>He runs <code>very</code> <code>slowly</code>.</td>
+                    <td>slowly</td>
+                    <td>runs（动词）</td>
+                    <td><strong>副词</strong></td>
+                    <td>slowly 修饰 runs（动词）→ 副词</td>
+                </tr>
+                <tr>
+                    <td>He runs very <code>slowly</code>.</td>
+                    <td>very</td>
+                    <td>slowly（副词）</td>
+                    <td><strong>副词</strong></td>
+                    <td>very 修饰 slowly（副词）→ 副词</td>
+                </tr>
+                <tr>
+                    <td><code>Unfortunately</code>, he lost all his money.</td>
+                    <td>Unfortunately</td>
+                    <td>整个句子</td>
+                    <td><strong>副词</strong></td>
+                    <td>修饰整个句子 → 副词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心易错点：slowly 的词性判断</strong><br>
+            - slowly 以 -ly 结尾，但它修饰的是 runs（动词），所以 slowly 是副词，不是形容词<br>
+            - very 修饰 slowly（副词），所以 very 也是副词<br>
+            - 判断词性不要只看后缀（-ly），要看它修饰的是什么词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 进阶练习：一个句子中的多个副词</h2>
+        <p>老师用一句 <code>Unluckily, I got up very late today.</code> 来检测同学们是否真正理解了副词的判断方法：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>目标词</th>
+                    <th>修饰对象</th>
+                    <th>词性</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Unluckily</code></td>
+                    <td>整个句子</td>
+                    <td><strong>副词</strong></td>
+                    <td>逗号隔开，修饰整句话 → 副词</td>
+                </tr>
+                <tr>
+                    <td><code>very</code></td>
+                    <td>late</td>
+                    <td><strong>副词</strong></td>
+                    <td>very 修饰 late → 副词</td>
+                </tr>
+                <tr>
+                    <td><code>late</code></td>
+                    <td>got up（动词短语）</td>
+                    <td><strong>副词</strong></td>
+                    <td>late 修饰 got up（动词），表示"起得晚"→ 副词</td>
+                </tr>
+                <tr>
+                    <td><code>today</code></td>
+                    <td>整个句子 / got up</td>
+                    <td><strong>副词</strong></td>
+                    <td>today 修饰 got up 或整个句子 → 副词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心易错点：today 和 late 的双重词性</strong><br>
+            - today：做主语时是名词（Today is a good day），修饰动词/句子时是副词（I got up late today）<br>
+            - late：做表语时是形容词（I am late），修饰动词时是副词（I got up late）<br>
+            - 判断词性不要只看形式，要看它在句中的功能和修饰对象
+        </div>
+
+        <div class="annotation">
+            一个句子中可以出现多个副词，每个副词修饰的对象不同。判断副词的核心方法：看它修饰什么词——修饰动词/形容词/副词/整个句子 → 副词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 频度副词（频率副词）</h2>
+        <p>频度副词是用来回答 <strong>how often</strong>（多久一次）的副词。回答 how often 有两种方式：</p>
+
+        <h3>回答方式一：次数 + 时间</h3>
+        <div class="example-box">
+            <div class="example-item">✅ once a week（一周一次）</div>
+            <div class="example-item">✅ twice a day（一天两次）</div>
+        </div>
+
+        <h3>回答方式二：频度副词</h3>
+        <p>频度副词按频率从高到低排列：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>频度副词</th>
+                    <th>含义</th>
+                    <th>大致频率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>always</strong></td>
+                    <td>总是</td>
+                    <td>接近 100%</td>
+                </tr>
+                <tr>
+                    <td><strong>usually</strong></td>
+                    <td>通常</td>
+                    <td>约 80%</td>
+                </tr>
+                <tr>
+                    <td><strong>often</strong></td>
+                    <td>经常</td>
+                    <td>约 70%</td>
+                </tr>
+                <tr>
+                    <td><strong>seldom</strong></td>
+                    <td>很少</td>
+                    <td>约 10%-20%</td>
+                </tr>
+                <tr>
+                    <td><strong>hardly ever</strong></td>
+                    <td>几乎不</td>
+                    <td>约 5%</td>
+                </tr>
+                <tr>
+                    <td><strong>never</strong></td>
+                    <td>从不</td>
+                    <td>接近 0%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            注意：这些百分比都是主观的，不同的人对"总是"的理解可能不同。有人可能只迟到了两三次，但心里觉得"总是"迟到。
+        </div>
+
+        <h3>频度副词的位置规则</h3>
+        <p>频度副词的位置：<strong>助动词/系动词之后，实义动词之前</strong>。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>结构</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>You can <code>now</code> tell me.</td>
+                    <td>助动词 + 频度副词 + 实义动词</td>
+                    <td>can（助动词）之后，tell（实义动词）之前</td>
+                </tr>
+                <tr>
+                    <td>He is <code>usually</code> happy.</td>
+                    <td>系动词 + 频度副词 + 形容词</td>
+                    <td>is（系动词）之后</td>
+                </tr>
+                <tr>
+                    <td>She has <code>often</code> gone there.</td>
+                    <td>助动词 + 频度副词 + 实义动词</td>
+                    <td>has（助动词）之后，gone（实义动词）之前</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心位置规则：</strong><br>
+            - 有 be 动词/助动词 → 频度副词放在 be/助动词之后<br>
+            - 没有 be 动词/助动词 → 频度副词放在实义动词之前<br>
+            - 简单记忆：助动词/系动词之后，实义动词之前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心模型：幸福摩天轮模型</h2>
+        <p>老师引入了本节课最核心的模型——<strong>「幸福摩天轮模型」</strong>，用来形象化地展示状语的构成方式：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>摩天轮的中心 = 动词（谓语）<br>摩天轮的每个格子 = 从不同角度修饰动词的状语</strong>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：动词是句子的核心（摩天轮的中心），我们可以从各种角度来修饰动词（时间、地点、原因、目的等），每个角度就像一个"格子"，围绕动词转成一圈，构成"幸福的摩天轮"。状语就是围绕动词、从不同角度修饰动词的句子成分。
+        </div>
+
+        <h3>名词 vs 动词的"笼统性"</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>部分</th>
+                    <th>特点</th>
+                    <th>扩展方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语（名词性）</strong></td>
+                    <td>可以笼统，也可以不断缩小范围</td>
+                    <td>数词 → 代词 → 名词短语（不断变小）</td>
+                </tr>
+                <tr>
+                    <td><strong>谓语（动词性）</strong></td>
+                    <td>更加笼统，可以从各种角度修饰</td>
+                    <td>时间状语、地点状语、原因状语等（摩天轮模型）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 状语按意义分类（11种）</h2>
+        <p>状语按意义可以分为11种，每种都是从不同角度修饰动词：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>状语类型</th>
+                    <th>修饰角度</th>
+                    <th>例句（以 do homework 为例）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>时间状语</strong></td>
+                    <td>什么时候做</td>
+                    <td>I do homework <code>in the morning</code>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>地点状语</strong></td>
+                    <td>在哪里做</td>
+                    <td>I do homework <code>at home</code>.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>原因状语</strong></td>
+                    <td>为什么做</td>
+                    <td>I do homework <code>because the teacher assigned it</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>目的状语</strong></td>
+                    <td>为了什么做</td>
+                    <td>I do homework <code>to get good grades</code>.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>结果状语</strong></td>
+                    <td>做的结果</td>
+                    <td>I do homework, <code>and I finish it quickly</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>方式状语</strong></td>
+                    <td>怎么做</td>
+                    <td>I do homework <code>with a pen</code>.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>伴随状语</strong></td>
+                    <td>做的时候同时在想什么</td>
+                    <td>I do homework, <code>thinking about playing football</code>.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>让步状语</strong></td>
+                    <td>虽然……但是做</td>
+                    <td><code>Although I am tired</code>, I do homework.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>条件状语</strong></td>
+                    <td>如果满足条件就做</td>
+                    <td><code>If you pay me 100 yuan</code>, I will do it.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>程度状语</strong></td>
+                    <td>做到什么程度</td>
+                    <td>I do homework <code>very hard</code>.</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><strong>比较状语</strong></td>
+                    <td>比别人做得怎样</td>
+                    <td>I do homework <code>better than him</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：11种状语就是从11个不同角度围绕动词构成的"摩天轮"。时间、地点、原因、目的、结果、方式、伴随、让步、条件、程度、比较——涵盖了修饰动词的所有主要角度。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 方式状语 vs 伴随状语的区分</h2>
+        <p>方式状语和伴随状语容易混淆，老师做了明确区分：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>含义</th>
+                    <th>核心区别</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>用怎样的方式做</td>
+                    <td>做这件事的"方法/工具"</td>
+                    <td>I do homework <code>with a pen</code>.（用笔做）</td>
+                </tr>
+                <tr>
+                    <td><strong>伴随状语</strong></td>
+                    <td>做的时候同时想着什么</td>
+                    <td>做这件事时"同时发生的伴随动作/状态"</td>
+                    <td>I do homework, <code>thinking about football</code>.（边做边想踢球）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心区分：</strong><br>
+            - 方式状语 = 怎么做（方法/工具/手段）<br>
+            - 伴随状语 = 做的时候同时还在干什么（另一个同时发生的动作）<br>
+            - 方式状语回答"怎样"，伴随状语回答"同时还在做什么"
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 综合示例：用"do homework"展示所有状语</h2>
+        <p>老师用"我做作业"这个简单句子，从11个角度展示状语的构成：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>状语类型</th>
+                    <th>中文示例</th>
+                    <th>英文示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>我早上做/下午做/晚上做</td>
+                    <td>I do homework <code>in the morning/afternoon/evening</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>地点状语</strong></td>
+                    <td>我在家里做/在学校做/在地铁做</td>
+                    <td>I do homework <code>at home / at school / on the subway</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>原因状语</strong></td>
+                    <td>因为老师布置了，所以我做</td>
+                    <td>I do homework <code>because the teacher assigned it</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>目的状语</strong></td>
+                    <td>为了考好大学，我做作业</td>
+                    <td>I do homework <code>to get into a good university</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>结果状语</strong></td>
+                    <td>结果做完了/结果考得很好</td>
+                    <td>I do homework, <code>and I finish it quickly</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>我用笔做/和大家讨论做</td>
+                    <td>I do homework <code>with a pen / with classmates</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>伴随状语</strong></td>
+                    <td>我做作业时想着踢球</td>
+                    <td>I do homework, <code>thinking about playing football</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>让步状语</strong></td>
+                    <td>虽然我很累，但我做作业</td>
+                    <td><code>Although I am tired</code>, I do homework.</td>
+                </tr>
+                <tr>
+                    <td><strong>条件状语</strong></td>
+                    <td>如果你闭嘴，我就做</td>
+                    <td><code>If you shut up</code>, I will do it.</td>
+                </tr>
+                <tr>
+                    <td><strong>程度状语</strong></td>
+                    <td>我非常用力地做</td>
+                    <td>I do homework <code>very hard</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>比较状语</strong></td>
+                    <td>我比他做得好/多/少</td>
+                    <td>I do homework <code>better/more/less than him</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心判断逻辑总结</h2>
+        <p>老师总结了副词和状语的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>副词 = 词性（修饰动词/形容词/副词/整个句子）<br>状语 = 成分（从不同角度修饰动词）<br>核心模型 = 幸福摩天轮（动词在中心，状语围绕它转）</strong>
+        </div>
+
+        <h3>副词判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到目标词，看它修饰什么词</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>如果修饰动词/形容词/副词/整个句子 → 副词</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>注意：不要只看后缀（-ly），要看功能和修饰对象</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>状语分类速查</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>状语类型</th>
+                    <th>核心问题</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>时间状语</strong></td>
+                    <td>什么时候？</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>地点状语</strong></td>
+                    <td>在哪里？</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>原因状语</strong></td>
+                    <td>为什么？</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>目的状语</strong></td>
+                    <td>为了什么？</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>结果状语</strong></td>
+                    <td>结果怎样？</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>方式状语</strong></td>
+                    <td>怎样做？</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>伴随状语</strong></td>
+                    <td>同时还在做什么？</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>让步状语</strong></td>
+                    <td>虽然……但是？</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>条件状语</strong></td>
+                    <td>如果……就？</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>程度状语</strong></td>
+                    <td>到什么程度？</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><strong>比较状语</strong></td>
+                    <td>比别人怎样？</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 副词 = 词性，修饰动词/形容词/副词/整个句子<br>
+            - 状语 = 成分，从不同角度修饰动词<br>
+            - 11种状语 = 时间/地点/原因/目的/结果/方式/伴随/让步/条件/程度/比较<br>
+            - 频度副词位置 = 助动词/系动词之后，实义动词之前<br>
+            - 幸福摩天轮 = 动词在中心，状语围绕它转
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+副词和状语
+├── 核心概念
+│   ├── 副词（adverb）= 词性
+│   │   └── 修饰：动词 / 形容词 / 副词 / 整个句子
+│   └── 状语（adverbial）= 句子成分
+│       └── 从不同角度修饰动词
+├── 副词判断方法
+│   ├── 看修饰对象：修饰动词/形容词/副词/句子 → 副词
+│   ├── 不要只看后缀（-ly），要看功能和修饰对象
+│   └── 注意双重词性：today（名词/副词）、late（形容词/副词）
+├── 进阶练习：Unluckily, I got up very late today.
+│   ├── Unluckily → 修饰整个句子 → 副词
+│   ├── very → 修饰 late → 副词
+│   ├── late → 修饰 got up（动词）→ 副词
+│   └── today → 修饰整个句子/动词 → 副词
+├── 频度副词
+│   ├── 回答 how often（多久一次）
+│   ├── 频率排序：always > usually > often > seldom > hardly ever > never
+│   └── 位置：助动词/系动词之后，实义动词之前
+├── 幸福摩天轮模型
+│   ├── 中心 = 动词（谓语）
+│   └── 每个格子 = 从不同角度修饰动词的状语
+├── 状语按意义分类（11种）
+│   ├── 时间 / 地点 / 原因 / 目的 / 结果
+│   ├── 方式 / 伴随 / 让步 / 条件 / 程度 / 比较
+│   └── 用 do homework 展示所有11种
+└── 核心口诀
+    ├── 副词 = 词性，状语 = 成分
+    ├── 11种状语 = 围绕动词的摩天轮
+    └── 频度副词 = 助动词后，实义动词前
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记副词的定义：</strong>副词是词性，修饰动词、形容词、副词和整个句子。判断词性不要只看后缀（-ly），要看它修饰什么词。</li>
+            <li><strong>掌握副词判断三步法：</strong>找到目标词 → 看修饰对象 → 修饰动词/形容词/副词/句子 → 副词。</li>
+            <li><strong>注意双重词性的词：</strong>today（做主语是名词，修饰动词/句子是副词）、late（做表语是形容词，修饰动词是副词）。</li>
+            <li><strong>掌握频度副词的位置：</strong>助动词/系动词之后，实义动词之前。如 You can now tell me. / He is usually happy.</li>
+            <li><strong>理解"幸福摩天轮模型"：</strong>动词在中心，状语围绕它从不同角度修饰。这是理解状语的核心框架。</li>
+            <li><strong>区分方式状语和伴随状语：</strong>方式状语 = 怎样做（方法/工具），伴随状语 = 做的时候同时还在做什么（另一个同时发生的动作）。</li>
+            <li><strong>11种状语要熟记：</strong>时间/地点/原因/目的/结果/方式/伴随/让步/条件/程度/比较。用"do homework"来理解每种状语的含义。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

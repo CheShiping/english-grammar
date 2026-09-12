@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G27 动词宾语和介词宾语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G27】动词宾语和介词宾语</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G27 是「基础语法」系列第27课，由陈老师主讲。本节课是句子成分部分的<strong>实战练习课</strong>，专门讲解<strong>如何判断动词宾语和介词宾语</strong>。</p>
+        <p>在此之前，同学们已经学习了宾语的产生机制（G26），包括四种宾语类型（动宾、介宾、间宾、直宾）以及广义宾语与狭义宾语的区别。本节课将通过大量实战例句，深入辨析宾语的判断方法，并引入一个核心观点——<strong>宾语的本质是名词，而名词有六种形式</strong>（数词、名词短语、不定式、动名词、句子等）。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握宾语判断的完整思路——找到及物动词 → 看后面跟的是什么（名词/不定式/动名词/句子），理解狭义宾语（及物动词后面的完整宾语）与广义宾语（介词后面的名词）的区别。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G26「宾语」的基础上。需要理解四种宾语类型（动宾/介宾/间宾/直宾）、广义宾语与狭义宾语的区别，以及不定式、动名词可以做名词的原理。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：四种宾语的产生条件</h2>
+        <p>老师首先快速回顾了 G26 讲过的四种宾语类型及其产生条件：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>宾语类型</th>
+                    <th>产生条件</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>动宾</strong></td>
+                    <td>及物动词 VT1 + 一个宾语</td>
+                    <td>及物动词后面直接跟宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>间宾（IO）</strong></td>
+                    <td>及物动词 VT2 + 间接宾语（人）</td>
+                    <td>及物动词后面跟两个宾语中的"人"</td>
+                </tr>
+                <tr>
+                    <td><strong>直宾（DO）</strong></td>
+                    <td>及物动词 VT2 + 直接宾语（物）</td>
+                    <td>及物动词后面跟两个宾语中的"物"</td>
+                </tr>
+                <tr>
+                    <td><strong>介宾（借宾）</strong></td>
+                    <td>介词 + 宾语</td>
+                    <td>介词后面的名词短语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：宾语归根结底是名词。名词有六种形式（数词、名词短语、不定式、动名词、句子等），所以宾语也可以是这六种形式中的任何一种。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 实战练习一：They planted many trees</h2>
+
+        <h3>句子分析</h3>
+        <div class="example-box">
+            <div class="example-item">✅ They <code>planted</code> <code>many trees</code>.</div>
+            <div class="example-item">→ they（主语）+ planted（谓语：及物动词 VT1）+ many trees（宾语）</div>
+            <div class="example-item">→ planted 是及物动词，后面直接跟宾语 → <strong>动宾</strong></div>
+        </div>
+
+        <div class="annotation">
+            这是最标准的动宾结构：及物动词 planted 后面直接跟名词短语 many trees 作宾语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 实战练习二：Help the old</h2>
+
+        <h3>句子分析</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Help</code> <code>the old</code>.</div>
+            <div class="example-item">→ help（谓语：及物动词 VT1）+ the old（宾语）</div>
+            <div class="example-item">→ the old 是"the + 形容词"结构，表示"老年人"这个群体 → <strong>动宾</strong></div>
+        </div>
+
+        <div class="annotation">
+            the old 是"the + 形容词"结构，表示一类人（老年人）。虽然形式上是形容词，但功能上是名词，可以作宾语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 实战练习三：I wanted to buy a car（核心重点）</h2>
+
+        <h3>传统思路（浅层分析）</h3>
+        <div class="example-box">
+            <div class="example-item">❌ I wanted to buy a car → wanted + to buy（不定式）+ a car</div>
+            <div class="example-item">→ 很多人把 a car 当成宾语</div>
+        </div>
+
+        <h3>本质思路（深层分析）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>wanted</code> <code>to buy a car</code>.</div>
+            <div class="example-item">→ I（主语）+ wanted（谓语：及物动词 VT1，单独构成谓语）</div>
+            <div class="example-item">→ to buy a car（不定式短语，整体作宾语）→ <strong>狭义宾语</strong></div>
+            <div class="example-item">→ car 是 to buy a car 内部的名词 → <strong>广义宾语</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：wanted a car vs wanted to buy a car</strong><br>
+            - I wanted a car. → 我想要一辆车（想要一个"东西"）<br>
+            - I wanted to buy a car. → 我想买一辆车（想做一件"事情"）<br>
+            - to buy a car 是不定式短语，可以做名词 → 作 wanted 的宾语（狭义宾语）<br>
+            - car 只是不定式内部的名词 → 广义宾语
+        </div>
+
+        <div class="annotation">
+            核心逻辑：wanted 是及物动词，已经单独构成谓语了，所以它后面的整个 to buy a car 才是它的宾语。不定式可以做名词，所以可以作宾语。这是本节课最推崇的分析思路。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 实战练习四：I enjoy listening to popular music（核心重点）</h2>
+
+        <h3>传统思路（浅层分析）</h3>
+        <div class="example-box">
+            <div class="example-item">❌ I enjoy listening to popular music → listening + to（介词）+ popular music（介宾）</div>
+            <div class="example-item">→ 很多人只看到 popular music 是介宾，忽略了 enjoy 的宾语</div>
+        </div>
+
+        <h3>本质思路（深层分析）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>enjoy</code> <code>listening to popular music</code>.</div>
+            <div class="example-item">→ I（主语）+ enjoy（谓语：及物动词 VT1，单独构成谓语）</div>
+            <div class="example-item">→ listening to popular music（动名词短语，整体作宾语）→ <strong>狭义宾语</strong></div>
+            <div class="example-item">→ popular music 是 to 后面的名词 → <strong>广义宾语（介宾）</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：enjoy popular music vs enjoy listening to popular music</strong><br>
+            - I enjoy popular music. → 我喜欢流行音乐（喜欢"某种音乐形式"）<br>
+            - I enjoy listening to popular music. → 我喜欢听流行音乐（喜欢"做这件事"）<br>
+            - listening to popular music 是动名词短语，可以做名词 → 作 enjoy 的宾语（狭义宾语）<br>
+            - popular music 只是动名词内部的名词 → 广义宾语
+        </div>
+
+        <div class="annotation">
+            核心逻辑：enjoy 是及物动词，已经单独构成谓语了，所以它后面的整个 listening to popular music 才是它的宾语。动名词可以做名词，所以可以作宾语。这和 to buy a car 作 wanted 的宾语是同样的道理。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 实战练习五：Look at the man（祈使句）</h2>
+
+        <h3>句子分析</h3>
+        <div class="example-box">
+            <div class="example-item">✅ <code>Look</code> <code>at</code> <code>the man</code>.</div>
+            <div class="example-item">→ （主语 you 省略，祈使句）+ look（谓语）+ at（介词）+ the man（宾语）</div>
+            <div class="example-item">→ at 是介词，the man 是介词后面的宾语 → <strong>介宾（借宾）</strong></div>
+        </div>
+
+        <div class="annotation">
+            这是标准的介宾结构：look 是谓语（祈使句省略主语 you），at 是介词，the man 是介词 at 后面的宾语。注意：look 本身是不及物动词，需要加介词 at 才能接宾语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 实战练习六：I think (that) he is fit for his office（宾语从句）</h2>
+
+        <h3>句子分析</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>think</code> <code>(that) he is fit for his office</code>.</div>
+            <div class="example-item">→ I（主语）+ think（谓语：及物动词 VT1，单独构成谓语）</div>
+            <div class="example-item">→ (that) he is fit for his office（一个完整的句子，作 think 的宾语）→ <strong>宾语从句</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心突破：宾语可以是"句子"</strong><br>
+            - 宾语的本质是名词<br>
+            - 名词有六种形式：数词、名词短语、不定式、动名词、句子等<br>
+            - 一个句子（he is fit for his office）也可以做宾语 → 这就是"宾语从句"<br>
+            - that 是从句引导词，可以省略
+        </div>
+
+        <div class="annotation">
+            这是本节课最重要的突破——宾语不仅可以是名词短语、不定式、动名词，还可以是一个完整的句子！一个句子做宾语 → 宾语从句。同理，一个句子做主语 → 主语从句；做表语 → 表语从句；做定语 → 定语从句；做状语 → 状语从句。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 宾语的形式总览（名词的六种形式）</h2>
+        <p>老师总结了宾语可以是名词的六种形式，每种都配了例句：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>宾语形式</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>数词</strong></td>
+                    <td>数词可以做名词，作宾语</td>
+                    <td>I have <code>three</code>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>名词短语</strong></td>
+                    <td>最常见的宾语形式</td>
+                    <td>I play <code>football</code>.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>不定式</strong></td>
+                    <td>to do 可以做名词，作宾语</td>
+                    <td>I want <code>to go</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>动名词</strong></td>
+                    <td>doing 可以做名词，作宾语</td>
+                    <td>I enjoy <code>listening</code>.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>句子（宾语从句）</strong></td>
+                    <td>一个完整句子可以做宾语</td>
+                    <td>I think <code>(that) he is fit</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>the + 形容词</strong></td>
+                    <td>表示一类人</td>
+                    <td>Help <code>the old</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心结论：</strong><br>
+            - 宾语的本质 = 名词<br>
+            - 名词有六种形式 → 宾语也可以是这六种形式<br>
+            - 不要只看到名词短语就说是宾语，不定式、动名词、句子也可以做宾语<br>
+            - 判断宾语的第一步：找到及物动词（谓语）→ 第二步：看后面跟的是什么形式
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 狭义宾语 vs 广义宾语 对比总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>狭义宾语</th>
+                    <th>广义宾语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>位置</strong></td>
+                    <td>及物动词后面</td>
+                    <td>介词后面</td>
+                </tr>
+                <tr>
+                    <td><strong>产生条件</strong></td>
+                    <td>及物动词 VT1/VT2 产生</td>
+                    <td>介词产生</td>
+                </tr>
+                <tr>
+                    <td><strong>形式</strong></td>
+                    <td>可以是名词短语/不定式/动名词/句子</td>
+                    <td>通常是名词短语</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>I want <code>to buy a car</code>.（to buy a car 整体作宾语）</td>
+                    <td>Look at <code>the man</code>.（the man 是介词 at 的宾语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心区分：狭义宾语 = 及物动词后面的完整宾语（可以是不定式/动名词/句子）；广义宾语 = 介词后面的名词。在 I wanted to buy a car 中，to buy a car 是狭义宾语，car 是广义宾语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 五种从句总览（名词的第六种形式：句子）</h2>
+        <p>老师从"宾语可以是句子"这个点出发，引申出了五种从句的概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>从句类型</th>
+                    <th>句子充当的成分</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>一个句子做主语</td>
+                    <td><code>(That he is fit)</code> is obvious.</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句</strong></td>
+                    <td>一个句子做宾语</td>
+                    <td>I think <code>(that) he is fit</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td>一个句子做表语</td>
+                    <td>The fact is <code>(that) he is fit</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td>一个句子做定语</td>
+                    <td>The man <code>who is fit</code> is here.</td>
+                </tr>
+                <tr>
+                    <td><strong>状语从句</strong></td>
+                    <td>一个句子做状语</td>
+                    <td><code>Because he is fit</code>, he can run.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：一个句子可以做句子中的任何成分（主语、宾语、表语、定语、状语），这就是各种从句的本质。本节课重点讲了宾语从句，其他从句后续课程会逐一讲解。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+        <p>老师总结了宾语判断的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找到及物动词（谓语）<br>
+            第二步：看后面跟的是什么形式（名词短语/不定式/动名词/句子）<br>
+            第三步：判断是狭义宾语（及物动词后面）还是广义宾语（介词后面）</strong>
+        </div>
+
+        <h3>宾语判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到及物动词（实义动词 VT1/VT2），它单独构成谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看及物动词后面跟的是什么：名词短语→动宾；不定式→不定式作宾语；动名词→动名词作宾语；句子→宾语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断狭义/广义：及物动词后面的完整宾语→狭义宾语；介词后面的名词→广义宾语（介宾）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 宾语的本质 = 名词<br>
+            - 名词有六种形式 → 宾语也可以是六种形式<br>
+            - 及物动词后面 → 狭义宾语（可以是不定式/动名词/句子）<br>
+            - 介词后面 → 广义宾语（介宾）<br>
+            - 不要只看到名词短语，不定式和动名词也可以做宾语！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+动词宾语和介词宾语
+├── 核心回顾：四种宾语
+│   ├── 动宾：及物动词 VT1 + 一个宾语
+│   ├── 间宾(IO)：及物动词 VT2 + 人
+│   ├── 直宾(DO)：及物动词 VT2 + 物
+│   └── 介宾：介词 + 宾语
+├── 实战练习（6个例句）
+│   ├── They planted many trees → 动宾（名词短语）
+│   ├── Help the old → 动宾（the+形容词，一类人）
+│   ├── I wanted to buy a car → 狭义宾语=to buy a car（不定式）
+│   ├── I enjoy listening to popular music → 狭义宾语=listening to popular music（动名词）
+│   ├── Look at the man → 介宾（祈使句，介词at+宾语）
+│   └── I think (that) he is fit for his office → 宾语从句（句子做宾语）
+├── 宾语的形式（名词的六种形式）
+│   ├── 数词 → I have three.
+│   ├── 名词短语 → I play football.
+│   ├── 不定式 → I want to go.
+│   ├── 动名词 → I enjoy listening.
+│   ├── 句子（宾语从句）→ I think (that) he is fit.
+│   └── the+形容词 → Help the old.
+├── 狭义宾语 vs 广义宾语
+│   ├── 狭义宾语 = 及物动词后面的完整宾语
+│   └── 广义宾语 = 介词后面的名词
+├── 五种从句总览
+│   ├── 主语从句：句子做主语
+│   ├── 宾语从句：句子做宾语
+│   ├── 表语从句：句子做表语
+│   ├── 定语从句：句子做定语
+│   └── 状语从句：句子做状语
+└── 核心口诀
+    ├── 宾语 = 名词的六种形式
+    ├── 及物动词后面 → 狭义宾语
+    └── 介词后面 → 广义宾语
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记宾语的本质是名词：</strong>宾语可以是名词的六种形式——数词、名词短语、不定式、动名词、句子、the+形容词。不要只看到名词短语就说是宾语。</li>
+            <li><strong>掌握狭义宾语与广义宾语的区别：</strong>狭义宾语 = 及物动词后面的完整宾语（可以是不定式/动名词/句子）；广义宾语 = 介词后面的名词。</li>
+            <li><strong>I wanted to buy a car 的深度分析：</strong>wanted 是及物动词，单独构成谓语；to buy a car 是不定式短语，整体作宾语（狭义宾语）；car 只是不定式内部的名词（广义宾语）。</li>
+            <li><strong>I enjoy listening to popular music 的深度分析：</strong>enjoy 是及物动词，单独构成谓语；listening to popular music 是动名词短语，整体作宾语（狭义宾语）；popular music 是介词 to 的宾语（广义宾语）。</li>
+            <li><strong>宾语从句的概念：</strong>一个句子可以做宾语 → 宾语从句。同理可推主语从句、表语从句、定语从句、状语从句。</li>
+            <li><strong>判断宾语三步法：</strong>找到及物动词 → 看后面跟什么形式 → 判断狭义/广义。</li>
+            <li><strong>思维拓展：</strong>不要把思路局限在"名词短语=宾语"，要看到不定式、动名词、句子也可以做宾语。这就是"上帝视角"——看到表面现象背后的本质。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

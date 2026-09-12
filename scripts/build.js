@@ -112,8 +112,7 @@ function renderTopbar(levelLabel, baseHome) {
   <div class="site-topbar-inner">
     <button class="site-iconbtn site-burger" type="button" aria-label="打开目录" aria-expanded="false" aria-controls="site-aside">${ICON_BURGER}</button>
     <a class="site-brand" href="${baseHome}">
-      <span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4.6" fill="currentColor"/><rect x="4" y="16" width="16" height="2.4" rx="1.2" fill="currentColor"/></svg></span>
-      <span class="name">ENG GRAMMAR</span>
+      <span class="mark">ENG&nbsp;GRAMMAR</span>
     </a>
     <nav class="site-topnav">
       <a href="${baseHome}">目录</a>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G26 宾语：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G26】宾语的产生</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G26 是「基础语法」系列第26课，由陈老师主讲。本节课是句子成分部分的<strong>核心课</strong>，专门讲解<strong>宾语的产生机制与分类</strong>。</p>
+        <p>在此之前，同学们已经学习了动词分类（G12）、谓语的构成（G15）、状语的本质（G23-G24）。本节课将从宏观角度系统讲解宾语是怎么产生的、有哪几种类型，以及从广义和狭义两个角度理解宾语。</p>
+
+        <div class="annotation">
+            本节课的核心目标：彻底搞清宾语的产生机制（实义动词产生宾语），掌握四种宾语类型（动宾、间宾、直宾、介宾），以及广义宾语与狭义宾语的区别。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G12「动词分类」、G15「谓语的构成」的基础上。需要理解实义动词、及物动词与不及物动词的区别，以及助动词辅助构成谓语的规则。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 宾语的产生机制</h2>
+        <p>老师首先从宏观角度讲解宾语是怎么产生的。核心逻辑链如下：</p>
+
+        <div class="example-box">
+            <div class="example-item">✅ 句子 = 主语 + 谓语</div>
+            <div class="example-item">✅ 谓语由实义动词构成（可加助动词辅助）</div>
+            <div class="example-item">✅ 实义动词分为<strong>及物动词</strong>和<strong>不及物动词</strong></div>
+            <div class="example-item">✅ 不及物动词 + 介词 → 可以产生宾语</div>
+            <div class="example-item">✅ 及物动词 → 直接产生宾语</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：宾语归根结底是由<strong>实义动词</strong>产生的。不及物动词需要借助介词才能产生宾语，及物动词可以直接产生宾语。
+        </div>
+
+        <h3>及物动词的细分：VT1 与 VT2</h3>
+        <p>老师把及物动词进一步细分为两类：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>全称</th>
+                    <th>含义</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>VT1</strong></td>
+                    <td>及物动词（一类）</td>
+                    <td>能生一个"孩子"</td>
+                    <td>后面只需要加一个宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>VT2</strong></td>
+                    <td>及物动词（二类）</td>
+                    <td>必须生两个"孩子"</td>
+                    <td>后面需要加两个宾语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>记忆技巧：</strong><br>
+            - VT1 = 及物动词一类 → 生一个（一个宾语）→ 动宾<br>
+            - VT2 = 及物动词二类 → 生两个（两个宾语）→ 间宾 + 直宾<br>
+            - 这个比喻虽然粗俗但很好记：及物动词"生孩子"，VT1 生一个，VT2 生两个
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 四种宾语类型详解</h2>
+        <p>老师系统讲解了四种宾语类型，它们都是在<strong>及物动词（实义动词）</strong>的情况下产生的：</p>
+
+        <h3>第一种：动宾（及物动词 + 一个宾语）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I <code>play</code> <code>football</code>.</div>
+            <div class="example-item">→ play（实义动词，及物动词 VT1）+ football（宾语）</div>
+            <div class="example-item">→ 这种宾语叫<strong>动宾</strong>（及物动词后面的宾语）</div>
+        </div>
+
+        <h3>第二种：间宾（间接宾语 IO）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I told <code>her</code> a story.</div>
+            <div class="example-item">→ told（实义动词，及物动词 VT2）</div>
+            <div class="example-item">→ her（间接宾语，IO = Indirect Object）</div>
+            <div class="example-item">→ story（直接宾语，DO = Direct Object）</div>
+        </div>
+
+        <div class="annotation">
+            间接宾语（IO）通常是"人"——动作的接受者。比如 told her（告诉她），her 就是动作的接受者。
+        </div>
+
+        <h3>第三种：直宾（直接宾语 DO）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ I told her <code>a story</code>.</div>
+            <div class="example-item">→ a story（直接宾语，DO = Direct Object）</div>
+            <div class="example-item">→ 直接宾语通常是"物"——动作直接作用的对象</div>
+        </div>
+
+        <h3>第四种：介宾（介词 + 宾语）</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He is reading <code>under the tree</code>.</div>
+            <div class="example-item">→ under（介词）+ the tree（名词短语）</div>
+            <div class="example-item">→ under the tree 整体是地点状语</div>
+            <div class="example-item">→ 但 under 是介词，the tree 是介词后面的宾语 → 这叫<strong>介宾</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 四种宾语（动宾、介宾、间宾、直宾）都是在<strong>及物动词</strong>（实义动词）的情况下产生的<br>
+            - 有宾语一定是动词后面或介词后面产生的<br>
+            - 跟助动词、系动词没关系
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 四种宾语总览表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>宾语类型</th>
+                    <th>产生条件</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>动宾</strong></td>
+                    <td>及物动词 VT1 + 一个宾语</td>
+                    <td>I play football.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>间宾（IO）</strong></td>
+                    <td>及物动词 VT2 + 间接宾语（人）</td>
+                    <td>I told her a story.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>直宾（DO）</strong></td>
+                    <td>及物动词 VT2 + 直接宾语（物）</td>
+                    <td>I told her a story.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>介宾（介宾）</strong></td>
+                    <td>介词 + 宾语</td>
+                    <td>He is reading under the tree.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>5. 广义宾语 vs 狭义宾语</h2>
+        <p>老师从另一个角度（广义和狭义）来理解宾语：</p>
+
+        <h3>狭义宾语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He is reading <code>a book</code>.</div>
+            <div class="example-item">→ he（主语）+ is reading（谓语：助动词+实义动词 VT1）+ a book（宾语）</div>
+            <div class="example-item">→ 这是最标准的主谓宾结构中的宾语 → <strong>狭义宾语</strong></div>
+        </div>
+
+        <div class="annotation">
+            狭义宾语就是我们最熟悉的主谓宾里面的宾语——及物动词后面直接跟的宾语。
+        </div>
+
+        <h3>广义宾语</h3>
+        <div class="example-box">
+            <div class="example-item">✅ He is reading <code>under the tree</code>.</div>
+            <div class="example-item">→ under the tree 整体是地点状语</div>
+            <div class="example-item">→ 但 under 是介词，the tree 是介词后面的名词短语 → 做的还是宾语</div>
+            <div class="example-item">→ 这属于<strong>广义宾语</strong>——不属于主谓宾结构，但介词后面也可以有宾语</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心区分：</strong><br>
+            - 狭义宾语 = 主谓宾结构中的宾语（及物动词后面的宾语）<br>
+            - 广义宾语 = 狭义宾语 + 介词后面的宾语（状语里面的宾语）<br>
+            - 介词后面的宾语显然不是我们常说的主谓宾的那个宾语，但介词层面也可以叫宾语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 宾语产生条件总结</h2>
+        <p>老师总结了宾语产生的核心条件：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>产生条件</th>
+                    <th>说明</th>
+                    <th>宾语类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>实义动词（及物动词 VT1）</strong></td>
+                    <td>及物动词后面直接加一个宾语</td>
+                    <td>动宾</td>
+                </tr>
+                <tr>
+                    <td><strong>实义动词（及物动词 VT2）</strong></td>
+                    <td>及物动词后面加两个宾语（人+物）</td>
+                    <td>间宾 + 直宾</td>
+                </tr>
+                <tr>
+                    <td><strong>不及物动词 + 介词</strong></td>
+                    <td>不及物动词本身不能直接加宾语，需要介词帮助</td>
+                    <td>介词后面的宾语（介宾）</td>
+                </tr>
+                <tr>
+                    <td><strong>介词</strong></td>
+                    <td>介词后面可以跟宾语</td>
+                    <td>介宾（广义宾语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：有宾语一定是在动词后面或介词后面产生的。宾语归根结底是实义动词（及物动词）和介词的"孩子"。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心判断逻辑总结</h2>
+        <p>老师总结了宾语的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>宾语 = 实义动词（及物动词）或介词的"孩子"<br>
+            动词后面或介词后面 → 就是宾语</strong>
+        </div>
+
+        <h3>宾语判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到实义动词（谓语的核心）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>判断及物还是不及物：及物 → 后面直接跟宾语；不及物 → 需要介词帮助</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断宾语类型：一个宾语→动宾；两个宾语→间宾+直宾；介词后面→介宾</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 宾语是实义动词（及物动词）或介词的"孩子"<br>
+            - VT1 生一个（动宾），VT2 生两个（间宾+直宾）<br>
+            - 不及物动词 + 介词 → 介词后面有宾语（介宾）<br>
+            - 狭义宾语 = 主谓宾中的宾语；广义宾语 = 狭义宾语 + 介词后面的宾语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+宾语
+├── 宾语的产生
+│   ├── 句子 = 主语 + 谓语
+│   ├── 谓语由实义动词构成（可加助动词辅助）
+│   └── 实义动词 → 产生宾语
+├── 实义动词的分类
+│   ├── 及物动词（VT）
+│   │   ├── VT1：能生一个"孩子" → 加一个宾语 → 动宾
+│   │   └── VT2：必须生两个"孩子" → 间宾(IO) + 直宾(DO)
+│   └── 不及物动词
+│       └── 需要介词帮助 → 产生宾语（介宾）
+├── 四种宾语类型
+│   ├── 动宾：及物动词 VT1 + 一个宾语（I play football）
+│   ├── 间宾(IO)：及物动词 VT2 + 人（I told her）
+│   ├── 直宾(DO)：及物动词 VT2 + 物（I told her a story）
+│   └── 介宾：介词 + 宾语（under the tree）
+├── 广义宾语 vs 狭义宾语
+│   ├── 狭义宾语 = 主谓宾结构中的宾语
+│   └── 广义宾语 = 狭义宾语 + 介词后面的宾语
+└── 核心口诀
+    ├── 宾语 = 实义动词/介词的"孩子"
+    ├── VT1 生一个，VT2 生两个
+    └── 有宾语一定在动词后面或介词后面
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记宾语的产生机制：</strong>宾语是实义动词（及物动词）或介词的"孩子"。不及物动词需要介词帮助才能产生宾语。</li>
+            <li><strong>掌握 VT1 与 VT2 的区别：</strong>VT1 及物动词后面加一个宾语（动宾）；VT2 及物动词后面加两个宾语（间宾+直宾）。</li>
+            <li><strong>四种宾语要区分：</strong>动宾（及物动词+一个宾语）、间宾（人）、直宾（物）、介宾（介词+宾语）。</li>
+            <li><strong>广义 vs 狭义宾语：</strong>狭义宾语 = 主谓宾结构中的宾语；广义宾语 = 狭义宾语 + 介词后面的宾语（状语里面的宾语）。</li>
+            <li><strong>核心判断方法：</strong>找到实义动词 → 判断及物/不及物 → 判断宾语类型。有宾语一定在动词后面或介词后面。</li>
+            <li><strong>记忆技巧：</strong>及物动词"生孩子"——VT1 生一个，VT2 生两个。虽然粗俗但很好记。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

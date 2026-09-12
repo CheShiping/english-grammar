@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G34 表语的构成（主系表）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G34】表语的构成（主系表）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G34 是「基础语法」系列第34课，由陈老师主讲。本节课是句子成分部分的<strong>细化课</strong>，专门讲解<strong>表语的构成——即什么词/短语/从句可以充当表语</strong>。</p>
+        <p>在此之前，同学们已经学习了表语的产生机制（G33，系动词后面不表具体动作的成分就是表语）。本节课将从更细致的角度，逐一分析之前出现过的所有表语例句，归纳出表语的完整构成形式。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握表语的完整构成形式（名词/形容词/副词/介词短语/句子），理解表语与宾语在充当词性上的本质区别（宾语只能是名词，表语可以是多种词性），并辨析 playing football 是动名词而非现在分词。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G33「表语」的基础上。需要理解系动词的分类、主系表结构，以及名词短语、代词、不定式、动名词、介词短语、句子等语法概念。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心回顾：之前出现过的表语例句</h2>
+        <p>老师首先回顾了 G33 中出现过的所有表语例句，逐一分析它们是由什么词/短语充当的：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>表语</th>
+                    <th>充当词性</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I am <code>American</code>.</td>
+                    <td>American</td>
+                    <td><strong>名词短语</strong>（限定词+名词，修饰词被省略）</td>
+                </tr>
+                <tr>
+                    <td>Is it <code>yours</code>?</td>
+                    <td>yours</td>
+                    <td><strong>代词</strong>（名词性物主代词）</td>
+                </tr>
+                <tr>
+                    <td>He has turned <code>21</code>.</td>
+                    <td>21</td>
+                    <td><strong>数词</strong></td>
+                </tr>
+                <tr>
+                    <td>To teach <code>English</code> is my dream.</td>
+                    <td>English</td>
+                    <td><strong>名词</strong>（但 to teach English 整体是不定式短语）</td>
+                </tr>
+                <tr>
+                    <td>His hobby is <code>playing football</code>.</td>
+                    <td>playing football</td>
+                    <td><strong>动名词</strong>（不是现在分词）</td>
+                </tr>
+                <tr>
+                    <td>The truth is <code>that he has never been abroad</code>.</td>
+                    <td>that he has never been abroad</td>
+                    <td><strong>句子（表语从句）</strong></td>
+                </tr>
+                <tr>
+                    <td>You look <code>great</code>.</td>
+                    <td>great</td>
+                    <td><strong>形容词</strong></td>
+                </tr>
+                <tr>
+                    <td>The machine is <code>under repairs</code>.</td>
+                    <td>under repairs</td>
+                    <td><strong>介词短语</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：通过回顾所有例句，我们可以看出表语的构成非常多样化——名词、代词、数词、不定式、动名词、句子、形容词、介词短语都可以充当表语。这与宾语和主语形成鲜明对比。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心重点：playing football 是动名词，不是现在分词</h2>
+        <p>老师特别强调了一个容易混淆的点——playing football 在表语中是什么性质：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>His hobby is <code>playing football</code>.</strong></div>
+            <div class="example-item">→ playing football 是<strong>动名词</strong>（gerund），不是现在分词（present participle）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：动名词 vs 现在分词</strong><br>
+            - 动名词（doing）→ 表示长期的、习惯性的活动<br>
+            - 现在分词（doing）→ 表示与谓语同步发生的动作<br>
+            - "他的爱好是踢球" → 踢球是长期的爱好，不是以谓语同步发生的动作 → 动名词 ✓<br>
+            - 对比：I saw him <code>crying</code>. → crying 是现在分词（看见他正在哭，与 saw 同步发生）
+        </div>
+
+        <div class="annotation">
+            核心逻辑：playing 在语法形式上既可以是动名词也可以是现在分词，需要根据语境判断。在表语位置，表示长期爱好/习惯 → 动名词；表示与谓语同步的动作 → 现在分词（作宾补/主补时）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 表语的完整构成形式</h2>
+        <p>老师系统总结了表语可以由哪些词/短语/从句充当：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>表语构成</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>名词（名词短语）</strong></td>
+                    <td>包括限定词+名词、代词、数词等宏观上的"名词"</td>
+                    <td>He is <code>a teacher</code>. / Is it <code>yours</code>? / He has turned <code>21</code>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>不定式（to do）</strong></td>
+                    <td>to teach English 等不定式短语</td>
+                    <td>To teach English is my dream.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>动名词（doing）</strong></td>
+                    <td>表示长期的、习惯性的活动</td>
+                    <td>His hobby is <code>playing football</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>形容词</strong></td>
+                    <td>描述主语的状态或特征（最常见的表语形式之一）</td>
+                    <td>You look <code>great</code>. / She is <code>beautiful</code>.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>副词</strong></td>
+                    <td>少数情况下可以是副词（如 out, here, there 等）</td>
+                    <td>He is <code>out</code>. / Let him be <code>here</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>以介词开头的短语充当表语</td>
+                    <td>The machine is <code>under repairs</code>.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>句子（表语从句）</strong></td>
+                    <td>一个完整句子（从句）充当表语</td>
+                    <td>The truth is <code>that he has never been abroad</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 默认主要的表语构成是：名词 + 形容词<br>
+            - 副词作表语只出现在少数情况下（如 out, here, there 等单个词的副词）<br>
+            - 介词短语和句子（表语从句）单独列出，虽然宏观上可以归入"名词"大类<br>
+            - 不定式和动名词在宏观上也可以归入"名词"大类，但为了强调其特殊性，单独列出
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 核心难点：表语 vs 宾语 的构成区别</h2>
+        <p>这是本节课最重要的辨析——表语和宾语在"可以由什么词充当"上有本质区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>主语</th>
+                    <th>宾语</th>
+                    <th>表语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>可充当词性</strong></td>
+                    <td><strong>只能是名词</strong>（名词短语、代词、数词、不定式、动名词、句子等宏观名词）</td>
+                    <td><strong>只能是名词</strong>（名词短语、代词、数词、不定式、动名词、句子等宏观名词）</td>
+                    <td><strong>可以是名词 + 形容词 + 副词 + 介词短语 + 句子</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>核心区别</strong></td>
+                    <td colspan="2" style="text-align: center;">主语和宾语 → 只能是名词</td>
+                    <td>表语 → 可以是多种词性（名词、形容词、副词、介词短语、句子）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <div class="example-item"><strong>主语 = 宾语（只能是名词）：</strong></div>
+            <div class="example-item">→ <code>He</code> (名词) is my friend. / I see <code>him</code> (代词=名词).</div>
+            <div class="example-item">→ <code>Playing football</code> (动名词=名词) is fun. / I enjoy <code>playing football</code> (动名词=名词).</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>表语（可以是多种词性）：</strong></div>
+            <div class="example-item">→ He is <code>a teacher</code>. (名词 ✓)</div>
+            <div class="example-item">→ He is <code>great</code>. (形容词 ✓) ← 宾语位置不能放形容词！</div>
+            <div class="example-item">→ He is <code>out</code>. (副词 ✓) ← 宾语位置不能放副词！</div>
+            <div class="example-item">→ He is <code>under repairs</code>. (介词短语 ✓) ← 宾语位置不能放介词短语！</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 主语 = 宾语 → 只能是名词（宏观名词）<br>
+            - 表语 → 可以是名词 + 形容词 + 副词 + 介词短语 + 句子<br>
+            - 这是表语与宾语/主语的本质区别！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 副词作表语的详细说明</h2>
+        <p>老师补充了副词作表语的少数情况，这是很多同学容易忽略的：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>表语</th>
+                    <th>词性</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He is <code>out</code>.</td>
+                    <td>out</td>
+                    <td><strong>副词</strong></td>
+                    <td>"他出去了/他不在"</td>
+                </tr>
+                <tr>
+                    <td>Let him be <code>here</code>.</td>
+                    <td>here</td>
+                    <td><strong>副词</strong></td>
+                    <td>"让他待在这里"</td>
+                </tr>
+                <tr>
+                    <td>The book is <code>there</code>.</td>
+                    <td>there</td>
+                    <td><strong>副词</strong></td>
+                    <td>"书在那里"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 副词作表语只出现在少数情况下，主要是 out, here, there 等表示位置/状态的副词<br>
+            - 不能把长串的副词短语强行说成副词作表语，比如 "The truth is that..." 中的 that 从句不是副词<br>
+            - 默认情况下，表语的主要构成是名词和形容词，副词是少数情况
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 介词短语作表语的详细说明</h2>
+        <p>老师用之前的例句详细说明了介词短语作表语的情况：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>The machine is <code>under repairs</code>.</strong></div>
+            <div class="example-item">→ is（系动词）+ under repairs（介词短语，作表语）</div>
+            <div class="example-item">→ under（介词）+ repairs（名词）→ 整体是介词短语</div>
+            <div class="example-item">→ 含义：机器正在维修中</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：under repairs 是介词短语，在系动词 is 后面作表语，描述主语 the machine 的状态（正在维修中）。介词短语作表语是非常常见的用法。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 表语构成总览对比表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>构成形式</th>
+                    <th>词性类别</th>
+                    <th>频率</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>名词/名词短语</strong></td>
+                    <td>名词类</td>
+                    <td>非常常见</td>
+                    <td>He is <code>a teacher</code>. / I am <code>American</code>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>代词</strong></td>
+                    <td>名词类</td>
+                    <td>常见</td>
+                    <td>Is it <code>yours</code>?</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>数词</strong></td>
+                    <td>名词类</td>
+                    <td>常见</td>
+                    <td>He has turned <code>21</code>.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>不定式</strong></td>
+                    <td>名词类</td>
+                    <td>较常见</td>
+                    <td>To teach English is my dream.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>动名词</strong></td>
+                    <td>名词类</td>
+                    <td>较常见</td>
+                    <td>His hobby is <code>playing football</code>.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>形容词</strong></td>
+                    <td>形容词类</td>
+                    <td>非常常见（与名词并列最主要）</td>
+                    <td>You look <code>great</code>. / She is <code>beautiful</code>.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>副词</strong></td>
+                    <td>副词类</td>
+                    <td>少数情况</td>
+                    <td>He is <code>out</code>. / Let him be <code>here</code>.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>介词短语</strong></td>
+                    <td>介词短语类</td>
+                    <td>常见</td>
+                    <td>The machine is <code>under repairs</code>.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>句子（表语从句）</strong></td>
+                    <td>句子类</td>
+                    <td>较常见</td>
+                    <td>The truth is <code>that he has never been abroad</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心判断逻辑总结</h2>
+        <p>老师总结了判断表语构成的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找到系动词（be/表状态/表感官/表变化/表表象）<br>
+            第二步：看系动词后面的成分是什么词性<br>
+            第三步：判断属于9种构成形式中的哪一种</strong>
+        </div>
+
+        <h3>表语构成判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到系动词（be / stay/keep/remains / feel/smell/taste/look/sound / become/go/get/turn / seem/appear）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看系动词后面的成分 → 判断词性（名词/形容词/副词/介词短语/句子）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>归类到9种构成形式中：名词类（名词/代词/数词/不定式/动名词）+ 形容词 + 副词 + 介词短语 + 句子</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 主语 = 宾语 → 只能是名词<br>
+            - 表语 → 名词 + 形容词 + 副词（少数）+ 介词短语 + 句子<br>
+            - 默认主要看名词和形容词<br>
+            - playing football 在表语位置 = 动名词（长期爱好），不是现在分词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+表语的构成（主系表）
+├── 核心回顾：之前出现过的表语
+│   ├── American → 名词短语
+│   ├── yours → 代词
+│   ├── 21 → 数词
+│   ├── to teach English → 不定式
+│   ├── playing football → 动名词（不是现在分词！）
+│   ├── that he has never been abroad → 句子（表语从句）
+│   ├── great → 形容词
+│   └── under repairs → 介词短语
+├── 核心辨析：playing football 是动名词
+│   ├── 动名词 → 长期/习惯性活动
+│   └── 现在分词 → 与谓语同步发生的动作
+├── 表语的9种构成形式
+│   ├── 名词类：名词/代词/数词/不定式/动名词
+│   ├── 形容词（最常见之一）
+│   ├── 副词（少数：out/here/there）
+│   ├── 介词短语（如 under repairs）
+│   └── 句子（表语从句）
+├── 核心区别：表语 vs 主语/宾语
+│   ├── 主语 = 宾语 → 只能是名词
+│   └── 表语 → 可以是多种词性（名词+形容词+副词+介词短语+句子）
+└── 核心口诀
+    ├── 主语=宾语→名词；表语→多种词性
+    ├── 默认看名词和形容词
+    └── playing football在表语=动名词
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记表语的9种构成形式：</strong>名词（含代词/数词/不定式/动名词）+ 形容词 + 副词（少数）+ 介词短语 + 句子（表语从句）。</li>
+            <li><strong>掌握核心区别——表语 vs 主语/宾语：</strong>主语和宾语只能是名词（宏观名词），但表语可以是多种词性（名词+形容词+副词+介词短语+句子）。这是表语最本质的特征。</li>
+            <li><strong>默认主要看名词和形容词：</strong>副词作表语只出现在少数情况（out/here/there），不要过度延伸。</li>
+            <li><strong>playing football 是动名词：</strong>在表语位置表示长期爱好/习惯性活动 → 动名词；不是现在分词。现在分词表示与谓语同步发生的动作。</li>
+            <li><strong>介词短语作表语：</strong>under repairs / in the classroom 等介词短语可以作表语，描述主语的状态或位置。</li>
+            <li><strong>表语从句：</strong>一个完整句子（从句）也可以作表语，如 The truth is that he has never been abroad.</li>
+            <li><strong>思维方式：</strong>本节课最重要的是从"词性"角度理解表语——表语不限于名词，可以是多种词性。理解了这一点，判断表语就自然了。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
