@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G46 同位语从句【Vs定语从句】：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G46】同位语从句【Vs定语从句】</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G46 是「基础语法」系列第46课，由陈老师主讲。本节课是句子部分复合句/从句的<strong>专题课</strong>，紧接 G45「从句3.0：一个公式降维看懂所有从句」，专门讲解<strong>同位语从句的三大要素（完整、抽象、等同）以及同位语从句与定语从句的区别辨析</strong>。</p>
+        <p>在 G45 中，老师用\"一个公式\"将六种从句归纳为两大类——主句不完整（主从/宾从/表从）和主句完整（定从/状从/同位从）。但同位语从句当时只提了\"三要素：完整、抽象、等同\"，没有展开讲解。本节课就是专门补上这块内容。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握同位语从句的三要素（完整、抽象、等同），学会用三要素判断同位语从句，并掌握同位语从句与定语从句的本质区别。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G44「从句2.0」、G45「从句3.0」的基础上。需要熟练掌握主谓结构识别、从属连词、六大从句的基本概念与判断方法等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 同位语从句的三要素总览</h2>
+        <p>老师提出同位语从句必须同时满足三个条件，缺一不可：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>要素</th>
+                    <th>核心含义</th>
+                    <th>一句话总结</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>完整</strong></td>
+                    <td>主句完整（不缺主语/宾语/表语）</td>
+                    <td>主句主要成分齐全，不缺东西</td>
+                </tr>
+                <tr>
+                    <td><strong>抽象</strong></td>
+                    <td>主句中有抽象名词</td>
+                    <td>该抽象名词能等同于\"1万个句子\"</td>
+                </tr>
+                <tr>
+                    <td><strong>等同</strong></td>
+                    <td>从句等同于抽象名词</td>
+                    <td>从句的内容 = 抽象名词的内容（1:1关系）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 完整、抽象、等同——同位语从句三要素<br>
+            - 三个条件必须同时满足，缺一不可<br>
+            - 如果主句不完整，就不用考虑同位语从句了（直接归入主从/宾从/表从）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 要素一：完整（主句完整）</h2>
+        <p>老师首先讲解第一个要素——完整：</p>
+
+        <h3>核心含义</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>We all know the fact that you are a pig.</strong></div>
+            <div class="example-item">→ 主句：We all know the fact（主谓宾完整）</div>
+            <div class="example-item">→ 主句不缺主语、不缺宾语、不缺表语 → 主句完整 ✓</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：同位语从句属于\"主句完整\"那一类（与定语从句、状语从句同类）。如果主句不完整（缺主语/宾语/表语），那从句就是主从/宾从/表从，不用考虑同位语从句。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 要素二：抽象（主句中有抽象名词）</h2>
+        <p>老师重点讲解了第二个要素——抽象，这是最难理解也是最关键的一个要素：</p>
+
+        <h3>什么是\"抽象名词\"？</h3>
+        <p>老师给出了一个非常实用的判断技巧——<strong>\"等同于1万个句子\"</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>promise（承诺）= 抽象名词 ✓</strong></div>
+            <div class="example-item">→ \"我爱你一年\" = 一个承诺（一个句子）</div>
+            <div class="example-item">→ \"我爱你两年\" = 一个承诺（一个句子）</div>
+            <div class="example-item">→ \"我爱你1万年\" = 一个承诺（一个句子）</div>
+            <div class="example-item">→ 从\"我爱你一年\"到\"我爱你1万年\"，有1万个句子 = 1万个承诺 → promise 是抽象名词 ✓</div>
+        </div>
+
+        <h3>反面案例：普通名词 ≠ 抽象名词</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>desk（桌子）= 普通名词 ✗</strong></div>
+            <div class="example-item">→ 虽然可以说\"我有一张桌子\"\"他买了张桌子\"……有1万个句子</div>
+            <div class="example-item">→ 但\"我买了一张桌子\"≠ 桌子（不等同于桌子本身）</div>
+            <div class="example-item">→ 所以 desk 不是抽象名词 ✗</div>
+        </div>
+
+        <h3>关键区分：要有\"主谓结构\"的句子</h3>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 不是随便什么句子都行，必须是有主谓结构的句子<br>
+            - \"我爱你一年\"是一个有主谓结构的句子，它等同于\"承诺\"→ promise 是抽象名词<br>
+            - \"我买了一张桌子\"虽然也是句子，但它不等同于\"桌子\"→ desk 不是抽象名词<br>
+            - 本质区别：抽象名词 = 一个概念/内容，普通名词 = 一个具体物体
+        </div>
+
+        <h3>常见的抽象名词列表</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>抽象名词</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>promise</strong></td>
+                    <td>承诺</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>fact</strong></td>
+                    <td>事实、真相</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>news</strong></td>
+                    <td>新闻、消息</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>problem</strong></td>
+                    <td>问题</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>idea</strong></td>
+                    <td>想法</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>possibility</strong></td>
+                    <td>可能性</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>wish</strong></td>
+                    <td>愿望</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>hope</strong></td>
+                    <td>希望</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>belief</strong></td>
+                    <td>信念、信仰</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>conclusion</strong></td>
+                    <td>结论</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><strong>suggestion</strong></td>
+                    <td>建议</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><strong>thought</strong></td>
+                    <td>想法、思考</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 这些是\"狭义的抽象名词\"，专指可以换成\"1万个句子\"的名词<br>
+            - 广义的抽象名词（如 happiness、beauty 等）不一定能等同1万个句子，不算这里的抽象名词<br>
+            - 判断方法：看它能不能等同1万个句子，能→抽象名词；不能→普通名词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 要素三：等同（从句等同于抽象名词）</h2>
+        <p>老师讲解第三个要素——等同，这是区分同位语从句和定语从句的核心：</p>
+
+        <h3>核心含义</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>We all know the fact that you are a pig.</strong></div>
+            <div class="example-item">→ 主句抽象名词：the fact（事实/真相）</div>
+            <div class="example-item">→ 从句：that you are a pig（你是一头猪）</div>
+            <div class="example-item">→ \"你是一头猪\"是不是一个\"真相\"？→ 是 ✓</div>
+            <div class="example-item">→ 从句 = 抽象名词（等同关系）→ 同位语从句 ✓</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：从句的内容就是抽象名词所表达的具体内容。fact = you are a pig，两者是等同关系（1:1）。从句不是修饰 fact，而是直接说明 fact 是什么。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 三要素实战验证：We all know the fact that you are a pig</h2>
+        <p>老师用经典例句逐一验证三要素：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>要素</th>
+                    <th>验证内容</th>
+                    <th>结果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>完整</strong></td>
+                    <td>主句 We all know the fact → 主谓宾完整</td>
+                    <td>✓ 满足</td>
+                </tr>
+                <tr>
+                    <td><strong>抽象</strong></td>
+                    <td>fact（真相）能等同于1万个句子吗？→ 能（\"我讲英语很好\"是真相、\"蔡徐坤打篮球好\"是真相……）</td>
+                    <td>✓ 满足</td>
+                </tr>
+                <tr>
+                    <td><strong>等同</strong></td>
+                    <td>从句 that you are a pig（你是一头猪）= fact（真相）？→ 是，\"你是一头猪\"就是一个真相</td>
+                    <td>✓ 满足</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>结论：</strong>三要素全部满足 → 同位语从句 ✓
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 同位语从句 vs 定语从句：相同点</h2>
+        <p>老师先讲两者的相同点，再重点讲不同点：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>相同点</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. 主句完整</strong></td>
+                    <td>同位语从句和定语从句的主句都是完整的（不缺成分）</td>
+                </tr>
+                <tr>
+                    <td><strong>2. 都可以用 that 引导</strong></td>
+                    <td>两者都可以用 that 来引导从句（这点容易迷惑人）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 同位语从句 vs 定语从句：不同点（核心辨析）</h2>
+        <p>老师从三个维度详细对比两者的区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>同位语从句</th>
+                    <th>定语从句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. 名词类型</strong></td>
+                    <td>主句中必须是<strong>抽象名词</strong>（能等同1万个句子）</td>
+                    <td>主句中可以是<strong>笼统名词</strong>（抽象名词或普通名词都可以）</td>
+                </tr>
+                <tr>
+                    <td><strong>2. 等同关系</strong></td>
+                    <td>从句<strong>等同于</strong>抽象名词（1:1关系）</td>
+                    <td>从句<strong>不等同</strong>名词（只是修饰名词，缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>3. that 的作用</strong></td>
+                    <td>that 不做成分（只是连接词，属于名词性从句）</td>
+                    <td>that 叫关系代词，在从句中<strong>做成分</strong>（主语/宾语/表语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 名词范围：定从 > 同位从（定从可以是任何名词，同位从只能是抽象名词）<br>
+            - 等同关系：同位从 = 从句等同名词；定从 = 从句修饰名词（不等同）<br>
+            - that 的作用：同位从的 that 不做成分；定从的 that 做主/宾/表语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 实战辨析：promise 的两个句子</h2>
+        <p>老师用 promise 的两个句子来实战区分同位语从句和定语从句：</p>
+
+        <h3>句子一：Do you remember the promise that you will love me forever?</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：划分主从句</strong></div>
+            <div class="example-item">→ 谓语动词：do（助动词，算第一个V）+ will love（第二个V）→ 两个V需要一个连词 → that 是从句句首</div>
+            <div class="example-item">→ 划分：Do you remember the promise（主句） | that you will love me forever（从句）</div>
+            <div class="example-item">→ 变陈述句更容易看：You remember the promise（主谓宾完整 ✓）</div>
+
+            <div class="example-item" style="margin-top: 15px;"><strong>第二步：三要素验证</strong></div>
+            <div class="example-item">→ 完整：主句 You remember the promise → 主谓宾完整 ✓</div>
+            <div class="example-item">→ 抽象：promise（承诺）能等同1万个句子吗？→ 能（\"我爱你一年\"=承诺、\"我爱你两年\"=承诺……）✓</div>
+            <div class="example-item">→ 等同：从句 \"you will love me forever\"（你会永远爱我）= promise（承诺）？→ 是！\"你会永远爱我\"就是一个承诺 ✓</div>
+
+            <div class="example-item" style="margin-top: 15px;"><strong>结论：同位语从句 ✓</strong></div>
+        </div>
+
+        <h3>句子二：Do you remember the promise that you made last year?</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：划分主从句</strong></div>
+            <div class="example-item">→ 谓语动词：do（助动词，算第一个V）+ made（第二个V）→ 两个V需要一个连词 → that 是从句句首</div>
+            <div class="example-item">→ 划分：Do you remember the promise（主句） | that you made last year（从句）</div>
+            <div class="example-item">→ 变陈述句：You remember the promise（主谓宾完整 ✓）</div>
+
+            <div class="example-item" style="margin-top: 15px;"><strong>第二步：三要素验证</strong></div>
+            <div class="example-item">→ 完整：主句 You remember the promise → 主谓宾完整 ✓</div>
+            <div class="example-item">→ 抽象：promise 能等同1万个句子 → ✓</div>
+            <div class="example-item">→ 等同：从句 \"you made last year\"（你去年做的）= promise（承诺）？→ <strong>不等同！</strong>✗</div>
+            <div class="example-item">→ \"你去年做的\"没有说出承诺的内容，只是修饰 promise（缩小范围：不是所有承诺，是去年做的那个）</div>
+
+            <div class="example-item" style="margin-top: 15px;"><strong>第三步：that 的作用验证</strong></div>
+            <div class="example-item">→ that 在从句中做成分吗？→ 做！made 是及物动词，缺宾语 → that = the promise → that 做宾语 ✓</div>
+
+            <div class="example-item" style="margin-top: 15px;"><strong>结论：定语从句 ✓</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 句子一：\"你会永远爱我\" = 承诺（等同）→ 同位语从句<br>
+            - 句子二：\"你去年做的\" ≠ 承诺（不等同，只是修饰）→ 定语从句<br>
+            - 类比理解：新闻播报员说\"下面播报一条最新消息\"→ 你期待的是消息的内容（等同→同位从），而不是\"昨天收到的消息\"（修饰→定从）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 同位语从句 vs 定语从句 完整对比总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>同位语从句</th>
+                    <th>定语从句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主句名词类型</strong></td>
+                    <td>必须是抽象名词（promise/fact/news/idea/possibility/wish/hope/belief/conclusion/suggestion/thought 等）</td>
+                    <td>可以是任何名词（抽象名词或普通名词都可以）</td>
+                </tr>
+                <tr>
+                    <td><strong>等同关系</strong></td>
+                    <td>从句 = 抽象名词（1:1等同关系）</td>
+                    <td>从句 ≠ 名词（只是修饰名词，缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>that 的词性</strong></td>
+                    <td>that 是从属连词，不做成分</td>
+                    <td>that 是关系代词，在从句中做主/宾/表语</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>看从句是否等同于抽象名词（能否说\"名词 = 从句内容\"）</td>
+                    <td>看从句是否修饰名词（缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>I heard the news <code>that he passed</code>.（news = he passed）</td>
+                    <td>The boy <code>who is reading</code> is Tom.（修饰 boy，缩小范围）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 同位语从句判断流程</h2>
+        <p>老师总结了判断同位语从句的完整流程：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：看主句是否完整 → 不完整？→ 不是同位语从句（是主从/宾从/表从）<br>
+            第二步：看主句中有没有抽象名词 → 没有？→ 不是同位语从句<br>
+            第三步：看从句是否等同于抽象名词 → 不等同？→ 不是同位语从句（是定语从句）</strong>
+        </div>
+
+        <h3>同位语从句判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看主句是否完整（主谓宾/主系表齐全）→ 不完整 → 排除同位语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看主句中有没有抽象名词（能等同1万个句子）→ 没有 → 排除同位语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>看从句是否等同于抽象名词（从句内容 = 抽象名词内容）→ 不等同 → 排除同位语从句（是定语从句）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 完整、抽象、等同——三要素缺一不可<br>
+            - 主句不完整 → 不是同位语从句<br>
+            - 名词不是抽象名词 → 不是同位语从句<br>
+            - 从句不等同名词 → 不是同位语从句（是定语从句）<br>
+            - that 不做成分 → 同位语从句；that 做成分 → 定语从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+        <p>老师总结了同位语从句 vs 定语从句的核心判断逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>同位语从句 vs 定语从句 终极判断法</strong><br><br>
+            第一步：看从句是否等同于名词<br>
+            &emsp;等同（名词 = 从句内容）→ 同位语从句<br>
+            &emsp;不等同（从句只是修饰名词）→ 定语从句<br>
+            第二步：看 that 是否在从句中做成分<br>
+            &emsp;that 不做成分 → 同位语从句<br>
+            &emsp;that 做成分 → 定语从句
+        </div>
+
+        <h3>终极判断两步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>看等同关系：从句内容 = 名词内容？→ 是→同位语从句；否→定语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看 that 的作用：that 在从句中做成分吗？→ 不做→同位语从句；做→定语从句</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 等同 → 同位语从句；修饰 → 定语从句<br>
+            - that 不做成分 → 同位语从句；that 做成分 → 定语从句<br>
+            - 抽象名词 + 等同 → 同位语从句；任何名词 + 修饰 → 定语从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+同位语从句 Vs 定语从句（G46）
+├── 同位语从句三要素
+│   ├── 完整：主句完整（不缺主/宾/表）
+│   ├── 抽象：主句中有抽象名词（能等同1万个句子）
+│   │   └── 常见抽象名词：promise/fact/news/problem/idea/possibility
+│   │        /wish/hope/belief/conclusion/suggestion/thought
+│   └── 等同：从句内容 = 抽象名词内容（1:1关系）
+│
+├── 同位语从句 vs 定语从句
+│   ├── 相同点
+│   │   ├── 主句都完整
+│   │   └── 都可以用 that 引导
+│   ├── 不同点
+│   │   ├── 名词类型：同位从=抽象名词；定从=任何名词
+│   │   ├── 等同关系：同位从=从句等同名词；定从=从句修饰名词
+│   │   └── that的作用：同位从=that不做成分；定从=that做主/宾/表
+│   └── 实战辨析
+│       ├── promise that you will love me forever → 等同→同位从
+│       └── promise that you made last year → 修饰→定从
+│
+├── 判断流程
+│   ├── 第一步：主句完整？→ 不完整→排除
+│   ├── 第二步：有抽象名词？→ 没有→排除
+│   └── 第三步：从句=名词？→ 不等同→排除（是定从）
+│
+└── 终极判断法
+    ├── 等同 → 同位语从句；修饰 → 定语从句
+    └── that不做成分 → 同位语从句；that做成分 → 定语从句
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记三要素：</strong>完整、抽象、等同——同位语从句必须同时满足三个条件，缺一不可。</li>
+            <li><strong>理解\"抽象名词\"：</strong>能等同\"1万个句子\"的名词才是抽象名词。promise（承诺）= 1万个句子（我爱你一年/两年/1万年）；desk（桌子）≠ 1万个句子（我买了一张桌子 ≠ 桌子本身）。</li>
+            <li><strong>掌握\"等同\"判断法：</strong>从句内容 = 名词内容？→ 是→同位语从句；否→定语从句。比如\"你会永远爱我\"= 承诺（等同→同位从）；\"你去年做的\"≠ 承诺（不等同→定从）。</li>
+            <li><strong>掌握\"that 做不做成分\"判断法：</strong>that 在从句中不做成分 → 同位语从句；that 做主/宾/表语 → 定语从句。</li>
+            <li><strong>记住常见抽象名词：</strong>promise/fact/news/problem/idea/possibility/wish/hope/belief/conclusion/suggestion/thought。这些是考试高频词。</li>
+            <li><strong>三要素缺一不可：</strong>主句不完整 → 排除同位语从句；名词不是抽象名词 → 排除；从句不等同名词 → 排除（是定语从句）。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

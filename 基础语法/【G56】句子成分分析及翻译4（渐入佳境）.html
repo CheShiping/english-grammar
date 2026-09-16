@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G56 句子成分分析及翻译4：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G56】句子成分分析及翻译4（渐入佳境）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G56 是「基础语法」系列第56课，由陈老师主讲。本节课是句子部分的<strong>实战练习课（续）</strong>，紧接 G55「句子成分分析及翻译3」，继续通过<strong>5个经典例句的逐句分析</strong>，将前面所有句型知识融会贯通，进一步巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程。</p>
+        <p>本节课难度"渐入佳境"，重点讲解两个高频考点：<strong>① It 作形式主语的识别（It takes...句型）</strong>以及<strong>② 介词短语的歧义辨析</strong>（同一个介词短语可能修饰不同成分），同时强化不及物动词+介词构成谓语、to do做目的状语、副词位置等核心知识点。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过5个例句的逐句分析，巩固"It takes...句型"的形式主语识别、介词短语修饰对象的歧义辨析、不定式做目的状语的优先判断等核心技能。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G52「翻译公式」、G53「句子成分分析及翻译1」、G54「句子成分分析及翻译2」、G55「句子成分分析及翻译3」的基础上。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心易错点：It 作形式主语（It takes...句型）</h2>
+        <p>老师以"It takes you three hours to go to Hong Kong by air"为例，重点讲解了 It 作形式主语的识别方法：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>It takes you three hours to go to Hong Kong by air.</strong></div>
+            <div class="example-item">→ 找谓语：takes（谓语1）；go 前面有 to → 非谓语 → 不是谓语 → 只有一个谓语 → 简单句</div>
+            <div class="example-item">→ 看到 It 开头 → 不要马上下定义，很可能 It 是形式主语</div>
+            <div class="example-item">→ 去掉 It：___ takes you three hours to go to Hong Kong by air → 主句缺主语 ✓</div>
+            <div class="example-item">→ to go to Hong Kong by air 是真正的主语（"去香港"这件事花你三小时）</div>
+            <div class="example-item">→ It 是形式主语，真正主语是 to go to Hong Kong by air → 主语从句</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——It 是不是形式主语：</strong><br>
+            - It 后面跟很长的内容（to do / doing / that 从句）→ 很可能 It 是形式主语<br>
+            - It 后面很短（如 It is nice）→ It 是真正主语（指代天气/时间/距离等）<br>
+            - 判断方法：去掉 It，看主句是否缺主语 → 缺主语 → It 是形式主语
+        </div>
+
+        <h3>It takes... 句型的双宾语结构辨析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>takes 后面有两个短语：you 和 three hours</strong></div>
+            <div class="example-item">→ 你是你，三小时是三小时 → 不是一伙的 → 两个独立成分</div>
+            <div class="example-item">→ 你是间接宾语；三小时是直接宾语 → 双宾语（SVOIO）✓</div>
+            <div class="example-item">→ 宾补和宾语的区别：宾补和宾语是"一个主体"（如 I find it nice → it 和 nice 是同一个东西）</div>
+            <div class="example-item">→ 你 ≠ 三小时 → 不是宾补 → 是双宾语 ✓</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：It takes sb. + 时间 + to do sth. 是经典句型。It 是形式主语，sb. 是间宾，时间短语是直宾，to do 是真正主语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心易错点：介词短语的歧义辨析</h2>
+        <p>老师以"Just got a letter for her brother in the US"为例，揭示了同一个介词短语可能修饰不同成分导致的歧义：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Just got a letter for her brother in the US.</strong></div>
+            <div class="example-item">→ 找谓语：got（谓语1）；has 是助动词 → 只有一个谓语 → 简单句</div>
+            <div class="example-item">→ for her brother 是介词短语；in the US 也是介词短语</div>
+            <div class="example-item">→ for her brother 修饰 letter → 后置定语（"来自她哥哥的信"）✓</div>
+            <div class="example-item">→ in the US 修饰 brother → 后置定语（"在美国的哥哥"）→ 也可能修饰 got → 地点状语（"在美国收到"）</div>
+            <div class="example-item">→ 歧义1（两个后置定语）：他刚好收到一封他美国哥哥寄来的信</div>
+            <div class="example-item">→ 歧义2（后置定语+地点状语）：他刚好在美国收到他哥哥寄来的信</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——介词短语修饰对象的判断方法：</strong><br>
+            - 看语义逻辑：in the US 修饰 brother → "美国的哥哥"（后置定语）；修饰 got → "在美国收到"（地点状语）<br>
+            - 两种理解都通顺 → 产生歧义<br>
+            - 老师倾向于后置定语的理解（两个后置定语嵌套）<br>
+            - 实际翻译时可以根据上下文判断哪种理解更合理
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句一：They sell Chinese shoes in New York biggest department store.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：sell（只有一个谓语动词）→ 简单句 ✓</div>
+            <div class="example-item">② 主语：They；谓语：sell；宾语：Chinese shoes</div>
+            <div class="example-item">③ in New York biggest department store 是什么成分？</div>
+            <div class="example-item">④ 是后置定语？→ "在纽约最大百货商场的中国鞋子"→ 不通顺 ✗</div>
+            <div class="example-item">⑤ 是状语？→ 修饰 sell → "在哪里卖？"→ "在纽约最大的百货商场卖"→ 通顺 ✓</div>
+            <div class="example-item">⑥ 地点状语 → 需要变序 → 调到 sell 前面</div>
+            <div class="example-item">⑦ 句型：主谓宾（SVO）→ 主干不变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 地点状语 in New York biggest department store → 变序（调 sell 前面）<br>
+            <br>
+            <strong>翻译：他们在纽约最大的百货商场卖中国鞋子。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句二：It takes you three hours to go to Hong Kong by air.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：takes（谓语1）；go 前面有 to → 非谓语 → 不是谓语 → 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② It 开头 → 考虑形式主语 → 去掉 It → 主句缺主语 → It 是形式主语 ✓</div>
+            <div class="example-item">③ 真正主语：to go to Hong Kong by air（"去香港"这件事）</div>
+            <div class="example-item">④ takes 是谓语；you 是间宾；three hours 是直接宾语 → 双宾语（SVOIO）✓</div>
+            <div class="example-item">⑤ by air 是什么成分？→ 修饰 go → 方式状语（"坐飞机去"）→ 需要变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——双宾语 vs 宾补：</strong><br>
+            - 双宾语：you 和 three hours 是两个不同的东西 → 你是你，三小时是三小时<br>
+            - 宾补：宾补和宾语是"一个主体"（如 I find it nice → it = nice）<br>
+            - 你 ≠ 三小时 → 不是宾补 → 是双宾语 ✓
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 方式状语 by air → 变序（调 go 前面）<br>
+            <br>
+            <strong>翻译：坐飞机去香港会花你三个小时的时间。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 例句三：Just got a letter for her brother in the US.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：got（谓语1）；has 是助动词 → 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② 主语：（省略的I/He）；谓语：got（has got = 得到/收到）</div>
+            <div class="example-item">③ just 是副词 → 夹在助动词和实义动词之间 → 时间状语（"刚好"）</div>
+            <div class="example-item">④ for her brother 是介词短语 → 修饰 letter → 后置定语（"来自她哥哥的信"）✓</div>
+            <div class="example-item">⑤ in the US 是介词短语 → 有两种理解：</div>
+            <div class="example-item">→ 理解A：修饰 brother → 后置定语（"在美国的哥哥"）→ 两个后置定语嵌套</div>
+            <div class="example-item">→ 理解B：修饰 got → 地点状语（"在美国收到"）</div>
+        </div>
+
+        <div class="example-box" style="text-align: center; font-size: 1.1em;">
+            <strong>歧义翻译：</strong><br><br>
+            理解A（两个后置定语）：他刚好收到一封他美国哥哥寄来的信。<br>
+            理解B（后置定语+地点状语）：他刚好在美国收到他哥哥寄来的信。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 例句四：He comes to my house every evening to help me with my English.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：comes（谓语1）；help 前面有 to → 非谓语 → 不是谓语 → 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② comes to my house → come 是不及物动词 + to（介词）→ 一起构成谓语 ✓</div>
+            <div class="example-item">③ every evening 是什么成分？→ 时间状语 → 修饰 comes to → 需要变序</div>
+            <div class="example-item">④ to help me with my English 是什么成分？→ 主干完了的 to do → 优先考虑目的状语 ✓</div>
+            <div class="example-item">⑤ 来我家里干什么？→ 目的是"帮助我学英语"→ 通顺 → 目的状语 ✓</div>
+            <div class="example-item">⑥ with my English 可以看作修饰 help → 方式状语（"在英语方面帮助"），但太细了，整体看作目的状语即可</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：主干完了的 to do → 优先考虑目的状语。"他来我家里的目的是帮助我学英语"→ 通顺 → 目的状语（不变序）。
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 时间状语 every evening → 变序（调 comes to 前面）<br>
+            ② 目的状语 to help me with my English → 不变序（目的状语动作之后）<br>
+            <br>
+            <strong>翻译：他每晚来我家里帮助我学习英语。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 例句五：He spent his holiday at the beach with his friends.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：spent（谓语1）→ 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② 主语：He；谓语：spent；宾语：his holiday</div>
+            <div class="example-item">③ 后面有两个介词短语：at the beach 和 with his friends</div>
+            <div class="example-item">④ at the beach 是什么成分？→ 修饰 spent → 地点状语（"在海边度过"）→ 需要变序 ✓</div>
+            <div class="example-item">⑤ with his friends 是什么成分？→ 修饰 spent → 方式状语（"和朋友一起度过"）→ 需要变序 ✓</div>
+            <div class="example-item">⑥ 排除法：with his friends 不是修饰 holiday（"和他朋友的海边"→ 不通顺）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——with his friends 修饰谁：</strong><br>
+            - 修饰 spent → 方式状语（"和朋友一起度过"）→ 通顺 ✓<br>
+            - 修饰 holiday → "和他朋友的海边"→ 不通顺 ✗<br>
+            - 所以 with his friends 是方式状语，修饰 spent
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 地点状语 at the beach → 变序（调 spent 前面）<br>
+            ② 方式状语 with his friends → 变序（调 spent 前面）<br>
+            <br>
+            <strong>翻译：他和朋友在海边度过了他的假期。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 五大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>They sell Chinese shoes <strong>in New York biggest department store</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>in New York... = 地点状语</td>
+                    <td>地点状语变序</td>
+                    <td>他们在纽约最大的百货商场卖中国鞋子。</td>
+                </tr>
+                <tr>
+                    <td>It takes you three hours <strong>to go to Hong Kong by air</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ It形式主语</td>
+                    <td>It=形式主语；to go...=真正主语；by air=方式状语</td>
+                    <td>方式状语变序</td>
+                    <td>坐飞机去香港会花你三个小时的时间。</td>
+                </tr>
+                <tr>
+                    <td>Just got a letter <strong>for her brother in the US</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>for her brother=后置定语；in the US=后置定语/地点状语（歧义）</td>
+                    <td>后置定语变序；地点状语变序</td>
+                    <td>他刚好收到一封他美国哥哥寄来的信。（或：他刚好在美国收到他哥哥寄来的信。）</td>
+                </tr>
+                <tr>
+                    <td>He comes to my house <strong>every evening</strong> <strong>to help me with my English</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>every evening=时间状语；to help...=目的状语</td>
+                    <td>时间状语变序；目的状语不变序</td>
+                    <td>他每晚来我家里帮助我学习英语。</td>
+                </tr>
+                <tr>
+                    <td>He spent his holiday <strong>at the beach</strong> <strong>with his friends</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>at the beach=地点状语；with his friends=方式状语</td>
+                    <td>地点状语+方式状语变序</td>
+                    <td>他和朋友在海边度过了他的假期。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心知识点总结</h2>
+
+        <h3>知识点一：It 作形式主语的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>It 后面很长</strong></td>
+                    <td>to do / doing / that 从句 → 很可能 It 是形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>It 后面很短</strong></td>
+                    <td>如 It is nice → It 是真正主语（指代天气/时间/距离等）</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>去掉 It，看主句是否缺主语 → 缺主语 → It 是形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>典型句型</strong></td>
+                    <td>It takes sb. + 时间 + to do sth.（做某事花某人多少时间）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：It takes... 句型的双宾语结构</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>内容</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>It</strong></td>
+                    <td>形式主语</td>
+                    <td>真正主语是后面的 to do 不定式</td>
+                </tr>
+                <tr>
+                    <td><strong>takes</strong></td>
+                    <td>谓语动词</td>
+                    <td>花费</td>
+                </tr>
+                <tr>
+                    <td><strong>sb.（你/我/他）</strong></td>
+                    <td>间接宾语</td>
+                    <td>人</td>
+                </tr>
+                <tr>
+                    <td><strong>时间短语（three hours）</strong></td>
+                    <td>直接宾语</td>
+                    <td>时间（与 sb. 不是同一个东西 → 不是宾补）</td>
+                </tr>
+                <tr>
+                    <td><strong>to do sth.</strong></td>
+                    <td>真正主语</td>
+                    <td>"做某事"这件事</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：介词短语的歧义辨析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>歧义类型</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>修饰对象不同</strong></td>
+                    <td>同一个介词短语可能修饰不同的词 → 产生歧义</td>
+                    <td>for her brother in the US → in the US 修饰 brother（后置定语）或修饰 got（地点状语）</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>看语义逻辑：哪种理解通顺 → 哪种就是正确理解</td>
+                    <td>"美国的哥哥"（后置定语）vs "在美国收到"（地点状语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：come to 的谓语构成</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>分析</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>不及物动词 + 介词</td>
+                    <td>come 是不及物动词，不能直接接宾语，必须加介词 to 后才能接宾语 → 整体构成谓语</td>
+                    <td>He <code>comes to</code> my house.</td>
+                </tr>
+                <tr>
+                    <td>类似结构</td>
+                    <td>look at / listen to / wait for / depend on 等</td>
+                    <td>——</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：just 的副词位置</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>just 夹在助动词和实义动词之间</td>
+                    <td>just 是时间状语，意思是"刚好"，常夹在助动词（has/have）和实义动词之间</td>
+                    <td>He <code>has just got</code> a letter.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>地点状语</strong></td>
+                    <td>in New York biggest department store（修饰 sell）</td>
+                    <td>需要变序</td>
+                    <td>调到 sell 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>真正主语（to do）</strong></td>
+                    <td>to go to Hong Kong by air（做 It 的真正主语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>by air（修饰 go）</td>
+                    <td>需要变序</td>
+                    <td>调到 go 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>for her brother（修饰 letter）</td>
+                    <td>需要变序</td>
+                    <td>调到 letter 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>every evening（修饰 comes to）</td>
+                    <td>需要变序</td>
+                    <td>调到 comes to 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>目的状语</strong></td>
+                    <td>to help me with my English（修饰 comes to）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>地点状语</strong></td>
+                    <td>at the beach（修饰 spent）</td>
+                    <td>需要变序</td>
+                    <td>调到 spent 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>with his friends（修饰 spent）</td>
+                    <td>需要变序</td>
+                    <td>调到 spent 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G56 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 判断句型类型<br>
+            ↓<br>
+            第二步：看到 It 开头 → 考虑是不是形式主语（去掉 It 看是否缺主语）<br>
+            ↓<br>
+            第三步：It takes... 句型 → It=形式主语；sb.=间宾；时间=直宾；to do=真正主语<br>
+            ↓<br>
+            第四步：介词短语 → 看修饰对象（修饰名词→后置定语；修饰动词→状语）<br>
+            ↓<br>
+            第五步：主干完了的 to do → 优先考虑目的状语（不变序）<br>
+            ↓<br>
+            第六步：不及物动词 + 介词 = 一个谓语（come to / look at / listen to）<br>
+            ↓<br>
+            第七步：变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 看到 It 开头要想想是不是形式主语<br>
+            - It takes sb. + 时间 + to do → 双宾语结构（sb.≠时间 → 不是宾补）<br>
+            - 介词短语修饰对象要判断（修饰名词→后置定语；修饰动词→状语）<br>
+            - 同一个介词短语可能产生歧义（修饰不同成分）<br>
+            - 主干完了的 to do → 优先考虑目的状语（不变序）<br>
+            - 不及物动词 + 介词 = 一个谓语（come to / look at / listen to）<br>
+            - just 夹在助动词和实义动词之间 → 时间状语（"刚好"）<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+句子成分分析及翻译4（G56）——渐入佳境
+├── 核心易错点一：It 作形式主语
+│   ├── 去掉 It → 主句缺主语 → It 是形式主语
+│   └── It takes sb. + 时间 + to do → 双宾语结构
+│       ├── sb. = 间宾；时间 = 直宾
+│       └── sb. ≠ 时间 → 不是宾补
+│
+├── 核心易错点二：介词短语的歧义
+│   └── 同一个介词短语可能修饰不同成分
+│       ├── 修饰名词 → 后置定语
+│       └── 修饰动词 → 状语
+│
+├── 例句一：They sell Chinese shoes in New York biggest department store.
+│   └── SVO + 地点状语变序 → 他们在纽约最大的百货商场卖中国鞋子。
+│
+├── 例句二：It takes you three hours to go to Hong Kong by air.
+│   ├── It = 形式主语；to go... = 真正主语
+│   ├── you = 间宾；three hours = 直宾（双宾语）
+│   ├── by air = 方式状语（变序）
+│   └── 翻译：坐飞机去香港会花你三个小时的时间。
+│
+├── 例句三：Just got a letter for her brother in the US.
+│   ├── for her brother = 后置定语（修饰letter）
+│   ├── in the US = 后置定语（修饰brother）或地点状语（修饰got）→ 歧义
+│   └── 翻译A：他刚好收到一封他美国哥哥寄来的信。
+│       翻译B：他刚好在美国收到他哥哥寄来的信。
+│
+├── 例句四：He comes to my house every evening to help me with my English.
+│   ├── come to = 不及物动词+介词 → 一个谓语
+│   ├── every evening = 时间状语（变序）
+│   └── to help... = 目的状语（不变序）
+│   └── 翻译：他每晚来我家里帮助我学习英语。
+│
+├── 例句五：He spent his holiday at the beach with his friends.
+│   ├── at the beach = 地点状语（变序）
+│   └── with his friends = 方式状语（变序，修饰spent不是holiday）
+│   └── 翻译：他和朋友在海边度过了他的假期。
+│
+└── 核心口诀
+    ├── It开头 → 考虑形式主语
+    ├── It takes... → 双宾语（sb.≠时间）
+    ├── 介词短语 → 判断修饰对象
+    ├── 主干完了的to do → 优先考虑目的状语
+    ├── 不及物动词+介词 = 一个谓语
+    └── just → 夹在助动词和实义动词之间
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记 It 形式主语的识别方法：</strong>去掉 It，看主句是否缺主语。缺主语 → It 是形式主语，真正主语在后面。It 后面很长（to do / doing / that 从句）→ 很可能 It 是形式主语。</li>
+            <li><strong>牢记 It takes... 句型的双宾语结构：</strong>It takes sb. + 时间 + to do sth. 中，sb. 是间宾，时间短语是直宾。你 ≠ 三小时 → 不是宾补 → 是双宾语。</li>
+            <li><strong>牢记介词短语的歧义辨析：</strong>同一个介词短语可能修饰不同成分（名词→后置定语；动词→状语）。根据语义逻辑判断哪种理解更合理。</li>
+            <li><strong>牢记 come to 的谓语构成：</strong>come 是不及物动词，不能直接接宾语，必须加介词 to 后才能接宾语 → come to 一起构成谓语。</li>
+            <li><strong>牢记 just 的副词位置：</strong>just 是时间状语（"刚好"），常夹在助动词（has/have）和实义动词之间 → has just got。</li>
+            <li><strong>牢记主干完了的 to do → 优先考虑目的状语：</strong>"他来我家里干什么？→ 目的是帮助我"→ 通顺 → 目的状语（不变序）。</li>
+            <li><strong>翻译三步法：</strong>找谓语 → 识别句型 → 找后置定语和状语变序 → 翻译完成。每一步都不能跳过。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

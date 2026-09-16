@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G57 句子成分分析及翻译5：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G57】句子成分分析及翻译5</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G57 是「基础语法」系列第57课，由陈老师主讲。本节课是句子部分的<strong>实战练习课（续）</strong>，紧接 G56「句子成分分析及翻译4」，继续通过<strong>5个经典例句的逐句分析</strong>，将前面所有句型知识融会贯通，进一步巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程。</p>
+        <p>本节课重点讲解两个高频易错考点：<strong>① 祈使句的识别</strong>（省略主语 you，不能误判为缺主语的主语从句）以及<strong>② 定语从句与同位语从句的终极辨析</strong>（以 promise 为例，通过"等同检验"区分定从和同位从），同时强化 go 的不及物属性、keep an eye on 短语谓语、It 形式主语等核心知识点。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过5个例句的逐句分析，巩固祈使句的识别方法、"that"引导从句时的类型判断（定从vs同位从）、go的不及物属性、It形式主语等核心技能。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G41「祈使句」、G43「从句/复合句1.0」、G45「从句3.0」、G52「翻译公式」、G53「句子成分分析及翻译1」的基础上。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心易错点一：祈使句的识别</h2>
+        <p>老师以"Keep an eye on my little sister while I'm away"为例，揭示了同学们最容易犯的错误——<strong>一看到句子缺主语就认为是主语从句</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Keep an eye on my little sister while I'm away.</strong></div>
+            <div class="example-item">→ 句中有两个谓语：keep（谓语1）+ am（谓语2，系动词）</div>
+            <div class="example-item">→ 引导词 that/while → while 是从属连词（时间），从这里划开</div>
+            <div class="example-item">→ 主句：Keep an eye on my little sister → 看起来缺主语？→ 不一定！</div>
+            <div class="example-item">→ 这是<strong>祈使句</strong>！祈使句省略了主语 you → 不是缺主语的主语从句 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到句子缺主语不要激动，先想想是不是祈使句（省略了 you）<br>
+            - 祈使句的特点：以动词原形开头，语气是命令/请求/建议<br>
+            - Keep an eye on = 固定短语，意思是"照看/留意"<br>
+            - 连接词个数 = V - 1 = 2 - 1 = 1 → while 是从属连词 → 复合句
+        </div>
+
+        <h3>keep an eye on 的两种理解方式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>理解方式</th>
+                    <th>分析</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>整体看作短语谓语</strong></td>
+                    <td>keep an eye on = 照看（整体看作一个谓语短语）</td>
+                    <td>简单理解：照看 + my little sister（宾语）→ 简单 ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>精细拆解</strong></td>
+                    <td>keep（谓语）+ an eye（宾语）+ on my little sister（状语）</td>
+                    <td>字面意思：在你妹妹身上保持一个注视 → 转换翻译为"照看" ✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：建议简单理解——把 keep an eye on 整体看作一个谓语短语（照看），my little sister 是宾语。while I'm away 是时间状语从句，修饰 keep。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心易错点二：go 是不及物动词</h2>
+        <p>老师以"Go where you want to go"为例，重点讲解了 go 的不及物属性对从句类型判断的影响：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Go where you want to go.</strong></div>
+            <div class="example-item">→ 句中有两个谓语：go（谓语1）+ want（谓语2）</div>
+            <div class="example-item">→ 引导词 where → 从这里划开</div>
+            <div class="example-item">→ 主句：Go → 看起来只有一个动词？→ 是祈使句，省略了主语 you ✓</div>
+            <div class="example-item">→ go 是<strong>不及物动词</strong>（vi.）→ 后面不需要接宾语 → 主句完整 ✓</div>
+            <div class="example-item">→ 主句完整 → 定从/状从/同位从 → 没有名词可修饰 → 排除定从和同位从 → <strong>状语从句 ✓</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——go 是不及物动词：</strong><br>
+            - go 是不及物动词，后面不能直接接宾语<br>
+            - go to school（加介词 to 后才能接宾语）→ 证明 go 是不及物的<br>
+            - go home 中 home 是地点副词，不影响 go 的不及物属性<br>
+            - 很多同学误以为 go 后面可以接宾语（如 go school），这是错误的
+        </div>
+
+        <div class="annotation">
+            核心逻辑：Go where you want to go. → 祈使句 + where 引导的地点状语从句。翻译："去你想去的地方"或"你想去哪里就去吧"。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心易错点三：It 作形式主语（与主语从句对比）</h2>
+        <p>老师以"That she will go is certain"为例，讲解了主语从句和 It 形式主语的转换：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>That she will go is certain.</strong></div>
+            <div class="example-item">→ 两个谓语：will go（will+go原形=谓语1）+ is（系动词=谓语2）</div>
+            <div class="example-item">→ that 引导从句 → 划分：<code>[That she will go]</code>（从句） | <code>is certain</code>（主句）</div>
+            <div class="example-item">→ 主句：is certain → 系动词 is 后面缺表语 → 主句不完整 → <strong>主语从句 ✓</strong></div>
+            <div class="example-item">→ 大结构：主语从句 + 系动词 + 表语 → 主系表（SVP）→ 主干不变序</div>
+        </div>
+
+        <h3>主语从句的两种表达方式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>表达方式</th>
+                    <th>例句</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>that 从句做主语（句首）</strong></td>
+                    <td><code>That she will go</code> is certain.</td>
+                    <td>主语从句在句首，正式文体</td>
+                </tr>
+                <tr>
+                    <td><strong>It 做形式主语</strong></td>
+                    <td>It is certain <code>that she will go</code>.</td>
+                    <td>It 是形式主语，真正主语是 that 从句（避免头重脚轻）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：that she will go 做主语（她要走这件事）+ is（系动词）+ certain（表语，表示评价/判断）。两种表达方式意思相同，可根据中文习惯灵活选择。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句一：Keep an eye on my little sister while I'm away.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：keep（谓语1）+ am（谓语2，系动词单独构成谓语）→ 两个谓语</div>
+            <div class="example-item">② 引导词：while → 从 while 处划开</div>
+            <div class="example-item">③ 主句：Keep an eye on my little sister → 祈使句（省略主语 you）→ 主谓结构完整 ✓</div>
+            <div class="example-item">④ while I'm away → 时间状语从句（修饰 keep）→ "当我离开的时候"</div>
+            <div class="example-item">⑤ 句型：祈使句 + 时间状语从句 → 主干不变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我离开的时候，请照看一下我妹妹。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 例句二：Go where you want to go.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：go（谓语1）+ want（谓语2）→ 两个谓语</div>
+            <div class="example-item">② 引导词：where → 从 where 处划开</div>
+            <div class="example-item">③ 主句：Go → 祈使句（省略主语 you）→ go 是不及物动词 → 主句完整 ✓</div>
+            <div class="example-item">④ where you want to go → 没有名词可修饰 → 排除定从和同位从 → <strong>地点状语从句 ✓</strong></div>
+            <div class="example-item">⑤ where 引导的地点状语从句 → 修饰 go → 需要变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：去你想去的地方。</strong><br>
+            （或：你想去哪里就去吧。）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 例句三：That she will go is certain.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：will go（will+go原形=谓语1）+ is（系动词=谓语2）→ 两个谓语</div>
+            <div class="example-item">② 引导词：that → 从 that 处划开</div>
+            <div class="example-item">③ 从句：That she will go（主语从句）</div>
+            <div class="example-item">④ 主句：is certain → 系动词 is 后面缺表语 → 主句不完整 → <strong>主语从句 ✓</strong></div>
+            <div class="example-item">⑤ 大结构：主语从句 + is（系动词）+ certain（表语）→ 主系表（SVP）→ 主干不变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>直译：她要走是确定的。</strong><br>
+            <strong>符合中文习惯：很确定她要走。/ 她要走是很确定的。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 例句四：I remember the factory that my mother worked in.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：remember（谓语1）+ worked（谓语2）→ 两个谓语</div>
+            <div class="example-item">② 引导词：that → 从 that 处划开</div>
+            <div class="example-item">③ 主句：I remember the factory → 主谓宾结构完整 ✓ → 定从/状从/同位从</div>
+            <div class="example-item">④ factory（工厂）不是抽象名词 → 排除同位从</div>
+            <div class="example-item">⑤ 修饰关系：that my mother worked in 修饰 factory → "我妈妈曾经工作过的工厂" → 缩小范围 → <strong>定语从句 ✓</strong></div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 定语从句 that my mother worked in → 变序（调 factory 前面）<br>
+            <br>
+            <strong>翻译：我记得我妈妈曾经工作过的那个工厂。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 例句五（上）：Do you remember the promise that you would help me?</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：do...remember（do是助动词+remember=谓语1）+ would help（would+help原形=谓语2）→ 两个谓语</div>
+            <div class="example-item">② 注意：这是疑问语序，do 提前了 → 还原陈述句：You remember the promise that you would help me.</div>
+            <div class="example-item">③ 引导词：that → 从 that 处划开</div>
+            <div class="example-item">④ 主句：You remember the promise → 主谓宾结构完整 ✓ → 定从/状从/同位从</div>
+            <div class="example-item">⑤ promise（承诺）是<strong>抽象名词</strong> → 满足"抽象"条件 ✓</div>
+            <div class="example-item">⑥ 等同检验：that you would help me（你会帮助我）= an promise（一个承诺）？→ 是的！"你会帮助我"本身就是一个承诺的内容 ✓</div>
+            <div class="example-item">⑦ 三要素全部满足（完整+抽象+等同）→ <strong>同位语从句 ✓</strong></div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：你还记得你会帮助我的那个承诺吗？</strong><br>
+            （同位语从句可以不变序，也可以像定语一样翻译）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 例句五（下）：Do you remember the promise that you made last year?</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：do...remember（谓语1）+ made（谓语2，ABB型动词，主动形式=谓语）→ 两个谓语</div>
+            <div class="example-item">② 引导词：that → 从 that 处划开</div>
+            <div class="example-item">③ 主句：You remember the promise → 主谓宾结构完整 ✓ → 定从/状从/同位从</div>
+            <div class="example-item">④ promise（承诺）是抽象名词 → 满足"抽象"条件 ✓</div>
+            <div class="example-item">⑤ 等同检验：that you made last year（你去年做的）= an promise（一个承诺）？→ <strong>不等同！</strong>✗</div>
+            <div class="example-item">⑥ "你去年做的"≠ "承诺"，只是说明了"做"的时间 → 没有等同关系</div>
+            <div class="example-item">⑦ 只是把"承诺"缩小了范围（你去年做的那个承诺，不是你前年做的）→ <strong>定语从句 ✓</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——同位从 vs 定从（promise 的终极对决）：</strong><br>
+            - that you would help me（你会帮助我）→ 这是一个承诺的内容 → 等同 → 同位语从句 ✓<br>
+            - that you made last year（你去年做的）→ 只是说明做的时间 → 不等同 → 缩小范围 → 定语从句 ✓<br>
+            - 关键：看从句内容是否等于抽象名词的内容（等同→同位从；不等同→定从）
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 定语从句 that you made last year → 变序（调 promise 前面）<br>
+            ② 时间状语 last year → 变序（调 made 前面）<br>
+            <br>
+            <strong>翻译：你还记得你去年做的那个承诺吗？</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 五大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Keep an eye on my little sister <strong>while I'm away</strong>.</td>
+                    <td><strong>祈使句</strong> + 时间状语从句</td>
+                    <td>keep an eye on = 短语谓语（照看）；while I'm away = 时间状语从句</td>
+                    <td>时间状语变序</td>
+                    <td>我离开的时候，请照看一下我妹妹。</td>
+                </tr>
+                <tr>
+                    <td>Go <strong>where you want to go</strong>.</td>
+                    <td><strong>祈使句</strong> + 地点状语从句</td>
+                    <td>go = 不及物动词（vi.）；where you want to go = 地点状语从句</td>
+                    <td>地点状语变序</td>
+                    <td>去你想去的地方。</td>
+                </tr>
+                <tr>
+                    <td><strong>That she will go</strong> is certain.</td>
+                    <td><strong>SVP</strong>（主系表）+ 主语从句</td>
+                    <td>That she will go = 主语从句；is = 系动词；certain = 表语</td>
+                    <td>不变序</td>
+                    <td>很确定她要走。</td>
+                </tr>
+                <tr>
+                    <td>I remember the factory <strong>that my mother worked in</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 定语从句</td>
+                    <td>that my mother worked in = 定语从句（修饰factory）</td>
+                    <td>定语从句变序</td>
+                    <td>我记得我妈妈曾经工作过的那个工厂。</td>
+                </tr>
+                <tr>
+                    <td>Do you remember the promise <strong>that you would help me</strong>?</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 同位语从句</td>
+                    <td>that you would help me = 同位语从句（promise=你会帮助我）</td>
+                    <td>不变序</td>
+                    <td>你还记得你会帮助我的那个承诺吗？</td>
+                </tr>
+                <tr>
+                    <td>Do you remember the promise <strong>that you made last year</strong>?</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 定语从句</td>
+                    <td>that you made last year = 定语从句（缩小promise的范围）</td>
+                    <td>定语从句+时间状语变序</td>
+                    <td>你还记得你去年做的那个承诺吗？</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心知识点总结</h2>
+
+        <h3>知识点一：祈使句的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>形式特征</strong></td>
+                    <td>以动词原形开头，语气是命令/请求/建议</td>
+                </tr>
+                <tr>
+                    <td><strong>主语</strong></td>
+                    <td>省略了 you（不是缺主语的主语从句！）</td>
+                </tr>
+                <tr>
+                    <td><strong>判断方法</strong></td>
+                    <td>在句首加 "Please" 看是否通顺 → 通顺 → 祈使句</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td><code>Keep</code> an eye on my little sister.（请照看一下我妹妹）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：go 是不及物动词</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>go 的词性</strong></td>
+                    <td>不及物动词（vi.），后面不能直接接宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>接目的地</strong></td>
+                    <td>必须加介词 to：go to school / go to Beijing</td>
+                </tr>
+                <tr>
+                    <td><strong>例外</strong></td>
+                    <td>go home 中 home 是地点副词，不影响 go 的不及物属性</td>
+                </tr>
+                <tr>
+                    <td><strong>对从句判断的影响</strong></td>
+                    <td>go 后面不需要宾语 → 主句完整 → 定从/状从/同位从（不是宾从）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：It 作形式主语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>表达方式</th>
+                    <th>结构</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>that 从句做主语（句首）</strong></td>
+                    <td>[That ...] + 系动词 + 表语</td>
+                    <td><code>That she will go</code> is certain.</td>
+                </tr>
+                <tr>
+                    <td><strong>It 做形式主语</strong></td>
+                    <td>It + 系动词 + 表语 + that 从句</td>
+                    <td>It is certain <code>that she will go</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：定语从句 vs 同位语从句（promise 终极辨析）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>同位语从句</th>
+                    <th>定语从句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>三要素</strong></td>
+                    <td>完整 + 抽象 + 等同（三要素全满足）</td>
+                    <td>完整 + 抽象 + 不等同（缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>等同检验</strong></td>
+                    <td>从句内容 = 抽象名词的内容</td>
+                    <td>从句内容 ≠ 抽象名词的内容</td>
+                </tr>
+                <tr>
+                    <td><strong>that you would help me</strong></td>
+                    <td>"你会帮助我" = 一个承诺 → 等同 → 同位从 ✓</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>that you made last year</strong></td>
+                    <td>——</td>
+                    <td>"你去年做的" ≠ 承诺（只是时间）→ 缩小范围 → 定从 ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>变序</strong></td>
+                    <td>不变序（同位语=同一事物，可不变序）</td>
+                    <td>需要变序（调到被修饰的名词前面）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀——等同检验法：</strong><br>
+            - 同位语从句：从句内容 = 抽象名词（"你会帮助我" = "承诺"）→ 等同 → 同位从<br>
+            - 定语从句：从句内容 ≠ 抽象名词（"你去年做的" ≠ "承诺"）→ 不等同 → 缩小范围 → 定从<br>
+            - 抽象名词举例：promise（承诺）、idea（想法）、news（消息）、fact（事实）、hope（希望）...
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>时间状语从句</strong></td>
+                    <td>while I'm away（修饰 keep）</td>
+                    <td>需要变序</td>
+                    <td>调到 keep 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>地点状语从句</strong></td>
+                    <td>where you want to go（修饰 go）</td>
+                    <td>需要变序</td>
+                    <td>调到 go 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>That she will go（做主语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td>that my mother worked in（修饰 factory）</td>
+                    <td>需要变序</td>
+                    <td>调到 factory 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语从句</strong></td>
+                    <td>that you would help me（同位说明 promise）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td>that you made last year（修饰 promise）</td>
+                    <td>需要变序</td>
+                    <td>调到 promise 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>14. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G57 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词 → 判断句型类型<br>
+            ↓<br>
+            第二步：看到动词原形开头 → 想想是不是祈使句（省略主语 you）<br>
+            ↓<br>
+            第三步：看到 It 开头 / that 从句在句首 → 考虑是不是形式主语/主语从句<br>
+            ↓<br>
+            第四步：看到 that 引导从句 → 先看主句是否完整<br>
+            &emsp;完整 → 定从/状从/同位从<br>
+            &emsp;不完整 → 主从/宾从/表从<br>
+            ↓<br>
+            第五步：定从 vs 同位从 → 等同检验法<br>
+            &emsp;从句内容 = 抽象名词 → 同位语从句（不变序）<br>
+            &emsp;从句内容 ≠ 抽象名词 → 定语从句（需要变序）<br>
+            ↓<br>
+            第六步：变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 看到动词原形开头要想想是不是祈使句（不要误判为缺主语的主语从句）<br>
+            - go 是不及物动词（vi.），后面不接宾语<br>
+            - keep an eye on = 照看（整体看作一个谓语短语）<br>
+            - that she will go is certain = 主语从句 + 主系表（不变序）<br>
+            - 同位从 vs 定从：等同检验法（从句内容 = 抽象名词 → 同位从；不等同 → 定从）<br>
+            - promise 既可以引导同位从也可以引导定从，关键看等同关系<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>15. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+句子成分分析及翻译5（G57）
+├── 核心易错点一：祈使句的识别
+│   ├── 动词原形开头 → 可能省略了主语 you
+│   ├── 在句首加 "Please" 测试 → 通顺 → 祈使句
+│   └── keep an eye on = 照看（整体看作谓语短语）
+│
+├── 核心易错点二：go 是不及物动词
+│   ├── go 后面不接宾语（vi.）
+│   ├── go to school（加介词 to 才能接宾语）
+│   └── go home（home 是地点副词，不影响不及物属性）
+│
+├── 核心易错点三：It 作形式主语
+│   ├── That she will go is certain.（that 从句做主语）
+│   └── It is certain that she will go.（It 做形式主语）
+│
+├── 例句一：Keep an eye on my little sister while I'm away.
+│   ├── 祈使句 + 时间状语从句（while）
+│   └── 翻译：我离开的时候，请照看一下我妹妹。
+│
+├── 例句二：Go where you want to go.
+│   ├── 祈使句 + 地点状语从句（where）
+│   └── 翻译：去你想去的地方。
+│
+├── 例句三：That she will go is certain.
+│   ├── 主语从句 + 主系表（SVP）
+│   └── 翻译：很确定她要走。
+│
+├── 例句四：I remember the factory that my mother worked in.
+│   ├── 定语从句（修饰 factory，缩小范围）
+│   └── 翻译：我记得我妈妈曾经工作过的那个工厂。
+│
+├── 例句五（上）：Do you remember the promise that you would help me?
+│   ├── 同位语从句（"你会帮助我" = "承诺" → 等同）
+│   └── 翻译：你还记得你会帮助我的那个承诺吗？
+│
+├── 例句五（下）：Do you remember the promise that you made last year?
+│   ├── 定语从句（"你去年做的" ≠ "承诺" → 不等同 → 缩小范围）
+│   └── 翻译：你还记得你去年做的那个承诺吗？
+│
+└── 核心口诀
+    ├── 祈使句 → 不要误判为缺主语
+    ├── go → 不及物动词
+    ├── that 从句在句首 → 考虑主语从句或 It 形式主语
+    ├── 等同检验法 → 同位从 vs 定从 的终极武器
+    └── 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记祈使句的识别方法：</strong>动词原形开头 + 语气是命令/请求/建议 → 祈使句 → 省略了主语 you。不要误判为缺主语的主语从句。测试方法：在句首加 "Please" 看是否通顺。</li>
+            <li><strong>牢记 go 是不及物动词：</strong>go 后面不能直接接宾语，必须加介词 to 才能接目的地（go to school）。go home 中 home 是地点副词，不影响 go 的不及物属性。</li>
+            <li><strong>牢记 keep an eye on 的两种理解：</strong>简单理解：整体看作一个谓语短语（照看）；精细理解：keep（谓语）+ an eye（宾语）+ on my little sister（状语）→ 字面"在你妹妹身上保持注视"→ 转换翻译为"照看"。</li>
+            <li><strong>牢记主语从句的两种表达：</strong>① that 从句做主语（句首）→ That she will go is certain. ② It 做形式主语 → It is certain that she will go. 两种表达方式意思相同。</li>
+            <li><strong>牢记"等同检验法"区分定从和同位从：</strong>从句内容 = 抽象名词 → 同位语从句（不变序）；从句内容 ≠ 抽象名词 → 定语从句（需要变序）。promise 既可以引导同位从也可以引导定从，关键看等同关系。</li>
+            <li><strong>牢记 ABB 型动词的判断：</strong>made 是 ABB 型动词（make-made-made），主动形式 = 谓语。需要做主动/被动判断。</li>
+            <li><strong>翻译三步法：</strong>找谓语 → 识别句型 → 找后置定语和状语变序 → 翻译完成。每一步都不能跳过。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

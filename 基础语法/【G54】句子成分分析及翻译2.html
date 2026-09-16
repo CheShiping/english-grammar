@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G54 句子成分分析及翻译2：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G54】句子成分分析及翻译2</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G54 是「基础语法」系列第54课，由陈老师主讲。本节课是句子部分的<strong>实战练习课（续）</strong>，紧接 G53「句子成分分析及翻译1」，专门讲解 G53 中遗留的<strong>三个有难度的句子</strong>的逐句成分分析与翻译。</p>
+        <p>在 G53 中，老师准备了约50个由浅入深的句子，但其中三个句子难度稍大，因此单独拿出来在本节课详细讲解。这三个句子分别涉及：定语从句+伴随状语+后置定语的嵌套分析、宾语从句与宾补的辨析、以及简单句中并列谓语与多层状语/定语的精细拆解。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过3个高难度例句的逐句深度分析，巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程，特别强化复杂嵌套句的拆解能力和"名词短语"概念的运用。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G44「从句2.0」、G52「翻译公式」、G53「句子成分分析及翻译1」的基础上。需要熟练掌握谓语动词识别、定语从句、伴随状语、后置定语、非谓语动词等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 例句一：He sat there reading a novel that I lent him last Sunday.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：sat（谓语1）+ lent（谓语2）→ 两个谓语，连接词个数 = 2 - 1 = 1 → that 是从属连词引导从句</div>
+            <div class="example-item">② 划分主从句：<code>He sat there reading a novel</code>（主句） | <code>that I lent him last Sunday</code>（从句）</div>
+            <div class="example-item">③ 看主句：He sat there reading a novel（主谓结构完整 ✓）→ 主句完整 → 定从/状从/同位从</div>
+            <div class="example-item">④ 三要素验证：he 和 novel 都不是抽象名词 → 排除同位从</div>
+            <div class="example-item">⑤ 修饰关系：that I lent him last Sunday 修饰 novel（"我上周借给他的小说"）→ 缩小范围 → <strong>定语从句 ✓</strong></div>
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He sat there reading a novel</strong></div>
+            <div class="example-item">→ sat 是不及物动词（vi.）→ 后面不需要接宾语（类比 sit on the chair，需要加介词 on）</div>
+            <div class="example-item">→ there 是副词 → 做地点状语，修饰 sat</div>
+            <div class="example-item">→ reading a novel 是现在分词短语 → 修饰 sat（动词）→ 伴随状语 ✓</div>
+            <div class="example-item">→ 伴随状语 = 同时发生 → "他坐在那里，同时在读一本小说" → 不变序 ✓</div>
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>that I lent him last Sunday</strong></div>
+            <div class="example-item">→ that 在从句中做成分（lent 是双宾语动词 vt2，缺直宾 → that 做直宾）</div>
+            <div class="example-item">→ I 是主语，lent 是谓语，him 是间宾，that 是直宾（= the novel）</div>
+            <div class="example-item">→ last Sunday 是时间状语 → 需要变序 → 调到 lent 前面</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——reading 是伴随状语而非宾补：</strong><br>
+            - reading 修饰的是 sat（动词），不是 novel（名词）→ 因为前面没有笼统的名词可以修饰<br>
+            - "他坐在那里读一本小说"→ reading 是伴随动作，与 sat 同时发生<br>
+            - 类比：他坐在那里听歌/发呆/谈恋爱 → 都是伴随状语<br>
+            - 伴随状语 → 动作同时 → 不变序 ✓
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 伴随状语 reading a novel → 不变序（修饰 sat，放 sat 后面）<br>
+            ② 定语从句 that I lent him last Sunday → 变序（调 novel 前面）<br>
+            ③ 时间状语 last Sunday → 变序（调 lent 前面）<br>
+            <br>
+            <strong>翻译：他坐在那里读一本我上周日借给他的小说。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 例句二：I don't believe that story is true.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：don't believe（谓语1）+ is（谓语2）→ 两个谓语，连接词个数 = 1 → that 是从属连词</div>
+            <div class="example-item">② 划分主从句：<code>I don't believe</code>（主句） | <code>that story is true</code>（从句）</div>
+            <div class="example-item">③ 看主句：believe 是及物动词（vt.），I believe you → 后面缺宾语 → 主句不完整 → <strong>宾语从句 ✓</strong></div>
+            <div class="example-item">④ 从句内部：the story is true → 主系表结构（is 不表具体动作，表状态/评价）→ 不变序</div>
+            <div class="example-item">⑤ 大结构：主谓宾结构（SVO）→ 不变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——宾语从句 vs 宾补（与 G53 例句六对比）：</strong><br>
+            - 本句：I don't believe that story is true → that 引导从句（that story is true 是完整句子）→ 宾语从句<br>
+            - G53 例句：I don't believe the story true → true 是形容词做宾补 → 主谓宾宾补（SVOOC）<br>
+            - 两者意思相同，但结构不同：<br>
+            &emsp;① 宾从：that 是从属连词（不做成分，只是引导词）<br>
+            &emsp;② 宾补：true 是形容词（做宾补，补充说明 story 的侧面）<br>
+            - 很多同学只认一种结构不认另一种，这是常见困惑
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我不相信这个故事是真的。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句三：Commonly the least student stood up and spoke at the close of the meeting.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：stood（谓语1）+ spoke（谓语2）→ 两个谓语</div>
+            <div class="example-item">② 连接词：and → 判断是并列连词还是大V</div>
+            <div class="example-item">③ and 前面：the least student stood up → 有主语 the least student + 谓语 stood up ✓</div>
+            <div class="example-item">④ and 后面：spoke → 只有谓语 spoke，没有主语 → 不是完整的主谓结构 ✗</div>
+            <div class="example-item">⑤ 结论：and 连接的是 stood 和 spoke → 大V（V and V）→ <strong>简单句 ✓</strong>（不是并列句！）</div>
+        </div>
+
+        <h3>短语精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>at the close of the meeting 是什么成分？</strong></div>
+            <div class="example-item">→ at 是介词，the close 是名词短语（the + 名词 close = 结束）</div>
+            <div class="example-item">→ of the meeting 是介词短语，修饰 close（"会议的结束"）→ 缩小范围 → <strong>后置定语 ✓</strong></div>
+            <div class="example-item">→ at the close of the meeting 整体修饰 stood up and spoke（动词）→ <strong>时间状语 ✓</strong></div>
+            <div class="example-item">→ close = 结束 → 属于时间概念（开始/中间/高潮/起承转合/结束）→ 时间状语 → 需要变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——名词短语 vs 介词短语：</strong><br>
+            - the close of the meeting → 名词短语（the + close + of 后置定语）→ close 是名词，意思是"结束"<br>
+            - at the close of the meeting → 介词短语（at + 名词短语）→ 整体做状语<br>
+            - 很多同学看到 at 就认为是状语，但关键要看 at 后面跟的是什么：at + 名词 → 名词短语做 at 的宾语 → 介词短语做状语<br>
+            - of the meeting 修饰 close（"会议的结束"），把"结束"变小了 → 后置定语<br>
+            - "结束"有无数种（战争的结束/爱情的结束/比赛的结束/会议的结束…），of the meeting 缩小了范围
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——and 是大V还是并列句：</strong><br>
+            - 并列句：and 前后都必须有完整的主谓结构（SV and SV）<br>
+            - 大V：and 前面有 SV，后面只有 V（没有主语）→ V and V 是大谓语 → 简单句<br>
+            - 本句：the least student stood up and spoke → and 后面只有 spoke（无主语）→ 大V → 简单句<br>
+            - 看到 and 不要激动，看 and 两边是否都有 SV！
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 时间状语 at the close of the meeting → 变序（调 stood up and spoke 前面）<br>
+            ② 后置定语 of the meeting → 变序（调 close 前面）<br>
+            ③ stood up and spoke → 大V，不变序<br>
+            <br>
+            <strong>翻译：在会议结束的时候，李同志站起来并且发言。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 三大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He sat there reading a novel that I lent him last Sunday.</td>
+                    <td><strong>SV</strong>（主谓）+ 定语从句</td>
+                    <td>reading = 伴随状语；that I lent... = 定语从句；last Sunday = 时间状语</td>
+                    <td>定语从句+时间状语变序；伴随状语不变序</td>
+                    <td>他坐在那里读一本我上周日借给他的小说。</td>
+                </tr>
+                <tr>
+                    <td>I don't believe that story is true.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 宾语从句</td>
+                    <td>that story is true = 宾语从句（从句内部为主系表结构）</td>
+                    <td>不变序</td>
+                    <td>我不相信这个故事是真的。</td>
+                </tr>
+                <tr>
+                    <td>Commonly the least student stood up and spoke at the close of the meeting.</td>
+                    <td><strong>SV</strong>（主谓）+ 时间状语</td>
+                    <td>stood up and spoke = 大V（简单句）；at the close of the meeting = 时间状语；of the meeting = 后置定语</td>
+                    <td>时间状语+后置定语变序</td>
+                    <td>在会议结束的时候，李同志站起来并且发言。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心知识点总结</h2>
+
+        <h3>知识点一：伴随状语的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>词性</strong></td>
+                    <td>现在分词（doing）</td>
+                </tr>
+                <tr>
+                    <td><strong>修饰对象</strong></td>
+                    <td>修饰动词（不是名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>语义</strong></td>
+                    <td>与谓语动作同时发生 → "他做A的同时在做B"</td>
+                </tr>
+                <tr>
+                    <td><strong>变序</strong></td>
+                    <td>不变序（伴随状语 = 动作同时 = 不变序）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>He sat there <code>reading</code> a novel.（他坐在那里，同时在读一本小说）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：and 是大V还是并列句</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>大V（简单句）</th>
+                    <th>并列句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>and 前面</strong></td>
+                    <td>有 SV</td>
+                    <td>有 SV</td>
+                </tr>
+                <tr>
+                    <td><strong>and 后面</strong></td>
+                    <td>只有 V（没有主语）</td>
+                    <td>有 SV（完整的主谓结构）</td>
+                </tr>
+                <tr>
+                    <td><strong>句型</strong></td>
+                    <td>简单句（V and V 是大谓语）</td>
+                    <td>并列句</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>He <code>stood up</code> and <code>spoke</code>.（stand + speak = 大V）</td>
+                    <td>He <code>stood up</code>, and <code>she left</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：名词短语 vs 介词短语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类型</th>
+                    <th>结构</th>
+                    <th>功能</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词短语</strong></td>
+                    <td>the + 名词 + 后置定语</td>
+                    <td>做主语/宾语等名词性成分</td>
+                    <td><code>The close of the meeting</code>（会议的结束）→ 名词短语做 at 的宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>介词短语</strong></td>
+                    <td>介词 + 名词短语</td>
+                    <td>做状语/定语</td>
+                    <td><code>At the close of the meeting</code>（在会议结束时）→ 介词短语做时间状语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - the close of the meeting → 名词短语（the + close + of 后置定语）<br>
+            - at the close of the meeting → 介词短语（at + 名词短语）→ 做时间状语<br>
+            - of the meeting 修饰 close → 后置定语（把"结束"缩小为"会议的结束"）<br>
+            - 很多同学看到 at 就认为是状语，但关键要看 at 后面跟的是什么成分
+        </div>
+
+        <h3>知识点四：宾语从句 vs 宾补</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>宾语从句</th>
+                    <th>宾补（OC）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>结构</strong></td>
+                    <td>that + 完整句子（有主语+谓语）</td>
+                    <td>宾语 + 形容词/名词/分词（非完整句子）</td>
+                </tr>
+                <tr>
+                    <td><strong>that 的作用</strong></td>
+                    <td>从属连词，不做成分</td>
+                    <td>无 that（true 是形容词做宾补）</td>
+                </tr>
+                <tr>
+                    <td><strong>句型</strong></td>
+                    <td>SVO + 从句</td>
+                    <td>SVOOC（五大基本句型）</td>
+                </tr>
+                <tr>
+                    <td><strong>变序</strong></td>
+                    <td>不变序（主谓宾结构）</td>
+                    <td>不变序（五大基本句型）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>I don't believe <code>that story is true</code>.</td>
+                    <td>I don't believe <code>the story true</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>伴随状语</strong></td>
+                    <td>reading a novel（修饰 sat）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td>that I lent him last Sunday（修饰 novel）</td>
+                    <td>需要变序</td>
+                    <td>调到 novel 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>last Sunday（修饰 lent）</td>
+                    <td>需要变序</td>
+                    <td>调到 lent 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句</strong></td>
+                    <td>that story is true（做 believe 的宾语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>of the meeting（修饰 close）</td>
+                    <td>需要变序</td>
+                    <td>调到 close 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语（整体）</strong></td>
+                    <td>at the close of the meeting（修饰 stood up and spoke）</td>
+                    <td>需要变序</td>
+                    <td>调到 stood up and spoke 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>复杂句分析终极流程</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词 → 判断句型类型<br>
+            ↓<br>
+            第二步：划分主从句（如果是复合句）→ 看主句是否完整<br>
+            &emsp;不完整 → 主从/宾从/表从<br>
+            &emsp;完整 → 定从/状从/同位从<br>
+            ↓<br>
+            第三步：主句/从句内部精细分析 → 逐一识别每个短语的成分<br>
+            ↓<br>
+            第四步：决定变序/不变序 → 翻译
+        </div>
+
+        <h3>复杂句分析四步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找谓语动词 → 数个数 → 找连接词 → 判断简单句/并列句/复合句</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>复合句 → 划分主从句 → 看主句是否完整 → 定从句类型</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>主句/从句内部精细分析 → 逐一识别每个短语（后置定语/状语/宾补等）</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前 → 翻译完成</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - and 前面有 SV + 后面有 SV → 并列句；and 前面有 SV + 后面只有 V → 大V（简单句）<br>
+            - 伴随状语（doing）→ 动作同时 → 不变序<br>
+            - 名词短语（the close of the meeting）vs 介词短语（at the close of the meeting）→ 后者做状语<br>
+            - of the meeting 修饰 close → 后置定语（把"结束"缩小为"会议的结束"）<br>
+            - 宾语从句（that + 完整句子）vs 宾补（形容词/名词做宾语补充）→ 意思相同，结构不同<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+句子成分分析及翻译2（G54）
+├── 例句一：He sat there reading a novel that I lent him last Sunday.
+│   ├── 主句：He sat there reading a novel（SV + 伴随状语）
+│   ├── 从句：that I lent him last Sunday（定语从句，修饰 novel）
+│   ├── 伴随状语 reading → 不变序
+│   ├── 定语从句 → 调 novel 前面
+│   └── 翻译：他坐在那里读一本我上周日借给他的小说。
+│
+├── 例句二：I don't believe that story is true.
+│   ├── 主句：I don't believe（SVO，believe 是及物动词，缺宾语）
+│   ├── 从句：that story is true（宾语从句，从句内部为主系表结构）
+│   ├── that 是从属连词（不做成分）
+│   └── 翻译：我不相信这个故事是真的。
+│
+├── 例句三：Commonly the least student stood up and spoke at the close of the meeting.
+│   ├── and 前面：the least student stood up（SV ✓）
+│   ├── and 后面：spoke（只有 V，没有主语 ✗）
+│   ├── → 大V（简单句，不是并列句！）
+│   ├── at the close of the meeting → 时间状语（变序）
+│   ├── of the meeting → 后置定语，修饰 close（变序）
+│   └── 翻译：在会议结束的时候，李同志站起来并且发言。
+│
+├── 核心知识点
+│   ├── 伴随状语（doing）→ 修饰动词 → 动作同时 → 不变序
+│   ├── and 大V vs 并列句 → 看 and 后面有没有主语
+│   ├── 名词短语 vs 介词短语 → the close of the meeting vs at the close of the meeting
+│   └── 宾语从句 vs 宾补 → that + 完整句子 vs 形容词/名词
+│
+└── 变序规则
+    ├── 变序：后置定语（调名词前）+ 状语（除目的/结果/伴随，调动词前）
+    └── 不变序：主干 + 并列 + 符号分隔 + 太长 + 目的/结果/伴随 + 宾语从句
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>掌握伴随状语的识别：</strong>doing 修饰动词，表示与谓语同时发生的动作 → "他做A的同时在做B" → 不变序。常见搭配：sit there reading/standing there listening/lying there thinking...</li>
+            <li><strong>掌握 and 大V vs 并列句的判断：</strong>看 and 后面有没有主语。有主语 → 并列句；只有 V → 大V（简单句）。看到 and 不要激动！</li>
+            <li><strong>掌握名词短语 vs 介词短语的区分：</strong>the close of the meeting（名词短语）vs at the close of the meeting（介词短语做状语）。看到介词不要直接认为是状语，要看它后面跟的是什么成分。</li>
+            <li><strong>掌握 of 后置定语的识别：</strong>of the meeting 修饰 close（"会议的结束"），把笼统的"结束"缩小为具体的"会议的结束" → 后置定语。</li>
+            <li><strong>掌握宾语从句 vs 宾补的辨析：</strong>that + 完整句子 → 宾语从句；形容词/名词 → 宾补。两者意思可能相同，但结构不同。</li>
+            <li><strong>掌握 sat 是不及物动词：</strong>sit 是不及物动词，后面不能直接接宾语（sit on the chair），所以 there 是副词做状语，不是宾语。</li>
+            <li><strong>复杂句分析四步法：</strong>找谓语→划分主从句→内部精细分析→变序翻译。每一步都不能跳过。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

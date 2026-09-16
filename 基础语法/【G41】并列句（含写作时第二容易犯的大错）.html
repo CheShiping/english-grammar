@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G41 并列句（含写作时第二容易犯的大错）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G41】并列句（含写作时第二容易犯的大错）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G41 是「基础语法」系列第41课，由陈老师主讲。本节课是句子部分的<strong>第二课</strong>，紧接 G40「五大基本句型」，专门讲解<strong>并列句的定义、构成规则以及写作中第二大容易犯的错误</strong>。</p>
+        <p>在此之前，同学们已经学习了简单句的定义和五大基本句型（G40）。本节课从简单句过渡到并列句，核心任务是搞清楚<strong>并列句和简单句的本质区别</strong>——关键不在于有没有 and，而在于<strong>and 两边是否都有 SV（主谓结构）</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：理解并列句的定义（X ≥ 2 个 SV + 并列连词连接），掌握并列连词的种类和用法，避免写作中"逗号拼接"和"缺少连词"两大常见错误。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」的基础上。需要熟练掌握主谓结构的识别（S 和 V 的寻找）、简单句的定义（只有一个主谓结构）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 并列句的定义</h2>
+        <p>老师从简单句的定义出发，引出并列句的概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型类型</th>
+                    <th>主谓结构数（X）</th>
+                    <th>是否需要连接词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>简单句</strong></td>
+                    <td>X = 1（只有一个主谓结构）</td>
+                    <td>不需要</td>
+                </tr>
+                <tr>
+                    <td><strong>并列句</strong></td>
+                    <td>X ≥ 2（两个或以上主谓结构）</td>
+                    <td>✅ 必须用并列连词连接</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心定义：</strong><br>
+            并列句 = 两个（或以上）SV 结构 + 中间有正确的并列连词连接<br>
+            注意：仅仅 X ≥ 2 还不够，<strong>必须有连接词</strong>！没有连接词就不是并列句。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 并列句 vs 简单句：核心区别</h2>
+        <p>老师用经典错误例子说明并列句和简单句的区别，以及写作中最容易犯的错误：</p>
+
+        <h3>错误写法一：两个 SV 直接连写（缺少连词）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>❌ I love you you love me.</strong></div>
+            <div class="example-item">→ 两个 SV（I love you + you love me）直接连在一起，没有连接词 → <strong>错误</strong></div>
+        </div>
+
+        <h3>错误写法二：只用逗号连接两个 SV（逗号拼接 / Comma Splice）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>❌ I love you, you love me.</strong></div>
+            <div class="example-item">→ 两个 SV 之间只用了一个逗号，没有并列连词 → <strong>还是错误！</strong></div>
+            <div class="example-item">→ 这是很多同学写作文时最常犯的错误</div>
+        </div>
+
+        <h3>正确写法：用并列连词连接</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>✅ I love you, and you love me.</strong></div>
+            <div class="example-item">→ 两个 SV（I love you + you love me）之间用了 <code>and</code> 连接 → <strong>正确</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 不能随心所欲地把两个句子直接连在一起<br>
+            - 不能只用逗号连接两个完整句子（逗号拼接是写作大错）<br>
+            - 必须用并列连词（and/but/so/分号）来连接<br>
+            - 英语是一门严谨的语言，形式上的要求必须遵守
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 连接词数量公式</h2>
+        <p>老师总结了一个非常重要的公式：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>连接词的个数 = V 的个数 - 1</strong>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句子结构</th>
+                    <th>SV 个数</th>
+                    <th>连接词个数</th>
+                    <th>示例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2 个 SV</strong></td>
+                    <td>2</td>
+                    <td>1 个</td>
+                    <td>I love you <code>and</code> you love me.</td>
+                </tr>
+                <tr>
+                    <td><strong>3 个 SV</strong></td>
+                    <td>3</td>
+                    <td>2 个</td>
+                    <td>I love you, <code>and</code> you love me, <code>and</code> he loves her.</td>
+                </tr>
+                <tr>
+                    <td><strong>n 个 SV</strong></td>
+                    <td>n</td>
+                    <td>n - 1 个</td>
+                    <td>以此类推</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：每两个 SV 之间需要一个连接词。2 个 SV 需要 1 个连接词，3 个 SV 需要 2 个连接词，以此类推。这个公式在写作和改错中非常有用。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 并列句的四大关系与连接词</h2>
+        <p>老师系统讲解了并列句的四种逻辑关系及对应的连接词：</p>
+
+        <h3>关系一：等同关系 / 并列关系 / 承接关系（and, not only...but also, neither...nor）</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>连接词</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>and</strong></td>
+                    <td>和、并且</td>
+                    <td>The teacher's name <code>is</code> Smith <code>and</code> the student's name <code>is</code> Joe.</td>
+                </tr>
+                <tr>
+                    <td><strong>not only...but also</strong></td>
+                    <td>不仅……而且</td>
+                    <td>He <code>not only</code> stole my money, <code>but</code> he <code>also</code> took my watch.</td>
+                </tr>
+                <tr>
+                    <td><strong>neither...nor</strong></td>
+                    <td>既不……也不</td>
+                    <td><code>Neither</code> he <code>nor</code> I am wrong.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>关系二：选择关系（or, otherwise）</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>连接词</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>or</strong></td>
+                    <td>或者</td>
+                    <td>You can go <code>or</code> you can stay.</td>
+                </tr>
+                <tr>
+                    <td><strong>otherwise</strong></td>
+                    <td>否则、不然</td>
+                    <td>Finish your work, <code>otherwise</code> you'll be punished.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            注意：otherwise 不是"或者"的意思，而是"否则"的意思。常见用法是"祈使句 + or/otherwise"，表示"做某事，否则就……"。
+        </div>
+
+        <h3>关系三：转折关系（but, yet, while, when）</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>连接词</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>but</strong></td>
+                    <td>但是</td>
+                    <td>The little man <code>was</code> poor, <code>but</code> he <code>had</code> a dream.</td>
+                </tr>
+                <tr>
+                    <td><strong>yet</strong></td>
+                    <td>然而</td>
+                    <td>He is young, <code>yet</code> he is wise.</td>
+                </tr>
+                <tr>
+                    <td><strong>while</strong></td>
+                    <td>然而、而</td>
+                    <td>She likes tea, <code>while</code> he likes coffee.</td>
+                </tr>
+                <tr>
+                    <td><strong>when</strong></td>
+                    <td>然而、但是（很多人不知道）</td>
+                    <td>He is rich, <code>when</code> his brother is poor.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>重点提醒：</strong><br>
+            - when 不仅有"当……时"的意思，还有"然而、但是"的转折含义<br>
+            - while 也有"然而"的转折含义，表示对比<br>
+            - 很多同学只知道 when 的时间含义，忽略了它的转折含义
+        </div>
+
+        <h3>关系四：因果关系（so）</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>连接词</th>
+                    <th>含义</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>so</strong></td>
+                    <td>所以</td>
+                    <td>August <code>is</code> hot, <code>so</code> I <code>work</code> less.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>6. 四大关系总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>关系类型</th>
+                    <th>连接词</th>
+                    <th>核心含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>等同/并列/承接</strong></td>
+                    <td>and, not only...but also, neither...nor</td>
+                    <td>并列、递进、选择（否定）</td>
+                </tr>
+                <tr>
+                    <td><strong>选择</strong></td>
+                    <td>or, otherwise</td>
+                    <td>或者 / 否则</td>
+                </tr>
+                <tr>
+                    <td><strong>转折</strong></td>
+                    <td>but, yet, while, when</td>
+                    <td>但是、然而</td>
+                </tr>
+                <tr>
+                    <td><strong>因果</strong></td>
+                    <td>so</td>
+                    <td>所以</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 等同：and / not only...but also / neither...nor<br>
+            - 选择：or / otherwise（否则）<br>
+            - 转折：but / yet / while / when（然而）<br>
+            - 因果：so（所以）<br>
+            - 分号（;）也可以起连接作用，等同于并列连词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 写作中第二大容易犯的错误</h2>
+        <p>老师着重强调了写作中关于并列句的两大常见错误：</p>
+
+        <h3>错误一：逗号拼接（Comma Splice）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>❌ I love you, you love me.</strong></div>
+            <div class="example-item">→ 两个完整句子之间只用逗号连接，没有并列连词</div>
+            <div class="example-item">→ 这是很多同学写作文时最常犯的错误</div>
+            <div class="example-item"><strong>✅ 改正：</strong>I love you, <code>and</code> you love me.</div>
+        </div>
+
+        <h3>错误二：代词格错误</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>❌ I love you, you love I.</strong></div>
+            <div class="example-item">→ love 是动词，后面要用宾格（me），不能用主格（I）</div>
+            <div class="example-item"><strong>✅ 改正：</strong>I love you, and you love <code>me</code>.</div>
+        </div>
+
+        <h3>错误三：看到 and 就认为是并列句</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>❌ 误判：</strong>I love you and me.</div>
+            <div class="example-item">→ 这里 and 连接的是两个宾语（you 和 me），不是两个 SV</div>
+            <div class="example-item">→ and 前面没有 SV，and 后面也没有 SV → 这不是并列句，是简单句</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 看到 and 不要激动，一定要看 and 的<strong>两边</strong>是否都有 SV<br>
+            - and 两边都有 SV → 并列句<br>
+            - and 一边有 SV，另一边没有 → 简单句（and 连接的是词或短语）<br>
+            - 逗号不能单独连接两个完整句子
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 判断并列句的核心方法</h2>
+        <p>老师总结了判断并列句的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找 SV → and 两边是否都有完整的 SV？<br>
+            第二步：找连接词 → 有没有并列连词（and/but/so/分号）？<br>
+            第三步：数连接词 → 连接词个数 = SV 个数 - 1？</strong>
+        </div>
+
+        <h3>并列句判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找 SV：看 and/but/so 等连接词的两边是否都有完整的主谓结构</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>找连接词：确认使用了正确的并列连词（and/but/so/分号），不是只用逗号</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>数连接词：连接词个数 = SV 个数 - 1，不符合则错误</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到 and 不要激动，看两边是否都有 SV<br>
+            - 逗号不能连句子，必须用并列连词<br>
+            - 连接词个数 = SV 个数 - 1<br>
+            - 动词后用人称代词宾格（love me，不是 love I）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 并列句 vs 简单句（含 and）对比</h2>
+        <p>老师重点对比了并列句中的 and 和简单句中 and 的区别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比项</th>
+                    <th>简单句中的 and</th>
+                    <th>并列句中的 and</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>I love <code>you and me</code>.</td>
+                    <td>I love you, <code>and</code> you love me.</td>
+                </tr>
+                <tr>
+                    <td><strong>and 前面</strong></td>
+                    <td>没有 SV（只有宾语 you）</td>
+                    <td>有 SV（I love you）</td>
+                </tr>
+                <tr>
+                    <td><strong>and 后面</strong></td>
+                    <td>没有 SV（只有宾语 me）</td>
+                    <td>有 SV（you love me）</td>
+                </tr>
+                <tr>
+                    <td><strong>句型归属</strong></td>
+                    <td>简单句（and 连接两个宾语）</td>
+                    <td>并列句（and 连接两个 SV）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 不要看到 and 就认为是并列句<br>
+            - 关键看 and 的<strong>两边</strong>是否都有完整的 SV（主谓结构）<br>
+            - 简单句中 and 连接的是词或短语（如两个宾语、两个主语、两个动词）<br>
+            - 并列句中 and 连接的是两个完整的 SV
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+并列句（G41）
+├── 定义：X ≥ 2 个 SV + 并列连词连接
+├── vs 简单句（X = 1）
+│   └── 关键区别：必须有连接词
+├── 写作常见错误
+│   ├── 错误1：逗号拼接（只用逗号连两个句子）
+│   ├── 错误2：缺少连词（两个 SV 直接连写）
+│   ├── 错误3：代词格错误（love I → love me）
+│   └── 错误4：看到 and 就认为是并列句
+├── 连接词公式：连接词个数 = SV 个数 - 1
+├── 四大关系
+│   ├── 等同/并列：and, not only...but also, neither...nor
+│   ├── 选择：or, otherwise（否则）
+│   ├── 转折：but, yet, while, when（然而）
+│   └── 因果：so（所以）
+├── 分号（;）也可起连接作用
+└── 判断三步法
+    ├── 第一步：and 两边是否都有 SV？
+    ├── 第二步：有没有正确的并列连词？
+    └── 第三步：连接词个数 = SV 个数 - 1？
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记并列句定义：</strong>并列句 = X ≥ 2 个 SV + 并列连词连接。没有连接词就不是并列句。</li>
+            <li><strong>写作两大铁律：</strong>① 两个完整句子之间不能只用逗号连接（逗号拼接错误）；② 必须用并列连词（and/but/so/分号）连接。</li>
+            <li><strong>连接词公式：</strong>连接词个数 = SV 个数 - 1。2 个 SV 需要 1 个连接词，3 个 SV 需要 2 个连接词。</li>
+            <li><strong>看到 and 不要激动：</strong>一定要看 and 两边是否都有 SV。一边有 SV 另一边没有 → 简单句；两边都有 SV → 并列句。</li>
+            <li><strong>记住四大关系：</strong>等同（and/not only...but also）、选择（or/otherwise）、转折（but/yet/while/when）、因果（so）。</li>
+            <li><strong>when 的转折含义：</strong>when 不仅有"当……时"的意思，还有"然而、但是"的转折含义，很多同学不知道。</li>
+            <li><strong>otherwise 的含义：</strong>otherwise 是"否则"不是"或者"，常见用法是"祈使句 + or/otherwise"。</li>
+            <li><strong>代词格：</strong>动词后面用宾格（love me，不是 love I）。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

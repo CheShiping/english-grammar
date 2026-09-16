@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G55 句子成分分析及翻译3：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G55】句子成分分析及翻译3</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G55 是「基础语法」系列第55课，由陈老师主讲。本节课是句子部分的<strong>实战练习课（续）</strong>，紧接 G54「句子成分分析及翻译2」，专门通过<strong>5个经典例句的逐句深度分析</strong>，将前面所有句型知识融会贯通，进一步巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程。</p>
+        <p>本节课重点讲解两个高频易错考点：<strong>① "that"的多重身份辨析</strong>（引导词/关系代词/指示代词）以及<strong>② "It"作形式主语的识别</strong>，同时强化不定代词+后置定语、不定式做目的状语、had better结构、不及物动词+介词等核心知识点。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过5个例句的逐句分析，巩固"that"的多重身份辨析、"It"形式主语的识别、不定式做目的状语的优先判断、不定代词+后置定语等核心技能。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G52「翻译公式」、G53「句子成分分析及翻译1」、G54「句子成分分析及翻译2」的基础上。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心易错点：that 的多重身份</h2>
+        <p>老师以一个经典例句切入，揭示了同学们最容易犯的错误——<strong>一看到 that 就认为是引导词</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>It was a pity that you didn't watch that wonderful football match.</strong></div>
+            <div class="example-item">→ 句中有两个 that：第一个 that 是从属连词（引导主语从句）；第二个 that 是指示代词（那个）</div>
+            <div class="example-item">→ 判断方法：that 后面是否跟主谓结构？→ 第一个 that 后面是 you didn't watch（主+谓）→ 是引导词 ✓</div>
+            <div class="example-item">→ 第二个 that 后面是 wonderful football match（名词短语，没有主谓结构）→ 不是引导词，是"那个"✗</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到 that 不要激动，先看 it 后面有没有主谓结构<br>
+            - that + 主谓结构 → 引导词（连词/关系代词）<br>
+            - that + 名词短语 → 指示代词（"那个"），不是引导词<br>
+            - 连接词个数 = V - 1，V=1 时连接词个数=0，没有引导词
+        </div>
+
+        <h3>that 的三种身份总结</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>身份</th>
+                    <th>词性</th>
+                    <th>判断方法</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>从属连词（引导词）</strong></td>
+                    <td>连词，不做成分</td>
+                    <td>that 后跟完整句子（主+谓）</td>
+                    <td>It was a pity <code>that</code> you didn't watch...</td>
+                </tr>
+                <tr>
+                    <td><strong>关系代词</strong></td>
+                    <td>代词，在从句中做成分</td>
+                    <td>that 后跟主谓结构，且 that 在从句中做主/宾/表</td>
+                    <td>The book <code>that</code> I bought...</td>
+                </tr>
+                <tr>
+                    <td><strong>指示代词（那个）</strong></td>
+                    <td>代词/限定词</td>
+                    <td>that 后跟名词短语（无主谓结构）</td>
+                    <td>...watch <code>that</code> wonderful football match</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心易错点：It 作形式主语</h2>
+        <p>老师强调，看到 <strong>It 开头</strong> 一定要考虑是不是 It 做形式主语：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>It was a pity that you didn't watch the wonderful football match.</strong></div>
+            <div class="example-item">→ 去掉 It 后：___ was a pity that you didn't watch... → 主句缺主语 ✓</div>
+            <div class="example-item">→ that you didn't watch the wonderful football match 是真正的主语</div>
+            <div class="example-item">→ It 是形式主语，真正的主语是后面的 that 从句</div>
+        </div>
+
+        <h3>It 形式主语的常见类型</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>真正主语类型</th>
+                    <th>结构</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>不定式（to do）</strong></td>
+                    <td>It is + adj. + to do...</td>
+                    <td>It is hard to learn English.</td>
+                </tr>
+                <tr>
+                    <td><strong>动名词（doing）</strong></td>
+                    <td>It is + adj. + doing...</td>
+                    <td>It is no use crying.</td>
+                </tr>
+                <tr>
+                    <td><strong>that 从句</strong></td>
+                    <td>It is + adj./noun + that...</td>
+                    <td>It was a pity that you didn't come.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 判断 It 是否形式主语的方法：去掉 It，看主句是否缺主语<br>
+            - 去掉 It 后主句缺主语 → It 是形式主语，真正主语在后面 → 主语从句<br>
+            - 去掉 It 后主句不缺主语 → It 是真正的主语（指代天气/时间/距离等）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句一：It was a pity that you didn't watch the wonderful football match.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：was（谓语1）+ didn't watch（谓语2，didn't是助动词+watch原形）→ 两个谓语</div>
+            <div class="example-item">② 引导词：that → 但句中有两个 that，划哪个？</div>
+            <div class="example-item">③ 第一个 that 后面是 you didn't watch（主+谓）→ 是引导词 ✓</div>
+            <div class="example-item">④ 第二个 that 后面是 wonderful football match（名词短语）→ 是指示代词"那个"✗</div>
+            <div class="example-item">⑤ 划分：<code>It was a pity</code>（主句） | <code>that you didn't watch the wonderful football match</code>（从句）</div>
+            <div class="example-item">⑥ 看主句：It was a pity → 主系表结构，但 It 是形式主语 → 去掉 It 后缺主语 → <strong>主语从句 ✓</strong></div>
+            <div class="example-item">⑦ 从句内部：you didn't watch the wonderful football match → 主谓宾结构 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——两个 that 的区分：</strong><br>
+            - 第一个 that：从属连词，引导主语从句，不做成分<br>
+            - 第二个 that：指示代词，修饰 wonderful football match，意思是"那个精彩的足球比赛"<br>
+            - 判断方法：that 后面是否跟主谓结构？跟了→引导词；跟名词短语→指示代词
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>直译：你没有看这场精彩的足球比赛是一个遗憾。</strong><br>
+            <strong>符合中文习惯：很遗憾你没有看这场精彩的足球比赛。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句二：We should do something to help the comrades in difficulties.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：should do（谓语1，should是情态动词+do原形）→ 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② 主语：We；谓语：should do；宾语：something</div>
+            <div class="example-item">③ to help the comrades in difficulties 是什么成分？</div>
+            <div class="example-item">④ 主干（主谓宾）完了之后的 to do → 优先考虑是不是目的状语 ✓</div>
+            <div class="example-item">⑤ to help the comrades 修饰 do → "做事情的目的是帮助同志" → 目的状语 ✓</div>
+            <div class="example-item">⑥ something 是不定代词（笼统）→ 后面跟后置定语的概率很大</div>
+            <div class="example-item">⑦ in difficulties（处于困难中的）修饰 comrades → 后置定语 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——to do 做目的状语 vs 后置定语：</strong><br>
+            - 主干（主谓宾）完了之后的 to do → 优先考虑目的状语<br>
+            - "我们应该做一些事情"→ 目的是"去帮助同志"→ 通顺 → 目的状语 ✓<br>
+            - 如果理解为"我们应该做去帮助同志的事情"→ 也通顺，但用中文辅助判断，目的状语更自然<br>
+            - 口诀：主干完了的 to do → 优先考虑目的状语
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 目的状语 to help the comrades → 不变序（目的状语动作之后）<br>
+            ② 后置定语 in difficulties → 变序（调 comrades 前面）<br>
+            <br>
+            <strong>翻译：我们应该做一些事情，去帮助处于困难中的同志们。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 例句三：You had better answer the question in English.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：had better + answer → 一起构成谓语（had better 是助动词/情态动词类）</div>
+            <div class="example-item">② 为什么 had better 可以和 answer 一起？→ had better 相当于助动词，助动词+实义动词=一个谓语</div>
+            <div class="example-item">③ 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">④ 主语：You；谓语：had better answer；宾语：the question</div>
+            <div class="example-item">⑤ in English 是什么成分？→ 要么修饰 question，要么修饰 answer</div>
+            <div class="example-item">⑥ 试一下：①"你最好回答用英语的问题"→ 不通顺 ✗ ②"你最好用英语回答问题"→ 通顺 ✓</div>
+            <div class="example-item">⑦ in English 修饰 answer（动词）→ 方式状语 → 需要变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——had better 的谓语构成：</strong><br>
+            - had better 是固定结构，had 是助动词，better 是副词，整体相当于情态动词<br>
+            - had better + 动词原形 → 一起构成谓语<br>
+            - 类似结构：would rather / might as well / used to 等
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 方式状语 in English → 变序（调 answer 前面）<br>
+            <br>
+            <strong>翻译：你最好用英语来回答这个问题。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 例句四：Dishes that the Chinese all over the world are hoping for (the realization for modernization).</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：are hoping for（谓语1，hope 是不及物动词+for构成及物短语）→ 只有一个谓语 → 简单句</div>
+            <div class="example-item">② that 是什么？→ that 后面是 the Chinese（名词短语，没有主谓结构）→ that 是关系代词，不是引导词</div>
+            <div class="example-item">③ that 在从句中做成分（for 的宾语，即 hoping for 的宾语）→ 关系代词 ✓</div>
+            <div class="example-item">④ all over the world 是什么成分？→ 修饰 the Chinese → 后置定语 ✓</div>
+            <div class="example-item">⑤ 为什么是后置定语？→ the Chinese 是笼统名词（天下中国人很多）→ 需要缩小范围</div>
+            <div class="example-item">⑥ for modernization 是什么成分？→ 修饰 realization → 后置定语 ✓</div>
+            <div class="example-item">⑦ realization 是笼统名词（有很多种实现）→ for modernization 缩小范围→"四个现代化的实现"</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——that 是关系代词还是从属连词：</strong><br>
+            - that 后面跟完整句子（主+谓）→ 从属连词/关系代词<br>
+            - that 后面跟名词短语（无主谓）→ 指示代词（"那个"）或关系代词<br>
+            - 判断方法：that 在从句中是否做成分？→ 做成分→关系代词；不做成分→从属连词<br>
+            - 本句中 that = the dishes，做 for 的宾语 → 关系代词 ✓
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 后置定语 all over the world → 变序（调 the Chinese 前面）<br>
+            ② 后置定语 for modernization → 变序（调 realization 前面）<br>
+            <br>
+            <strong>翻译：全世界的中国人都在期待希望着四个现代化的实现。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 例句五：We must go to the meeting right now.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：must go（谓语1，must是情态动词+go原形）→ 只有一个谓语 → 简单句 ✓</div>
+            <div class="example-item">② 主语：We；谓语：must go；to the meeting → 去哪里？→ 介词短语做状语</div>
+            <div class="example-item">③ right now → 立刻马上 → 时间状语 ✓</div>
+            <div class="example-item">④ 时间状语 → 需要变序 → 调到 go 前面</div>
+        </div>
+
+        <h3>翻译结果</h3>
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 时间状语 right now → 变序（调 go 前面）<br>
+            <br>
+            <strong>翻译：我们必须立刻马上去开会。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 五大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>It was a pity <strong>that</strong> you didn't watch <strong>that</strong> wonderful football match.</td>
+                    <td><strong>SVP</strong>（主系表）+ 主语从句</td>
+                    <td>第一个 that=引导词（主语从句）；第二个 that=指示代词（那个）；It=形式主语</td>
+                    <td>不变序</td>
+                    <td>很遗憾你没有看这场精彩的足球比赛。</td>
+                </tr>
+                <tr>
+                    <td>We should do something <strong>to help</strong> the comrades <strong>in difficulties</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>to help=目的状语；in difficulties=后置定语（修饰comrades）</td>
+                    <td>后置定语变序；目的状语不变序</td>
+                    <td>我们应该做一些事情，去帮助处于困难中的同志们。</td>
+                </tr>
+                <tr>
+                    <td>You had better answer the question <strong>in English</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>had better+answer=谓语；in English=方式状语</td>
+                    <td>方式状语变序</td>
+                    <td>你最好用英语来回答这个问题。</td>
+                </tr>
+                <tr>
+                    <td>Dishes <strong>that</strong> the Chinese <strong>all over the world</strong> are hoping for (the realization <strong>for modernization</strong>).</td>
+                    <td><strong>SVO</strong>（主谓宾）</td>
+                    <td>that=关系代词；all over the world=后置定语；for modernization=后置定语</td>
+                    <td>两个后置定语都变序</td>
+                    <td>全世界的中国人都在期待希望着四个现代化的实现。</td>
+                </tr>
+                <tr>
+                    <td>We must go to the meeting <strong>right now</strong>.</td>
+                    <td><strong>SV</strong>（主谓）</td>
+                    <td>must go=谓语；right now=时间状语</td>
+                    <td>时间状语变序</td>
+                    <td>我们必须立刻马上去开会。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心知识点总结</h2>
+
+        <h3>知识点一：that 的三种身份辨析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>从属连词</th>
+                    <th>关系代词</th>
+                    <th>指示代词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>that 后接</strong></td>
+                    <td>完整句子（主+谓）</td>
+                    <td>完整句子（主+谓）</td>
+                    <td>名词短语（无主谓）</td>
+                </tr>
+                <tr>
+                    <td><strong>that 做成分</strong></td>
+                    <td>不做成分</td>
+                    <td>做主/宾/表</td>
+                    <td>不做成分（修饰名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>It was a pity <code>that</code> you didn't come.</td>
+                    <td>The book <code>that</code> I bought...</td>
+                    <td>Watch <code>that</code> wonderful match.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：It 作形式主语的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断方法</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>去掉 It</strong></td>
+                    <td>去掉 It 后，主句缺主语 → It 是形式主语，真正主语在后面</td>
+                </tr>
+                <tr>
+                    <td><strong>常见真正主语</strong></td>
+                    <td>① 不定式（to do）② 动名词（doing）③ that 从句</td>
+                </tr>
+                <tr>
+                    <td><strong>句型归属</strong></td>
+                    <td>主系表（SVP）→ 主干不变序</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：主干完了的 to do → 优先考虑目的状语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>位置</th>
+                    <th>优先考虑</th>
+                    <th>是否变序</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>主谓宾结构之后的 to do</td>
+                    <td>目的状语（修饰动词）</td>
+                    <td>✅ 不变序（动作之后）</td>
+                </tr>
+                <tr>
+                    <td>判断方法</td>
+                    <td>用中文辅助："做A的目的是B"是否通顺</td>
+                    <td>——</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：had better 的谓语构成</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>分析</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>had better + 动词原形</td>
+                    <td>had better 是助动词/情态动词类，+ 实义动词原形 = 一个谓语</td>
+                    <td>You had better <code>answer</code> the question.</td>
+                </tr>
+                <tr>
+                    <td>类似结构</td>
+                    <td>would rather / might as well / used to 等</td>
+                    <td>——</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：不及物动词 + 介词 = 谓语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>分析</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>不及物动词 + 介词</td>
+                    <td>不及物动词不能直接接宾语，必须加介词后才能接宾语 → 整体构成谓语</td>
+                    <td>hope <code>for</code> / look <code>at</code> / listen <code>to</code></td>
+                </tr>
+                <tr>
+                    <td>本句应用</td>
+                    <td>are hoping for = 谓语（hope 不及物 + for）</td>
+                    <td>...are hoping <code>for</code> the realization...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点六：不定代词 + 后置定语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>不定代词</th>
+                    <th>特点</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>something / anything / nothing / everything</td>
+                    <td>非常笼统 → 后面跟后置定语的概率很大</td>
+                    <td>something <code>to help the comrades</code></td>
+                </tr>
+                <tr>
+                    <td>the Chinese / the rich / the poor</td>
+                    <td>笼统名词 → 后面跟后置定语缩小范围</td>
+                    <td>the Chinese <code>all over the world</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>that you didn't watch...（做 It 的真正主语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>目的状语</strong></td>
+                    <td>to help the comrades（修饰 do）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>in difficulties（修饰 comrades）</td>
+                    <td>需要变序</td>
+                    <td>调到 comrades 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>in English（修饰 answer）</td>
+                    <td>需要变序</td>
+                    <td>调到 answer 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语（关系代词that）</strong></td>
+                    <td>all over the world（修饰 the Chinese）</td>
+                    <td>需要变序</td>
+                    <td>调到 the Chinese 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语（for短语）</strong></td>
+                    <td>for modernization（修饰 realization）</td>
+                    <td>需要变序</td>
+                    <td>调到 realization 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>right now（修饰 go）</td>
+                    <td>需要变序</td>
+                    <td>调到 go 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G55 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词 → 判断句型类型<br>
+            ↓<br>
+            第二步：看到 that 不要激动 → 看后面跟什么（主谓→引导词/关系代词；名词→指示代词）<br>
+            ↓<br>
+            第三步：看到 It 开头 → 考虑是不是形式主语（去掉 It 看是否缺主语）<br>
+            ↓<br>
+            第四步：主干完了的 to do → 优先考虑目的状语（不变序）<br>
+            ↓<br>
+            第五步：不定代词（something等）→ 优先考虑后置定语（需要变序）<br>
+            ↓<br>
+            第六步：had better / must / should 等 → 情态动词+实义动词=一个谓语<br>
+            ↓<br>
+            第七步：不及物动词+介词=一个谓语（hope for / look at / listen to）<br>
+            ↓<br>
+            第八步：变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 看到 that 不要激动，看后面跟主谓还是名词<br>
+            - 看到 It 开头要想想是不是形式主语<br>
+            - 主干完了的 to do → 优先考虑目的状语（不变序）<br>
+            - 不定代词后面 → 优先考虑后置定语（需要变序）<br>
+            - had better / must / should + 动词原形 = 一个谓语<br>
+            - 不及物动词 + 介词 = 一个谓语（hope for / look at）<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+句子成分分析及翻译3（G55）
+├── 核心易错点一：that 的三种身份
+│   ├── 从属连词（that + 主谓 → 引导词，不做成分）
+│   ├── 关系代词（that + 主谓 → 做主/宾/表）
+│   └── 指示代词（that + 名词短语 → "那个"）
+│
+├── 核心易错点二：It 作形式主语
+│   ├── 去掉 It → 主句缺主语 → It 是形式主语
+│   ├── 真正主语：to do / doing / that 从句
+│   └── 本句：It was a pity that you didn't watch...
+│       └── 主语从句（不变序）
+│
+├── 例句一：It was a pity that you didn't watch that wonderful football match.
+│   ├── 第一个 that = 引导词（主语从句）
+│   ├── 第二个 that = 指示代词（"那个"）
+│   └── 翻译：很遗憾你没有看这场精彩的足球比赛。
+│
+├── 例句二：We should do something to help the comrades in difficulties.
+│   ├── should do = 谓语（情态动词+实义动词）
+│   ├── to help = 目的状语（主干完了的to do → 优先考虑目的状语）
+│   ├── something = 不定代词 → 后跟后置定语
+│   ├── in difficulties = 后置定语（修饰comrades）
+│   └── 翻译：我们应该做一些事情，去帮助处于困难中的同志们。
+│
+├── 例句三：You had better answer the question in English.
+│   ├── had better + answer = 谓语
+│   ├── in English = 方式状语（修饰answer → 变序）
+│   └── 翻译：你最好用英语来回答这个问题。
+│
+├── 例句四：Dishes that the Chinese all over the world are hoping for...
+│   ├── are hoping for = 谓语（不及物动词+介词）
+│   ├── that = 关系代词（做for的宾语）
+│   ├── all over the world = 后置定语（修饰the Chinese）
+│   ├── for modernization = 后置定语（修饰realization）
+│   └── 翻译：全世界的中国人都在期待希望着四个现代化的实现。
+│
+├── 例句五：We must go to the meeting right now.
+│   ├── must go = 谓语（情态动词+实义动词）
+│   ├── right now = 时间状语（变序）
+│   └── 翻译：我们必须立刻马上去开会。
+│
+└── 核心口诀
+    ├── that → 看后面跟主谓还是名词
+    ├── It开头 → 考虑形式主语
+    ├── 主干完了的to do → 优先考虑目的状语
+    ├── 不定代词 → 优先考虑后置定语
+    ├── had better/must/should + 动词 = 一个谓语
+    └── 不及物动词+介词 = 一个谓语
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记 that 的三种身份：</strong>从属连词（that+主谓，不做成分）、关系代词（that+主谓，做成分）、指示代词（that+名词短语，"那个"）。看到 that 不要激动，先看后面跟什么。</li>
+            <li><strong>牢记 It 形式主语的识别方法：</strong>去掉 It，看主句是否缺主语。缺主语 → It 是形式主语，真正主语在后面 → 主语从句。</li>
+            <li><strong>牢记"主干完了的 to do → 优先考虑目的状语"：</strong>主谓宾结构之后的 to do，用中文辅助判断"做A的目的是B"是否通顺，通顺 → 目的状语（不变序）。</li>
+            <li><strong>牢记不定代词 + 后置定语：</strong>something/anything/nothing/everything 非常笼统 → 后面跟后置定语的概率很大。</li>
+            <li><strong>牢记 had better / must / should + 动词原形 = 一个谓语：</strong>情态动词/助动词类 + 实义动词原形 → 一起构成谓语。</li>
+            <li><strong>牢记不及物动词 + 介词 = 一个谓语：</strong>hope for / look at / listen to / answer for 等，不及物动词不能直接接宾语，必须加介词。</li>
+            <li><strong>翻译三步法：</strong>找谓语 → 识别句型 → 找后置定语和状语变序 → 翻译完成。每一步都不能跳过。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

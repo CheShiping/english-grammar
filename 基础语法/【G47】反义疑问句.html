@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G47 反义疑问句：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G47】反义疑问句</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G47 是「基础语法」系列第47课，由陈老师主讲。本节课是句子部分的<strong>专题小课</strong>，紧接 G46「同位语从句 vs 定语从句」，专门讲解<strong>反义疑问句（Tag Question）的核心规则与特殊用法</strong>。</p>
+        <p>反义疑问句在初中阶段讲得比较多，但初中老师往往讲得很复杂。本节课从底层逻辑出发——居高临下地看这个句型，几分钟就能掌握所有要点。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握反义疑问句的三步构成法（完整句子 + 逗号 + 助动词/系动词 + 人称代词），理解"前肯后否、前否后肯"的核心规则，以及 There be 句型、主语从句、祈使句三大特殊用法。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G42「祈使句」的基础上。需要熟练掌握动词分类（助动词/系动词/实意动词）、人称代词、五大基本句型等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 反义疑问句的核心规则：前肯后否，前否后肯</h2>
+        <p>老师首先点明反义疑问句的核心口诀——<strong>反着来</strong>：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主句语气</th>
+                    <th>反义疑问部分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>肯定</strong></td>
+                    <td><strong>否定</strong>（前肯后否）</td>
+                </tr>
+                <tr>
+                    <td><strong>否定</strong></td>
+                    <td><strong>肯定</strong>（前否后肯）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 反义 = 反着唱反调<br>
+            - 前肯后否，前否后肯，总之反着来就对了
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 反义疑问句的三步构成法</h2>
+        <p>老师从结构上拆解反义疑问句的构成，分为三步：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>内容</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td><strong>一个完整的句子</strong></td>
+                    <td>不缺主、宾、表，即五大基本句型（SV / SVO / SVP / SVOOC / SVOIO）都算完整</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td><strong>加逗号</strong></td>
+                    <td>逗号后面只有两个词的位置</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td><strong>两个词：助动词/系动词 + 人称代词主语</strong></td>
+                    <td>第一个词是助动词或系动词（根据前句决定肯/否）；第二个词必须用人称代词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：逗号后面只有两个词的位置——第一个词给助动词/系动词，第二个词给人称代词主语。这就是反义疑问句的全部结构。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 第一步详解：什么是"完整的句子"</h2>
+        <p>老师详细解释了"完整句子"的判断标准——不缺主、宾、表：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型</th>
+                    <th>例句</th>
+                    <th>是否完整</th>
+                    <th>分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SV（主谓）</strong></td>
+                    <td>Birds fly.</td>
+                    <td>✅ 完整</td>
+                    <td>不及物动词单独构成主谓，不缺成分</td>
+                </tr>
+                <tr>
+                    <td><strong>SVO（主谓宾）</strong></td>
+                    <td>I like English.</td>
+                    <td>✅ 完整</td>
+                    <td>主语+及物动词+宾语，不缺成分</td>
+                </tr>
+                <tr>
+                    <td><strong>SVO（不完整）</strong></td>
+                    <td>I like.</td>
+                    <td>❌ 不完整</td>
+                    <td>及物动词后面缺宾语，话没说完</td>
+                </tr>
+                <tr>
+                    <td><strong>SVP（主系表）</strong></td>
+                    <td>It is sunny today.</td>
+                    <td>✅ 完整</td>
+                    <td>系动词+表语，不缺成分</td>
+                </tr>
+                <tr>
+                    <td><strong>SVP（不完整）</strong></td>
+                    <td>It is.</td>
+                    <td>❌ 不完整</td>
+                    <td>系动词后面缺表语，话没说完</td>
+                </tr>
+                <tr>
+                    <td><strong>SVOOC（主谓宾宾补）</strong></td>
+                    <td>I find it nice.</td>
+                    <td>✅ 完整</td>
+                    <td>主语+及物动词+宾语+宾补，不缺成分</td>
+                </tr>
+                <tr>
+                    <td><strong>SVOIO（主谓间宾直宾）</strong></td>
+                    <td>She told me a joke.</td>
+                    <td>✅ 完整</td>
+                    <td>主语+及物动词+间宾+直宾，不缺成分</td>
+                </tr>
+                <tr>
+                    <td><strong>SVOIO（不完整）</strong></td>
+                    <td>She told me.</td>
+                    <td>❌ 不完整</td>
+                    <td>VT2 双宾语动词缺直宾，话没说完</td>
+                </tr>
+                <tr>
+                    <td><strong>形容词性物主代词后</strong></td>
+                    <td>This is my...</td>
+                    <td>❌ 不完整</td>
+                    <td>形容词性物主代词（my/your/his）后面必须加名词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 判断完整与否的方法：读一下句子，看意思说完整了没有<br>
+            - 形容词性物主代词（my/your/his/her/its/our/their）后面不能空着，必须加名词<br>
+            - "This is my." 是错的，必须是 "This is my book."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 第三步详解：助动词/系动词的选取（核心难点）</h2>
+        <p>这是本节课最重要的部分——逗号后面第一个词应该用什么：</p>
+
+        <h3>规则一：句中有助动词或系动词 → 直接用</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主句</th>
+                    <th>分析</th>
+                    <th>反义疑问部分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He <code>can</code> speak English.</td>
+                    <td>can 是助动词 → 直接用</td>
+                    <td>前肯 → 后否 → <strong>can't he?</strong></td>
+                </tr>
+                <tr>
+                    <td>He <code>is</code> a good student.</td>
+                    <td>is 是系动词 → 直接用</td>
+                    <td>前肯 → 后否 → <strong>isn't he?</strong></td>
+                </tr>
+                <tr>
+                    <td><code>Tom</code> can speak English.</td>
+                    <td>can 是助动词；Tom → he</td>
+                    <td>前肯 → 后否 → <strong>can't he?</strong></td>
+                </tr>
+                <tr>
+                    <td><code>Lily</code> can speak English.</td>
+                    <td>can 是助动词；Lily → she</td>
+                    <td>前肯 → 后否 → <strong>can't she?</strong></td>
+                </tr>
+                <tr>
+                    <td><code>Lily</code> isn't a student.</td>
+                    <td>isn't 是系动词（已否定）</td>
+                    <td>前否 → 后肯 → <strong>is she?</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>规则二：句中只有实意动词 → 抽象成 does/do/did</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主句</th>
+                    <th>分析</th>
+                    <th>反义疑问部分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He speak<span style="color:red;font-weight:bold;">s</span> good English.</td>
+                    <td>speaks 是实意动词 → 抽象成 does（第三人称单数现在时）</td>
+                    <td>前肯 → 后否 → <strong>doesn't he?</strong></td>
+                </tr>
+                <tr>
+                    <td><code>Tom</code> speaks good English.</td>
+                    <td>speaks → does；Tom → he</td>
+                    <td>前肯 → 后否 → <strong>doesn't he?</strong></td>
+                </tr>
+                <tr>
+                    <td><code>Lily</code> speaks good English.</td>
+                    <td>speaks → does；Lily → she</td>
+                    <td>前肯 → 后否 → <strong>doesn't she?</strong></td>
+                </tr>
+                <tr>
+                    <td>Lily <code>won't</code> speak English.</td>
+                    <td>won't 是助动词（已否定）</td>
+                    <td>前否 → 后肯 → <strong>will she?</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 实意动词（如 speaks/likes/goes）不能直接放在反义疑问部分<br>
+            - 必须"抽象"成助动词：第三人称单数现在时 → does；第一/二人称现在时 → do；过去时 → did<br>
+            - 口诀：实意动词不能直接用，要抽象成 does/do/did
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 特殊考点一：否定副词（hardly）</h2>
+        <p>老师讲解了一个重要的特殊情况——否定副词：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He can hardly speak English.</strong></div>
+            <div class="example-item">→ 句中有 hardly（几乎不），这是一个<strong>否定副词</strong></div>
+            <div class="example-item">→ 虽然 can 是肯定的，但 hardly 已经表示否定了</div>
+            <div class="example-item">→ 前否 → 后肯 → <strong>can he?</strong>（不用 can't）</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>否定副词</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>hardly</strong></td>
+                    <td>几乎不（表示否定）</td>
+                </tr>
+                <tr>
+                    <td><strong>never</strong></td>
+                    <td>从不（表示否定）</td>
+                </tr>
+                <tr>
+                    <td><strong>seldom</strong></td>
+                    <td>很少（表示否定）</td>
+                </tr>
+                <tr>
+                    <td><strong>rarely</strong></td>
+                    <td>很少（表示否定）</td>
+                </tr>
+                <tr>
+                    <td><strong>scarcely</strong></td>
+                    <td>几乎不（表示否定）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 含有 hardly/never/seldom 等否定副词的句子，虽然形式上是肯定的，但语义上是否定的<br>
+            - 所以反义疑问部分要用<strong>肯定形式</strong><br>
+            - He can hardly speak English → can he?（不是 can't he!）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 特殊考点二：There be 句型</h2>
+        <p>老师讲解 There be 句型的反义疑问句特殊规则：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>There is a car, isn't there?</strong></div>
+            <div class="example-item">→ 主句：There is a car（完整句子 ✓）</div>
+            <div class="example-item">→ is 是系动词 → 直接用</div>
+            <div class="example-item">→ 前肯 → 后否 → 但主语不用 it，而用 <strong>there</strong></div>
+            <div class="example-item">→ 结果：isn't there?</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：There be 句型中，there 不是主语，真正的主语是 be 后面的名词。但反义疑问部分不用名词的人称代词（如 it），而是固定用 there。这是 There be 句型的特殊规则。
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>There are many students in the classroom, aren't there?</strong></div>
+            <div class="example-item">→ are 是系动词 → 直接用；前肯 → 后否 → aren't there?</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 特殊考点三：主语从句 → 用 it 代替</h2>
+        <p>老师讲解当主句的主语是一个从句时（主语从句），反义疑问部分用 it 代替整个从句：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>What he said is right, isn't it?</strong></div>
+            <div class="example-item">→ 主句：What he said is right</div>
+            <div class="example-item">→ 主语是 What he said（主语从句），是一个句子做主语</div>
+            <div class="example-item">→ 一个句子的主语 → 用 <strong>it</strong> 代替</div>
+            <div class="example-item">→ is 是系动词 → 前肯 → 后否 → isn't it?</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 当主语是一个从句（如 What he said / What you want / Where he goes）时，反义疑问部分用 it<br>
+            - 不能说 "isn't what he said?"（太长了，像说相声）<br>
+            - 原理：一个句子做主语 → 用 it 代替
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 特殊考点四：祈使句</h2>
+        <p>老师讲解祈使句的反义疑问句特殊规则：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Shut up, will you?</strong></div>
+            <div class="example-item">→ 祈使句省略了主语 you（You shut up）</div>
+            <div class="example-item">→ 祈使句天然表将来 → 助动词用 will</div>
+            <div class="example-item">→ 省略的主语是 you → 用 you</div>
+            <div class="example-item">→ 结果：will you?（肯定否定都可以，语气略有不同）</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>祈使句类型</th>
+                    <th>反义疑问部分</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>一般祈使句</strong></td>
+                    <td>will you? / won't you?</td>
+                    <td>Shut up, will you? / Open the door, won't you?</td>
+                </tr>
+                <tr>
+                    <td><strong>Let's 开头</strong></td>
+                    <td>will we?</td>
+                    <td>Let's go, will we?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：祈使句省略了主语 you，天然表将来（用 will）。所以反义疑问部分用 will you。Let's 开头隐含省略的是 we（第一人称），所以用 will we。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 人称代词选取规则</h2>
+        <p>老师强调反义疑问部分的第二个词必须用人称代词：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主句主语</th>
+                    <th>反义疑问部分主语</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He / Tom / 男生名字</td>
+                    <td><strong>he</strong></td>
+                    <td>人名 → 对应的人称代词</td>
+                </tr>
+                <tr>
+                    <td>She / Lily / 女生名字</td>
+                    <td><strong>she</strong></td>
+                    <td>人名 → 对应的人称代词</td>
+                </tr>
+                <tr>
+                    <td>It / 事物</td>
+                    <td><strong>it</strong></td>
+                    <td>事物 → it</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td><strong>I</strong></td>
+                    <td>第一人称 → I</td>
+                </tr>
+                <tr>
+                    <td>You</td>
+                    <td><strong>you</strong></td>
+                    <td>第二人称 → you</td>
+                </tr>
+                <tr>
+                    <td>We</td>
+                    <td><strong>we</strong></td>
+                    <td>第一人称复数 → we</td>
+                </tr>
+                <tr>
+                    <td>They</td>
+                    <td><strong>they</strong></td>
+                    <td>第三人称复数 → they</td>
+                </tr>
+                <tr>
+                    <td>一个句子（主语从句）</td>
+                    <td><strong>it</strong></td>
+                    <td>一个句子做主语 → 用 it 代替</td>
+                </tr>
+                <tr>
+                    <td>There be 句型</td>
+                    <td><strong>there</strong></td>
+                    <td>There be 句型特殊规则</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 不能说 "isn't Tom?" / "isn't New York?" / "isn't the man who is wearing a hat?"<br>
+            - 必须用人称代词：Tom → he, New York → it, 一个句子 → it<br>
+            - There be 句型特殊：用 there 代替
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 完整实战演练</h2>
+        <p>老师用多个例句完整演示反义疑问句的构建过程：</p>
+
+        <h3>例句一：He can speak English.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ He can speak English（主谓宾完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → He can speak English, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>can 是助动词 → 直接用；前肯 → 后否 → can't he?</div>
+            <div class="example-item"><strong>结果：</strong>He can speak English, <strong>can't he?</strong></div>
+        </div>
+
+        <h3>例句二：He is a good student.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ It is sunny today（主系表完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → He is a good student, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>is 是系动词 → 直接用；前肯 → 后否 → isn't he?</div>
+            <div class="example-item"><strong>结果：</strong>He is a good student, <strong>isn't he?</strong></div>
+        </div>
+
+        <h3>例句三：He speaks good English.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ He speaks good English（主谓宾完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → He speaks good English, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>speaks 是实意动词 → 抽象成 does；前肯 → 后否 → doesn't he?</div>
+            <div class="example-item"><strong>结果：</strong>He speaks good English, <strong>doesn't he?</strong></div>
+        </div>
+
+        <h3>例句四：He can hardly speak English.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ He can hardly speak English（主谓宾完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → He can hardly speak English, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>can 是助动词 → 直接用；但 hardly 是否定副词 → 前否 → 后肯 → can he?</div>
+            <div class="example-item"><strong>结果：</strong>He can hardly speak English, <strong>can he?</strong></div>
+        </div>
+
+        <h3>例句五：There is a car, ___ ___?</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ There is a car（完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → There is a car, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>is 是系动词 → 直接用；There be 句型特殊 → 用 there；前肯 → 后否 → isn't there?</div>
+            <div class="example-item"><strong>结果：</strong>There is a car, <strong>isn't there?</strong></div>
+        </div>
+
+        <h3>例句六：What he said is right, ___ ___?</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ What he said is right（主系表完整 ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → What he said is right, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>is 是系动词 → 直接用；主语是 What he said（从句）→ 用 it；前肯 → 后否 → isn't it?</div>
+            <div class="example-item"><strong>结果：</strong>What he said is right, <strong>isn't it?</strong></div>
+        </div>
+
+        <h3>例句七：Shut up, ___ ___?</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ Shut up = You shut up（祈使句，省略主语 you ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → Shut up, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>祈使句天然表将来 → will；省略的主语是 you → you；will you? / won't you?</div>
+            <div class="example-item"><strong>结果：</strong>Shut up, <strong>will you?</strong> / <strong>won't you?</strong></div>
+        </div>
+
+        <h3>例句八：Let's go, ___ ___?</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：</strong>完整句子？→ Let's go = Let us go（祈使句，隐含主语 we ✓）</div>
+            <div class="example-item"><strong>第二步：</strong>打逗号 → Let's go, ____ ____?</div>
+            <div class="example-item"><strong>第三步：</strong>Let's 隐含主语是 we → will we?</div>
+            <div class="example-item"><strong>结果：</strong>Let's go, <strong>will we?</strong></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 三大特殊用法总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>特殊句型</th>
+                    <th>反义疑问部分</th>
+                    <th>原因</th>
+                    <th>典型例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>There be 句型</strong></td>
+                    <td>isn't/aren't + <strong>there</strong></td>
+                    <td>There be 句型特殊规则，不用 it</td>
+                    <td>There is a car, <strong>isn't there?</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>isn't/doesn't + <strong>it</strong></td>
+                    <td>一个句子做主语 → 用 it 代替</td>
+                    <td>What he said is right, <strong>isn't it?</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>祈使句（一般）</strong></td>
+                    <td><strong>will you?</strong> / won't you?</td>
+                    <td>祈使句省略 you + 天然表将来（will）</td>
+                    <td>Shut up, <strong>will you?</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>祈使句（Let's）</strong></td>
+                    <td><strong>will we?</strong></td>
+                    <td>Let's 隐含主语是 we</td>
+                    <td>Let's go, <strong>will we?</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>13. 助动词/系动词选取速查表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>前句动词类型</th>
+                    <th>反义疑问部分动词</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>有助动词（can/will/should/may/must...）</strong></td>
+                    <td>直接用该助动词（肯/否反着来）</td>
+                    <td>He can swim, can't he?</td>
+                </tr>
+                <tr>
+                    <td><strong>有系动词（am/is/are/was/were）</strong></td>
+                    <td>直接用该系动词（肯/否反着来）</td>
+                    <td>She is a teacher, isn't she?</td>
+                </tr>
+                <tr>
+                    <td><strong>只有实意动词（现在时）</strong></td>
+                    <td>抽象成 does（三单）/ do（其他）</td>
+                    <td>He speaks English, doesn't he?</td>
+                </tr>
+                <tr>
+                    <td><strong>只有实意动词（过去时）</strong></td>
+                    <td>抽象成 did</td>
+                    <td>He spoke English, didn't he?</td>
+                </tr>
+                <tr>
+                    <td><strong>有 have（表示"有"）</strong></td>
+                    <td>直接用 have/has（英式）/ do（美式）</td>
+                    <td>He has a car, hasn't he? / doesn't he?</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>14. 核心判断逻辑总结</h2>
+        <p>老师总结了判断反义疑问句的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：看主句是否完整 → 不缺主宾表？→ 继续<br>
+            第二步：打逗号，看前句有助动词/系动词吗？<br>
+            &emsp;有 → 直接用（肯/否反着来）<br>
+            &emsp;没有 → 实意动词抽象成 does/do/did<br>
+            第三步：主语用人称代词（There be → there；主语从句 → it；祈使句 → you/we）</strong>
+        </div>
+
+        <h3>反义疑问句判断三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>确认主句完整（不缺主/宾/表）→ 不完整则不能构成反义疑问句</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>看前句动词：有助动词/系动词 → 直接用；只有实意动词 → 抽象成 does/do/did；注意否定副词（hardly/never）→ 前否后肯</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>主语用人称代词：一般人名 → he/she/it；There be → there；主语从句 → it；祈使句 → you/we</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 前肯后否，前否后肯（反着来）<br>
+            - 有助动词/系动词 → 直接用；只有实意动词 → 抽象成 does/do/did<br>
+            - 主语必须用人称代词（不用人名、不用名词）<br>
+            - 特殊：There be → there；主语从句 → it；祈使句 → will you/won't you / Let's → will we<br>
+            - 注意否定副词：hardly/never/seldom → 语义否定 → 后肯
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>15. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+反义疑问句（G47）
+├── 核心规则：前肯后否，前否后肯（反着来）
+├── 三步构成法
+│   ├── 第一步：一个完整的句子（不缺主/宾/表）
+│   ├── 第二步：打逗号
+│   └── 第三步：两个词 = 助动词/系动词 + 人称代词
+├── 助动词/系动词选取
+│   ├── 有助动词/系动词 → 直接用（肯/否反着来）
+│   ├── 只有实意动词 → 抽象成 does/do/did
+│   └── 否定副词（hardly/never/seldom）→ 语义否定 → 后肯
+├── 人称代词选取
+│   ├── 一般人名 → he/she/it
+│   ├── There be 句型 → there（特殊）
+│   ├── 主语从句 → it（一个句子用it代替）
+│   ├── 祈使句 → you（will you/won't you）
+│   └── Let's → we（will we）
+└── 三大特殊用法
+    ├── There be → isn't/aren't there?
+    ├── 主语从句 → isn't/doesn't it?
+    └── 祈使句 → will you? / won't you? / Let's → will we?
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记三步构成法：</strong>完整句子 + 逗号 + 助动词/系动词 + 人称代词。这是反义疑问句的全部结构。</li>
+            <li><strong>助动词选取是核心难点：</strong>有助动词/系动词 → 直接用；只有实意动词 → 抽象成 does/do/did。这是最容易出错的地方。</li>
+            <li><strong>注意否定副词：</strong>hardly/never/seldom/rarely/scarcely 表示否定语义 → 前否后肯 → 反义疑问部分用肯定形式。</li>
+            <li><strong>人称代词必须用：</strong>不能用人名或名词重复，必须用人称代词（he/she/it/it/there/you/we）。</li>
+            <li><strong>三大特殊用法必须记住：</strong>There be → there；主语从句 → it；祈使句 → will you / Let's → will we。</li>
+            <li><strong>判断完整与否：</strong>读一下句子，看意思说完整了没有。形容词性物主代词（my/your/his）后面必须加名词。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G48 秒判断简单句并列句复合句：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G48】秒判断简单句并列句复合句【大一统的前兆开始浮现】</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G48 是「基础语法」系列第48课，由陈老师主讲。本节课是句子部分的<strong>综合实战课</strong>，紧接 G47「反义疑问句」，专门讲解<strong>如何秒判断简单句、并列句和复合句</strong>。</p>
+        <p>在此之前，同学们已经学习了简单句（G40）、并列句（G41）、复合句/从句（G43-G45）、反义疑问句（G47）等知识。本节课将所有句型知识融会贯通，用一套系统的方法对句子进行快速分类，是前面所有句型知识的综合大练兵。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握"谓语动词是解开所有句子的钥匙"这一核心理念，学会通过找谓语动词个数和连接词个数来秒判断简单句、并列句和复合句。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G41「并列句」、G43「从句/复合句1.0」、G47「反义疑问句」的基础上。需要熟练掌握谓语动词识别、并列连词与从属连词的区别、反义疑问句等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 三种句型定义回顾</h2>
+        <p>老师首先回顾三种句型的核心定义：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型类型</th>
+                    <th>主谓结构数（X）</th>
+                    <th>连接词类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>简单句</strong></td>
+                    <td>X = 1（只有一个主谓结构）</td>
+                    <td>不需要连接词</td>
+                </tr>
+                <tr>
+                    <td><strong>并列句</strong></td>
+                    <td>X ≥ 2（两个或以上主谓结构）</td>
+                    <td>并列连词（and/but/so/or），且and/but两边都必须有SV</td>
+                </tr>
+                <tr>
+                    <td><strong>复合句</strong></td>
+                    <td>X ≥ 2（两个或以上主谓结构）</td>
+                    <td>从属连词（that/which/what/when/if/because...）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 先找谓语动词个数 → 再找连接词个数 → 秒判断句型类型<br>
+            - 连接词个数 = V - 1
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心方法：先找谓语动词</h2>
+        <p>老师强调找谓语动词是判断句型的第一步，也是最关键的一步：</p>
+
+        <h3>谓语动词的识别要点</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>要点</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词 + 实义动词 = 一个谓语</strong></td>
+                    <td>助动词和实义动词一起构成谓语，要一起画。只画助动词或只画实义动词都是错误的</td>
+                </tr>
+                <tr>
+                    <td><strong>to do 不是谓语</strong></td>
+                    <td>to do 是非谓语动词，不算谓语动词。如 to go / to plant 不算谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>ABB 型动词</strong></td>
+                    <td>过去式和过去分词一样的动词（如 offer → offered），主动是 -ed，被动也是 -ed。需根据语境判断是主动（谓语）还是被动（非谓语）</td>
+                </tr>
+                <tr>
+                    <td><strong>反义疑问句不算</strong></td>
+                    <td>反义疑问句部分（如 isn't there）不算谓语动词，因为它属于附加问句</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 很多同学只画 is 不画 doing，或者只画助动词不画实义动词 → 对谓语的内涵理解不够透彻<br>
+            - 助动词（am/is/are/was/were/can/will/has/have/been...）+ 实义动词 = 一起构成谓语，要一起划<br>
+            - to do 是典型的非谓语，不算谓语动词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 实战例句逐句分析</h2>
+        <p>老师用多个经典例句演示秒判断的过程：</p>
+
+        <h3>例句一：简单句</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>We often study Chinese history on Friday afternoon.</strong></div>
+            <div class="example-item">→ 只有一个谓语动词 study → 简单句 ✓</div>
+        </div>
+
+        <h3>例句二：复合句（定语从句）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>The boy who offered me his seat is called Tom.</strong></div>
+            <div class="example-item">→ offered 是谓语（主动，ABB型，过去式）；is 是谓语（系动词）→ 两个谓语</div>
+            <div class="example-item">→ 连接词个数 = 2 - 1 = 1 → who 是从属连词 → 复合句 ✓</div>
+            <div class="example-item">→ who offered me his seat 是定语从句，修饰 the boy</div>
+        </div>
+
+        <h3>例句三：简单句（反义疑问句不算）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>There is a chair in this room, isn't there?</strong></div>
+            <div class="example-item">→ is 是谓语；isn't 是反义疑问句部分，不算谓语 → 只有一个谓语 → 简单句 ✓</div>
+        </div>
+
+        <h3>例句四：简单句（and 连接大V，不是并列句）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>My brother and I go to school at half past seven in the morning and come back.</strong></div>
+            <div class="example-item">→ go 和 come back 是两个谓语动词，但 and 前面没有 SV（My brother and I 是大主语）</div>
+            <div class="example-item">→ and 前面是 S，后面是 V → 大V，不是并列句 → 简单句 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——简单句中的 and vs 并列句中的 and：</strong><br>
+            - 简单句：and 前面没有 SV，只有 S；and 后面是 V → 大V → 简单句<br>
+            - 并列句：and 前面有 SV，后面也有 SV → 天平两端都有 SV → 并列句<br>
+            - 看到 and 不要激动，看 and 两边是否都有 SV
+        </div>
+
+        <h3>例句五：并列句</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>He is in class one, and I am in class two.</strong></div>
+            <div class="example-item">→ and 前面：He is in class one（SV ✓）</div>
+            <div class="example-item">→ and 后面：I am in class two（SV ✓）</div>
+            <div class="example-item">→ 两边都有 SV → 并列句 ✓（并列关系）</div>
+        </div>
+
+        <h3>例句六：复合句（when 引导时间状语从句）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>He was fond of painting when he was young.</strong></div>
+            <div class="example-item">→ was fond of 看作一个动词短语（谓语1）；was（谓语2）→ 两个谓语</div>
+            <div class="example-item">→ when 是从属连词 → 复合句 ✓（时间状语从句）</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：was fond of 是一个固定动词短语，整体看作一个谓语。when 是从属连词，引导时间状语从句。
+        </div>
+
+        <h3>例句七：并列句 + 复合句嵌套</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>We grow rice in the south of the state, but where it is cold, they grow wheat.</strong></div>
+            <div class="example-item">→ 三个谓语：grow / is / grow → 连接词个数 = 3 - 1 = 2</div>
+            <div class="example-item">→ but 是并列连词，where 是从属连词</div>
+            <div class="example-item">→ but 前面：We grow rice in the south of the state（SV ✓）</div>
+            <div class="example-item">→ but 后面：where it is cold, they grow wheat（SV ✓，内部嵌套 where 从句）</div>
+            <div class="example-item">→ 大结构是并列句（but 连接两个 SV），内部嵌套复合句（where 引导）</div>
+        </div>
+
+        <h3>例句八：复合句（although 引导让步状语从句）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>The farm is large, although my dad has only two men working in it.</strong></div>
+            <div class="example-item">→ 两个谓语：is / has → 连接词个数 = 2 - 1 = 1</div>
+            <div class="example-item">→ although 是从属连词（不是并列连词！）</div>
+            <div class="example-item">→ 即使 although 前面有 SV，它仍然是复合句（从属关系，不是并列关系）</div>
+            <div class="example-item">→ 复合句 ✓（让步状语从句）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - although 是从属连词，不是并列连词！很多同学误以为 although 是并列连词<br>
+            - 即使 although 前面有 SV，它仍然是复合句（从属关系，不是并列关系）<br>
+            - 判断并列句的关键：and/but 两边是否都有 SV
+        </div>
+
+        <h3>例句九：简单句（to do 不算谓语）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>The farmer is showing the children how to plant rice.</strong></div>
+            <div class="example-item">→ is showing 是谓语（助动词 + 实义动词一起构成谓语）</div>
+            <div class="example-item">→ to plant 是非谓语（to do 形式）→ 不算谓语</div>
+            <div class="example-item">→ 只有一个谓语 → 简单句 ✓</div>
+        </div>
+
+        <h3>例句十：并列句（so 引导因果关系）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>It is time for the rice harvest, so everyday I work.</strong></div>
+            <div class="example-item">→ is 是谓语；work 是谓语 → 两个谓语</div>
+            <div class="example-item">→ so 是并列连词 → and 前面：It is time for the rice harvest（SV ✓）</div>
+            <div class="example-item">→ and 后面：I work（SV ✓）→ 并列句 ✓（因果关系）</div>
+        </div>
+
+        <h3>例句十一：并列句</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>Summer vacation is here, and I am helping.</strong></div>
+            <div class="example-item">→ is 是谓语；am helping 是谓语 → 两个谓语</div>
+            <div class="example-item">→ and 前面：Summer vacation is here（SV ✓）</div>
+            <div class="example-item">→ and 后面：I am helping（SV ✓）→ 并列句 ✓</div>
+        </div>
+
+        <h3>例句十二：复合句（反义疑问句 + 主语从句）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>What he said is right, isn't it?</strong></div>
+            <div class="example-item">→ said 是谓语（主动，谓语形式）；is 是谓语 → 两个谓语</div>
+            <div class="example-item">→ isn't 是反义疑问句部分，不算谓语</div>
+            <div class="example-item">→ what 是从属连词 → 复合句 ✓（主语从句）</div>
+            <div class="example-item">→ 反义疑问部分：主语是 What he said（一个句子）→ 用 it → isn't it?</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 特殊考点：Neither...Nor 与部分倒装</h2>
+        <p>老师讲解了一个高级语法点——Neither...Nor 引导的并列句中的部分倒装：</p>
+
+        <h3>原句还原</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>正常语序：</strong>He has neither changed his mind, nor will he do so.</div>
+            <div class="example-item">→ 正常语序中，neither 在 has 和 changed 之间</div>
+        </div>
+
+        <h3>倒装过程</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>Step 1：</strong>将 neither 提前到句首 → Neither he has changed his mind</div>
+            <div class="example-item">→ 助动词 has 提到主语 he 前面 → 部分倒装</div>
+            <div class="example-item"><strong>Step 2：</strong>第二个分句同样倒装 → nor will he do so</div>
+            <div class="example-item">→ 助动词 will 提到主语 he 前面 → 部分倒装</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>最终结果：</strong>Neither has he changed his mind, nor will he do so.</div>
+            <div class="example-item">→ 谓语1：has changed（has 提前 = 倒装）</div>
+            <div class="example-item">→ 谓语2：will do（will 提前 = 倒装）</div>
+            <div class="example-item">→ neither...nor 是并列连词 → 并列句 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 部分倒装：只有谓语动词的一部分（助动词）提到主语前面，实义动词留在后面<br>
+            - 完全倒装：整个谓语提到主语前面（本节课不涉及）<br>
+            - neither...nor 是并列连词，不是从属连词<br>
+            - 虽然形式看起来复杂，但核心方法不变：找谓语 → 找连词 → 判断句型
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 三种句型秒判断总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型</th>
+                    <th>谓语动词数</th>
+                    <th>连接词</th>
+                    <th>关键特征</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>简单句</strong></td>
+                    <td>1 个</td>
+                    <td>不需要</td>
+                    <td>只有一个谓语动词（助动词+实义动词算一个）</td>
+                </tr>
+                <tr>
+                    <td><strong>并列句</strong></td>
+                    <td>≥ 2 个</td>
+                    <td>并列连词（and/but/so/or）<br>且连词两边都有 SV</td>
+                    <td>天平两端都有 SV</td>
+                </tr>
+                <tr>
+                    <td><strong>复合句</strong></td>
+                    <td>≥ 2 个</td>
+                    <td>从属连词（that/which/when/if/because/although...）</td>
+                    <td>从属连词引导从句</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 易错点汇总</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>易错点</th>
+                    <th>说明</th>
+                    <th>正确判断</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>只画 is 不画 doing</strong></td>
+                    <td>助动词和实义动词要一起画</td>
+                    <td>is showing = 一个谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>把 to do 当谓语</strong></td>
+                    <td>to do 是非谓语，不算谓语</td>
+                    <td>how to plant = 非谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>看到 and 就认为是并列句</strong></td>
+                    <td>要看 and 两边是否都有 SV</td>
+                    <td>and 前面只有 S → 简单句</td>
+                </tr>
+                <tr>
+                    <td><strong>把 although 当并列连词</strong></td>
+                    <td>although 是从属连词</td>
+                    <td>复合句（让步状语从句）</td>
+                </tr>
+                <tr>
+                    <td><strong>把反义疑问句当谓语</strong></td>
+                    <td>反义疑问句部分不算谓语</td>
+                    <td>isn't there 不算谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>ABB 型动词误判</strong></td>
+                    <td>需根据主动/被动判断</td>
+                    <td>主动→谓语；被动→非谓语</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心判断逻辑总结</h2>
+        <p>老师总结了秒判断句型的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找谓语动词 → 数个数<br>
+            第二步：找连接词 → 数个数（= V - 1）<br>
+            第三步：看连接词类型 → 并列连词→并列句；从属连词→复合句；无→简单句<br>
+            第四步：并列句中看 and/but 两边是否都有 SV</strong>
+        </div>
+
+        <h3>秒判断四步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找谓语动词：助动词+实义动词一起画；to do 不画；反义疑问句不画</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>数连接词个数 = V - 1，确定连接词类型（并列/从属）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>并列连词 → 看 and/but 两边是否都有 SV → 有→并列句；没有→简单句</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>从属连词 → 复合句（从句）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 助动词+实义动词 = 一个谓语（一起画）<br>
+            - to do 是非谓语（不画）<br>
+            - 反义疑问句不算谓语（不画）<br>
+            - ABB 型动词：主动→谓语；被动→非谓语<br>
+            - 看到 and 不要激动，看两边是否都有 SV<br>
+            - although 是从属连词，不是并列连词<br>
+            - neither...nor 是并列连词（会引发部分倒装）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+秒判断简单句并列句复合句（G48）
+├── 核心方法：谓语动词是解开所有句子的钥匙
+│   ├── 助动词 + 实义动词 = 一个谓语（一起画）
+│   ├── to do = 非谓语（不画）
+│   ├── 反义疑问句 = 不算谓语（不画）
+│   └── ABB 型动词：主动→谓语；被动→非谓语
+│
+├── 三种句型
+│   ├── 简单句：1 个谓语，不需要连接词
+│   ├── 并列句：≥ 2 个谓语 + 并列连词 + 两边都有 SV
+│   └── 复合句：≥ 2 个谓语 + 从属连词
+│
+├── 易错点
+│   ├── 看到 and 就认为是并列句 → 看两边是否都有 SV
+│   ├── 把 although 当并列连词 → 是从属连词
+│   ├── 把反义疑问句当谓语 → 不算
+│   └── to do 当谓语 → 是非谓语
+│
+├── 特殊考点
+│   └── neither...nor 部分倒装
+│       ├── 助动词提到主语前面
+│       └── neither...nor 是并列连词 → 并列句
+│
+└── 嵌套结构
+    ├── 并列句内部可以嵌套复合句（but + where 从句）
+    └── 大结构看并列，小结构看从句
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记核心方法：</strong>谓语动词是解开所有句子的钥匙。先找谓语 → 再找连接词 → 秒判断句型。</li>
+            <li><strong>谓语动词识别是基本功：</strong>助动词+实义动词一起画；to do 不画；反义疑问句不画；ABB 型看主动/被动。</li>
+            <li><strong>看到 and 不要激动：</strong>看 and 两边是否都有 SV。只有 S + V → 简单句（大V）；SV + SV → 并列句。</li>
+            <li><strong>although 是从属连词：</strong>不是并列连词！although 引导的是让步状语从句（复合句）。</li>
+            <li><strong>注意嵌套结构：</strong>并列句内部可以嵌套复合句（如 but 后面有 where 从句）。大结构看并列，小结构看从句。</li>
+            <li><strong>掌握部分倒装：</strong>neither...nor 提前会诱发部分倒装（助动词提到主语前面），但仍然是并列句。</li>
+            <li><strong>客观判断：</strong>不要凭感觉，要客观地找谓语动词。grow 和 grow 要一视同仁，不要看上下文就主观判断。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

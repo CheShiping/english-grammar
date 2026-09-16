@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G44 从句2.0【放大招：秒判断各种从句】：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G44】从句2.0【放大招：秒判断各种从句】</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G44 是「基础语法」系列第44课，由陈老师主讲。本节课是句子部分复合句/从句的<strong>第二层</strong>，紧接 G43「从句/复合句1.0」，专门讲解<strong>如何秒判断各种从句的类型</strong>。</p>
+        <p>在此之前，同学们已经学习了 G43 的第一层——判断一个句子是不是从句、是哪种从句（通过找谓语动词→找连词→判断从属连词）。但第一层有一个弱点：虽然能判断出是哪种从句，但不知道它到底是什么从句（主从、宾从、表从、同位从、定从还是状从？）。本节课的"第二层"就是为了解决这个问题，掌握后就可以<strong>秒判断</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握从属连词的四个维度属性，学会三大技巧划分主从句，理解"从句属于主句"的哲学道理，从而通过判断从句在主句中做什么成分来秒判断从句类型。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G41「并列句」、G43「从句/复合句1.0」的基础上。需要熟练掌握谓语动词识别、并列连词与从属连词的区别、六种从句的基本概念等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 第一层回顾：秒判断是不是从句</h2>
+        <p>老师首先回顾了 G43 第一层的方法——快速判断一个句子是不是从句：</p>
+
+        <h3>第一层步骤</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>示例：What you said is right.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找谓语动词</td>
+                    <td>said（谓语1）+ is（谓语2）→ 两个谓语动词</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>找连词（个数 = V - 1）</td>
+                    <td>两个 V 需要一个连词 → what 是从属连词</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断从句类型</td>
+                    <td>what 是从属连词 → 是从句（复合句）✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>第一层的弱点</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一层能做到的：</strong>判断出它是从句（复合句）</div>
+            <div class="example-item"><strong>第一层做不到的：</strong>不知道它到底是什么从句（主从？宾从？表从？同位从？定从？状从？）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——并列句 vs 复合句的关键区别：</strong><br>
+            - 并列句和复合句的区别不是"有几个主谓结构"，而是<strong>连词的不同</strong><br>
+            - I help you and you help me → and 是并列连词 → 并列句<br>
+            - I help you because you need me → because 是从属连词 → 复合句（从句）<br>
+            - 因此要深入研究复合句，必须先深入研究从属连词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 从属连词的四个维度（研究从句的关键）</h2>
+        <p>老师从四个维度来阐述从属连词，这是解决从句问题的关键：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>维度</th>
+                    <th>核心内容</th>
+                    <th>详细说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一：位置</strong></td>
+                    <td><strong>位于从句句首</strong></td>
+                    <td>从属连词永远位于从句的句首。从句可以在主句前面、中间或后面，但连词始终在从句的最前面</td>
+                </tr>
+                <tr>
+                    <td><strong>第二：个数</strong></td>
+                    <td><strong>= V - 1</strong></td>
+                    <td>连接词个数 = 谓语动词个数 - 1（这是第一层的内容，比较简单）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三：作用</strong></td>
+                    <td><strong>两个作用</strong></td>
+                    <td>① 引导从句（因为位于从句句首，所以起引导作用）；② 在从句中做成分（引导词属于从句，在从句中充当某个成分）</td>
+                </tr>
+                <tr>
+                    <td><strong>第四：省略</strong></td>
+                    <td>（待后续专题讲解）</td>
+                    <td>省略问题将在后续专题中单独讲解，本节课暂不涉及</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心比喻——"举牌子的人"：</strong><br>
+            - 从属连词就像运动会开幕式时站在班级最前面举牌子的人<br>
+            - 它的作用是让队伍更清晰，不是更混乱<br>
+            - 从属连词的作用就是让主从句之间的界限更加分明、更加清晰<br>
+            - 它不是来给你添麻烦的，它是来帮你的！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 从属连词的位置：从句句首（核心概念）</h2>
+        <p>老师强调从属连词最核心的属性——它位于从句的句首，这是划分主从句的关键：</p>
+
+        <h3>从属连词的位置规律</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型结构</th>
+                    <th>示例</th>
+                    <th>分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>连词 + SV … SV</strong></td>
+                    <td><code>What</code> you said is right.</td>
+                    <td>what 是从句句首 → 左边是从句，右边是主句</td>
+                </tr>
+                <tr>
+                    <td><strong>SV … 连词 + SV … SV</strong></td>
+                    <td>I don't know <code>what</code> you talked about.</td>
+                    <td>what 是从句句首 → 右边是从句，两边是主句</td>
+                </tr>
+                <tr>
+                    <td><strong>SV … 连词 + SV … 连词 + SV</strong></td>
+                    <td>She said <code>that</code> you were late, <code>and</code> he was angry.</td>
+                    <td>that 是从句句首 → that 后面是从句</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：因为连词位于从句句首，所以连词后面就是从句的开始。知道从属连词是从句的开端，就知道从句从哪里开始。但只知道开始不知道结尾也不行，还需要其他技巧来确定结尾。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 第二层三大技巧（秒判断从句的核心武器）</h2>
+        <p>老师给出了第二层的三大技巧，有了这三把武器就可以秒判断从句：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>技巧</th>
+                    <th>核心内容</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>技巧一</strong></td>
+                    <td><strong>从属连词 = 从句的开端</strong></td>
+                    <td>找到引导词就知道从句从哪里开始</td>
+                </tr>
+                <tr>
+                    <td><strong>技巧二</strong></td>
+                    <td><strong>根据句意判断结尾</strong></td>
+                    <td>读句子，根据语义判断从句到哪里结束（需要一定的阅读能力）</td>
+                </tr>
+                <tr>
+                    <td><strong>技巧三</strong></td>
+                    <td><strong>两个谓语动词不属于同一个句子</strong></td>
+                    <td>主句和从句都是句子，每个句子必须有且只有一个谓语动词。两个谓语动词一定不属于同一个句子，必须从这里划开</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - 技巧一告诉你从句从哪里开始（引导词 = 从句句首）<br>
+            - 技巧二告诉你从句到哪里结束（根据句意）<br>
+            - 技巧三帮你确认划开的位置对不对（两个 V 不能在一个句子里面）<br>
+            - 三把武器配合使用，就能准确划分主从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 三大技巧实战：划分主从句</h2>
+        <p>老师用六大经典例句演示三大技巧如何配合使用，准确划分主从句：</p>
+
+        <h3>例句一：What you said is right.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：said 和 is 是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：what 是从句句首 → 左边是从句</div>
+            <div class="example-item">→ 划分：<code>[What you said]</code>（从句） | <code>is right</code>（主句）</div>
+        </div>
+
+        <h3>例句二：I don't know what you talked about.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：don't know 和 talked 是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：what 是从句句首 → 右边是从句</div>
+            <div class="example-item">→ 划分：<code>I don't know</code>（主句） | <code>[what you talked about]</code>（从句）</div>
+        </div>
+
+        <h3>例句三：The boy who is wearing a hat is my brother.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：is（wearing 前面那个）和 is（my brother 前面那个）是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：who 是从句句首 → 右边是从句</div>
+            <div class="example-item">→ 技巧二：根据句意，who is wearing a hat 是一个完整意思 → 从句到这里结束</div>
+            <div class="example-item">→ 划分：<code>The boy</code>（主句前半） | <code>[who is wearing a hat]</code>（从句，夹在主句中间） | <code>is my brother</code>（主句后半）</div>
+        </div>
+
+        <h3>例句四：When she came back, I was doing my homework.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：came 和 was doing 是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：when 是从句句首 → 左边是从句</div>
+            <div class="example-item">→ 划分：<code>[When she came back]</code>（从句） | <code>I was doing my homework</code>（主句）</div>
+        </div>
+
+        <h3>例句五：We all know the fact that you are a pig.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：know 和 are 是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：that 是从句句首 → 右边是从句</div>
+            <div class="example-item">→ 划分：<code>We all know the fact</code>（主句） | <code>[that you are a pig]</code>（从句）</div>
+        </div>
+
+        <h3>例句六：I don't know what he is wearing.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>分析：</strong></div>
+            <div class="example-item">→ 技巧三：don't know 和 is wearing 是两个谓语动词 → 必须划开</div>
+            <div class="example-item">→ 技巧一：what 是从句句首 → 右边是从句</div>
+            <div class="example-item">→ 划分：<code>I don't know</code>（主句） | <code>[what he is wearing]</code>（从句）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心要点：</strong><br>
+            - 从句可以在主句前面（When she came back）、中间（The boy who is wearing a hat）、后面（I don't know what you talked about）<br>
+            - 三个技巧缺一不可：技巧一找开端，技巧二定结尾，技巧三验证划分是否正确<br>
+            - 技巧三是"铁律"：两个谓语动词一定不属于同一个句子，必须从这里划开
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 哲学核心：从句属于主句（秒判断的关键）</h2>
+        <p>老师提出了本节课最重要的"哲学问题"——想明白这个道理，就可以秒判断任何从句：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>从句属于主句（就像小弟属于老大）<br>
+            从句在主句中做成分</strong>
+        </div>
+
+        <h3>核心逻辑链</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>逻辑步骤</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>从句属于主句（从属关系，不是并列关系）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>从句在主句中做成分（因为属于主句，所以是主句的一个零件）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>看从句在主句中做什么成分 → 主语→主从，宾语→宾从，表语→表从，定语→定从，状语→状从，同位语→同位从</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从句属于主句（从属关系，不是主句属于从句）<br>
+            - 从句在主句中做成分<br>
+            - 看从句在主句中做什么成分，就决定它是什么从句<br>
+            - 这就是"秒判断"的底层逻辑！
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 六大从句秒判断实战</h2>
+        <p>老师用五大经典例句逐一演示：从句在主句中做什么成分，就是什么从句：</p>
+
+        <h3>① 主语从句：What you said is right.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>[What you said]</code> | <code>is right</code></div>
+            <div class="example-item"><strong>分析：</strong>主句 is right（系动词 + 表语），主句缺主语 → 从句做了主语 → <strong>主语从句</strong></div>
+        </div>
+
+        <h3>② 宾语从句：I don't know what you talked about.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>I don't know</code> | <code>[what you talked about]</code></div>
+            <div class="example-item"><strong>分析：</strong>主句 I don't know（know 是及物动词，后面缺宾语）→ 从句做了宾语 → <strong>宾语从句</strong></div>
+        </div>
+
+        <h3>③ 表语从句：I know what he is.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>I know</code> | <code>[what he is]</code></div>
+            <div class="example-item"><strong>分析：</strong>主句 I know（及物动词 + 宾语）→ 等等，这里 what he is 是 know 的宾语 → 宾从<br>
+            → 再看：What he is is right. → 主句缺主语 → 主从（第一个 what he is）；主句 is right 缺表语 → <strong>表语从句</strong>（第二个 is right 的主语位置）</div>
+        </div>
+
+        <h3>④ 定语从句：The boy who is wearing a hat is my brother.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>The boy</code> | <code>[who is wearing a hat]</code> | <code>is my brother</code></div>
+            <div class="example-item"><strong>分析：</strong>从句在主句中修饰 the boy（名词）→ 修饰名词做定语 → <strong>定语从句</strong></div>
+        </div>
+
+        <h3>⑤ 状语从句：When she came back, I was doing my homework.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>[When she came back]</code> | <code>I was doing my homework</code></div>
+            <div class="example-item"><strong>分析：</strong>从句在主句中修饰 was doing（动词）→ 修饰动词做状语 → <strong>状语从句（时间状语从句）</strong></div>
+        </div>
+
+        <h3>⑥ 同位语从句：We all know the fact that you are a pig.</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>划分：</strong><code>We all know the fact</code> | <code>[that you are a pig]</code></div>
+            <div class="example-item"><strong>分析：</strong>从句在主句中说明 the fact 的内容 → 事实 = 你是一头猪（1:1 关系）→ <strong>同位语从句</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 定语从句 vs 同位语从句：定语从句修饰名词（缩小范围），同位语从句说明名词内容（1:1 关系）<br>
+            - The boy who is wearing a hat → 修饰 the boy，缩小范围 → 定语从句<br>
+            - The fact that you are a pig → 事实 = 你是一头猪，1:1 → 同位语从句<br>
+            - 判断方法：看从句和名词之间是"修饰关系"还是"等同关系"
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 六大从句秒判断总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>从句类型</th>
+                    <th>从句在主句中做什么成分</th>
+                    <th>典型例句</th>
+                    <th>主句缺什么</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>主语</td>
+                    <td><code>[What you said]</code> is right.</td>
+                    <td>主句缺主语</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句</strong></td>
+                    <td>宾语</td>
+                    <td>I don't know <code>[what you talked about]</code>.</td>
+                    <td>主句缺宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td>表语</td>
+                    <td>The problem is <code>[who will go]</code>.</td>
+                    <td>主句缺表语（系动词后面）</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语从句</strong></td>
+                    <td>同位语</td>
+                    <td>We know the fact <code>[that you are a pig]</code>.</td>
+                    <td>说明前面名词的内容（1:1）</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td>定语</td>
+                    <td>The boy <code>[who is wearing a hat]</code> is my brother.</td>
+                    <td>修饰名词（缩小范围）</td>
+                </tr>
+                <tr>
+                    <td><strong>状语从句</strong></td>
+                    <td>状语</td>
+                    <td><code>[When she came back]</code>, I was doing homework.</td>
+                    <td>修饰动词（时间/原因/条件等）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从句属于主句 → 从句在主句中做成分<br>
+            - 做主语 → 主语从句；做宾语 → 宾语从句；做表语 → 表语从句<br>
+            - 做同位语 → 同位语从句；做定语 → 定语从句；做状语 → 状语从句<br>
+            - 秒判断公式：找从句 → 看主句缺什么成分 → 就是什么从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 第一层 vs 第二层完整对比</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>第一层（G43）</th>
+                    <th>第二层（G44）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>目标</strong></td>
+                    <td>判断是不是从句，是哪种从句（名从/形从/副从）</td>
+                    <td>秒判断到底是什么从句（主从/宾从/表从/同位从/定从/状从）</td>
+                </tr>
+                <tr>
+                    <td><strong>核心方法</strong></td>
+                    <td>找谓语动词 → 找连词 → 判断从属/并列</td>
+                    <td>三大技巧划分主从句 → 看从句在主句中做什么成分</td>
+                </tr>
+                <tr>
+                    <td><strong>核心工具</strong></td>
+                    <td>从属连词列表</td>
+                    <td>从属连词的四个维度属性</td>
+                </tr>
+                <tr>
+                    <td><strong>输出结果</strong></td>
+                    <td>是/不是从句；是名从/形从/副从</td>
+                    <td>主从/宾从/表从/同位从/定从/状从（六种精确分类）</td>
+                </tr>
+                <tr>
+                    <td><strong>哲学核心</strong></td>
+                    <td>无</td>
+                    <td>从句属于主句，从句在主句中做成分</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+        <p>老师总结了秒判断从句的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找从属连词 → 确定从句开端<br>
+            第二步：根据句意 + 两个V不属于同一句 → 确定从句结尾，划分主从句<br>
+            第三步：看从句在主句中做什么成分 → 秒判断从句类型</strong>
+        </div>
+
+        <h3>秒判断从句三步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找从属连词 → 从句从这里开始（技巧一：引导词是从句句首）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>根据句意 + 两个V不属于同一句 → 确定从句结尾，划分主从句（技巧二 + 技巧三）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>看从句在主句中做什么成分 → 主语→主从，宾语→宾从，表语→表从，定语→定从，状语→状从，同位语→同位从</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从属连词是从句句首（位置）<br>
+            - 连接词个数 = V - 1（个数）<br>
+            - 引导从句 + 在从句中做成分（作用）<br>
+            - 从句属于主句，从句在主句中做成分（哲学核心）<br>
+            - 看从句在主句中做什么成分，就决定它是什么从句（秒判断公式）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+从句2.0 放大招：秒判断各种从句（G44）
+├── 第一层回顾（G43）
+│   ├── 找谓语动词 → 找连词（V-1）→ 判断从属/并列
+│   └── 弱点：能判断是从句，但不知道什么从句
+│
+├── 从属连词的四个维度
+│   ├── 位置：位于从句句首
+│   ├── 个数：= V - 1
+│   ├── 作用：①引导从句 ②在从句中做成分
+│   └── 省略：（后续专题讲解）
+│
+├── 第二层三大技巧
+│   ├── 技巧一：从属连词 = 从句开端
+│   ├── 技巧二：根据句意判断结尾
+│   └── 技巧三：两个谓语动词不属于同一个句子
+│
+├── 哲学核心
+│   ├── 从句属于主句（从属关系）
+│   ├── 从句在主句中做成分
+│   └── 看从句在主句中做什么成分 → 秒判断从句类型
+│
+├── 六大从句秒判断
+│   ├── 主语从句：What you said is right.（主句缺主语）
+│   ├── 宾语从句：I don't know what you talked about.（主句缺宾语）
+│   ├── 表语从句：The problem is who will go.（主句缺表语）
+│   ├── 同位语从句：We know the fact that you are a pig.（1:1说明内容）
+│   ├── 定语从句：The boy who is wearing a hat is my brother.（修饰名词）
+│   └── 状语从句：When she came back, I was doing homework.（修饰动词）
+│
+└── 秒判断三步法
+    ├── 第一步：找从属连词 → 确定开端
+    ├── 第二步：句意 + 两个V → 确定结尾，划分主从句
+    └── 第三步：看从句在主句中做什么成分 → 定类型
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记从属连词的四个维度：</strong>位置（从句句首）、个数（= V-1）、作用（引导从句 + 在从句中做成分）、省略（后续专题）。这是研究从句的起点。</li>
+            <li><strong>掌握三大技巧：</strong>技巧一（引导词是从句开端）、技巧二（根据句意定结尾）、技巧三（两个V不属于同一句）。三把武器配合使用，就能准确划分主从句。</li>
+            <li><strong>理解"从句属于主句"的哲学道理：</strong>这是秒判断的核心。从句在主句中做成分，看它做什么成分就决定它是什么从句。</li>
+            <li><strong>定语从句 vs 同位语从句的区别：</strong>定语从句修饰名词（缩小范围），同位语从句说明名词内容（1:1 关系）。判断方法：看从句和名词之间是"修饰关系"还是"等同关系"。</li>
+            <li><strong>从属连词是来帮你的：</strong>不要烦它，它是来让主从句界限更清晰的。它是"举牌子的人"，站在从句最前面。</li>
+            <li><strong>后续预告：</strong>本节课只是第二层，下节课（第三层）会在基础上再升级，更加厉害。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G43 从句/复合句1.0：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G43】从句/复合句1.0：我们总共需要掌握多少种从句？</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G43 是「基础语法」系列第43课，由陈老师主讲。本节课是句子部分的<strong>第三课</strong>，紧接 G42「祈使句」，专门讲解<strong>复合句（Complex Sentence）和从句（Subordinate Clause）的基本概念与分类体系</strong>。</p>
+        <p>在此之前，同学们已经学习了简单句和五大基本句型（G40）、并列句（G41）、祈使句（G42）。本节课标志着正式进入"复合句/从句"的学习——这也是大部分同学觉得最恼火、读不懂文章的主要原因。</p>
+
+        <div class="annotation">
+            本节课的核心目标：理解复合句与并列句的本质区别（从属连词 vs 并列连词）、掌握从句的两种分类方式（按词性分三种 / 按成分分六种），建立从句学习的整体框架。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G41「并列句」的基础上。需要熟练掌握主谓结构识别、简单句定义、并列连词（and/but/so/or）、名词/形容词/副词的词性概念、句子成分（主/宾/表/定/状/补）等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 课程定位：从并列句到复合句</h2>
+        <p>老师明确了整个课程体系的学习路线和当前所处的位置：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型类型</th>
+                    <th>主谓结构数（X）</th>
+                    <th>连接词类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>简单句</strong></td>
+                    <td>X = 1</td>
+                    <td>不需要连接词</td>
+                </tr>
+                <tr>
+                    <td><strong>并列句</strong></td>
+                    <td>X ≥ 2</td>
+                    <td>并列连词（and/but/so/or），放在两个 SV 中间</td>
+                </tr>
+                <tr>
+                    <td><strong>复合句（从句）</strong></td>
+                    <td>X ≥ 2</td>
+                    <td>从属连词（that/which/what/when/if/because...），位置灵活</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——并列句 vs 复合句：</strong><br>
+            - 并列句：用<strong>并列连词</strong>（and/but/also），必须放在两个 SV <strong>中间</strong>（天平两端，必须端平）<br>
+            - 复合句：用<strong>从属连词</strong>（that/which/what/when/where/if/because/as/since/although/though/whatever...），从句可以放在主句的<strong>前、中、后</strong>任意位置<br>
+            - 从句属于主句的一部分（属于脑袋、尾巴或躯干），不是并列关系
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 从属连词大集合</h2>
+        <p>老师列举了常见的从属连词，强调这些词大家其实很熟悉：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>从属连词</th>
+                    <th>常见含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>that</strong></td>
+                    <td>（无实义，引导从句的标记词）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>which</strong></td>
+                    <td>哪个</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>what</strong></td>
+                    <td>什么</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>when</strong></td>
+                    <td>当……时</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>where</strong></td>
+                    <td>哪里</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>if</strong></td>
+                    <td>如果</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>because</strong></td>
+                    <td>因为</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>as</strong></td>
+                    <td>因为/当……时/正如</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>since</strong></td>
+                    <td>自从/既然</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>although / though</strong></td>
+                    <td>虽然/尽管（很多人误以为 though 是并列连词，其实它是从属连词）</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><strong>whatever / whoever / wherever / whenever...</strong></td>
+                    <td>无论什么/无论谁/无论哪里/无论何时</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 从属连词和并列连词的关键区别：并列连词（如 and）不能和 also 分开（not only...but also 中间必须夹 SV）<br>
+            - 从属连词没有这个限制，从句可以出现在主句的前、中、后任意位置<br>
+            - although/though 是<strong>从属连词</strong>，不是并列连词（很多同学搞错）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 从句的本质：一个句子代替一个词</h2>
+        <p>老师从词性角度切入，讲解从句的本质——用一个完整的句子来代替某个词性的词：</p>
+
+        <h3>角度一：名词性从句（一个句子代替名词）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>对比：</strong></div>
+            <div class="example-item"><strong>It</strong> is right.（它是对的。）→ It 是主语，is 是系动词，right 是表语 → 主系表结构</div>
+            <div class="example-item"><strong>What he said</strong> is right.（他说的这件事是对的。）→ What he said 是主语，is right 是系表结构</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：What he said 是一个完整的句子（he 主语 + said 谓语 + what 宾语），它代替了一个名词，做了主句的主语。这就是<strong>主语从句</strong>，也叫<strong>名词性从句</strong>。
+        </div>
+
+        <h3>角度二：形容词性从句（一个句子代替形容词）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>对比：</strong></div>
+            <div class="example-item">The boy <code>under the tree</code> is Tom.（树下的那个男孩是汤姆。）→ under the tree 是介词短语，做后置定语，修饰 boy</div>
+            <div class="example-item">The boy <code>who is reading a book</code> is Tom.（正在读书的那个男孩是汤姆。）→ who is reading a book 是一个句子，修饰 boy</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：定语修饰名词，词性是形容词性的。who is reading a book 是一个句子（who 主语 + is reading 谓语 + a book 宾语），它代替了一个形容词，做后置定语。这就是<strong>定语从句</strong>，也叫<strong>形容词性从句</strong>。
+        </div>
+
+        <h3>角度三：副词性从句（一个句子代替副词）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>对比：</strong></div>
+            <div class="example-item">I was doing my homework <code>at six</code>.（我在六点做作业。）→ at six 是介词短语，做时间状语，修饰 was doing</div>
+            <div class="example-item">I was doing my homework <code>when he called me</code>.（他打电话给我的时候我正在做作业。）→ when he called me 是一个句子，修饰 was doing</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：状语修饰动词，词性是副词性的。when he called me 是一个句子（when 连接词 + he 主语 + called 谓语 + me 宾语），它代替了一个副词，做状语。这就是<strong>状语从句</strong>，也叫<strong>副词性从句</strong>。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 从句的两种分类体系（核心）</h2>
+        <p>老师从两个角度对从句进行了完整的分类：</p>
+
+        <h3>分类一：按词性分 → 三种从句</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>词性</th>
+                    <th>从句类型</th>
+                    <th>本质</th>
+                    <th>典型例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词</strong></td>
+                    <td><strong>名词性从句</strong></td>
+                    <td>一个句子代替名词</td>
+                    <td><code>What he said</code> is right.（代替名词，做主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>形容词</strong></td>
+                    <td><strong>形容词性从句</strong></td>
+                    <td>一个句子代替形容词</td>
+                    <td>The boy <code>who is reading a book</code> is Tom.（代替形容词，做定语）</td>
+                </tr>
+                <tr>
+                    <td><strong>副词</strong></td>
+                    <td><strong>副词性从句</strong></td>
+                    <td>一个句子代替副词</td>
+                    <td>I was doing homework <code>when he called me</code>.（代替副词，做状语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>分类二：按句子成分分 → 六种从句</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句子成分</th>
+                    <th>从句类型</th>
+                    <th>所属大类</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语</strong></td>
+                    <td><strong>主语从句</strong></td>
+                    <td>名词性从句</td>
+                    <td>一个句子做主语 → What he said is right.</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语</strong></td>
+                    <td><strong>宾语从句</strong></td>
+                    <td>名词性从句</td>
+                    <td>一个句子做宾语 → I know <em>what you mean</em>.</td>
+                </tr>
+                <tr>
+                    <td><strong>表语</strong></td>
+                    <td><strong>表语从句</strong></td>
+                    <td>名词性从句</td>
+                    <td>一个句子做表语 → The problem is <em>who will go</em>.</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语</strong></td>
+                    <td><strong>同位语从句</strong></td>
+                    <td>名词性从句</td>
+                    <td>一个句子做同位语 → I heard the news <em>that he passed</em>.</td>
+                </tr>
+                <tr>
+                    <td><strong>定语</strong></td>
+                    <td><strong>定语从句</strong></td>
+                    <td>形容词性从句</td>
+                    <td>一个句子做定语 → The boy <em>who is reading</em> is Tom.</td>
+                </tr>
+                <tr>
+                    <td><strong>状语</strong></td>
+                    <td><strong>状语从句</strong></td>
+                    <td>副词性从句</td>
+                    <td>一个句子做状语 → I was cooking <em>when he called</em>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 按词性分三种：名从（名词性从句）、形从（形容词性从句）、副从（副词性从句）<br>
+            - 按成分分六种：主从、宾从、表从、同位从、定从、状从<br>
+            - 名从 = 主从 + 宾从 + 表从 + 同位从（四种合一）<br>
+            - 形从 = 定从（一种）<br>
+            - 副从 = 状从（一种）<br>
+            - 总共需要掌握 <strong>六种从句</strong>（这是痛苦的根源，也是学习的核心框架）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 名词性从句详解：四种从句合一</h2>
+        <p>老师详细解释了名词性从句为什么包含四种从句：</p>
+
+        <h3>逻辑推导</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>名词能做什么成分？</strong></div>
+            <div class="example-item">→ 名词可以做：主语、宾语、表语、同位语</div>
+            <div class="example-item">→ 一个句子代替名词（名词性从句），自然也可以做：主语、宾语、表语、同位语</div>
+            <div class="example-item">→ 所以名词性从句 = 主语从句 + 宾语从句 + 表语从句 + 同位语从句</div>
+        </div>
+
+        <h3>四种名词性从句示例</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>从句类型</th>
+                    <th>例句</th>
+                    <th>分析</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td><code>What he said</code> is right.</td>
+                    <td>What he said 做主语（代替名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句</strong></td>
+                    <td>I know <code>what you mean</code>.</td>
+                    <td>what you mean 做宾语（代替名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td>The problem is <code>who will go</code>.</td>
+                    <td>who will go 做表语（代替名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语从句</strong></td>
+                    <td>I heard the news <code>that he passed</code>.</td>
+                    <td>that he passed 做同位语，说明 news 的内容（代替名词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：名词性从句的本质就是一个句子代替名词。因为名词可以做主/宾/表/同，所以名词性从句也对应四种从句。掌握了这个逻辑，就不用死记硬背了。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 定语从句详解：形容词性从句</h2>
+        <p>老师讲解定语从句的本质——一个句子代替形容词，做后置定语：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>对比分析：</strong></div>
+            <div class="example-item">The boy <code>under the tree</code> is Tom.</div>
+            <div class="example-item">→ under the tree 是介词短语，做后置定语，修饰 boy，翻译时变序："树下的男孩"</div>
+            <div class="example-item">The boy <code>who is reading a book</code> is Tom.</div>
+            <div class="example-item">→ who is reading a book 是一个句子（who 主语 + is reading 谓语 + a book 宾语），做后置定语，修饰 boy</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - who 在这里既是连接词，又做了从句的主语（who = the boy）<br>
+            - 定语从句 = 形容词性从句，因为定语修饰名词，词性是形容词性的<br>
+            - 定语从句永远做后置定语（英语中定语从句放在被修饰名词的后面）<br>
+            - 翻译时需要变序：把后面的从句提到名词前面翻译
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 状语从句详解：副词性从句</h2>
+        <p>老师讲解状语从句的本质——一个句子代替副词，做状语：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>对比分析：</strong></div>
+            <div class="example-item">I was doing my homework <code>at six</code>.</div>
+            <div class="example-item">→ at six 是介词短语，做时间状语，修饰 was doing（幸福摩天轮：从时间角度修饰动词）</div>
+            <div class="example-item">I was doing my homework <code>when he called me</code>.</div>
+            <div class="example-item">→ when he called me 是一个句子（when 连接词 + he 主语 + called 谓语 + me 宾语），做时间状语，修饰 was doing</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：状语修饰动词，词性是副词性的。when he called me 是一个句子代替了副词 at six，做时间状语。这就是状语从句，也叫副词性从句。
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 状语从句 = 副词性从句，因为状语修饰动词，词性是副词性的<br>
+            - 状语从句可以表示时间、原因、条件、让步、目的、结果等多种逻辑关系<br>
+            - when 在这里是连接词（从属连词），不是疑问词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 补充说明：宾补从句</h2>
+        <p>老师提到还有一种"宾补从句"，但基本不讨论：</p>
+
+        <div class="annotation">
+            宾补从句（一个句子做宾补）理论上存在，但实际上基本归入名词性从句的范畴，课程中不单独讨论。大家只需要知道有六种从句就够了。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 从句分类总总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类角度</th>
+                    <th>大类</th>
+                    <th>包含的从句</th>
+                    <th>本质</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3"><strong>按词性</strong></td>
+                    <td><strong>名词性从句</strong></td>
+                    <td>主语从句、宾语从句、表语从句、同位语从句</td>
+                    <td>一个句子代替名词</td>
+                </tr>
+                <tr>
+                    <td><strong>形容词性从句</strong></td>
+                    <td>定语从句</td>
+                    <td>一个句子代替形容词</td>
+                </tr>
+                <tr>
+                    <td><strong>副词性从句</strong></td>
+                    <td>状语从句</td>
+                    <td>一个句子代替副词</td>
+                </tr>
+                <tr>
+                    <td rowspan="6"><strong>按成分</strong></td>
+                    <td><strong>主语从句</strong></td>
+                    <td colspan="2">What he said is right.（一个句子做主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句</strong></td>
+                    <td colspan="2">I know what you mean.（一个句子做宾语）</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td colspan="2">The problem is who will go.（一个句子做表语）</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语从句</strong></td>
+                    <td colspan="2">I heard the news that he passed.（一个句子做同位语）</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句</strong></td>
+                    <td colspan="2">The boy who is reading a book is Tom.（一个句子做定语）</td>
+                </tr>
+                <tr>
+                    <td><strong>状语从句</strong></td>
+                    <td colspan="2">I was doing homework when he called me.（一个句子做状语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 按词性分三种：名从、形从、副从<br>
+            - 按成分分六种：主从、宾从、表从、同位从、定从、状从<br>
+            - 名从 = 主从 + 宾从 + 表从 + 同位从<br>
+            - 形从 = 定从<br>
+            - 副从 = 状从<br>
+            - 总共掌握六种从句
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 并列句 vs 复合句 完整对比</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>并列句</th>
+                    <th>复合句（从句）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>连接词类型</strong></td>
+                    <td>并列连词（and/but/so/or/not only...but also/neither...nor）</td>
+                    <td>从属连词（that/which/what/when/where/if/because/as/since/although/though/whatever...）</td>
+                </tr>
+                <tr>
+                    <td><strong>连接词位置</strong></td>
+                    <td>必须放在两个 SV 中间（天平两端，必须端平）</td>
+                    <td>位置灵活，从句可放在主句的前、中、后</td>
+                </tr>
+                <tr>
+                    <td><strong>逻辑关系</strong></td>
+                    <td>并列、选择、转折、因果（平等关系）</td>
+                    <td>从属关系（从句属于主句的一部分）</td>
+                </tr>
+                <tr>
+                    <td><strong>连接词个数</strong></td>
+                    <td>连接词个数 = SV 个数 - 1</td>
+                    <td>从属连词个数 = 从句个数</td>
+                </tr>
+                <tr>
+                    <td><strong>从句类型</strong></td>
+                    <td>无从句</td>
+                    <td>六种从句（主/宾/表/同位/定/状）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析：</strong><br>
+            - 并列句 = 平等关系，连接词放中间，两端必须都有 SV<br>
+            - 复合句 = 从属关系，从句是主句的一个成分（主语/宾语/表语/定语/状语/同位语）<br>
+            - 连接词个数公式不同：并列句 = SV个数 - 1；复合句 = 从句个数
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+        <p>老师总结了判断从句类型的核心逻辑：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>第一步：找连接词 → 是从属连词（that/which/what/when/if/because...）？<br>
+            第二步：找从句 → 连接词 + 主语 + 谓语 = 一个完整的句子<br>
+            第三步：看成分 → 这个从句在主句中做什么成分？<br>
+            第四步：定类型 → 主语→主语从句；宾语→宾语从句；表语→表语从句；<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;同位语→同位语从句；定语→定语从句；状语→状语从句</strong>
+        </div>
+
+        <h3>从句判断四步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找连接词：识别从属连词（that/which/what/when/where/if/because/as/since/although/though/whatever...）</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>找从句：连接词 + 主语 + 谓语，构成一个完整的句子</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>看成分：这个从句在主句中做什么成分（主/宾/表/定/状/同位）</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>定类型：根据成分确定从句类型（主从/宾从/表从/定从/状从/同位从）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从句本质：一个句子代替一个词<br>
+            - 按词性分三种：名从（代名词）、形从（代形容词）、副从（代副词）<br>
+            - 按成分分六种：主/宾/表/同位/定/状<br>
+            - 名从 = 主从 + 宾从 + 表从 + 同位从<br>
+            - 形从 = 定从；副从 = 状从<br>
+            - 判断四步：找连接词 → 找从句 → 看成分 → 定类型
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+从句/复合句1.0（G43）
+├── 并列句 vs 复合句
+│   ├── 并列句：并列连词（and/but/so），放两个SV中间，平等关系
+│   └── 复合句：从属连词（that/which/what/when/if/because...），位置灵活，从属关系
+│
+├── 从属连词大集合
+│   ├── that, which, what, when, where
+│   ├── if, because, as, since
+│   ├── although, though（注意：是从属连词，不是并列连词！）
+│   └── whatever, whoever, wherever, whenever...
+│
+├── 从句的本质：一个句子代替一个词
+│   ├── 名词性从句：一个句子代替名词
+│   ├── 形容词性从句：一个句子代替形容词
+│   └── 副词性从句：一个句子代替副词
+│
+├── 按词性分三种
+│   ├── 名词性从句（名从）
+│   ├── 形容词性从句（形从）= 定语从句
+│   └── 副词性从句（副从）= 状语从句
+│
+├── 按成分分六种
+│   ├── 主语从句 → What he said is right.
+│   ├── 宾语从句 → I know what you mean.
+│   ├── 表语从句 → The problem is who will go.
+│   ├── 同位语从句 → I heard the news that he passed.
+│   ├── 定语从句 → The boy who is reading a book is Tom.
+│   └── 状语从句 → I was doing homework when he called me.
+│
+├── 名从 = 主从 + 宾从 + 表从 + 同位从（四种合一）
+├── 形从 = 定从（一种）
+├── 副从 = 状从（一种）
+└── 总共掌握六种从句
+    ├── 判断四步法：找连接词 → 找从句 → 看成分 → 定类型
+    └── 宾补从句（基本不讨论，归入名从）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记两种分类体系：</strong>按词性分三种（名从/形从/副从）+ 按成分分六种（主从/宾从/表从/同位从/定从/状从）。这是整个从句学习的框架，后续所有从句课程都建立在这个框架之上。</li>
+            <li><strong>理解从句本质：</strong>从句 = 一个句子代替一个词。名从代名词、形从代形容词、副从代副词。理解了本质，就不用死记硬背。</li>
+            <li><strong>掌握名从的四种合一：</strong>名词可以做主/宾/表/同位，所以名从 = 主从 + 宾从 + 表从 + 同位从。这是理解名词性从句的关键逻辑。</li>
+            <li><strong>区分并列句和复合句：</strong>并列句用并列连词（and/but/so），放两个SV中间；复合句用从属连词（that/which/when/if...），从句位置灵活。</li>
+            <li><strong>记住常见从属连词：</strong>that/which/what/when/where/if/because/as/since/although/though/whatever 等。注意 although/though 是从属连词，不是并列连词。</li>
+            <li><strong>学会判断从句类型：</strong>找连接词 → 找从句 → 看成分 → 定类型。四步走完就能准确判断。</li>
+            <li><strong>后续课程预告：</strong>本节课只是第一层（基本概念），后续会上升到第二层（秒判断从句类型）和第三层（超神水平），层层递进。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
