@@ -144,6 +144,64 @@
   document.querySelectorAll(".site-aside .group-head").forEach(function (head) {
     head.addEventListener("click", function () { toggleGroup(head.parentElement); });
   });
+
+  // ── 侧栏 active 项自动滚动到可视区顶部（仅不可见时滚动，smooth） ──
+  function scrollActiveIntoView(asideEl, linkEl) {
+    if (!asideEl || !linkEl) return;
+    var aRect = asideEl.getBoundingClientRect();
+    var lRect = linkEl.getBoundingClientRect();
+    // 视区顶部留 ~12px 头边距；可见则跳过
+    var headPad = 12;
+    var topOk = lRect.top >= aRect.top + headPad;
+    var bottomOk = lRect.bottom <= aRect.bottom - 4;
+    if (topOk && bottomOk) return;
+    // 计算目标：让 linkEl 顶部对齐 aRect.top + headPad
+    var target = linkEl.offsetTop - headPad;
+    if (target < 0) target = 0;
+    var max = asideEl.scrollHeight - asideEl.clientHeight;
+    if (target > max) target = max;
+    asideEl.scrollTo({ top: target, behavior: "smooth" });
+  }
+  // 1) 初始 mount：定位 build 时写入的 .cur
+  function initActiveScroll() {
+    var sb = document.querySelector(".site-aside");
+    if (!sb) return;
+    var cur = sb.querySelector("li a.cur") || sb.querySelector("a.cur");
+    if (!cur) return;
+    // 等待布局/字体稳定；滚动到 group 容器以便折叠也能正常展开
+    var run = function () { scrollActiveIntoView(sb, cur); };
+    requestAnimationFrame(run);
+    window.addEventListener("load", run);
+  }
+
+  // 2) 点击侧栏链接：点击后该链接成为 active
+  document.querySelectorAll(".site-aside li a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      document.querySelectorAll(".site-aside li a").forEach(function (x) { x.classList.remove("cur"); });
+      a.classList.add("cur");
+      // 同步把激活项所在分组展开（build 默认单展开，点击其他层级不展开折叠的兄弟级）
+      var grp = a.closest(".group");
+      if (grp && !grp.classList.contains("is-open")) openGroup(grp);
+      // 稍等展开动画完成后再滚（节流到下一帧）
+      requestAnimationFrame(function () {
+        scrollActiveIntoView(document.querySelector(".site-aside"), a);
+      });
+    });
+  });
+
+  // 3) 初始化：build 时已写入 .cur；如没写，根据 hash 选中并滚
+  initActiveScroll();
+  // 若当前页无 .cur（首页），按 URL hash 标记并滚
+  (function initByHash() {
+    var sb = document.querySelector(".site-aside");
+    if (!sb) return;
+    if (sb.querySelector("a.cur")) return;
+    if (!location.hash) return;
+    var name = "";
+    try { name = decodeURIComponent(location.hash.slice(1)); } catch (_) {}
+    var target = sb.querySelector('.group[data-group="' + name + '"]');
+    if (target) openGroup(target);
+  })();
   // 初始展开定位：当前课所在分组 > URL 锚点对应分组 > 保持 build 默认
   (function initGroups() {
     var sb = document.querySelector(".site-aside");
