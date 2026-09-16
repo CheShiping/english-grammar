@@ -63,6 +63,26 @@
 
   if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
 
+  // ── 顶部胶囊导航：当前激活胶囊自动滚动到可见区 ──
+  // 顺序固定，激活项 scrollIntoView 到 nav 起始位置（保留少量左 padding）
+  (function initTopnav() {
+    var nav = document.querySelector(".site-topnav");
+    var cur = nav && nav.querySelector("a.cur");
+    if (!nav || !cur) return;
+    // 等待字体与布局稳定再滚动，避免初次闪烁
+    var doScroll = function () {
+      var navRect = nav.getBoundingClientRect();
+      var curRect = cur.getBoundingClientRect();
+      // 仅当激活项超出可见区才滚动
+      if (curRect.left < navRect.left + 8 || curRect.right > navRect.right - 8) {
+        var offset = cur.offsetLeft - 8;
+        nav.scrollTo({ left: offset, behavior: "auto" });
+      }
+    };
+    requestAnimationFrame(doScroll);
+    window.addEventListener("load", doScroll);
+  })();
+
   // ── 抽屉 ──
   function isOpen() {
     return aside && aside.classList.contains("is-open");
