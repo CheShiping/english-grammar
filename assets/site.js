@@ -101,6 +101,46 @@
     if (e.key === "Escape" && isOpen()) closeDrawer();
   });
 
+  // ── 侧栏分组折叠（手风琴：一次只展开一个层级） ──
+  function closeAllGroups() {
+    document.querySelectorAll(".site-aside .group").forEach(function (g) {
+      g.classList.remove("is-open");
+      var h = g.querySelector(".group-head");
+      if (h) h.setAttribute("aria-expanded", "false");
+    });
+  }
+  function openGroup(g) {
+    if (!g) return;
+    g.classList.add("is-open");
+    var h = g.querySelector(".group-head");
+    if (h) h.setAttribute("aria-expanded", "true");
+  }
+  function toggleGroup(g) {
+    if (!g) return;
+    var wasOpen = g.classList.contains("is-open");
+    closeAllGroups();
+    if (!wasOpen) openGroup(g);
+  }
+  document.querySelectorAll(".site-aside .group-head").forEach(function (head) {
+    head.addEventListener("click", function () { toggleGroup(head.parentElement); });
+  });
+  // 初始展开定位：当前课所在分组 > URL 锚点对应分组 > 保持 build 默认
+  (function initGroups() {
+    var sb = document.querySelector(".site-aside");
+    if (!sb) return;
+    var curLink = sb.querySelector("li a.cur");
+    var grp = curLink ? curLink.closest(".group") : null;
+    if (!grp && location.hash) {
+      var name = "";
+      try { name = decodeURIComponent((location.hash || "").slice(1)); } catch (_) {}
+      grp = name ? sb.querySelector('.group[data-group="' + name + '"]') : null;
+    }
+    if (grp) {
+      closeAllGroups();
+      openGroup(grp);
+    }
+  })();
+
   // ── 回到顶部按钮 ──
   var toTop = document.querySelector(".site-to-top");
   if (toTop) {
