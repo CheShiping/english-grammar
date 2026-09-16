@@ -150,17 +150,19 @@
     if (!asideEl || !linkEl) return;
     var aRect = asideEl.getBoundingClientRect();
     var lRect = linkEl.getBoundingClientRect();
-    // 视区顶部留 ~12px 头边距；可见则跳过
-    var headPad = 12;
-    var topOk = lRect.top >= aRect.top + headPad;
-    var bottomOk = lRect.bottom <= aRect.bottom - 4;
-    if (topOk && bottomOk) return;
-    // 计算目标：让 linkEl 顶部对齐 aRect.top + headPad
-    var target = linkEl.offsetTop - headPad;
-    if (target < 0) target = 0;
-    var max = asideEl.scrollHeight - asideEl.clientHeight;
-    if (target > max) target = max;
-    asideEl.scrollTo({ top: target, behavior: "smooth" });
+    // 增量滚动：只在需要时挪动，最小步进保留可见
+    var headPad = 16;      // 顶部预留
+    var bottomPad = 24;    // 底部预留（点其他项时保留旧项可瞥见）
+    var visibleTop = aRect.top + headPad;
+    var visibleBottom = aRect.bottom - bottomPad;
+    // 已在可见缓冲区内：不滚
+    if (lRect.top >= visibleTop && lRect.bottom <= visibleBottom) return;
+    // 计算增量：目标 scrollTop = linkEl.offsetTop - 顶部预留（最小步进）
+    var desired = linkEl.offsetTop - headPad;
+    var max = Math.max(0, asideEl.scrollHeight - asideEl.clientHeight);
+    if (desired < 0) desired = 0;
+    if (desired > max) desired = max;
+    asideEl.scrollTo({ top: desired, behavior: "smooth" });
   }
   // 1) 初始 mount：定位 build 时写入的 .cur
   function initActiveScroll() {
