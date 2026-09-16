@@ -137,15 +137,7 @@ function renderTopbar(levelLabel, baseHome) {
 // courseBase：当前所在页在 dist/ 下的"相对的 ../前缀"
 // 课程页位于 dist/<level>/file.html → 到同辈 <level>/file.html 只需 "../<level>/"
 function renderSidebar(courses, currentFile, courseBase = "../") {
-  // 当前课（二级具体目录）置顶显示；一级层级保持固定顺序
-  const cur = currentFile ? courses.find((c) => c.file === currentFile) : null;
-  const hereHtml = cur
-    ? `<div class="site-here">
-        <span class="here-label">当前位置</span>
-        <strong><span class="num">${esc(cur.code)}</span>${esc(cur.title)}</strong>
-      </div>`
-    : "";
-  // 首页默认展开第一个非空分组
+  // 一级层级保持固定顺序
   let firstNonEmpty = null;
   for (const lv of LEVELS) {
     if (courses.some((c) => c.level === lv.dir)) { firstNonEmpty = lv.dir; break; }
@@ -177,7 +169,6 @@ function renderSidebar(courses, currentFile, courseBase = "../") {
   }).join("");
   return `<aside class="site-aside" id="site-aside">
   <h2>目录 · INDEX</h2>
-  ${hereHtml}
   ${groups}
 </aside>`;
 }
