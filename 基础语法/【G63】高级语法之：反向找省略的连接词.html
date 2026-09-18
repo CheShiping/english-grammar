@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G63 高级语法之：反向找省略的连接词：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G63】高级语法之：反向找省略的连接词</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G63 是「基础语法」系列第63课，由陈老师主讲。本节课是句子部分的<strong>高级方法论课（续）</strong>，紧接 G62「从属连词的省略」，专门讲解一种<strong>高级的逆向思维方法——反向找省略的连接词</strong>。</p>
+        <p>在 G62 中，老师正面讲解了引导词省略的三种常见情况（宾从第一个that / 定从中做宾语的关系代词 / 先行词the way的定从），并揭示了省略的本质原因——"不要引导词已经很清晰了"。本节课从<strong>反向角度</strong>切入：当你看到一个句子，找不到连接词，但根据谓语个数又知道应该有一个连接词时，如何用"反向找"的方法精确定位省略的连接词位置。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握"反向找省略的连接词"的逆向思维方法——找到从句的谓语和主语，主语前面的位置就是省略的连接词所在之处。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G61「连接词个数≠V-1」、G62「从属连词的省略」的基础上。需要熟练掌握谓语动词识别、宾语从句、定语从句、引导词省略等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心方法论：引导词在从句中的两种角色</h2>
+        <p>老师首先回顾了引导词的基本知识，然后引出反向找连接词的理论基础：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句的第一个词 = 引导词</strong></div>
+            <div class="example-item">→ 引导词的第一个作用：引导从句（放在从句句首）</div>
+            <div class="example-item">→ 引导词的第二个作用：在从句中做成分（要么做主语，要么不做主语）</div>
+        </div>
+
+        <h3>引导词做主语 vs 不做主语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>情况</th>
+                    <th>引导词角色</th>
+                    <th>后面接什么</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>情况一</strong></td>
+                    <td>引导词做主语</td>
+                    <td>后面接谓语</td>
+                    <td>I don't know <code>who</code> did it.（who = 主语，did = 谓语）</td>
+                </tr>
+                <tr>
+                    <td><strong>情况二</strong></td>
+                    <td>引导词不做主语</td>
+                    <td>后面接主语</td>
+                    <td>I don't know <code>how</code> he did it.（how = 状语，he = 主语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - 引导词做了主语 → 后面接谓语（who did it）<br>
+            - 引导词没做主语 → 后面接主语（he did it，he 是主语）<br>
+            - 这是反向找连接词的理论基石：找到谓语 → 再找到主语 → 主语前面就是引导词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心方法论：反向找连接词的操作步骤</h2>
+        <p>老师正式引入"反向找连接词"的方法，这是一种<strong>逆向思维</strong>，与正面找连接词的方法互补：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.1em;">
+            <strong>反向找连接词四步法</strong><br><br>
+            第一步：找到两个谓语动词 V1 和 V2<br>
+            ↓<br>
+            第二步：确认缺少连接词（V-1=1，但句中没有连接词）<br>
+            ↓<br>
+            第三步：找到 V2 和它的主语 S2<br>
+            ↓<br>
+            第四步：S2 前面的位置 = 省略的连接词所在之处
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 找到谓语 → 找到主语 → 主语前面就是引导词<br>
+            - 从句句首的引导词不能省略（因为句首必须标识从句的开端）<br>
+            - 所以省略的连接词一定不在句首，而在主语前面<br>
+            - 反向找的时候，一定要找"V + S"的结构（V2前面找S2，S2前面就是省略的连接词）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句一：I think he is right.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程（正向 + 反向结合）：</strong></div>
+            <div class="example-item">→ 找谓语：think（V1）+ is（V2）→ 两个谓语 → 需要 2-1=1 个连接词</div>
+            <div class="example-item">→ 正向找：找不到连接词（句中没有 that/which/who 等词）</div>
+            <div class="example-item">→ 反向找：找到 V2=is → 找到 S2=he → he 前面的位置 = 省略的连接词</div>
+            <div class="example-item">→ 还原：I think <strong>(that)</strong> he is right.</div>
+            <div class="example-item">→ 从句类型：I think 后面缺宾语 → 宾语从句 → 第一个 that 可省略 ✓</div>
+        </div>
+
+        <h3>反向找的逻辑验证</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ 句首的引导词不能省略（句首必须标识从句开端）</div>
+            <div class="example-item">→ 所以省略的连接词一定不在句首（即不在 he 前面更前面的位置）</div>
+            <div class="example-item">→ 只能在 he 前面 → I think [___ he is right] → ___ = that</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么是宾从而不是定从：</strong><br>
+            - I think 后面缺宾语（think 是及物动词）→ 后面是宾语从句<br>
+            - 如果是定从，主句 I think 应该是完整的（不缺主语/宾语/表语）<br>
+            - think 是及物动词，后面必须接东西 → 缺宾语 → 宾从
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我认为他是正确的。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句二：This is the park we visited last weekend.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程（正向 + 反向结合）：</strong></div>
+            <div class="example-item">→ 找谓语：is（V1）+ visited（V2）→ 两个谓语 → 需要 2-1=1 个连接词</div>
+            <div class="example-item">→ 正向找：找不到连接词（句中没有 that/which/where 等词）</div>
+            <div class="example-item">→ 反向找：找到 V2=visited → 找到 S2=we → we 前面的位置 = 省略的连接词</div>
+            <div class="example-item">→ 还原：This is the park <strong>(that/which)</strong> we visited last weekend.</div>
+        </div>
+
+        <h3>从句类型判断</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ 主句：This is the park（主系表，完整 ✓）→ 不是宾从</div>
+            <div class="example-item">→ 从句：we visited last weekend（缺宾语 → visited 是及物动词）</div>
+            <div class="example-item">→ 先行词：the park（指物）→ 关系代词用 that/which（不做主语，做宾语）</div>
+            <div class="example-item">→ 定从中做宾语的关系代词 → 可省略 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么是 that/which 而不是 where：</strong><br>
+            - we visited 中 visited 是及物动词，后面缺宾语<br>
+            - 关系代词在从句中做 visited 的宾语 → 用 that/which<br>
+            - 如果用 where（= in which），从句应该是 we were 或 we stayed（不缺宾语）<br>
+            - 判断方法：把关系代词还原进去 → we visited ___（缺宾语）→ 用 that/which
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：这是我们上周末参观过的公园。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 正向找 vs 反向找 对照总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方法</th>
+                    <th>操作方式</th>
+                    <th>适用场景</th>
+                    <th>优点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>正向找</strong></td>
+                    <td>根据省略的三种情况（宾从第一个that / 定从宾语关系代词 / the way），直接判断引导词是否可省略</td>
+                    <td>熟悉省略规则，一眼能看出省略</td>
+                    <td>直接、快速</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找</strong></td>
+                    <td>找到V2和S2，S2前面的位置就是省略的连接词</td>
+                    <td>找不到连接词，但知道应该有连接词</td>
+                    <td>万能、不遗漏</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：正向找和反向找结合使用，保证万无一失。正向找适合快速判断，反向找适合验证和发现遗漏。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心知识点总结</h2>
+
+        <h3>知识点一：引导词在从句中的两种角色</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>角色</th>
+                    <th>后面接什么</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>做主语</strong></td>
+                    <td>后面接谓语</td>
+                    <td>I don't know <code>who</code> did it.（who=主语，did=谓语）</td>
+                </tr>
+                <tr>
+                    <td><strong>不做主语</strong></td>
+                    <td>后面接主语</td>
+                    <td>I don't know <code>how</code> he did it.（how=状语，he=主语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：反向找连接词四步法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到两个谓语动词 V1 和 V2</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>确认缺少连接词（V-1=1，但句中没有连接词）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>找到 V2 和它的主语 S2</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>S2 前面的位置 = 省略的连接词所在之处</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：从句句首的引导词不能省略</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心规则</strong></td>
+                    <td>从句句首的引导词不能省略，因为句首必须标识从句的开端</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找的推论</strong></td>
+                    <td>省略的连接词一定不在从句句首，而在主语前面</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找的前提</strong></td>
+                    <td>一定要找"V + S"的结构（V2前面找S2，S2前面就是省略的连接词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：省略的三种情况回顾（G62）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>情况</th>
+                    <th>从句类型</th>
+                    <th>引导词</th>
+                    <th>条件</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>情况一</strong></td>
+                    <td>宾语从句</td>
+                    <td>that（第一个）</td>
+                    <td>①是宾从 ②是第一个that ③是that</td>
+                </tr>
+                <tr>
+                    <td><strong>情况二</strong></td>
+                    <td>定语从句</td>
+                    <td>that/which/whom（做宾语）</td>
+                    <td>①是定从 ②关系代词在从句中做宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>情况三</strong></td>
+                    <td>定语从句</td>
+                    <td>that / in which / 省略</td>
+                    <td>①是定从 ②先行词是the way ③从句完整</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 两大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>省略的连接词</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I think <strong>___</strong> he is right.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 宾语从句</td>
+                    <td>think=V1；is=V2；he=S2；省略的连接词=that（宾从第一个that）</td>
+                    <td>that（宾从第一个that，可省略）</td>
+                    <td>我认为他是正确的。</td>
+                </tr>
+                <tr>
+                    <td>This is the park <strong>___</strong> we visited last weekend.</td>
+                    <td><strong>SVP</strong>（主系表）+ 定语从句</td>
+                    <td>is=V1；visited=V2；we=S2；省略的连接词=that/which（定从宾语关系代词）</td>
+                    <td>that/which（定从中做宾语的关系代词，可省略）</td>
+                    <td>这是我们上周末参观过的公园。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G63 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词<br>
+            ↓<br>
+            第二步：如果找不到连接词，但 V-1 > 0 → 需要连接词 → 用反向找<br>
+            ↓<br>
+            第三步：找到 V2（第二个谓语）→ 找到 S2（V2的主语）<br>
+            ↓<br>
+            第四步：S2 前面的位置 = 省略的连接词所在之处<br>
+            ↓<br>
+            第五步：判断从句类型（宾从/定从）→ 确认省略是否合法<br>
+            ↓<br>
+            第六步：正向找 + 反向找结合 → 万无一失
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 找到谓语 → 找到主语 → 主语前面就是引导词<br>
+            - 从句句首的引导词不能省略（句首必须标识从句开端）<br>
+            - 反向找的前提：一定要找"V + S"的结构<br>
+            - 宾从第一个that可省略 → 反向找到的位置在 think 后面、he 前面<br>
+            - 定从宾语关系代词可省略 → 反向找到的位置在 park 后面、we 前面<br>
+            - 正向找 + 反向找结合 → 保证万无一失<br>
+            - 下节课预告：反向找连接词的三大难点（真正体现水平的地方）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+反向找省略的连接词（G63）
+├── 理论基础：引导词在从句中的两种角色
+│   ├── 做主语 → 后面接谓语（who did it）
+│   └── 不做主语 → 后面接主语（he did it）
+│
+├── 反向找连接词四步法
+│   ├── 第一步：找到两个谓语 V1 和 V2
+│   ├── 第二步：确认缺少连接词（V-1 > 0，但句中没有连接词）
+│   ├── 第三步：找到 V2 和它的主语 S2
+│   └── 第四步：S2 前面的位置 = 省略的连接词
+│
+├── 核心前提
+│   ├── 从句句首的引导词不能省略
+│   └── 反向找一定要找"V + S"的结构
+│
+├── 例句一：I think ___ he is right.
+│   ├── V1=think, V2=is, S2=he
+│   ├── he 前面 = 省略的连接词 = that（宾从第一个that）
+│   └── 翻译：我认为他是正确的。
+│
+├── 例句二：This is the park ___ we visited last weekend.
+│   ├── V1=is, V2=visited, S2=we
+│   ├── we 前面 = 省略的连接词 = that/which（定从宾语关系代词）
+│   └── 翻译：这是我们上周末参观过的公园。
+│
+├── 正向找 vs 反向找
+│   ├── 正向找：根据三种省略情况直接判断（快速）
+│   └── 反向找：找到V2+S2，S2前面就是省略的连接词（万能）
+│   └── 结合使用 → 万无一失
+│
+└── 下节课预告：反向找连接词的三大难点
+    └── 真正体现水平的地方
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记反向找连接词四步法：</strong>找到V2 → 找到S2 → S2前面 = 省略的连接词。这是本节课最重要的方法论。</li>
+            <li><strong>牢记反向找的前提条件：</strong>一定要找"V + S"的结构。从句句首的引导词不能省略，所以省略的连接词一定不在句首，而在主语前面。</li>
+            <li><strong>牢记引导词的两种角色：</strong>做主语（后面接谓语）vs 不做主语（后面接主语）。这是反向找的理论基石。</li>
+            <li><strong>牢记正向找 + 反向找结合：</strong>正向找适合快速判断，反向找适合验证和发现遗漏。两者结合，万无一失。</li>
+            <li><strong>牢记省略的三种情况（G62回顾）：</strong>①宾从第一个that ②定从中做宾语的关系代词 ③先行词the way的定从。反向找到的连接词必须符合这三种情况的省略条件。</li>
+            <li><strong>下节课预告：</strong>下节课会讲解"反向找连接词的三大难点"，那里才是真正体现水平的地方，建议提前思考反向找在更复杂句子中的应用。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

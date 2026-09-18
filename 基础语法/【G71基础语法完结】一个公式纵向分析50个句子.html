@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G71 一个公式纵向分析50个句子：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G71基础语法完结】一个公式纵向分析50个句子</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G71 是「基础语法」系列的收官课（最后一课），由陈老师主讲。本节课是<strong>实战操作课</strong>，紧接 G70「一张图归纳所有英语句子」，将 G70 提出的万能公式——<strong>简单陈述句模型</strong>——实际应用到50个句子的逐句分析中，演示如何一步步拆解各种句型。</p>
+        <p>本节课重点讲解：<strong>① 万能公式的实际操作步骤（从开头到谓语到复杂化）</strong>、<strong>② 句子开头的三种可能性（状语/主语/助动词倒装）</strong>、<strong>③ it 的两种身份辨析（人称代词 vs 形式主语）</strong>、<strong>④ 谓语部分的三种构成方式（助动词+实系动词/实系动词单独/系动词单独）</strong>、<strong>⑤ 五大基本句型在50个句子中的具体体现</strong>、<strong>⑥ 句子复杂化的三种方法（从句/并列/分裂）</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过50个句子的纵向分析，熟练掌握万能公式的实际操作流程——从判断开头（状语/主语/倒装）→ 找主语（六种形式）→ 判断主谓之间的障碍物 → 找谓语（三种构成）→ 判断句型 → 分析复杂化方式。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课是前面70节课的总和，需要熟练掌握简单陈述句万能模型、主语六种形式、谓语三种构成、五大基本句型、句子复杂化三方法、模型的三种例外等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 万能公式的实际操作步骤</h2>
+        <p>老师以一个万能公式为纲，逐一分析50个句子，演示具体的操作流程：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>(状语) + S + (后置定语/状语/同位语/插入语) + V + ...</strong>
+        </div>
+
+        <h3>第一步：判断句子开头</h3>
+        <p>句子开头不一定是主语，有三种可能性：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>开头类型</th>
+                    <th>说明</th>
+                    <th>典型标志</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>状语开头</strong></td>
+                    <td>时间/地点/方式等状语放在句首</td>
+                    <td>Yesterday / In the morning / When I was young...</td>
+                    <td>Yesterday, they eat...</td>
+                </tr>
+                <tr>
+                    <td><strong>主语开头</strong></td>
+                    <td>主语直接放在句首（最常见）</td>
+                    <td>名词短语/代词/不定式/动名词/从句</td>
+                    <td>You to swim... / I play...</td>
+                </tr>
+                <tr>
+                    <td><strong>助动词开头（倒装）</strong></td>
+                    <td>疑问句/倒装句，助动词提前</td>
+                    <td>Do/Does/Did/Is/Are/Was/Were/Can... 开头</td>
+                    <td>Would you be...? / Do you remember...?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到句子不要慌，先看开头是什么<br>
+            - 状语开头 → 跳过状语找主语<br>
+            - 主语开头 → 正常分析<br>
+            - 助动词开头 → 倒装句，要"调回去"（把助动词放回主语后面）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 主语的六种形式（实战识别）</h2>
+        <p>老师通过50个句子中的主语，逐一演示六种主语形式的识别方法：</p>
+
+        <h3>第一类：名词性成分（前面可加后置定语）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主语形式</th>
+                    <th>说明</th>
+                    <th>例句中的主语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词短语</strong></td>
+                    <td>普通名词+定语</td>
+                    <td>the Chinese / a man / the scientist / some new computers / the bikes / a car / Comrade Li</td>
+                </tr>
+                <tr>
+                    <td><strong>DTS（代词/限定词/数词）</strong></td>
+                    <td>人称代词</td>
+                    <td>you / he / I / we / they / her mother / Lily</td>
+                </tr>
+                <tr>
+                    <td><strong>Shots（缩略形式）</strong></td>
+                    <td>名词性缩略形式</td>
+                    <td>（部分缩略名词短语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>第二类：长形式（可能头重脚轻，用it做形式主语）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>主语形式</th>
+                    <th>说明</th>
+                    <th>例句中的主语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>不定式 (to do)</strong></td>
+                    <td>to + 动词原形</td>
+                    <td>to swim（做主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>动名词 (doing)</strong></td>
+                    <td>动词+ing</td>
+                    <td>（部分doing形式做主语）</td>
+                </tr>
+                <tr>
+                    <td><strong>从句 (引导词+句子)</strong></td>
+                    <td>that/what/whether + 完整句子</td>
+                    <td>It was a pity that... / It takes you three hours to go to Hong Kong... / It is hope that... / What we are most interested in...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——it的两种身份：</strong><br>
+            - it做人称代词：it 后面不接 to do / doing / that 从句 → it 就是主语本身（如 It is sunny）<br>
+            - it做形式主语：it 后面接 to do / doing / that 从句 → it 代替后面太长的真正主语<br>
+            - 判断方法：看到 it 开头 + 后面有 to do / doing / that 从句 → 形式主语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 谓语部分的三种构成方式（实战识别）</h2>
+        <p>老师通过分析50个句子中的谓语，演示三种构成方式的识别：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>谓语构成</th>
+                    <th>说明</th>
+                    <th>能否单独构成谓语</th>
+                    <th>例句中的谓语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词 + 实系动词</strong></td>
+                    <td>助动词（be/情态/do/完成）+ 动词原形/doing/done</td>
+                    <td>不能单独构成，必须加实系动词</td>
+                    <td>should put / don't believe / should do / had better / are hoping for / has just got / would be / is reporting / I'm writing / do remember</td>
+                </tr>
+                <tr>
+                    <td><strong>实系动词单独构成</strong></td>
+                    <td>及物动词/不及物动词单独做谓语</td>
+                    <td>可以单独构成谓语</td>
+                    <td>goes out / set / takes / spent / is interested in / spoke / stood up / remember / think / solve / put</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词单独构成</strong></td>
+                    <td>be动词/感官动词/状态动词单独做谓语</td>
+                    <td>可以单独构成谓语</td>
+                    <td>is / was / are / keep / was a pity / was the words</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀——助动词的四类及后接形式：</strong><br>
+            - be动词（am/is/are/was/were）→ 后接 doing 或 done<br>
+            - 情态动词（can/could/would/may/might...）→ 后接动词原形<br>
+            - 狭义助动词（do/does/did）→ 后接动词原形<br>
+            - 完成助动词（have/has/had）→ 后接过去分词（done）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 主谓之间的"障碍物"识别</h2>
+        <p>老师强调，主谓之间不一定直接跟着谓语，可能隔着各种"障碍物"，按概率从高到低排列：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>障碍物类型</th>
+                    <th>概率</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>谓语（助动词）</strong></td>
+                    <td>最高</td>
+                    <td>助动词放在主语和实系动词之间</td>
+                    <td>should <strong>put</strong> / often <strong>goes</strong> / just <strong>got</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>高</td>
+                    <td>名词后面的修饰性短语</td>
+                    <td>the scientist <strong>in the lab</strong> / the Chinese <strong>who...</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>状语</strong></td>
+                    <td>中</td>
+                    <td>状语可以放在助动词和实系动词之间</td>
+                    <td>just <strong>got</strong> / often <strong>goes</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>同位语</strong></td>
+                    <td>低</td>
+                    <td>名词后面的解释性成分</td>
+                    <td>the news <strong>that China successfully launched...</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>插入语</strong></td>
+                    <td>最低</td>
+                    <td>可插入句子的任何位置</td>
+                    <td>the news, <strong>I think</strong>, is...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到句子不要慌，按概率依次判断主谓之间是什么<br>
+            - 概率排序：谓语（助动词）> 后置定语 > 状语 > 同位语 > 插入语<br>
+            - 状语是最强大的，到处都可以放（助动词和实系动词之间）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 五大基本句型在50个句子中的体现</h2>
+        <p>老师通过分析50个句子，逐一演示五大基本句型的具体体现：</p>
+
+        <h3>句型一：SV（主谓）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>He set.</strong></div>
+            <div class="example-item">→ He = 主语；set = 不及物动词（sv）→ SV结构</div>
+            <div class="example-item">→ 后面可加状语：He set <em>in the classroom</em>.</div>
+        </div>
+
+        <h3>句型二：SVO（主谓宾）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>You put your things.</strong></div>
+            <div class="example-item">→ You = 主语；put = 及物动词（vt1）；your things = 宾语 → SVO结构</div>
+            <div class="example-item">→ 宾语后面可加定语/状语/同位语</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Scientists made a report.</strong></div>
+            <div class="example-item">→ Scientists = 主语；made = 及物动词；a report = 宾语 → SVO结构</div>
+            <div class="example-item">→ report 是名词短语，后面可加定语从句</div>
+        </div>
+
+        <h3>句型三：SVOC（主谓宾宾补）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>We solve the students playing basketball.</strong></div>
+            <div class="example-item">→ We = 主语；solve = 及物动词；the students = 宾语；playing basketball = 宾补 → SVOC结构</div>
+            <div class="example-item">→ 宾补后面可加定语/状语</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I don't believe that story true.</strong></div>
+            <div class="example-item">→ I = 主语；don't believe = 谓语；that story = 宾语；true = 宾补 → SVOC结构</div>
+        </div>
+
+        <h3>句型四：SVIO DO（主谓间宾直宾）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>He took me a deal.</strong></div>
+            <div class="example-item">→ He = 主语；took = 双宾语动词；me = 间宾（IO）；a deal = 直宾（DO）→ SVIO DO结构</div>
+            <div class="example-item">→ 可变序：He took a deal to me.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>She made us a report.</strong></div>
+            <div class="example-item">→ She = 主语；made = 双宾语动词；us = 间宾；a report = 直宾 → SVIO DO结构</div>
+            <div class="example-item">→ a report 是名词短语，后面可加定语从句</div>
+        </div>
+
+        <h3>句型五：SVT（主系表）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>It was a pity.</strong></div>
+            <div class="example-item">→ It = 主语（形式主语）；was = 系动词；a pity = 表语 → SVT结构</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Your things are a great pleasure.</strong></div>
+            <div class="example-item">→ Your things = 主语；are = 系动词；a great pleasure = 表语 → SVT结构</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Lily is interested in English.</strong></div>
+            <div class="example-item">→ Lily = 主语；is interested in = 系动词短语；English = 宾语 → SVT结构（简单分析：be interested in 整体看作谓语+宾语）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——be interested in 的两种分析思路：</strong><br>
+            - 精细分析：is = 系动词；interested = 表语；in English = 状语<br>
+            - 简单分析：be interested in 整体看作谓语动词短语 + English（宾语）<br>
+            - 老师建议：最简单的分析方法，把 be interested in 整体当作一个实意动词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 句子复杂化的三种方法（实战体现）</h2>
+        <p>老师通过分析50个句子，演示句子复杂化的三种方法：</p>
+
+        <h3>方法一：从句（用一个句子充当某个成分）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>主语从句：</strong></div>
+            <div class="example-item">→ It was a pity <em>that...</em>（it 做形式主语，that 引导主语从句）</div>
+            <div class="example-item">→ It takes you three hours <em>to go to Hong Kong by air</em>（it 做形式主语，不定式做真正主语）</div>
+            <div class="example-item">→ <em>What we are most interested in</em>...（what 引导主语从句做主语）</div>
+            <div class="example-item">→ <em>That she will go</em>...（that 引导主语从句做主语）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>宾语从句：</strong></div>
+            <div class="example-item">→ I don't believe <em>that the story is true</em>.（that 引导宾语从句做 believe 的宾语）</div>
+            <div class="example-item">→ Do you remember <em>that...</em>?（that 引导宾语从句）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>同位语从句：</strong></div>
+            <div class="example-item">→ the news <em>that China successfully launched a new experimental communications satellite</em>.（that 引导同位语从句，等同于 news）</div>
+        </div>
+
+        <h3>方法二：并列（用and连接相同结构）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>并列谓语：</strong></div>
+            <div class="example-item">→ stood up and spoke（两个不及物动词用 and 连接，共享主语）</div>
+            <div class="example-item">→ 并列可以让句子无限延伸</div>
+        </div>
+
+        <h3>方法三：分裂（环环相扣，每个成分可以再分）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>名词分裂出定语从句：</strong></div>
+            <div class="example-item">→ a report <em>for us</em>（名词 report 后面加介词短语做后置定语）</div>
+            <div class="example-item">→ 名词短语很笼统 → 后面加定语/状语/同位语 → 无限延伸</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>不定式分裂出状语：</strong></div>
+            <div class="example-item">→ to swim <em>in the river</em>（不定式 to swim 保留了动词属性 → 后面可加状语）</div>
+            <div class="example-item">→ 地点状语 in the river 修饰 swim</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>宾语分裂出宾补和状语：</strong></div>
+            <div class="example-item">→ the students <em>playing basketball</em> <em>on the playground happily</em></div>
+            <div class="example-item">→ 宾语 the students → 宾补 playing basketball → 状语 on the playground（地点）+ happily（程度）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从句 = 用一个句子充当某个成分（主语从句/宾语从句/同位语从句）<br>
+            - 并列 = 用 and 连接相同结构（谓语and谓语/句子and句子）<br>
+            - 分裂 = 环环相扣，名词→定语从句，不定式→分裂出状语，宾语→宾补+状语<br>
+            - 所有复杂句 = 简单句 + 从句/并列/分裂
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 模型的三种例外（实战识别）</h2>
+        <p>老师通过分析50个句子，演示三种例外的识别方法：</p>
+
+        <h3>例外一：祈使句（省略主语和助动词）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>Keep...</strong></div>
+            <div class="example-item">→ 动词原形开头 → 省略了主语（you）和助动词 → 祈使句</div>
+            <div class="example-item">→ 本质上是省略，仍然满足模型，但看起来不满足</div>
+        </div>
+
+        <h3>例外二：倒装句（谓语跑到主语前面）</h3>
+        <div class="example-box">
+            <div class="example-item"><strong>Would you be...?</strong></div>
+            <div class="example-item">→ 助动词 would 开头 → 疑问句 → 倒装句</div>
+            <div class="example-item">→ 要"调回去"：you would be... → 恢复正常语序再分析</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Do you remember...?</strong></div>
+            <div class="example-item">→ 助动词 do 开头 → 疑问句 → 倒装句</div>
+            <div class="example-item">→ 调回去：you remember... → 主语 you + 谓语 remember</div>
+        </div>
+
+        <h3>例外三：强调句（It is/was...that...）</h3>
+        <div class="example-box">
+            <div class="example-item">→ 50个句子中没有出现强调句（老师提到强调句在 G69 专门讲过）</div>
+            <div class="example-item">→ 强调句 = 在完整简单句基础上加了 It is/was...that...</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——祈使句 vs 不定式做主语：</strong><br>
+            - 祈使句：动词原形开头，省略主语 → Keep... / Put... / Do...<br>
+            - 不定式做主语：to + 动词原形开头 → to swim...<br>
+            - 判断方法：看开头有没有 to → 有 to → 不定式做主语；没有 to，动词原形开头 → 祈使句（省略主语）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 50个句子完整分析总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>开头类型</th>
+                    <th>主语</th>
+                    <th>谓语构成</th>
+                    <th>句型</th>
+                    <th>复杂化方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>you</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>主语（不定式）</td>
+                    <td>to swim</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>李华 / 李华（特殊名词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>状语开头</td>
+                    <td>they</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>he</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td>状语（Yesterday）</td>
+                    <td>they</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>7</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>8</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>the Chinese</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>9</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>we</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>10</strong></td>
+                    <td>主语（it做形式主语）</td>
+                    <td>it（形式主语）+ that从句（真正主语）</td>
+                    <td>was（系动词）</td>
+                    <td>SVT</td>
+                    <td>主语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>11</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>it（人称代词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>12</strong></td>
+                    <td>主语（it做形式主语）</td>
+                    <td>it（形式主语）+ to do（真正主语）</td>
+                    <td>takes（实系动词）</td>
+                    <td>SVO</td>
+                    <td>不定式做真正主语</td>
+                </tr>
+                <tr>
+                    <td><strong>13</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>he</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>14</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>we</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>15</strong></td>
+                    <td>倒装（助动词开头）</td>
+                    <td>you（调回去）</td>
+                    <td>would be（助动词+系动词）</td>
+                    <td>SVT</td>
+                    <td>倒装句</td>
+                </tr>
+                <tr>
+                    <td><strong>16</strong></td>
+                    <td>主语（it做形式主语）</td>
+                    <td>it（形式主语）+ that从句（真正主语）</td>
+                    <td>was（系动词）</td>
+                    <td>SVT</td>
+                    <td>主语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>17</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>the important question</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>18</strong></td>
+                    <td>主语（what引导的主语从句）</td>
+                    <td>what we are most interested in（主语从句）</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>主语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>19</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>20</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>the news</td>
+                    <td>is（系动词）</td>
+                    <td>SVT</td>
+                    <td>同位语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>21</strong></td>
+                    <td>主语（it做形式主语）</td>
+                    <td>it（形式主语）+ that从句（真正主语）</td>
+                    <td>is（系动词）</td>
+                    <td>SVT</td>
+                    <td>主语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>22</strong></td>
+                    <td>祈使句（省略主语）</td>
+                    <td>（省略you）</td>
+                    <td>keep（动词原形）</td>
+                    <td>SV</td>
+                    <td>祈使句</td>
+                </tr>
+                <tr>
+                    <td><strong>23</strong></td>
+                    <td>倒装（助动词开头）</td>
+                    <td>you（调回去）</td>
+                    <td>remember（实系动词）</td>
+                    <td>SVO</td>
+                    <td>倒装句</td>
+                </tr>
+                <tr>
+                    <td><strong>24</strong></td>
+                    <td>祈使句（省略主语）</td>
+                    <td>（省略you）</td>
+                    <td>go（动词原形）</td>
+                    <td>SV</td>
+                    <td>祈使句</td>
+                </tr>
+                <tr>
+                    <td><strong>25</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>26</strong></td>
+                    <td>主语（that引导的主语从句）</td>
+                    <td>that she will go（主语从句）</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>主语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>27</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>28</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>a man</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>29</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>He</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>30</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>31</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>Comrade Li</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>32</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>it（人称代词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>33</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>the scientist</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>34</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>35</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>I</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>36</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>we</td>
+                    <td>should put（助动词+实系动词）</td>
+                    <td>SVO</td>
+                    <td>分裂（不定式+状语）</td>
+                </tr>
+                <tr>
+                    <td><strong>37</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>he</td>
+                    <td>goes out（实系动词）</td>
+                    <td>SV</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>38</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>set</td>
+                    <td>set（实系动词）</td>
+                    <td>SV</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>39</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>there</td>
+                    <td>reading（伴随状语）</td>
+                    <td>SV</td>
+                    <td>分裂（that从句）</td>
+                </tr>
+                <tr>
+                    <td><strong>40</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>scientists</td>
+                    <td>made（实系动词）</td>
+                    <td>SVIO DO</td>
+                    <td>分裂（后置定语）</td>
+                </tr>
+                <tr>
+                    <td><strong>41</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>don't believe</td>
+                    <td>don't believe（助动词+实系动词）</td>
+                    <td>SVO</td>
+                    <td>宾语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>42</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>stood up and spoke</td>
+                    <td>stood up and spoke（并列谓语）</td>
+                    <td>SV</td>
+                    <td>并列</td>
+                </tr>
+                <tr>
+                    <td><strong>43</strong></td>
+                    <td>主语（it）</td>
+                    <td>it</td>
+                    <td>was（系动词）</td>
+                    <td>SVT</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>44</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>the words</td>
+                    <td>were（系动词）</td>
+                    <td>SVT</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>45</strong></td>
+                    <td>主语（名词短语+后置定语）</td>
+                    <td>should do（助动词+实系动词）</td>
+                    <td>should do（助动词+实系动词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>46</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>had better（助动词+实系动词）</td>
+                    <td>had better（助动词+实系动词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>47</strong></td>
+                    <td>主语（名词短语+后置定语）</td>
+                    <td>are hoping for（助动词+实系动词）</td>
+                    <td>are hoping for（助动词+实系动词）</td>
+                    <td>—</td>
+                    <td>后置定语</td>
+                </tr>
+                <tr>
+                    <td><strong>48</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>must go to（助动词+不及物动词+介词）</td>
+                    <td>must go to（助动词+实系动词+介词）</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>49</strong></td>
+                    <td>主语（名词短语）</td>
+                    <td>takes（实系动词，双宾语）</td>
+                    <td>takes（实系动词）</td>
+                    <td>SVIO DO</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>50</strong></td>
+                    <td>主语（人称代词）</td>
+                    <td>has just got（助动词+实系动词，just为状语）</td>
+                    <td>has just got（助动词+实系动词）</td>
+                    <td>—</td>
+                    <td>状语（just）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心知识点总结</h2>
+
+        <h3>知识点一：万能公式操作流程</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>注意事项</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>判断句子开头</td>
+                    <td>状语开头→跳过；主语开头→正常；助动词开头→倒装，调回去</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>找主语（六种形式）</td>
+                    <td>名词短语/DTS/Shots/to do/doing/从句；it注意区分人称代词和形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>判断主谓之间的障碍物</td>
+                    <td>概率排序：助动词>后置定语>状语>同位语>插入语</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>找谓语（三种构成）</td>
+                    <td>助动词+实系动词/实系动词单独/系动词单独</td>
+                </tr>
+                <tr>
+                    <td><strong>第五步</strong></td>
+                    <td>判断句型</td>
+                    <td>SV/SVO/SVOC/SVitOC/SVIO DO/SVT</td>
+                </tr>
+                <tr>
+                    <td><strong>第六步</strong></td>
+                    <td>分析复杂化方式</td>
+                    <td>从句/并列/分裂</td>
+                </tr>
+                <tr>
+                    <td><strong>第七步</strong></td>
+                    <td>检查例外</td>
+                    <td>祈使句/倒装句/强调句</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：it的两种身份辨析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>身份</th>
+                    <th>判断方法</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>人称代词（主语本身）</strong></td>
+                    <td>it 后面不接 to do / doing / that 从句</td>
+                    <td>It is sunny. / It is a pity.</td>
+                </tr>
+                <tr>
+                    <td><strong>形式主语</strong></td>
+                    <td>it 后面接 to do / doing / that 从句</td>
+                    <td>It was a pity that... / It takes you three hours to go...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：谓语构成的实战识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>谓语构成</th>
+                    <th>识别标志</th>
+                    <th>典型例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词+实系动词</strong></td>
+                    <td>should/does/did/is/are/was/were/can/would/have + 动词原形/doing/done</td>
+                    <td>should put / don't believe / are hoping for / has just got / would be / is reporting</td>
+                </tr>
+                <tr>
+                    <td><strong>实系动词单独构成</strong></td>
+                    <td>及物动词/不及物动词单独做谓语</td>
+                    <td>goes out / set / takes / spent / spoke / remember / think / solve / put</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词单独构成</strong></td>
+                    <td>be动词/感官动词/状态动词单独做谓语</td>
+                    <td>is / was / are / keep</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：祈使句 vs 不定式做主语的辨析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>祈使句</th>
+                    <th>不定式做主语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>开头标志</strong></td>
+                    <td>动词原形开头（无 to）</td>
+                    <td>to + 动词原形</td>
+                </tr>
+                <tr>
+                    <td><strong>主语</strong></td>
+                    <td>省略了 you</td>
+                    <td>不定式本身就是主语</td>
+                </tr>
+                <tr>
+                    <td><strong>例句</strong></td>
+                    <td>Keep... / Put... / Do...</td>
+                    <td>To swim is good.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：句子复杂化的三种方法（实战总结）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方法</th>
+                    <th>核心逻辑</th>
+                    <th>50个句子中的体现</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>从句</strong></td>
+                    <td>用一个句子充当某个成分</td>
+                    <td>主语从句（It was a pity that...）/ 宾语从句（I don't believe that...）/ 同位语从句（the news that...）</td>
+                </tr>
+                <tr>
+                    <td><strong>并列</strong></td>
+                    <td>用and连接相同结构</td>
+                    <td>stood up and spoke（并列谓语）</td>
+                </tr>
+                <tr>
+                    <td><strong>分裂</strong></td>
+                    <td>环环相扣，每个成分可以再分</td>
+                    <td>to swim in the river（不定式分裂出状语）/ a report for us（名词分裂出后置定语）/ the students playing basketball on the playground happily（宾语分裂出宾补+状语）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G71 核心方法总结</strong><br><br>
+            第一步：看到句子 → 先看开头（状语/主语/助动词倒装）<br>
+            ↓<br>
+            第二步：找主语 S（六种形式：名词短语/DTS/Shots/to do/doing/从句）<br>
+            &emsp;注意 it 的两种身份：人称代词 vs 形式主语<br>
+            ↓<br>
+            第三步：判断主谓之间的障碍物（概率排序：助动词>后置定语>状语>同位语>插入语）<br>
+            ↓<br>
+            第四步：找谓语 V（三种构成：助动词+实系动词/实系动词单独/系动词单独）<br>
+            ↓<br>
+            第五步：判断句型（SV/SVO/SVOC/SVitOC/SVIO DO/SVT）<br>
+            ↓<br>
+            第六步：看句子复杂化方式（从句/并列/分裂）<br>
+            ↓<br>
+            第七步：检查是否是例外（祈使句/倒装句/强调句）
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 开头看状语/主语/助动词（倒装调回去）<br>
+            - 主语六种：名词短语/DTS/Shots/to do/doing/从句<br>
+            - it 注意区分：人称代词 vs 形式主语（看后面有没有 to do/doing/that）<br>
+            - 主谓之间障碍物：助动词>后置定语>状语>同位语>插入语<br>
+            - 谓语三种构成：助动词+实系动词/实系动词单独/系动词单独<br>
+            - 助动词四类：be→doing/done；情态→原形；do→原形；have→done<br>
+            - 五大句型：SV/SVO/SVOC/SVitOC/SVIO DO/SVT<br>
+            - 复杂化三方法：从句/并列/分裂<br>
+            - 三种例外：祈使句/倒装句/强调句<br>
+            - 祈使句 vs 不定式：有 to→不定式做主语；无 to→祈使句（省略主语）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+一个公式纵向分析50个句子（G71）
+├── 万能公式操作流程
+│   ├── 第一步：判断开头（状语/主语/助动词倒装）
+│   ├── 第二步：找主语（六种形式）
+│   ├── 第三步：判断主谓之间的障碍物
+│   ├── 第四步：找谓语（三种构成）
+│   ├── 第五步：判断句型
+│   ├── 第六步：分析复杂化方式
+│   └── 第七步：检查例外
+│
+├── 句子开头的三种可能性
+│   ├── 状语开头 → 跳过状语找主语
+│   ├── 主语开头 → 正常分析
+│   └── 助动词开头（倒装）→ 调回去
+│
+├── 主语的六种形式
+│   ├── 名词短语 → 可加后置定语
+│   ├── DTS（代词/限定词/数词）→ 可加后置定语
+│   ├── Shots → 可加后置定语
+│   ├── 不定式(to do) → 可能用it做形式主语
+│   ├── 动名词(doing) → 可能用it做形式主语
+│   └── 从句(引导词+句子) → 可能用it做形式主语
+│
+├── it的两种身份
+│   ├── 人称代词（主语本身）→ it后面不接to do/doing/that
+│   └── 形式主语 → it后面接to do/doing/that
+│
+├── 谓语三种构成
+│   ├── 助动词+实系动词（不能单独构成）
+│   │   ├── be→doing/done
+│   │   ├── 情态→原形
+│   │   ├── do/does/did→原形
+│   │   └── have/has/had→done
+│   ├── 实系动词单独构成（可单独构成）
+│   │   ├── vi→SV
+│   │   ├── vi+介词→SVO
+│   │   └── vt1→SVO/SVOC
+│   └── 系动词单独构成（可单独构成）
+│       └── SVT（含there be倒装）
+│
+├── 主谓之间的障碍物（概率排序）
+│   ├── 助动词（最高）
+│   ├── 后置定语（高）
+│   ├── 状语（中）→ 到处可放
+│   ├── 同位语（低）
+│   └── 插入语（最低）
+│
+├── 五大基本句型在50个句子中的体现
+│   ├── SV → He set. / stood up and spoke
+│   ├── SVO → You put your things. / Scientists made a report.
+│   ├── SVOC → We solve the students playing basketball.
+│   ├── SVIO DO → He took me a deal. / She made us a report.
+│   └── SVT → It was a pity. / Your things are a great pleasure.
+│
+├── 句子复杂化的三种方法
+│   ├── 从句：主语从句/宾语从句/同位语从句
+│   ├── 并列：stood up and spoke
+│   └── 分裂：to swim in the river / a report for us / the students playing basketball
+│
+├── 模型的三种例外
+│   ├── 祈使句：Keep... / Do...（省略主语，动词原形开头）
+│   ├── 倒装句：Would you be...? / Do you remember...?（调回去）
+│   └── 强调句：It is/was...that...（50个句子中未出现）
+│
+└── 祈使句 vs 不定式做主语
+    ├── 有 to → 不定式做主语
+    └── 无 to，动词原形开头 → 祈使句（省略主语）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记万能公式操作流程：</strong>开头→主语→障碍物→谓语→句型→复杂化→例外。这是本节课最重要的方法论，掌握了这个流程就能分析任何英语句子。</li>
+            <li><strong>牢记主语的六种形式和 it 的两种身份：</strong>名词短语/DTS/Shots/to do/doing/从句。it 后面接 to do/doing/that → 形式主语；不接 → 人称代词。</li>
+            <li><strong>牢记主谓之间障碍物的概率排序：</strong>助动词 > 后置定语 > 状语 > 同位语 > 插入语。看到句子不要慌，按概率依次判断。</li>
+            <li><strong>牢记谓语的三种构成：</strong>助动词+实系动词（不能单独）/ 实系动词单独 / 系动词单独。谓语结尾一定落脚到实系动词或系动词。</li>
+            <li><strong>牢记祈使句 vs 不定式做主语：</strong>有 to → 不定式做主语；无 to，动词原形开头 → 祈使句（省略主语）。</li>
+            <li><strong>牢记倒装句要"调回去"：</strong>助动词开头 → 把助动词放回主语后面 → 恢复正常语序再分析。</li>
+            <li><strong>牢记复杂化三方法：</strong>从句（用一个句子充当成分）/ 并列（用and连接相同结构）/ 分裂（环环相扣）。所有复杂句 = 简单句 + 从句/并列/分裂。</li>
+            <li><strong>综合应用建议：</strong>拿到任何长难句，先用万能公式定位开头→主语→障碍物→谓语→句型→复杂化，层层拆解，万无一失。这是基础语法的收官课，标志着基础语法体系的完成。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

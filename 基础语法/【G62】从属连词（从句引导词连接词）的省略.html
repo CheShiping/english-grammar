@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G62 从属连词的省略：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G62】从属连词（从句引导词/连接词）的省略</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G62 是「基础语法」系列第62课，由陈老师主讲。本节课是句子部分的<strong>方法论专题课（续）</strong>，紧接 G61「连接词个数不等于V-1是怎么回事？」，专门讲解 G61 中预告的<strong>第四种原因——省略</strong>。</p>
+        <p>在此之前，同学们已经学习了 G61 提出的四种连接词个数 ≠ V-1 的原因：①第二层并列、②找错谓语（AABB型动词）、③找错连接词（that的多重身份）、④省略。本节课聚焦第四种原因，深入探究从句引导词省略的三种常见情况和背后的本质原因。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握从句引导词省略的三种常见情况（宾从第一个that、定从中做宾语的关系代词、先行词为the way的定从），并理解省略的本质原因——"不要引导词已经很清晰了"。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G51「省略」、G60「长难句3」、G61「连接词个数≠V-1」的基础上。需要熟练掌握宾语从句、定语从句、关系代词、非谓语动词等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心问题：引导词省略的本质</h2>
+        <p>老师首先指出一个普遍现象——很多同学被告知引导词省略是"固定搭配"，但这并不是本质原因。老师要探究的是：<strong>为什么引导词可以省略？</strong></p>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - 引导词的作用：让句子更加清晰明了（就像运动会举牌子的人）<br>
+            - 既然引导词让句子更清晰，为什么还要省略？<br>
+            - 答案：不是想让句子不清晰，而是<strong>不要引导词已经很清晰了</strong><br>
+            - 类比：班上有个姚明，不用举牌子也能一眼认出来
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 省略的三种常见情况</h2>
+        <p>老师列举了三种最常见的引导词省略情况，每种情况都有严格的条件限制：</p>
+
+        <h3>情况一：宾语从句的第一个 that 可以省略</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>条件1</strong></td>
+                    <td>必须是宾语从句（宾从）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件2</strong></td>
+                    <td>必须是第一个 that（不是第二个及以后的 that）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件3</strong></td>
+                    <td>必须是 that（其他连接词不适用）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <div class="example-item"><strong>可省略：</strong>I think (that) you are a pig.</div>
+            <div class="example-item">→ I = 主语；think = 谓语（及物动词）→ 后面缺宾语 → 宾从 → 第一个 that → 可省略 ✓</div>
+            <div class="example-item"><strong>不可省略：</strong>I think that you are a pig and (that) you are ugly.</div>
+            <div class="example-item">→ 第二个 that（and 后面的 that）→ 被 and 隔开了 → 不能省略 ✗</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——第一个 that 可省略，第二个 that 不可省略：</strong><br>
+            - 第一个 that：紧跟在谓语 think 后面 → 位置近 → 很清楚是宾从 → 可省略<br>
+            - 第二个 that：被 and 隔开了 → 位置远 → 需要举牌子标识 → 不可省略<br>
+            - 类比：紧跟在姚明后面的，大家都知道是姚明一伙的；隔远了，鬼知道你是谁
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 情况二：定从中做宾语的关系代词可以省略</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>条件1</strong></td>
+                    <td>必须是定语从句（定从）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件2</strong></td>
+                    <td>关系代词（that/which/whom）在从句中做宾语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <div class="example-item"><strong>可省略：</strong>The book (that) I bought yesterday is good.</div>
+            <div class="example-item">→ 主句：The book is good（完整 ✓）→ 定从 ✓</div>
+            <div class="example-item">→ 从句：I bought yesterday（缺宾语）→ that 做 bought 的宾语 ✓</div>
+            <div class="example-item">→ 名词 book 后面紧跟 that → 很清楚 that 修饰 book → 可省略 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么定从中做宾语的关系代词可以省略：</strong><br>
+            - 名词（the book）后面接从句 → 很明显是在修饰这个名词 → 引导词 that 可省略<br>
+            - 类比：姚明那么高，不用举牌子也能认出来<br>
+            - 本质：名词后面接从句已经很清晰了，不需要引导词来标识
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 情况三：先行词为 the way 的定从中引导词可以省略</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>条件</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>条件1</strong></td>
+                    <td>必须是定语从句（定从）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件2</strong></td>
+                    <td>先行词必须是 the way</td>
+                </tr>
+                <tr>
+                    <td><strong>条件3</strong></td>
+                    <td>从句必须完整（不缺主语/宾语等成分）</td>
+                </tr>
+                <tr>
+                    <td><strong>条件4</strong></td>
+                    <td>引导词可以用 that / in which / 省略（三种选择）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="example-box">
+            <div class="example-item"><strong>三种等价表达：</strong></div>
+            <div class="example-item">① I like the way (that) you lie.</div>
+            <div class="example-item">② I like the way (in which) you lie.</div>
+            <div class="example-item">③ I like the way you lie.（省略引导词）</div>
+            <div class="example-item">→ 主句：I like the way（完整 ✓）→ 定从 ✓</div>
+            <div class="example-item">→ 从句：you lie（完整 ✓，lie 是不及物动词，不缺宾语）</div>
+            <div class="example-item">→ 先行词 the way → 从句完整 → 引导词可用 that / in which / 省略</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么 the way 的引导词可以用 that：</strong><br>
+            - 按理说 the way（方式）应该用 how 引导 → 但定语从句中没有 how 这个引导词<br>
+            - 所以英语找了 that 或 in which 来替代<br>
+            - 同样，省略也是可以的，因为名词 the way 后面紧跟从句 → 已经很清晰了
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 补充情况：口语中的 other 省略</h2>
+        <p>老师提到，除了上述三种常见情况，口语中还有其他省略现象：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I like the reason (why) you cried.</strong></div>
+            <div class="example-item">→ 口语中 the reason 后面的 why 也可以省略（严格语法中应该用 why）</div>
+            <div class="example-item">→ 本质原因同上：名词 reason 后面紧跟从句 → 已经很清晰了</div>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：口语中有些省略是习惯用法，但根本原因仍然是"不要引导词已经很清晰了"。老师强调，最常见的还是前两种情况（宾从第一个that / 定从中做宾语的关系代词）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 省略的本质原因（核心颠覆点）</h2>
+        <p>老师揭示了引导词省略的根本原因，这是一个颠覆很多同学认知的重要概念：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>引导词省略的本质原因</strong><br><br>
+            引导词的作用是让句子更加清晰明了<br>
+            如果不要引导词，句子已经很清晰了<br>
+            → 就可以省略引导词<br>
+            <br>
+            反之，如果引导词离它修饰的名词/谓语太远了<br>
+            → 就需要保留引导词来"举牌子"标识<br>
+            → 就不能省略
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 引导词 = 运动会举牌子的人 → 让句子更清晰<br>
+            - 省略 ≠ 固定搭配 → 省略是因为"已经很清晰了"<br>
+            - 位置近 → 清晰 → 可省略（如宾从第一个that紧跟谓语）<br>
+            - 位置远 → 不清晰 → 不可省略（如第二个that被and隔开）<br>
+            - 名词后紧跟从句 → 清晰 → 可省略（如定从中that做宾语）<br>
+            - 不是想让句子不清晰，而是不要引导词已经很清晰了
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 三种省略情况完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>情况</th>
+                    <th>从句类型</th>
+                    <th>引导词</th>
+                    <th>条件</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>情况一</strong></td>
+                    <td><strong>宾语从句</strong></td>
+                    <td>that（第一个）</td>
+                    <td>①是宾从 ②是第一个that ③是that</td>
+                    <td>I think (that) you are a pig.</td>
+                </tr>
+                <tr>
+                    <td><strong>情况二</strong></td>
+                    <td><strong>定语从句</strong></td>
+                    <td>that/which/whom（做宾语）</td>
+                    <td>①是定从 ②关系代词在从句中做宾语</td>
+                    <td>The book (that) I bought yesterday is good.</td>
+                </tr>
+                <tr>
+                    <td><strong>情况三</strong></td>
+                    <td><strong>定语从句</strong></td>
+                    <td>that / in which / 省略</td>
+                    <td>①是定从 ②先行词是the way ③从句完整</td>
+                    <td>I like the way (that/in which) you lie.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 可省略 vs 不可省略 对照表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>能否省略</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I think <strong>that</strong> you are a pig.</td>
+                    <td>✅ 可省略</td>
+                    <td>宾从 + 第一个that + 紧跟谓语think → 很清晰</td>
+                </tr>
+                <tr>
+                    <td>I think that you are a pig and <strong>that</strong> you are ugly.</td>
+                    <td>❌ 不可省略</td>
+                    <td>第二个that被and隔开了 → 位置远 → 需要举牌子</td>
+                </tr>
+                <tr>
+                    <td>The book <strong>that</strong> I bought yesterday is good.</td>
+                    <td>✅ 可省略</td>
+                    <td>定从 + that做宾语 + 紧跟名词book → 很清晰</td>
+                </tr>
+                <tr>
+                    <td>I like the way <strong>that/in which</strong> you lie.</td>
+                    <td>✅ 可省略</td>
+                    <td>定从 + 先行词the way + 从句完整 → 很清晰</td>
+                </tr>
+                <tr>
+                    <td>I like the reason <strong>why</strong> you cried.</td>
+                    <td>✅ 可省略（口语中）</td>
+                    <td>名词reason后紧跟从句 → 很清晰 → 口语中可省略</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心知识点总结</h2>
+
+        <h3>知识点一：引导词省略的三种情况</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>情况一（宾从）</th>
+                    <th>情况二（定从-宾语）</th>
+                    <th>情况三（定从-the way）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>从句类型</strong></td>
+                    <td>宾语从句</td>
+                    <td>定语从句</td>
+                    <td>定语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>引导词</strong></td>
+                    <td>that（第一个）</td>
+                    <td>that/which/whom（做宾语）</td>
+                    <td>that / in which / 省略</td>
+                </tr>
+                <tr>
+                    <td><strong>核心条件</strong></td>
+                    <td>①宾从 ②第一个 ③就是that</td>
+                    <td>①定从 ②关系代词做宾语</td>
+                    <td>①定从 ②先行词the way ③从句完整</td>
+                </tr>
+                <tr>
+                    <td><strong>典型例句</strong></td>
+                    <td>I think (that) you are right.</td>
+                    <td>The book (that) I bought...</td>
+                    <td>I like the way (that) you...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：省略的本质原因</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>引导词的作用</strong></td>
+                    <td>让句子更加清晰明了（就像运动会举牌子的人）</td>
+                </tr>
+                <tr>
+                    <td><strong>可省略的条件</strong></td>
+                    <td>不要引导词，句子已经很清晰了 → 可以省略</td>
+                </tr>
+                <tr>
+                    <td><strong>不可省略的条件</strong></td>
+                    <td>引导词离它修饰的对象太远了 → 需要保留来"举牌子"标识</td>
+                </tr>
+                <tr>
+                    <td><strong>位置近 → 清晰 → 可省略</strong></td>
+                    <td>宾从第一个that紧跟谓语 / 定从中that紧跟名词</td>
+                </tr>
+                <tr>
+                    <td><strong>位置远 → 不清晰 → 不可省略</strong></td>
+                    <td>第二个that被and隔开 → 需要保留</td>
+                </tr>
+                <tr>
+                    <td><strong>不是固定搭配</strong></td>
+                    <td>省略有本质原因，不是死记硬背的固定搭配</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：姚明类比法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类比</th>
+                    <th>语法对应</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>姚明很高，不用举牌子也能认出来</td>
+                    <td>位置很近，引导词的作用已经很清晰了 → 可省略</td>
+                </tr>
+                <tr>
+                    <td>隔远了，鬼知道你是谁，需要举牌子</td>
+                    <td>位置远了，需要引导词来标识 → 不可省略</td>
+                </tr>
+                <tr>
+                    <td>全班都是光头，也不用举牌子</td>
+                    <td>语境太明显了，不需要引导词也能理解 → 可省略</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G62 核心方法总结</strong><br><br>
+            第一步：看到 that / which / why 等引导词 → 想想能不能省略<br>
+            ↓<br>
+            第二步：判断属于哪种情况<br>
+            &emsp;情况一：宾从 + 第一个 that → 可省略<br>
+            &emsp;情况二：定从 + 关系代词做宾语 → 可省略<br>
+            &emsp;情况三：定从 + 先行词 the way → 可省略<br>
+            ↓<br>
+            第三步：判断位置远近<br>
+            &emsp;位置近（紧跟谓语/名词）→ 清晰 → 可省略<br>
+            &emsp;位置远（被 and 等隔开）→ 不清晰 → 不可省略<br>
+            ↓<br>
+            第四步：记住本质原因<br>
+            &emsp;不是固定搭配！不是想让句子不清晰！<br>
+            &emsp;而是"不要引导词已经很清晰了"→ 所以可以省略
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 引导词 = 举牌子的人 → 让句子更清晰<br>
+            - 省略的本质：不要引导词已经很清晰了<br>
+            - 位置近 → 可省略（宾从第一个that / 定从宾语关系代词 / the way）<br>
+            - 位置远 → 不可省略（第二个that被and隔开）<br>
+            - 不是固定搭配！有本质原因！<br>
+            - 姚明类比：高个子不用举牌子
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+从属连词的省略（G62）
+├── 核心问题：引导词为什么可以省略？
+│   └── 本质原因：不要引导词已经很清晰了
+│       ├── 引导词 = 运动会举牌子的人 → 让句子更清晰
+│       ├── 位置近 → 清晰 → 可省略
+│       └── 位置远 → 不清晰 → 不可省略
+│
+├── 情况一：宾从的第一个 that 可省略
+│   ├── 条件：①是宾从 ②是第一个that ③是that
+│   ├── 可省略：I think (that) you are a pig.
+│   └── 不可省略：I think that... and (that)...（第二个that被and隔开）
+│
+├── 情况二：定从中做宾语的关系代词可省略
+│   ├── 条件：①是定从 ②关系代词在从句中做宾语
+│   ├── 可省略：The book (that) I bought yesterday is good.
+│   └── 本质：名词后紧跟从句 → 很清晰
+│
+├── 情况三：先行词为 the way 的定从中引导词可省略
+│   ├── 条件：①是定从 ②先行词是the way ③从句完整
+│   ├── 三种选择：that / in which / 省略
+│   ├── 可省略：I like the way (that/in which) you lie.
+│   └── 补充：why 没有 that 替代，所以用 that/in which 替代
+│
+├── 补充情况：口语中的 other 省略
+│   └── I like the reason (why) you cried.（口语中why可省略）
+│
+└── 姚明类比法
+    ├── 姚明很高 → 不用举牌子 → 位置近 → 可省略
+    ├── 隔远了 → 鬼知道你是谁 → 位置远 → 不可省略
+    └── 全班光头 → 也不用举牌子 → 语境太明显
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记省略的三种情况：</strong>①宾从第一个that（三个条件：宾从+第一个+that）②定从中做宾语的关系代词 ③先行词为the way的定从（that/in which/省略三种选择）。</li>
+            <li><strong>牢记省略的本质原因：</strong>不是固定搭配！不是想让句子不清晰！而是"不要引导词已经很清晰了"→ 所以可以省略。这是老师研究出来的本质，语法书上不说、很多老师也不知道。</li>
+            <li><strong>牢记位置远近判断法：</strong>位置近（紧跟谓语/名词）→ 清晰 → 可省略；位置远（被and等隔开）→ 不清晰 → 不可省略。第二个that被and隔开 → 不可省略。</li>
+            <li><strong>牢记姚明类比法：</strong>姚明很高，不用举牌子也能认出来 → 位置近可省略；隔远了，鬼知道你是谁 → 位置远不可省略。这个类比帮助理解省略的本质。</li>
+            <li><strong>牢记 the way 的特殊性：</strong>先行词是 the way 时，引导词可以用 that / in which / 省略。因为 way（方式）按理应用 how 引导，但定从中没有 how，所以找了 that/in which 替代。</li>
+            <li><strong>牢记口语补充：</strong>口语中 the reason 后面的 why 也可以省略（如 I like the reason you cried），本质原因同样是"名词后紧跟从句已经很清晰了"。</li>
+            <li><strong>下节课预告：</strong>下节课会进入新的语法专题，建议复习本节课的三种省略情况和本质原因。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

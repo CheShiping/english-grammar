@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G67 一般疑问句：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G67】一般疑问句</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G67 是「基础语法」系列第67课，由陈老师主讲。本节课是疑问句专题的开篇课，之前老师只讲了反义疑问句，本节课开始系统讲解<strong>一般疑问句、特殊疑问句和选择疑问句</strong>。本节课聚焦一般疑问句，抽象出一个核心公式，并通过大量例句讲解各种动词类型构成一般疑问句的规则。</p>
+        <p>本节课重点讲解：<strong>① 一般疑问句的核心公式（助动词 &gt; be动词 &gt; 其他动词）</strong>、<strong>② 动词分类复习（助动词/实意动词/系动词）</strong>、<strong>③ 实意动词/系动词/助动词分别变一般疑问句的规则</strong>、<strong>④ 特殊情况（there be句型、some/any区别、否定疑问句）</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握一般疑问句的顺位公式——有狭义助动词就选狭义助动词，没有就选be动词，没有be动词就抽象出do/does/did，并熟练应用于各种动词类型。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G51「省略」的基础上。需要熟练掌握动词分类（助动词/实意动词/系动词）、谓语构成等知识。如果动词分类不清楚，本节课会"莫名其妙"。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心公式：顺位原则</h2>
+        <p>老师抽象了一个核心公式，决定一般疑问句用什么词来提问：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>狭义助动词 &gt; be动词 &gt; 其他动词</strong>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀——顺位原则：</strong><br>
+            - 有狭义助动词 → 选狭义助动词（do/does/did）<br>
+            - 没有狭义助动词 → 选be动词（am/is/are/was/were）<br>
+            - 没有be动词 → 抽象出do/does/did<br>
+            - 简单理解：有就用，没有就抽象
+        </div>
+
+        <h3>动词分类总览（公式的前提）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>大类</th>
+                    <th>子类</th>
+                    <th>说明</th>
+                    <th>后面接什么</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>be动词</td>
+                    <td>不能单独构成谓语，起辅助作用</td>
+                    <td>doing / done</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>情态动词</td>
+                    <td>can/could/may/might等</td>
+                    <td>动词原形</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>狭义助动词</td>
+                    <td>do/does/did</td>
+                    <td>动词原形</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>完成助动词</td>
+                    <td>have/has/had</td>
+                    <td>过去分词（done）</td>
+                </tr>
+                <tr>
+                    <td><strong>实意动词</strong></td>
+                    <td>表具体动作</td>
+                    <td>play/eat/go等，可单独构成谓语</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>be动词类</td>
+                    <td>am/is/are/was/were，表状态</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>非be类系动词</td>
+                    <td>sounds/became/seem等，表感官/变化/表象</td>
+                    <td>——</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心方法一：实意动词变一般疑问句（抽象出do/does/did）</h2>
+        <p>老师以 play 为例，讲解实意动词（具体动作动词）如何变一般疑问句：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He plays football every day.</strong></div>
+            <div class="example-item">→ plays 是实意动词，单独构成谓语</div>
+            <div class="example-item">→ 没有助动词，没有be动词 → 抽象出狭义助动词 does（第三人称单数）</div>
+            <div class="example-item">→ does 放在最前面 + 动词恢复原形 → <strong>Does he play football every day?</strong></div>
+            <div class="example-item">→ 肯定回答：Yes, he does. / 否定回答：No, he doesn't.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一二人称转换（I → you）：</strong></div>
+            <div class="example-item">→ I play football every day. → <strong>Do you play football every day?</strong></div>
+            <div class="example-item">→ Yes, I do. / No, I don't.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>过去时态：</strong></div>
+            <div class="example-item">→ He played football yesterday.</div>
+            <div class="example-item">→ played 抽象成 did → <strong>Did he play football yesterday?</strong></div>
+            <div class="example-item">→ Yes, he did. / No, he didn't.</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心操作：</strong><br>
+            - 实意动词 → 抽象出 do/does/did → do 放在句首 → 原动词恢复原形<br>
+            - 注意人称转换：I play → Do you play...（第一人称变第二人称）<br>
+            - 注意时态：plays → does / played → did
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心方法二：be动词系动词变一般疑问句（直接提前）</h2>
+        <p>老师讲解 be 动词（am/is/are/was/were）构成的句子，变一般疑问句最简单——直接提前：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He is a student.</strong></div>
+            <div class="example-item">→ is 是 be 动词（系动词）→ 没有助动词 → 顺位到 be 动词 → 直接提前</div>
+            <div class="example-item">→ <strong>Is he a student?</strong></div>
+            <div class="example-item">→ Yes, he is. / No, he isn't.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一二人称转换：</strong></div>
+            <div class="example-item">→ I am a student. → <strong>Are you a student?</strong></div>
+            <div class="example-item">→ Yes, I am. / No, I'm not.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>复数：</strong></div>
+            <div class="example-item">→ They are students. → <strong>Are they students?</strong></div>
+            <div class="example-item">→ Yes, they are. / No, they aren't.</div>
+        </div>
+
+        <div class="annotation">
+            核心操作：有 be 动词 → 直接把 be 动词提到主语前面 → 完事。这是最简单的一种情况。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 核心方法三：非be类系动词变一般疑问句（抽象出do/does/did）</h2>
+        <p>老师讲解 sounds / became / seem 等非 be 类系动词，它们虽然也是系动词，但没有 be 动词形式，需要抽象出 do/does/did：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>It sounds interesting.</strong></div>
+            <div class="example-item">→ sounds 是系动词（表感官），不是 be 动词</div>
+            <div class="example-item">→ 没有助动词，没有 be 动词 → 抽象出 does（第三人称单数）</div>
+            <div class="example-item">→ does 后面接动词原形 → <strong>Does it sound interesting?</strong></div>
+            <div class="example-item">→ sound 要变回原形（去 s）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>过去时态：</strong></div>
+            <div class="example-item">→ They became friends. → 抽象出 did → <strong>Did they become friends?</strong></div>
+            <div class="example-item">→ become 变回原形</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>过去时态：</strong></div>
+            <div class="example-item">→ He seemed right. → 抽象出 does → <strong>Does he seem right?</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么不能直接把 sounds 提前：</strong><br>
+            - 如果把 sounds 直接提前 → "Sounds it interesting?" → 语法错误<br>
+            - 非 be 类系动词不能直接提前 → 必须抽象出 do/does/did<br>
+            - does 后面必须接动词原形 → sound 去 s
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心方法四：助动词 + 实意动词/系动词（直接提前助动词）</h2>
+        <p>老师讲解句子中已经有助动词的情况（进行时、被动语态、情态动词、完成时等），变一般疑问句最简单——直接把助动词提前：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>is 是助动词（进行时）：</strong></div>
+            <div class="example-item">→ He is playing football. → <strong>Is he playing football?</strong></div>
+            <div class="example-item">→ Yes, he is. / No, he isn't.</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>is 是助动词（被动语态）：</strong></div>
+            <div class="example-item">→ He is fired. → <strong>Is he fired?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>can 是情态助动词：</strong></div>
+            <div class="example-item">→ He can speak English. → <strong>Can he speak English?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>has 是完成助动词：</strong></div>
+            <div class="example-item">→ He has become a college student. → <strong>Has he become a college student?</strong></div>
+        </div>
+
+        <div class="annotation">
+            核心操作：句子中有助动词（be/情态/do/完成助动词）→ 直接把助动词提到主语前面 → 完事。这是最简单的情况。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心难点：助动词 + 系动词的复杂结构</h2>
+        <p>老师重点讲解了助动词 + 系动词（如 be + been / become + ing）的复杂结构，这是本节课最"恼火"的部分：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He is being a man.</strong></div>
+            <div class="example-item">→ 推导过程：He is a man（系动词 is）→ 加助动词 is → is 变成 doing 形式 → been → He is being a man</div>
+            <div class="example-item">→ 含义：他此时此刻是不是个男人（暗示他此刻表现不像男人）</div>
+            <div class="example-item">→ 变一般疑问句：is 是助动词 → 直接提前 → <strong>Is he been a man?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>We are becoming friends.</strong></div>
+            <div class="example-item">→ are 是助动词（be 的复数形式），becoming 是系动词 become 的 doing 形式</div>
+            <div class="example-item">→ 变一般疑问句：are 提前 → <strong>Are we becoming friends?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He can be the one to save.</strong></div>
+            <div class="example-item">→ can 是情态助动词，be 是系动词原形</div>
+            <div class="example-item">→ 变一般疑问句：can 提前 → <strong>Can he be the one to save?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He does seem right.</strong></div>
+            <div class="example-item">→ does 是强调用法的狭义助动词，seem 是系动词</div>
+            <div class="example-item">→ 含义：他似乎确实是对的（强调）</div>
+            <div class="example-item">→ 变一般疑问句：does 提前 → <strong>Does he seem right?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He has been doing for ten years.</strong></div>
+            <div class="example-item">→ has 是完成助动词，been 是系动词 be 的过去分词</div>
+            <div class="example-item">→ 变一般疑问句：has 提前 → <strong>Has he been doing for ten years?</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——be being / has been 中的 been 不是实意动词：</strong><br>
+            - been 是 be（系动词）的过去分词形式，不是实意动词<br>
+            - be 的原型是 be，doing 形式是 being，过去分词是 been<br>
+            - 助动词 + being/been → 助动词提前即可，been/being 不变
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 特殊情况一：强调句中的 did（罕见用法）</h2>
+        <p>老师讲解了一个特殊且罕见的情况——用 did 强调谓语动词：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He did play football yesterday.</strong></div>
+            <div class="example-item">→ did 不是用来变疑问句的，而是用来<strong>强调</strong>的（"确实"）</div>
+            <div class="example-item">→ 变一般疑问句时，did 既是强调词又是助动词 → 提前即可</div>
+            <div class="example-item">→ <strong>Did he do play football yesterday?</strong></div>
+            <div class="example-item">→ 第一个 did = 助动词（提前），do = 实意动词原形</div>
+        </div>
+
+        <div class="annotation">
+            注意：这种"did...do"结构在现实中很少见，老师只是硬要举例说明逻辑。实际使用中基本用不到。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 特殊情况二：there be 句型</h2>
+        <p>老师讲解 there be 句型变一般疑问句，非常简单——be 提前即可：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>There is a desk.</strong></div>
+            <div class="example-item">→ there be 句型 → be 提前 → <strong>Is there a desk?</strong></div>
+            <div class="example-item">→ <strong>Is there a book on the desk?</strong></div>
+        </div>
+
+        <div class="annotation">
+            核心操作：there be → be there → 完事。把 be 动词提到 there 前面即可。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 特殊情况三：some 和 any 的区别</h2>
+        <p>老师讲解疑问句中 some 和 any 的转换规则，以及例外情况：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>一般规则：疑问句用 any</strong></div>
+            <div class="example-item">→ I have something to say.</div>
+            <div class="example-item">→ have 是实意动词 → 抽象出 do → 第一人称变第二人称</div>
+            <div class="example-item">→ <strong>Do you have anything to say?</strong></div>
+            <div class="example-item">→ something → anything（疑问句中用 any 形式）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>例外：希望得到肯定回答时用 some</strong></div>
+            <div class="example-item">→ Do you like something to drink?</div>
+            <div class="example-item">→ 虽然是一般疑问句，但想邀请对方，希望得到肯定回答 → 用 something 表现真诚</div>
+            <div class="example-item">→ Do you like anything to drink? → 感觉好像不想请对方喝</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 疑问句中通常用 any（something → anything）<br>
+            - 例外：希望得到肯定回答/邀请别人时用 some（表现真诚）<br>
+            - 否定句中也用 any
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 特殊情况四：否定疑问句</h2>
+        <p>老师讲解否定疑问句（Isn't he a man?）的回答方法，这是很多同学容易搞混的地方：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>否定疑问句：</strong>Isn't he a man?</div>
+            <div class="example-item">→ 语气更强："难道他不是男人吗？"</div>
+            <div class="example-item">→ 回答方法：看事实，不看问题形式</div>
+            <div class="example-item">→ 如果他是男人 → <strong>Yes, he is.</strong></div>
+            <div class="example-item">→ 如果他不是 → <strong>No, he isn't.</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——否定疑问句的回答方法：</strong><br>
+            - 不要看问题是肯定还是否定 → 看<strong>事实</strong><br>
+            - 事实是"他是" → 写 he is → 搭配 Yes<br>
+            - 事实是"他不是" → 写 he isn't → 搭配 No<br>
+            - 简单口诀：他是 → he is → Yes / 他不是 → he isn't → No<br>
+            - 不要被问题的否定形式迷惑
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 一般疑问句完整规则总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>例句（陈述句）</th>
+                    <th>变疑问句操作</th>
+                    <th>一般疑问句</th>
+                    <th>回答</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>实意动词（现在时）</strong></td>
+                    <td>He plays football.</td>
+                    <td>抽象 does + 动词原形</td>
+                    <td>Does he play football?</td>
+                    <td>Yes, he does. / No, he doesn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>实意动词（过去时）</strong></td>
+                    <td>He played football.</td>
+                    <td>抽象 did + 动词原形</td>
+                    <td>Did he play football?</td>
+                    <td>Yes, he did. / No, he didn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>be动词</strong></td>
+                    <td>He is a student.</td>
+                    <td>be 直接提前</td>
+                    <td>Is he a student?</td>
+                    <td>Yes, he is. / No, he isn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>非be类系动词</strong></td>
+                    <td>It sounds interesting.</td>
+                    <td>抽象 does + 动词原形</td>
+                    <td>Does it sound interesting?</td>
+                    <td>Yes, it does. / No, it doesn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>助动词+doing</strong></td>
+                    <td>He is playing.</td>
+                    <td>助动词 is 提前</td>
+                    <td>Is he playing?</td>
+                    <td>Yes, he is. / No, he isn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>助动词+done</strong></td>
+                    <td>He is fired.</td>
+                    <td>助动词 is 提前</td>
+                    <td>Is he fired?</td>
+                    <td>Yes, he is. / No, he isn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>情态动词</strong></td>
+                    <td>He can speak English.</td>
+                    <td>情态动词 can 提前</td>
+                    <td>Can he speak English?</td>
+                    <td>Yes, he can. / No, he can't.</td>
+                </tr>
+                <tr>
+                    <td><strong>完成助动词</strong></td>
+                    <td>He has become a student.</td>
+                    <td>助动词 has 提前</td>
+                    <td>Has he become a student?</td>
+                    <td>Yes, he has. / No, he hasn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>助动词+系动词(being)</strong></td>
+                    <td>He is being a man.</td>
+                    <td>助动词 is 提前</td>
+                    <td>Is he being a man?</td>
+                    <td>Yes, he is. / No, he isn't.</td>
+                </tr>
+                <tr>
+                    <td><strong>there be</strong></td>
+                    <td>There is a desk.</td>
+                    <td>be 提前到 there 前</td>
+                    <td>Is there a desk?</td>
+                    <td>Yes, there is. / No, there isn't.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>13. 核心知识点总结</h2>
+
+        <h3>知识点一：一般疑问句的顺位公式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>顺位</th>
+                    <th>选择</th>
+                    <th>操作</th>
+                    <th>适用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一顺位</strong></td>
+                    <td>狭义助动词（do/does/did）</td>
+                    <td>有就用，没有就抽象</td>
+                    <td>实意动词 / 非be类系动词</td>
+                </tr>
+                <tr>
+                    <td><strong>第二顺位</strong></td>
+                    <td>be动词（am/is/are/was/were）</td>
+                    <td>直接提前</td>
+                    <td>be 动词作系动词</td>
+                </tr>
+                <tr>
+                    <td><strong>第三顺位</strong></td>
+                    <td>其他助动词</td>
+                    <td>直接提前</td>
+                    <td>情态动词/完成助动词/进行时be</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：实意动词 vs 非be类系动词的变疑问句规则</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词类型</th>
+                    <th>能否直接提前</th>
+                    <th>变疑问句方法</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>实意动词</strong></td>
+                    <td>不能</td>
+                    <td>抽象 do/does/did + 动词原形</td>
+                    <td>He plays → Does he play?</td>
+                </tr>
+                <tr>
+                    <td><strong>be动词</strong></td>
+                    <td>能</td>
+                    <td>直接提前</td>
+                    <td>He is → Is he...?</td>
+                </tr>
+                <tr>
+                    <td><strong>非be类系动词</strong></td>
+                    <td>不能</td>
+                    <td>抽象 do/does/did + 动词原形</td>
+                    <td>It sounds → Does it sound...?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么非be类系动词不能直接提前：</strong><br>
+            - sounds / became / seem 不是 be 动词 → 不能直接提前<br>
+            - 如果直接提前 → "Sounds it interesting?" → 语法错误<br>
+            - 必须抽象出 does → "Does it sound interesting?" → sound 恢复原形
+        </div>
+
+        <h3>知识点三：助动词 + 系动词的推导</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>推导过程</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>He is being a man.</strong></td>
+                    <td>He is a man → 加助动词 is → is 变 doing → being</td>
+                    <td>他此时此刻是不是个男人（暗示不是）</td>
+                </tr>
+                <tr>
+                    <td><strong>We are becoming friends.</strong></td>
+                    <td>We become friends → 加助动词 are → become 变 becoming</td>
+                    <td>我们正在变成朋友</td>
+                </tr>
+                <tr>
+                    <td><strong>He can be the one to save.</strong></td>
+                    <td>He can be... → can 提前</td>
+                    <td>他能成为那个救世主吗</td>
+                </tr>
+                <tr>
+                    <td><strong>He has been doing for ten years.</strong></td>
+                    <td>has 是完成助动词 + been（系动词的过去分词）</td>
+                    <td>他持续做某事十年了</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：some 和 any 的区别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>场景</th>
+                    <th>用 some 还是 any</th>
+                    <th>原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>陈述句</strong></td>
+                    <td>some（something）</td>
+                    <td>肯定语气</td>
+                </tr>
+                <tr>
+                    <td><strong>疑问句（一般）</strong></td>
+                    <td>any（anything）</td>
+                    <td>不确定</td>
+                </tr>
+                <tr>
+                    <td><strong>疑问句（希望肯定回答）</strong></td>
+                    <td>some（something）</td>
+                    <td>邀请/希望对方同意 → 表现真诚</td>
+                </tr>
+                <tr>
+                    <td><strong>否定句</strong></td>
+                    <td>any</td>
+                    <td>否定语气</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：否定疑问句的回答</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>问题</th>
+                    <th>事实</th>
+                    <th>回答</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Isn't he a man?</td>
+                    <td>他是</td>
+                    <td>Yes, he is.</td>
+                    <td>看事实，他是 → he is → Yes</td>
+                </tr>
+                <tr>
+                    <td>Isn't he a man?</td>
+                    <td>他不是</td>
+                    <td>No, he isn't.</td>
+                    <td>看事实，他不是 → he isn't → No</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 否定疑问句回答：看事实，不看问题形式<br>
+            - 他是 → he is → Yes<br>
+            - 他不是 → he isn't → No<br>
+            - 不要被问题的否定形式迷惑
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>14. 顺位判断流程图</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.1em;">
+            <strong>一般疑问句顺位判断流程</strong><br><br>
+            看到陈述句 → 准备变一般疑问句<br>
+            ↓<br>
+            第一步：找谓语，看有没有助动词（be/情态/do/完成助动词）<br>
+            ↓<br>
+            有 → 直接把助动词提到主语前面 → 完事<br>
+            ↓<br>
+            没有助动词 → 看有没有 be 动词（am/is/are/was/were）<br>
+            ↓<br>
+            有 be 动词 → 直接把 be 提前 → 完事<br>
+            ↓<br>
+            没有 be 动词 → 抽象出 do/does/did<br>
+            ↓<br>
+            do 放在句首 + 动词恢复原形 → 完事
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>15. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G67 核心方法总结</strong><br><br>
+            第一步：找谓语 → 看有没有助动词<br>
+            ↓<br>
+            有助动词（be/情态/do/完成）→ 助动词提前<br>
+            ↓<br>
+            没有助动词 → 有 be 动词 → be 提前<br>
+            ↓<br>
+            没有 be 动词 → 抽象出 do/does/did → do 放句首 + 动词原形<br>
+            ↓<br>
+            特殊情况：<br>
+            &emsp;① there be → be there（完事）<br>
+            &emsp;② some → any（疑问句）/ 希望肯定回答用 some<br>
+            &emsp;③ 否定疑问句 → 看事实回答（他是→Yes he is / 他不是→No he isn't）
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 有狭义助动词 → 选狭义助动词（do/does/did）<br>
+            - 没有 → 选 be 动词（am/is/are/was/were）<br>
+            - 没有 be → 抽象出 do/does/did<br>
+            - 助动词 + doing/done → 助动词提前<br>
+            - 助动词 + 系动词 → 助动词提前（been/being 不变）<br>
+            - 非 be 类系动词 → 抽象 do/does/did + 动词原形<br>
+            - there be → be there（完事）<br>
+            - 疑问句 some → any（希望肯定回答用 some）<br>
+            - 否定疑问句回答 → 看事实不看问题形式
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>16. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+一般疑问句（G67）
+├── 核心公式：狭义助动词 > be动词 > 其他动词
+│   ├── 有狭义助动词 → 选它
+│   ├── 没有 → 选be动词
+│   └── 没有be → 抽象出do/does/did
+│
+├── 动词分类（公式的前提）
+│   ├── 助动词：be动词/情态/狭义助动词/完成助动词
+│   ├── 实意动词：表具体动作，可单独构成谓语
+│   └── 系动词：be动词类 / 非be类（sounds/became/seem）
+│
+├── 方法一：实意动词 → 抽象do/does/did + 动词原形
+│   ├── He plays → Does he play?
+│   ├── He played → Did he play?
+│   └── I play → Do you play?（第一人称变第二人称）
+│
+├── 方法二：be动词 → 直接提前
+│   ├── He is a student → Is he a student?
+│   └── I am → Are you...?（第一人称变第二人称）
+│
+├── 方法三：非be类系动词 → 抽象do/does/did + 动词原形
+│   ├── It sounds interesting → Does it sound interesting?
+│   └── They became friends → Did they become friends?
+│
+├── 方法四：助动词+动词 → 助动词直接提前
+│   ├── He is playing → Is he playing?
+│   ├── He can speak → Can he speak?
+│   └── He has become → Has he become?
+│
+├── 核心难点：助动词+系动词
+│   ├── He is being a man → Is he being a man?
+│   ├── We are becoming friends → Are we becoming friends?
+│   ├── He can be the one → Can he be the one?
+│   └── He has been doing → Has he been doing?
+│
+├── 特殊情况一：there be → be there（完事）
+│   └── There is a desk → Is there a desk?
+│
+├── 特殊情况二：some vs any
+│   ├── 疑问句一般用 any
+│   └── 希望肯定回答/邀请时用 some（表现真诚）
+│
+├── 特殊情况三：否定疑问句
+│   ├── Isn't he a man?（语气更强）
+│   └── 回答看事实：他是→Yes he is / 他不是→No he isn't
+│
+└── 核心口诀
+    ├── 有狭义助动词 → 选它
+    ├── 没有 → 选be
+    ├── 没有be → 抽象do/does/did
+    ├── 助动词+系动词 → 助动词提前
+    ├── there be → be there
+    ├── some→any（希望肯定用some）
+    └── 否定疑问句→看事实回答
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记顺位公式：</strong>狭义助动词 &gt; be动词 &gt; 其他动词。有就用，没有就抽象。这是本节课最重要的方法论。</li>
+            <li><strong>牢记动词分类：</strong>助动词（be/情态/狭义do/完成have）、实意动词、系动词（be类/非be类）。如果动词分类不清楚，本节课会"莫名其妙"。</li>
+            <li><strong>牢记非be类系动词不能直接提前：</strong>sounds/became/seem 不是 be 动词 → 不能直接提前 → 必须抽象出 do/does/did + 动词原形。</li>
+            <li><strong>牢记助动词+系动词的结构：</strong>been 是 be 的过去分词，being 是 be 的 doing 形式。助动词提前即可，been/being 不变。</li>
+            <li><strong>牢记 there be 句型：</strong>be there → 完事。把 be 动词提到 there 前面。</li>
+            <li><strong>牢记 some/any 区别：</strong>疑问句一般用 any，但希望得到肯定回答/邀请别人时用 some（表现真诚）。</li>
+            <li><strong>牢记否定疑问句回答：</strong>看事实不看问题形式。他是 → Yes he is / 他不是 → No he isn't。不要被问题的否定形式迷惑。</li>
+            <li><strong>下节课预告：</strong>下节课讲特殊疑问句和选择疑问句。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

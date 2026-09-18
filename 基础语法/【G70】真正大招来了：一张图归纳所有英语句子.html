@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G70 一张图归纳所有英语句子：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G70】真正大招来了：一张图归纳所有英语句子</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G70 是「基础语法」系列第70课，由陈老师主讲。本节课是整个语法系列的<strong>总纲课/收官课</strong>，紧接 G69「强调句」。老师在前69节课中讲了大量重要且深刻的语法知识，但内容比较散乱，本节课的目标是将前面所有知识点<strong>串联起来</strong>，用一个万能公式——<strong>简单陈述句模型</strong>，将几乎所有的英语句子囊括进去。</p>
+        <p>本节课重点讲解：<strong>① 简单陈述句模型的完整结构</strong>、<strong>② 名词的六种形式（含it做形式主语）</strong>、<strong>③ 谓语的三种构成方式（助动词/实系动词/系动词）</strong>、<strong>④ 五大基本句型（SV/SVO/SVOC/SVIO DO/SVT）的推导</strong>、<strong>⑤ 句子复杂化的三种方法（从句/并列/分裂）</strong>、<strong>⑥ 模型的三种例外（祈使句/倒装句/强调句）</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握简单陈述句的万能模型——(状语) + S + (后置定语/状语/同位语/插入语) + V + ...，理解所有英语句子都是在这个简单模型基础上，通过"从句""并列""分裂"三种方法复杂化而来。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课是前面69节课的总和，需要熟练掌握前面所有知识点：五大基本句型、动词分类、从句、非谓语、后置定语、同位语、倒装、强调句等。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 简单陈述句万能模型</h2>
+        <p>老师提出了本节课最核心的公式——简单陈述句模型：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>(状语) + S + (后置定语/状语/同位语/插入语) + V + ...</strong>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 句子开头不一定是主语，前面可以有状语（In the morning / Yesterday / When I was young...）<br>
+            - 主语后面一定是谓语，但主谓之间可能有"障碍物"（后置定语/状语/同位语/插入语）<br>
+            - 谓语后面是各种成分（宾语/表语/补语等），后面还可以继续加定语/状语/同位语<br>
+            - 状语是最强大的，到处都可以放
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 主语（S）的六种形式</h2>
+        <p>老师详细讲解了主语（名词性成分）的六种形式，分为两大类：</p>
+
+        <h3>第一类：名词性成分（前面可加后置定语缩小范围）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>说明</th>
+                    <th>特点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td><strong>名词短语</strong></td>
+                    <td>普通名词+定语</td>
+                    <td>很笼统，后面可加后置定语</td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td><strong>DTS</strong></td>
+                    <td>代词/限定词/数词</td>
+                    <td>很笼统，后面可加后置定语</td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td><strong>Shots</strong></td>
+                    <td>（名词性缩略形式）</td>
+                    <td>很笼统，后面可加后置定语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>第二类：长形式（可能头重脚轻，前面用it做形式主语）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>抽象形式</th>
+                    <th>特点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td><strong>不定式</strong></td>
+                    <td>to do</td>
+                    <td>太长，前面可能用it做形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td><strong>动名词</strong></td>
+                    <td>doing</td>
+                    <td>太长，前面可能用it做形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td><strong>从句</strong></td>
+                    <td>引导词 + 句子</td>
+                    <td>太长，前面可能用it做形式主语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——it的两种身份：</strong><br>
+            - it做人称代词（如 It is good / It is sunny）→ it就是主语本身<br>
+            - it做形式主语（如 It is good to learn English）→ it代替后面的不定式/动名词/从句<br>
+            - 判断方法：看到 it 开头 + to do / doing / that 从句 → 很可能是形式主语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 主谓之间的"障碍物"</h2>
+        <p>老师强调，主谓之间不一定直接跟着谓语，可能隔着各种"障碍物"：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>障碍物类型</th>
+                    <th>概率（从高到低）</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>谓语</strong></td>
+                    <td>最高</td>
+                    <td>I finally found you.</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>高</td>
+                    <td>The boy sitting there is my brother.</td>
+                </tr>
+                <tr>
+                    <td><strong>状语</strong></td>
+                    <td>中</td>
+                    <td>I really like you.</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语</strong></td>
+                    <td>低</td>
+                    <td>I, a seventeen-year-old boy, am your friend.</td>
+                </tr>
+                <tr>
+                    <td><strong>插入语</strong></td>
+                    <td>最低（到处可插入）</td>
+                    <td>The movie, I think, is great.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到句子不要慌，按概率依次判断主谓之间是什么<br>
+            - 概率排序：谓语 > 后置定语 > 状语 > 同位语 > 插入语<br>
+            - 状语是最强大的，到处都可以放（I can hardly speak English）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 谓语的三种构成方式</h2>
+        <p>老师将谓语部分拆解为三种构成方式，这是本节课最精彩的部分：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>谓语构成</th>
+                    <th>说明</th>
+                    <th>后面接什么</th>
+                    <th>能否单独构成谓语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>起辅助作用，不能单独构成谓语</td>
+                    <td>doing / done / 动词原形</td>
+                    <td>❌ 必须加实系动词或系动词</td>
+                </tr>
+                <tr>
+                    <td><strong>实系动词</strong></td>
+                    <td>表具体动作</td>
+                    <td>可单独使用 / 也可加宾语</td>
+                    <td>✅ 可以单独构成谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>不表具体动作，表状态</td>
+                    <td>表语（名词/形容词/副词/介词短语）</td>
+                    <td>✅ 可以单独构成谓语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀——助动词的分类：</strong><br>
+            - be动词（am/is/are/was/were）→ 后面接 doing 或 done<br>
+            - 情态动词（can/could/may/might...）→ 后面接动词原形<br>
+            - 狭义助动词（do/does/did）→ 后面接动词原形<br>
+            - 完成助动词（have/has/had）→ 后面接过去分词（done）
+        </div>
+
+        <div class="annotation">
+            核心逻辑：谓语的开头可能是助动词/实系动词/系动词，但谓语的结尾一定会落脚到实系动词或系动词身上。助动词可以层层叠加（最多三个），但最终还是要落脚到实系动词或系动词。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 五大基本句型的推导</h2>
+        <p>老师从实系动词的分类（vi/vt）出发，推导出五大基本句型：</p>
+
+        <h3>句型一：SV（主谓）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + vi（不及物动词）→ 不接宾语 → SV结构</div>
+            <div class="example-item">→ 后面可加状语（修饰动词）或补语</div>
+            <div class="example-item">→ 例：I got up. / He runs every day.</div>
+        </div>
+
+        <h3>句型二：SVO（主谓宾）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + vi + 介词 + O → 构成SVO结构</div>
+            <div class="example-item">→ 或 S + vt1（接一个宾语）→ SVO结构</div>
+            <div class="example-item">→ 后面可加定语（O是名词）/ 状语 / 同位语</div>
+            <div class="example-item">→ 例：I play basketball. / She likes reading.</div>
+        </div>
+
+        <h3>句型三：SVOC（主谓宾宾补）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + vt1 + O + C（宾补）→ SVOC结构</div>
+            <div class="example-item">→ 宾补：名词/形容词/介词/to do/doing/done</div>
+            <div class="example-item">→ 例：I think you beautiful.（我认为你很漂亮）</div>
+            <div class="example-item">→ 宾补后面也可加定语/状语</div>
+        </div>
+
+        <h3>句型四：SVitOC（形式宾语结构）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + V + it（形式宾语）+ O + C + 真正的O（to do/doing/that从句）</div>
+            <div class="example-item">→ 当真正的宾语太长（头重脚轻）时，用it做形式宾语</div>
+            <div class="example-item">→ 例：We all think it important to learn English well.</div>
+            <div class="example-item">→ 真宾语：to learn English well（不定式做真正的宾语）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——形式宾语it vs 形式主语it：</strong><br>
+            - 形式主语：It is good to learn English.（it代替后面的to do做主语）<br>
+            - 形式宾语：We think it important to learn English.（it代替后面的to do做宾语）<br>
+            - 共同点：都是it代替后面太长的成分，避免头重脚轻
+        </div>
+
+        <h3>句型五：SVIO DO（主谓间宾直宾）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + vt2（接两个宾语）+ IO（间宾）+ DO（直宾）→ SVIO DO结构</div>
+            <div class="example-item">→ 可变序：S + vt2 + DO + to/for + IO</div>
+            <div class="example-item">→ 例：She told me a story. → She told a story to me.</div>
+            <div class="example-item">→ IO和DO都是宾语（名词性），后面可加定语/状语/同位语</div>
+        </div>
+
+        <h3>句型六：SVT（主系表）</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ S + 系动词 + P（表语）→ SVT结构</div>
+            <div class="example-item">→ 表语：名词/形容词/副词（小副词如in/out）/ 介词短语</div>
+            <div class="example-item">→ 例：He is a student. / She is beautiful. / He is at home.</div>
+            <div class="example-item">→ there be句型 = SVT的倒装演化形式</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——表语 vs 宾语/补语：</strong><br>
+            - 表语（P）：系动词后面，描述主语的状态 → 名词/形容词/副词/介词短语<br>
+            - 宾语（O）：及物动词后面，接受动作 → 名词性成分<br>
+            - 补语（C）：宾语后面，补充说明宾语 → 名词/形容词/介词/to do/doing/done<br>
+            - 表语的范围比宾语/补语更广，因为系动词不表具体动作，表状态
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 句子复杂化的三种方法</h2>
+        <p>老师指出，所有复杂的英语句子，都是在简单陈述句模型的基础上，通过三种方法复杂化而来的：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方法</th>
+                    <th>核心逻辑</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>① 从句</strong></td>
+                    <td>用一个句子来充当某个成分</td>
+                    <td>状语用句子→状语从句；主语用句子→主语从句；定语用句子→定语从句；宾语用句子→宾语从句；表语用句子→表语从句；同位语用句子→同位语从句；宾补用句子→宾补从句；间宾/直宾用句子→间宾从句/直宾从句</td>
+                </tr>
+                <tr>
+                    <td><strong>② 并列</strong></td>
+                    <td>像病毒复制一样，用and连接相同结构</td>
+                    <td>主语and主语 / 谓语and谓语 / 状语and状语 / 句子and句子（并列句）→ 无穷无尽</td>
+                </tr>
+                <tr>
+                    <td><strong>③ 分裂</strong>（嵌套）</td>
+                    <td>环环相扣，像细胞分裂一样</td>
+                    <td>主语里的名词可以再分（有主谓）；谓语里的动词可以再分；状语从句里也有主谓；定语从句里也有主谓 → 子子孙孙无穷尽也</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 从句 = 用一个句子充当某个成分（状语从句/主语从句/定语从句/宾语从句/表语从句/同位语从句/宾补从句/间宾从句/直宾从句）<br>
+            - 并列 = 用and连接相同结构（主语and主语/谓语and谓语/状语and状语/句子and句子）<br>
+            - 分裂 = 环环相扣，每个成分里面可以再分（定语从句里有主谓，状语从句里也有主谓）<br>
+            - 所有复杂句 = 简单句 + 从句/并列/分裂
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 模型的三种例外</h2>
+        <p>老师指出简单陈述句模型有三种例外情况，不满足这个模型：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例外类型</th>
+                    <th>核心特征</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>① 祈使句</strong></td>
+                    <td>省略主语和助动词，动词原形开头</td>
+                    <td>本质上是省略了主语和助动词，仍然满足模型，但看起来不满足</td>
+                    <td>Do it. / Be careful.</td>
+                </tr>
+                <tr>
+                    <td><strong>② 倒装句</strong></td>
+                    <td>谓语跑到主语前面</td>
+                    <td>包括完全倒装和 partial倒装（疑问句也是部分倒装）</td>
+                    <td>Can you speak English? / Here comes the bus.</td>
+                </tr>
+                <tr>
+                    <td><strong>③ 强调句</strong></td>
+                    <td>在完整简单句基础上加了 It is/was...that</td>
+                    <td>多了 It is/was...that 三个词，不满足简单模型</td>
+                    <td>It was in the classroom that she told me.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation">
+            核心逻辑：祈使句本质上是省略（省略主语和助动词），倒装句是语序颠倒，强调句是加了额外成分（It is/was...that）。这三种是简单陈述句模型的"例外"，但理解了本质后也不难。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 完整模型结构图（文字版）</h2>
+
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8; font-size: 0.95em;">
+简单陈述句模型（一张图归纳所有英语句子）
+│
+├── 开头：(状语) [In the morning / Yesterday / When I was young...]
+│
+├── 主语 S（名词性成分，六种形式）：
+│   ├── 名词短语 → 可加后置定语
+│   ├── DTS（代词/限定词/数词）→ 可加后置定语
+│   ├── Shots → 可加后置定语
+│   ├── 不定式 (to do) → 可能用it做形式主语
+│   ├── 动名词 (doing) → 可能用it做形式主语
+│   └── 从句 (引导词+句子) → 可能用it做形式主语
+│
+├── 主谓之间的"障碍物"（概率从高到低）：
+│   ├── 谓语（最高）
+│   ├── 后置定语（高）
+│   ├── 状语（中）→ 到处可放
+│   ├── 同位语（低）
+│   └── 插入语（最低，到处可插）
+│
+├── 谓语 V（三种构成方式）：
+│   ├── 助动词（不能单独构成谓语）
+│   │   ├── be动词 → 后接doing/done
+│   │   ├── 情态动词 → 后接动词原形
+│   │   ├── 狭义助动词(do/does/did) → 后接动词原形
+│   │   └── 完成助动词(have/has/had) → 后接done
+│   ├── 实系动词（可单独构成谓语，表具体动作）
+│   │   ├── vi（不及物）→ SV结构 → 后接状语/补语
+│   │   ├── vi+介词 → SVO结构 → 后接定语/状语/同位语
+│   │   └── vt1（接一个宾语）→ SVO结构 → 后接定语/状语/同位语/宾补
+│   └── 系动词（可单独构成谓语，不表具体动作）
+│       └── SVT结构（主系表）→ 后接表语（名词/形容词/副词/介词短语）
+│           └── there be = SVT的倒装演化
+│
+├── SVO的扩展：
+│   ├── SVOC（主谓宾宾补）→ 宾补：名词/形容词/介词/to do/doing/done
+│   ├── SVitOC（形式宾语）→ it代替后面太长的真正宾语
+│   └── SVIO DO（主谓间宾直宾）→ 可变序：SV DO to/for IO
+│
+├── 句子复杂化的三种方法：
+│   ├── ① 从句：用一个句子充当某个成分
+│   │   ├── 状语从句 / 主语从句 / 定语从句 / 宾语从句
+│   │   ├── 表语从句 / 同位语从句 / 宾补从句
+│   │   └── 间宾从句 / 直宾从句 / 形式宾语的宾语从句
+│   ├── ② 并列：用and连接相同结构（无穷无尽）
+│   └── ③ 分裂：环环相扣，每个成分可以再分（子子孙孙无穷尽）
+│
+└── 模型的三种例外：
+    ├── ① 祈使句（省略主语和助动词，动词原形开头）
+    ├── ② 倒装句（谓语跑到主语前面，含疑问句）
+    └── ③ 强调句（It is/was...that... 多了三个词）
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 五大句型完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>句型</th>
+                    <th>全称</th>
+                    <th>核心结构</th>
+                    <th>例句</th>
+                    <th>可加成分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SV</strong></td>
+                    <td>主谓</td>
+                    <td>S + vi（不及物动词）</td>
+                    <td>I got up. / He runs every day.</td>
+                    <td>状语（修饰vi）/ 补语</td>
+                </tr>
+                <tr>
+                    <td><strong>SVO</strong></td>
+                    <td>主谓宾</td>
+                    <td>S + vt1 + O</td>
+                    <td>I play basketball.</td>
+                    <td>定语（修饰O）/ 状语 / 同位语</td>
+                </tr>
+                <tr>
+                    <td><strong>SVOC</strong></td>
+                    <td>主谓宾宾补</td>
+                    <td>S + vt1 + O + C</td>
+                    <td>I think you beautiful.</td>
+                    <td>宾补后可加定语/状语</td>
+                </tr>
+                <tr>
+                    <td><strong>SVitOC</strong></td>
+                    <td>形式宾语</td>
+                    <td>S + V + it + O + C + 真O</td>
+                    <td>We think it important to learn English.</td>
+                    <td>真O：to do/doing/that从句</td>
+                </tr>
+                <tr>
+                    <td><strong>SVIO DO</strong></td>
+                    <td>主谓间宾直宾</td>
+                    <td>S + vt2 + IO + DO</td>
+                    <td>She told me a story.</td>
+                    <td>可变序：SV DO to/for IO</td>
+                </tr>
+                <tr>
+                    <td><strong>SVT</strong></td>
+                    <td>主系表</td>
+                    <td>S + 系动词 + P</td>
+                    <td>He is a student. / She is beautiful.</td>
+                    <td>there be = SVT倒装演化</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心知识点总结</h2>
+
+        <h3>知识点一：简单陈述句万能模型</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>模型公式</strong></td>
+                    <td>(状语) + S + (后置定语/状语/同位语/插入语) + V + ...</td>
+                </tr>
+                <tr>
+                    <td><strong>开头</strong></td>
+                    <td>不一定是主语，前面可以有状语（In the morning / Yesterday / When I was young）</td>
+                </tr>
+                <tr>
+                    <td><strong>主谓之间</strong></td>
+                    <td>可能有障碍物：后置定语/状语/同位语/插入语（概率从高到低）</td>
+                </tr>
+                <tr>
+                    <td><strong>谓语结尾</strong></td>
+                    <td>无论前面加多少助动词，最终一定落脚到实系动词或系动词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：名词的六种形式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分类</th>
+                    <th>形式</th>
+                    <th>特点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一类（笼统）</strong></td>
+                    <td>名词短语 / DTS / Shots</td>
+                    <td>前面可加后置定语缩小范围</td>
+                </tr>
+                <tr>
+                    <td><strong>第二类（太长）</strong></td>
+                    <td>不定式(to do) / 动名词(doing) / 从句(引导词+句子)</td>
+                    <td>可能头重脚轻 → 前面用it做形式主语/宾语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：谓语的三种构成</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>构成方式</th>
+                    <th>能否单独构成谓语</th>
+                    <th>助动词子类及后接形式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>助动词</strong></td>
+                    <td>❌ 不能</td>
+                    <td>be→doing/done；情态→原形；do/does/did→原形；have/has/had→done</td>
+                </tr>
+                <tr>
+                    <td><strong>实系动词</strong></td>
+                    <td>✅ 能</td>
+                    <td>vi→SV；vi+介词→SVO；vt1→SVO/SVOC</td>
+                </tr>
+                <tr>
+                    <td><strong>系动词</strong></td>
+                    <td>✅ 能</td>
+                    <td>→ SVT（主系表），含there be倒装</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：句子复杂化的三种方法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>方法</th>
+                    <th>核心逻辑</th>
+                    <th>结果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>从句</strong></td>
+                    <td>用一个句子充当某个成分</td>
+                    <td>状语从句/主语从句/定语从句/宾语从句/表语从句/同位语从句/宾补从句/间宾从句/直宾从句</td>
+                </tr>
+                <tr>
+                    <td><strong>并列</strong></td>
+                    <td>用and连接相同结构</td>
+                    <td>主语and主语/谓语and谓语/状语and状语/句子and句子</td>
+                </tr>
+                <tr>
+                    <td><strong>分裂</strong></td>
+                    <td>环环相扣，每个成分可以再分</td>
+                    <td>定语从句里有主谓，状语从句里也有主谓→子子孙孙无穷尽</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：模型的三种例外</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例外</th>
+                    <th>本质</th>
+                    <th>特征</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>祈使句</strong></td>
+                    <td>省略主语和助动词</td>
+                    <td>动词原形开头（Do it. / Be careful.）</td>
+                </tr>
+                <tr>
+                    <td><strong>倒装句</strong></td>
+                    <td>谓语跑到主语前面</td>
+                    <td>含完全倒装和partial倒装（疑问句也是部分倒装）</td>
+                </tr>
+                <tr>
+                    <td><strong>强调句</strong></td>
+                    <td>在完整简单句上加 It is/was...that</td>
+                    <td>多了三个词，不满足简单模型</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G70 核心方法总结</strong><br><br>
+            第一步：看到句子 → 先看开头有没有状语（In the morning / Yesterday...）<br>
+            ↓<br>
+            第二步：找到主语 S（六种形式：名词短语/DTS/Shots/to do/doing/从句）<br>
+            ↓<br>
+            第三步：判断主谓之间的"障碍物"（概率排序：谓语>后置定语>状语>同位语>插入语）<br>
+            ↓<br>
+            第四步：找到谓语 V（三种构成：助动词→实系动词/系动词）<br>
+            ↓<br>
+            第五步：判断句型（SV/SVO/SVOC/SVitOC/SVIO DO/SVT）<br>
+            ↓<br>
+            第六步：看句子复杂化方式（从句/并列/分裂）<br>
+            ↓<br>
+            第七步：检查是否是例外（祈使句/倒装句/强调句）
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 简单陈述句模型：(状语) + S + (障碍物) + V + ...<br>
+            - 名词六种：名词短语/DTS/Shots/to do/doing/从句<br>
+            - 主谓之间障碍物：谓语>后置定语>状语>同位语>插入语<br>
+            - 谓语三种构成：助动词(不能单独)/实系动词(可单独)/系动词(可单独)<br>
+            - 助动词四类：be→doing/done；情态→原形；do→原形；have→done<br>
+            - 五大句型：SV/SVO/SVOC/SVitOC/SVIO DO/SVT(含there be)<br>
+            - 复杂化三方法：从句/并列/分裂<br>
+            - 三种例外：祈使句/倒装句/强调句<br>
+            - 谓语结尾一定落脚到实系动词或系动词
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+一张图归纳所有英语句子（G70）
+├── 简单陈述句万能模型
+│   ├── (状语) + S + (后置定语/状语/同位语/插入语) + V + ...
+│   └── 开头不一定是主语，主谓之间可能有障碍物
+│
+├── 主语S的六种形式
+│   ├── 名词短语 → 可加后置定语
+│   ├── DTS（代词/限定词/数词）→ 可加后置定语
+│   ├── Shots → 可加后置定语
+│   ├── 不定式(to do) → 可能用it做形式主语
+│   ├── 动名词(doing) → 可能用it做形式主语
+│   └── 从句(引导词+句子) → 可能用it做形式主语
+│
+├── 谓语V的三种构成
+│   ├── 助动词（不能单独构成谓语）
+│   │   ├── be动词 → doing/done
+│   │   ├── 情态动词 → 动词原形
+│   │   ├── 狭义助动词(do/does/did) → 动词原形
+│   │   └── 完成助动词(have/has/had) → done
+│   ├── 实系动词（可单独构成谓语，表具体动作）
+│   │   ├── vi → SV → 后接状语/补语
+│   │   ├── vi+介词 → SVO → 后接定语/状语/同位语
+│   │   └── vt1 → SVO/SVOC → 后接定语/状语/同位语/宾补
+│   └── 系动词（可单独构成谓语，不表具体动作）
+│       └── SVT（主系表）→ 含there be倒装
+│
+├── SVO的扩展
+│   ├── SVOC（主谓宾宾补）
+│   ├── SVitOC（形式宾语）
+│   └── SVIO DO（主谓间宾直宾）→ 可变序
+│
+├── 句子复杂化的三种方法
+│   ├── ① 从句：用一个句子充当某个成分
+│   ├── ② 并列：用and连接相同结构
+│   └── ③ 分裂：环环相扣，每个成分可以再分
+│
+└── 模型的三种例外
+    ├── ① 祈使句（省略主语和助动词）
+    ├── ② 倒装句（谓语跑到主语前面）
+    └── ③ 强调句（It is/was...that...）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记简单陈述句万能模型：</strong>(状语) + S + (后置定语/状语/同位语/插入语) + V + ...。这是本节课最重要的方法论，掌握了这个模型就掌握了所有英语句子的内核。</li>
+            <li><strong>牢记名词的六种形式：</strong>名词短语/DTS/Shots（可加后置定语）和 to do/doing/从句（可能用it做形式主语/宾语）。</li>
+            <li><strong>牢记主谓之间的障碍物概率排序：</strong>谓语 > 后置定语 > 状语 > 同位语 > 插入语。看到句子不要慌，按概率依次判断。</li>
+            <li><strong>牢记谓语的三种构成：</strong>助动词（不能单独）/ 实系动词（可单独，表具体动作）/ 系动词（可单独，不表具体动作）。谓语结尾一定落脚到实系动词或系动词。</li>
+            <li><strong>牢记助动词的四类及后接形式：</strong>be→doing/done；情态→原形；do/does/did→原形；have/has/had→done。</li>
+            <li><strong>牢记五大句型及其扩展：</strong>SV/SVO/SVOC/SVitOC/SVIO DO/SVT（含there be）。每个句型后面都可以加定语/状语/同位语。</li>
+            <li><strong>牢记复杂化三方法：</strong>从句（用一个句子充当成分）/ 并列（用and连接相同结构）/ 分裂（环环相扣）。所有复杂句 = 简单句 + 从句/并列/分裂。</li>
+            <li><strong>牢记三种例外：</strong>祈使句（省略主语和助动词）/ 倒装句（谓语跑到主语前面）/ 强调句（It is/was...that...）。</li>
+            <li><strong>综合应用建议：</strong>拿到任何长难句，先用简单陈述句模型定位主谓，再判断句型，再分析复杂化方式（从句/并列/分裂），层层拆解，万无一失。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

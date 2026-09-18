@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G59 长难句分析（2）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G59】长难句分析（2）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G59 是「基础语法」系列第59课，由陈老师主讲。本节课是句子部分的<strong>长难句实战分析课（续）</strong>，紧接 G58「长难句分析（1）」。本节课难度进一步升级，重点分析三个高难度长难句，涉及<strong>三个谓语的嵌套结构</strong>、<strong>四层从句的并列与嵌套</strong>、<strong>同位语从句与后置定语的联合识别</strong>等核心技能。</p>
+        <p>本节课首先揭晓 G58 留下的悬念题（例句一），然后分析一个包含四个谓语、三个连接词的超长句（例句二），最后分析一个同位语从句+后置定语的复合句（例句三）。第三个句子留作下节课的悬念。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过3个高难度长难句的逐句深度分析，巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程，特别强化"主句只是is"的颠覆性认知、多层从句的层次划分（第一层/第二层）、同位语从句的三要素验证等核心技能。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43-G50「从句系列」、G52「翻译公式」、G53-G58「句子成分分析及翻译/长难句分析」的基础上。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心颠覆点：主句可能只是 "is"</h2>
+        <p>老师以 G58 留下的悬念题切入，揭示了一个颠覆很多同学世界观的概念——<strong>主句可能只有一个 "is"</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>What we are most interested in is that the whole equipment is operated only by one person.</strong></div>
+            <div class="example-item">→ 句中有三个谓语：are（interested in，谓语1）+ is（operated，谓语2）+ is（主句系动词，谓语3）</div>
+            <div class="example-item">→ 三个谓语 → 两个连接词 → what 和 that</div>
+            <div class="example-item">→ 排除两个从句后，剩下的就是主句 → 主句只有一个词：<strong>is</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 排除从句就是主句（"排除男人不就是女人了吗"）<br>
+            - 引导词是从句的开端 → 从这里划开<br>
+            - what 引导的从句：what we are most interested in（what 做 in 的宾语）<br>
+            - that 引导的从句：that the whole equipment is operated only by one person<br>
+            - 排除这两个从句后 → 剩下 is → 这就是主句！
+        </div>
+
+        <h3>主句 "is" 的成分分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主句缺不缺成分</strong></td>
+                    <td>缺！is 前面缺主语（what 从句充当），后面缺表语（that 从句充当）</td>
+                </tr>
+                <tr>
+                    <td><strong>大结构</strong></td>
+                    <td>主系表（SVP）→ 主语从句 + is + 表语从句</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译方式</strong></td>
+                    <td>翻译成"……是……"的结构</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心难点：多层从句的层次划分（第一层 vs 第二层）</h2>
+        <p>老师以第二个长难句为例，引入了<strong>"第一层"和"第二层"</strong>的概念，解决多个从句并列时的层次问题：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I am writing these words to you, not knowing whether they will ever reach you, or whether I shall be alive when you read them.</strong></div>
+            <div class="example-item">→ 四个谓语：am writing（谓语1）+ will reach（谓语2）+ shall be（谓语3）+ read（谓语4）</div>
+            <div class="example-item">→ 四个谓语 → 三个连接词 → whether（1）、whether（2）、when（3）</div>
+            <div class="example-item">→ 但 all 是第二层产生的！因为 whether...or whether... 形成了并列关系</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——第一层 vs 第二层：</strong><br>
+            - 第一层：主句 + 直接从句（3个从句对应3个连接词）<br>
+            - 第二层：从句之间又形成了并列关系（whether...or whether...），所以 all 是第二层产生的<br>
+            - 类比：主句是"老大"（只有一个），从句是"小弟"（有很多个）<br>
+            - whether...or... = 也……也……/ 不知道……也不知道……
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句一（悬念揭晓）：What we are most interested in is that the whole equipment is operated only by one person.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：are（谓语1，be interested in 整体看作谓语）+ is（谓语2，operated 是过去分词，is operated 是被动语态）+ is（谓语3，主句系动词）→ 三个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 3 - 1 = 2 → what 和 that</div>
+            <div class="example-item">③ what 引导从句：what we are most interested in（what 做 in 的宾语）</div>
+            <div class="example-item">④ that 引导从句：that the whole equipment is operated only by one person</div>
+            <div class="example-item">⑤ 排除两个从句后 → 剩下 is → 这就是主句！</div>
+            <div class="example-item">⑥ 主句 is 缺成分：前面缺主语，后面缺表语 → 主系表结构</div>
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句1（主语从句）：What we are most interested in</strong></div>
+            <div class="example-item">→ we = 主语；are interested in = 谓语（整体看作一个谓语短语）；most = 状语（修饰 interested）</div>
+            <div class="example-item">→ what = 宾语（做 in 的宾语，提到句首）→ SVO 结构 → 不变序</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句2（表语从句）：that the whole equipment is operated only by one person</strong></div>
+            <div class="example-item">→ that = 不翻译（引导词）；the whole equipment = 主语；is operated = 被动语态（被动及完整）→ 主谓结构 → 不变序</div>
+            <div class="example-item">→ only by one person = 方式状语（修饰 operated，"仅由一个人操作"）→ 需要变序 ✓</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 主语从句 → 不变序（主系表结构）<br>
+            ② 表语从句 → 不变序（主系表结构）<br>
+            ③ 方式状语 only by one person → 变序（调 operated 前面）<br>
+            <br>
+            <strong>翻译：我们最感兴趣的事情是整个设备仅由一个人操作完成。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句二：I am writing these words to you, not knowing whether they will ever reach you, or whether I shall be alive when you read them.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：am writing（谓语1）+ will reach（谓语2）+ shall be（谓语3）+ read（谓语4）→ 四个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 4 - 1 = 3 → whether（1）、whether（2）、when（3）</div>
+            <div class="example-item">③ all 是第二层产生的（因为 whether...or whether... 形成了并列关系）</div>
+            <div class="example-item">④ 划分：主句 I am writing these words to you, not knowing | 从句1 whether they will ever reach you | 从句2 or whether I shall be alive | 从句3 when you read them</div>
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I am writing these words to you, not knowing...</strong></div>
+            <div class="example-item">→ I = 主语；am writing = 谓语；these words = 宾语；to you = 间宾（IO）→ SVOIO 结构 → 不变序</div>
+            <div class="example-item">→ not knowing = 现在分词短语 → 修饰 am writing（同时发生的动作）→ <strong>伴随状语</strong> ✓</div>
+            <div class="example-item">→ 伴随状语 → 动作同时 → 不变序 ✓</div>
+            <div class="example-item">→ 但 knowing 是及物动词 → 后面缺宾语 → 需要接宾语从句</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——not knowing 是伴随状语：</strong><br>
+            - 伴随状语 = 与谓语同时发生的动作<br>
+            - "你写下这些话的时候，同时不知道" → 同时发生 → 伴随状语<br>
+            - 类比：做数学最后一道题的时候，一边做一边不知道能不能做对<br>
+            - 主干完了 + 逗号 + doing → 优先考虑伴随状语
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句1（宾语从句）：whether they will ever reach you</strong></div>
+            <div class="example-item">→ they = 主语；will reach = 谓语；you = 宾语 → SVO 结构 → 不变序</div>
+            <div class="example-item">→ whether = 副词词性，修饰 reach（动词）→ "是否会到达"</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句2（宾语从句，与从句1并列）：or whether I shall be alive</strong></div>
+            <div class="example-item">→ I = 主语；shall be = 系动词；alive = 表语 → 主系表结构 → 不变序</div>
+            <div class="example-item">→ whether = 副词词性，修饰 be → "是否会"</div>
+            <div class="example-item">→ whether...or whether... = "不知道……也不知道……"（并列的宾语从句）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>从句3（时间状语从句）：when you read them</strong></div>
+            <div class="example-item">→ when = 从属连词；you = 主语；read = 谓语；them = 宾语 → SVO 结构</div>
+            <div class="example-item">→ when 修饰 shall be（系动词）→ "当你读到它们的时候，我是否还活着" → 时间状语 → 需要变序 ✓</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 主句 I am writing these words to you → 不变序（SVOIO）<br>
+            ② 伴随状语 not knowing → 不变序（动作同时）<br>
+            ③ 宾语从句 whether they will ever reach you → 不变序（宾从）<br>
+            ④ 宾语从句 or whether I shall be alive → 不变序（宾从）<br>
+            ⑤ 时间状语从句 when you read them → 变序（调 shall be 前面）<br>
+            <br>
+            <strong>翻译：我正写下这些话给你，并不知道它们是否会到达你身边，也不知道当你读到它们的时候，我是否还活着。</strong>
+        </div>
+
+        <div class="annotation">
+            核心逻辑：这是一个军人写在战场上的绝笔信给他的妻子。背景悲壮，理解语境有助于翻译。结构上，not knowing 后面接了两个并列的宾语从句（whether...or whether...），第二个宾语从句中又嵌套了一个时间状语从句（when）。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 例句三：The news that China has successfully launched a new experimental communication satellite Saturday night is very exciting to people all over the world.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：has launched（谓语1，has+过去分词=现在完成时）+ is（谓语2，系动词）→ 两个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 2 - 1 = 1 → that 是从属连词</div>
+            <div class="example-item">③ that 引导从句：that China has successfully launched a new experimental communication satellite</div>
+            <div class="example-item">④ 主句：The news ... is very exciting to people all over the world</div>
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>that China has successfully launched a new experimental communication satellite</strong></div>
+            <div class="example-item">→ China = 主语；has launched = 谓语（现在完成时）；a new experimental communication satellite = 宾语 → SVO 结构 → 不变序</div>
+            <div class="example-item">→ Saturday night = 时间状语 → 修饰 has launched → 需要变序（但放在中文翻译中自然处理）</div>
+        </div>
+
+        <h3>核心辨析：同位语从句的三要素验证</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>that 从句是同位语从句还是定语从句？</strong></div>
+            <div class="example-item">→ 三要素验证：<br>
+            &emsp;① 完整：主句 The news is very exciting → 主系表完整 ✓<br>
+            &emsp;② 抽象：news（消息）是抽象名词 → "今天天气多少度"是 news，"穿普花了什么"也是 news → 有1万个 news ✓<br>
+            &emsp;③ 等同：that China has successfully launched...（中国成功发射了……）= a news（一个消息）✓</div>
+            <div class="example-item">→ 三要素全部满足 → <strong>同位语从句 ✓</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——同位语从句 vs 定语从句：</strong><br>
+            - 同位语从句：从句内容 = 抽象名词的内容（等同关系）→ "中国成功发射了卫星" = "一个消息"<br>
+            - 定语从句：从句内容 ≠ 抽象名词（缩小范围）→ 如 "the news that I heard yesterday"（我昨天听到的消息）→ "我昨天听到的" ≠ "消息"<br>
+            - 判断方法：等同检验 → 等同→同位从；不等同→定从
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>The news ... is very exciting to people all over the world.</strong></div>
+            <div class="example-item">→ The news = 主语；is = 系动词；very exciting = 表语 → 主系表（SVP）→ 不变序</div>
+            <div class="example-item">→ to people all over the world → 修饰 exciting → 方式状语（"对……来说感到激动"）→ 需要变序 ✓</div>
+            <div class="example-item">→ all over the world → 修饰 people → 后置定语（"全世界的人"）→ 需要变序 ✓</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 同位语从句 → 变序（调 news 前面）<br>
+            ② 方式状语 to people all over the world → 变序（调 exciting 前面）<br>
+            ③ 后置定语 all over the world → 变序（调 people 前面）<br>
+            <br>
+            <strong>翻译：中国成功发射了一枚新的实验通讯卫星的消息，对于全世界的人们来说是非常激动人心的。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 三大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>What</strong> we are most interested in is <strong>that</strong> the whole equipment is operated only by one person.</td>
+                    <td><strong>SVP</strong>（主系表）+ 主语从句 + 表语从句</td>
+                    <td>What 从句=主语从句；that 从句=表语从句；only by one person=方式状语</td>
+                    <td>方式状语变序</td>
+                    <td>我们最感兴趣的事情是整个设备仅由一个人操作完成。</td>
+                </tr>
+                <tr>
+                    <td>I am writing these words to you, not knowing <strong>whether</strong> they will ever reach you, <strong>or</strong> <strong>whether</strong> I shall be alive <strong>when</strong> you read them.</td>
+                    <td><strong>SVOIO</strong>（主谓间宾直宾）+ 伴随状语 + 并列宾语从句 + 时间状语从句</td>
+                    <td>not knowing=伴随状语；whether...or whether...=并列宾从；when=时间状语从句</td>
+                    <td>时间状语从句变序</td>
+                    <td>我正写下这些话给你，并不知道它们是否会到达你身边，也不知道当你读到它们的时候，我是否还活着。</td>
+                </tr>
+                <tr>
+                    <td>The news <strong>that</strong> China has successfully launched a new experimental communication satellite Saturday night is very exciting to people all over the world.</td>
+                    <td><strong>SVP</strong>（主系表）+ 同位语从句</td>
+                    <td>that 从句=同位语从句（修饰news）；Saturday night=时间状语；all over the world=后置定语（修饰people）</td>
+                    <td>同位语从句+方式状语+后置定语变序</td>
+                    <td>中国成功发射了一枚新的实验通讯卫星的消息，对于全世界的人们来说是非常激动人心的。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 核心知识点总结</h2>
+
+        <h3>知识点一：主句只是 "is" 的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心方法</strong></td>
+                    <td>排除从句就是主句（"排除男人不就是女人了吗"）</td>
+                </tr>
+                <tr>
+                    <td><strong>引导词识别</strong></td>
+                    <td>what 和 that 都是从句开端 → 从这里划开</td>
+                </tr>
+                <tr>
+                    <td><strong>主句成分</strong></td>
+                    <td>is 前面缺主语（what 从句充当），后面缺表语（that 从句充当）→ 主系表</td>
+                </tr>
+                <tr>
+                    <td><strong>翻译方式</strong></td>
+                    <td>翻译成"……是……"的结构</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：多层从句的层次划分（第一层 vs 第二层）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>层次</th>
+                    <th>说明</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一层</strong></td>
+                    <td>主句 + 直接从句（连接词个数 = V - 1）</td>
+                    <td>whether they will reach / whether I shall be / when you read</td>
+                </tr>
+                <tr>
+                    <td><strong>第二层</strong></td>
+                    <td>从句之间又形成并列关系 → all 是第二层产生的</td>
+                    <td>whether...or whether...（并列的宾语从句）→ all 连接它们</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：not knowing 是伴随状语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>形式</strong></td>
+                    <td>主干完了 + 逗号 + doing（not knowing）</td>
+                </tr>
+                <tr>
+                    <td><strong>修饰对象</strong></td>
+                    <td>修饰谓语动词（am writing），表示同时发生的动作</td>
+                </tr>
+                <tr>
+                    <td><strong>语义</strong></td>
+                    <td>"写的时候同时不知道" → 同时发生 → 伴随状语</td>
+                </tr>
+                <tr>
+                    <td><strong>变序</strong></td>
+                    <td>✅ 不变序（伴随状语 = 动作同时 = 不变序）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：同位语从句的三要素验证</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>要素</th>
+                    <th>说明</th>
+                    <th>本句验证</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>完整</strong></td>
+                    <td>主句不缺成分</td>
+                    <td>The news is very exciting → 主系表完整 ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>抽象</strong></td>
+                    <td>名词是抽象名词（能等同1万个句子）</td>
+                    <td>news → "今天天气多少度"也是 news → 有无数个 news ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>等同</strong></td>
+                    <td>从句内容 = 抽象名词的内容</td>
+                    <td>"中国成功发射了卫星" = "一个消息" ✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：to people all over the world 的双重分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>修饰对象</th>
+                    <th>类型</th>
+                    <th>变序</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>to people</td>
+                    <td>exciting</td>
+                    <td>方式状语</td>
+                    <td>需要变序</td>
+                </tr>
+                <tr>
+                    <td>all over the world</td>
+                    <td>people</td>
+                    <td>后置定语</td>
+                    <td>需要变序</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>What we are most interested in（做主语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td>that the whole equipment is operated only by one person（做表语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>only by one person（修饰 operated）</td>
+                    <td>需要变序</td>
+                    <td>调到 operated 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>伴随状语</strong></td>
+                    <td>not knowing（修饰 am writing）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句（并列）</strong></td>
+                    <td>whether they will ever reach you（做 knowing 的宾语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语从句</strong></td>
+                    <td>when you read them（修饰 shall be）</td>
+                    <td>需要变序</td>
+                    <td>调到 shall be 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>同位语从句</strong></td>
+                    <td>that China has successfully launched...（同位说明 news）</td>
+                    <td>需要变序</td>
+                    <td>调到 news 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语</strong></td>
+                    <td>to people all over the world（修饰 exciting）</td>
+                    <td>需要变序</td>
+                    <td>调到 exciting 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>all over the world（修饰 people）</td>
+                    <td>需要变序</td>
+                    <td>调到 people 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G59 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词 → 判断句型类型<br>
+            ↓<br>
+            第二步：排除从句就是主句（引导词是从句开端 → 从这里划开）<br>
+            ↓<br>
+            第三步：主句可能只是一个 "is" → 前面缺主语，后面缺表语 → 主系表<br>
+            ↓<br>
+            第四步：多层从句 → 第一层（V-1个连接词）+ 第二层（从句之间的并列，如 whether...or...）<br>
+            ↓<br>
+            第五步：主干完了 + 逗号 + doing → 优先考虑伴随状语（不变序）<br>
+            ↓<br>
+            第六步：同位语从句三要素验证（完整+抽象+等同）<br>
+            ↓<br>
+            第七步：变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 排除从句就是主句（"排除男人不就是女人了吗"）<br>
+            - 主句可能只是一个 "is"（不要不敢相信眼前的一切）<br>
+            - 引导词是从句的开端 → 从这里划开<br>
+            - whether...or whether... = 并列的宾语从句 → all 是第二层产生的<br>
+            - 主干完了 + 逗号 + doing → 优先考虑伴随状语（不变序）<br>
+            - 同位语从句三要素：完整+抽象+等同（缺一不可）<br>
+            - news 是抽象名词（有1万个 news）<br>
+            - to people all over the world → to people 修饰 exciting（方式状语）；all over the world 修饰 people（后置定语）<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+长难句分析（2）（G59）
+├── 核心颠覆点：主句可能只是 "is"
+│   ├── 排除从句 = 主句（"排除男人不就是女人了吗"）
+│   └── is 前面缺主语，后面缺表语 → 主系表
+│
+├── 核心难点：多层从句的层次划分
+│   ├── 第一层：主句 + 直接从句（连接词 = V - 1）
+│   └── 第二层：从句之间的并列（whether...or... → all 是第二层产生的）
+│
+├── 例句一（悬念揭晓）：What we are most interested in is that the whole equipment is operated only by one person.
+│   ├── 三个谓语：are(interested in) / is(operated) / is(主句系动词)
+│   ├── what 从句 = 主语从句；that 从句 = 表语从句
+│   ├── only by one person = 方式状语（变序）
+│   └── 翻译：我们最感兴趣的事情是整个设备仅由一个人操作完成。
+│
+├── 例句二：I am writing these words to you, not knowing whether they will ever reach you, or whether I shall be alive when you read them.
+│   ├── 四个谓语：am writing / will reach / shall be / read
+│   ├── 三个连接词：whether(1) / whether(2) / when
+│   ├── all = 第二层（whether...or whether... 并列）
+│   ├── not knowing = 伴随状语（不变序）
+│   ├── whether...or whether... = 并列宾语从句（不变序）
+│   ├── when you read them = 时间状语从句（变序）
+│   └── 翻译：我正写下这些话给你，并不知道它们是否会到达你身边，也不知道当你读到它们的时候，我是否还活着。
+│
+├── 例句三：The news that China has successfully launched a new experimental communication satellite Saturday night is very exciting to people all over the world.
+│   ├── that 从句 = 同位语从句（修饰 news，三要素全满足）
+│   ├── Saturday night = 时间状语
+│   ├── to people all over the world → to people 修饰 exciting（方式状语，变序）
+│   ├── all over the world 修饰 people（后置定语，变序）
+│   └── 翻译：中国成功发射了一枚新的实验通讯卫星的消息，对于全世界的人们来说是非常激动人心的。
+│
+└── 核心口诀
+    ├── 排除从句 = 主句
+    ├── 主句可能只是 "is"
+    ├── whether...or... → all 是第二层
+    ├── 主干完了 + 逗号 + doing → 伴随状语
+    ├── 同位语从句三要素：完整+抽象+等同
+    └── 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记"排除从句就是主句"的方法：</strong>引导词是从句的开端，从这里划开，排除所有从句后剩下的就是主句。主句可能只是一个 "is"，不要不敢相信眼前的一切，要做客观的人！</li>
+            <li><strong>牢记多层从句的层次划分：</strong>第一层是主句+直接从句（连接词=V-1）；第二层是从句之间又形成并列关系（如 whether...or whether...），all 是第二层产生的。</li>
+            <li><strong>牢记 not knowing 是伴随状语：</strong>主干完了 + 逗号 + doing → 优先考虑伴随状语。伴随状语 = 与谓语同时发生的动作 → 不变序。</li>
+            <li><strong>牢记同位语从句的三要素验证：</strong>完整（主句不缺成分）+ 抽象（名词是抽象名词，能等同1万个句子）+ 等同（从句内容 = 抽象名词的内容）。三要素缺一不可。</li>
+            <li><strong>牢记 news 是抽象名词：</strong>"今天天气多少度"是 news，"穿普花了什么"也是 news → 有无数个 news → 是抽象名词。</li>
+            <li><strong>牢记介词短语的双重分析：</strong>to people all over the world → to people 修饰 exciting（方式状语，变序）；all over the world 修饰 people（后置定语，变序）。逐一测试修饰对象。</li>
+            <li><strong>完成悬念题：</strong>下节课会讲解一个更有难度的句子，建议先自行分析，再对照答案。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

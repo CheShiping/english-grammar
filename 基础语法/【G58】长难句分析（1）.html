@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G58 长难句分析（1）：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left-color: var(--warning-border);
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G58】长难句分析（1）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G58 是「基础语法」系列第58课，由陈老师主讲。本节课是句子部分的<strong>长难句实战分析课</strong>，紧接 G57「句子成分分析及翻译5」，开始进入<strong>较长、较难句子的逐句深度分析</strong>，将前面所有句型知识融会贯通，进一步提升句子拆解和翻译能力。</p>
+        <p>本节课共分析4个句子（第4个句子留作下节课的悬念问题），难度逐步递增，重点讲解：<strong>① 疑问语序的还原</strong>、<strong>② 结果状语的识别</strong>、<strong>③ 被动及完整的判断</strong>、<strong>④ It 形式主语的深层分析</strong>、<strong>⑤ 介词短语修饰对象的歧义辨析</strong>、<strong>⑥ 三个谓语的嵌套结构</strong>等核心技能。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过4个长难句的逐句分析，巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程，特别强化疑问语序还原、结果状语与目的状语的辨析、被动及完整判断等核心技能。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G41「并列句」、G43-G50「从句系列」、G52「翻译公式」、G53-G57「句子成分分析及翻译」的基础上。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 例句一：Would you be good enough to tell me when the art exhibition will open?</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：would be（谓语1，would是助动词+be系动词，一起构成谓语）+ will open（谓语2，will+open原形）→ 两个谓语</div>
+            <div class="example-item">② to tell 不是谓语 → to do 是非谓语（不定式），不算谓语</div>
+            <div class="example-item">③ 连接词个数 = V - 1 = 2 - 1 = 1 → when 是从属连词，从 when 处划开</div>
+            <div class="example-item">④ 主句：Would you be good enough to tell me（注意：这是疑问语序，would 提前了）</div>
+            <div class="example-item">⑤ 从句：when the art exhibition will open</div>
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>Would you be good enough to tell me?</strong></div>
+            <div class="example-item">→ 还原陈述语序：You would be good enough to tell me</div>
+            <div class="example-item">→ you = 主语；would be = 谓语（助动词+系动词）；good enough = 表语 → 主系表结构</div>
+            <div class="example-item">→ tell 是及物动词（VT2：tell somebody something），但 to tell 是非谓语，不影响及物性</div>
+            <div class="example-item">→ me = 间宾（IO）；when the art exhibition will open = 直宾从句（DO）→ 双宾语结构</div>
+        </div>
+
+        <h3>核心辨析：to tell me 是结果状语还是目的状语？</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ 很多同学一看到 to do 就认为是目的状语 → 但这里不是！</div>
+            <div class="example-item">→ 测试方法：用中文辅助判断</div>
+            <div class="example-item">→ 目的状语理解："你很好的目的是告诉我" → 不通顺 ✗</div>
+            <div class="example-item">→ 结果状语理解："你这人很好，结果就是告诉我" → 通顺 ✓</div>
+            <div class="example-item">→ to tell me 是<strong>结果状语</strong>（修饰 good enough，表示"好到足以告诉我"的结果）→ 不变序 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——结果状语 vs 目的状语：</strong><br>
+            - 目的状语："做A的目的是B" → 你很好的目的是告诉我 → 不通顺 ✗<br>
+            - 结果状语："你很好，结果就是告诉我" → 通顺 ✓<br>
+            - be good enough to do = 好到足以做某事 → enough...to 结构表结果<br>
+            - 结果状语 → 动作之后 → 不变序 ✓
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>when the art exhibition will open</strong></div>
+            <div class="example-item">→ the art exhibition = 主语；will open = 谓语（will+open原形）</div>
+            <div class="example-item">→ when 是副词词性，修饰 open（动词）→ "什么时候开幕"</div>
+            <div class="example-item">→ open 是不及物动词 → 主句完整 → 时间状语从句 ✓</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 结果状语 to tell me... → 不变序（结果状语动作之后）<br>
+            ② 时间状语从句 when the art exhibition will open → 变序（调 tell 前面）<br>
+            <br>
+            <strong>翻译：你人真好，好心来告诉我艺术展什么时候开幕。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 例句二：It is reported that China is carrying out the plans to build two nuclear power plants during the sixth five-year plan period.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：is reported（谓语1，is+reported过去分词=被动语态）+ is carrying（谓语2，is+carrying out 现在进行时）→ 两个谓语</div>
+            <div class="example-item">② to build 不是谓语 → to do 是非谓语</div>
+            <div class="example-item">③ 连接词个数 = V - 1 = 2 - 1 = 1 → that 是从属连词，从 that 处划开</div>
+            <div class="example-item">④ 主句：It is reported；从句：that China is carrying out the plans to build two nuclear power plants during the sixth five-year plan period</div>
+        </div>
+
+        <h3>核心辨析一：is reported 是被动及完整，不是宾从</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ 很多同学看到 report 是及物动词，就认为后面是宾语从句 → 错！</div>
+            <div class="example-item">→ is reported 是被动语态 → 被动及完整 → 后面不缺宾语 → 不是宾从</div>
+            <div class="example-item">→ 且 it 开头 → 考虑 It 做形式主语 → 去掉 It："___ is reported" → 主句缺主语 ✓</div>
+            <div class="example-item">→ that 从句是真正主语（It 是形式主语）→ <strong>主语从句 ✓</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——It is reported that 的本质：</strong><br>
+            - 不是固定搭配！不是"report + 宾从"的简单记忆<br>
+            - 本质：It（形式主语）+ is reported（被动语态，及物动词已完整）+ that 从句（真正主语）<br>
+            - 类似结构：It is said that / It is believed that / It is reported that...<br>
+            - 判断方法：去掉 It，看主句是否缺主语 → 缺主语 → It 是形式主语
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>China is carrying out the plans to build two nuclear power plants during the sixth five-year plan period.</strong></div>
+            <div class="example-item">→ China = 主语；is carrying out = 谓语（现在进行时）；the plans = 宾语 → 主谓宾，不变序</div>
+            <div class="example-item">→ to build two nuclear power plants → 主干完了的 to do → 优先考虑目的状语 ✓</div>
+            <div class="example-item">→ "实施计划的目的是建造两个核电站" → 通顺 → 目的状语（不变序）✓</div>
+            <div class="example-item">→ during the sixth five-year plan period → 时间状语 → 需要判断修饰哪个动词</div>
+        </div>
+
+        <h3>核心辨析二：during 时间状语修饰 build 还是 carry out？</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ 理解A：在第六个五年计划期间建造 → 修饰 build ✓（通顺）</div>
+            <div class="example-item">→ 理解B：在第六个五年计划期间实施计划 → 修饰 carry out（不太通顺）</div>
+            <div class="example-item">→ 逻辑判断：建造核电站需要时间，"在五年计划期间建造"更合理 → 修饰 build ✓</div>
+            <div class="example-item">→ 时间状语 → 需要变序 → 调到 build 前面</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 主语从句（It 形式主语）→ 不变序<br>
+            ② 目的状语 to build... → 不变序（目的状语动作之后）<br>
+            ③ 时间状语 during the sixth five-year plan period → 变序（调 build 前面）<br>
+            <br>
+            <strong>符合中文习惯：据报道，中国正在实施计划，在第六个五年计划期间建造两座核电站。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 例句三：The important question is how we should train enough personnel in science and technology in a short time.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：is（谓语1，系动词单独构成谓语）+ should train（谓语2，should+train原形）→ 两个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 2 - 1 = 1 → how 是从属连词，从 how 处划开</div>
+            <div class="example-item">③ 主句：The important question is；从句：how we should train enough personnel in science and technology in a short time</div>
+        </div>
+
+        <h3>主句分析</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ The important question = 主语；is = 系动词（单独构成谓语）→ 系动词后面缺表语 → 主句不完整</div>
+            <div class="example-item">→ 主句不完整 → 主从/宾从/表从 → <strong>表语从句 ✓</strong></div>
+            <div class="example-item">→ 大结构：主系表（SVP）→ 主干不变序</div>
+        </div>
+
+        <h3>从句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>we should train enough personnel in science and technology in a short time</strong></div>
+            <div class="example-item">→ we = 主语；should train = 谓语；enough personnel = 宾语 → 主谓宾，不变序</div>
+            <div class="example-item">→ how 是副词词性，修饰 train（动词）→ "怎样训练"</div>
+        </div>
+
+        <h3>核心辨析：两个介词短语的修饰对象</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>in science and technology</strong></div>
+            <div class="example-item">→ 理解A：修饰 personnel → "科技方面的人才"（后置定语）→ 通顺 ✓</div>
+            <div class="example-item">→ 理解B：修饰 train → "在科技方面训练"（方式状语）→ 不太通顺 ✗</div>
+            <div class="example-item">→ 结论：修饰 personnel → 后置定语 → 需要变序 ✓</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>in a short time</strong></div>
+            <div class="example-item">→ 理解A：修饰 personnel → "短时间内的人才" → 不通顺 ✗</div>
+            <div class="example-item">→ 理解B：修饰 train → "在短时间内训练出来" → 通顺 ✓</div>
+            <div class="example-item">→ 结论：修饰 train → 时间状语 → 需要变序 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——介词短语修饰对象的判断方法：</strong><br>
+            - 同一个位置出现多个介词短语时，逐一测试修饰名词（后置定语）还是动词（状语）<br>
+            - in science and technology → 修饰 personnel（"科技方面的人才"）→ 后置定语<br>
+            - in a short time → 修饰 train（"在短时间内训练"）→ 时间状语<br>
+            - 思路必须足够清晰，这是长难句分析的关键能力
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 表语从句 → 不变序（主系表结构）<br>
+            ② 后置定语 in science and technology → 变序（调 personnel 前面）<br>
+            ③ 时间状语 in a short time → 变序（调 train 前面）<br>
+            <br>
+            <strong>翻译：重要的问题是，我们应该怎样在短时间内训练足够的科技方面的人才。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 例句四（悬念题）：What we are most interested in is that the whole equipment is operated only by one person.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>初步分析（留待下节课深入）：</strong></div>
+            <div class="example-item">① 找谓语：are interested（谓语1，be interested in 看作短语谓语）+ is operated（谓语2，被动语态）→ 三个谓语？</div>
+            <div class="example-item">② 注意：is operated 中 is 是助动词 + operated 过去分词 → 被动语态 → 一个谓语</div>
+            <div class="example-item">③ 连接词个数 = V - 1 → 需要仔细数谓语个数</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心悬念——这个句子的主句是什么？</strong><br>
+            - 句中有三个谓语动词：are（interested）/ is（operated）/ 还有一个 is（主句系动词）<br>
+            - 两个引导词：what / that<br>
+            - 关键问题：主句到底是哪一部分？<br>
+            - what 引导的从句是什么类型？that 引导的从句又是什么类型？<br>
+            - 老师留作下节课的悬念，检验同学们是否真正掌握了长难句分析方法
+        </div>
+
+        <div class="annotation">
+            核心逻辑：这个句子是 G58 的压轴题，难度最大。涉及三个谓语的嵌套、两个引导词的层次划分。老师没有直接给出答案，而是留给同学们思考，下节课再揭晓。建议同学们先自行分析，再对照下节课的答案。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 四大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Would you be good enough to tell me <strong>when the art exhibition will open</strong>?</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 结果状语 + 时间状语从句</td>
+                    <td>to tell me = 结果状语；when... = 时间状语从句（做 tell 的直宾）</td>
+                    <td>时间状语从句变序；结果状语不变序</td>
+                    <td>你人真好，好心来告诉我艺术展什么时候开幕。</td>
+                </tr>
+                <tr>
+                    <td>It is reported that China is carrying out the plans <strong>to build two nuclear power plants during the sixth five-year plan period</strong>.</td>
+                    <td><strong>SVP</strong>（主系表）+ It形式主语 + 主语从句</td>
+                    <td>It = 形式主语；that 从句 = 真正主语；to build = 目的状语；during... = 时间状语（修饰 build）</td>
+                    <td>时间状语变序；目的状语不变序</td>
+                    <td>据报道，中国正在实施计划，在第六个五年计划期间建造两座核电站。</td>
+                </tr>
+                <tr>
+                    <td>The important question is <strong>how we should train enough personnel in science and technology in a short time</strong>.</td>
+                    <td><strong>SVP</strong>（主系表）+ 表语从句</td>
+                    <td>how = 副词修饰 train；in science... = 后置定语（修饰 personnel）；in a short time = 时间状语（修饰 train）</td>
+                    <td>后置定语+时间状语变序</td>
+                    <td>重要的问题是，我们应该怎样在短时间内训练足够的科技方面的人才。</td>
+                </tr>
+                <tr>
+                    <td>What we are most interested in is that the whole equipment is operated only by one person.</td>
+                    <td>悬念题（留待下节课）</td>
+                    <td>三个谓语 / 两个引导词 / 主句待确定</td>
+                    <td>——</td>
+                    <td>——</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心知识点总结</h2>
+
+        <h3>知识点一：疑问语序的还原</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>疑问句标志</strong></td>
+                    <td>助动词/情态动词提前（Would/Do/Is 等放在主语前面）</td>
+                </tr>
+                <tr>
+                    <td><strong>还原方法</strong></td>
+                    <td>把提前的助动词/情态动词放回主语后面，恢复陈述语序再分析</td>
+                </tr>
+                <tr>
+                    <td><strong>本句应用</strong></td>
+                    <td>Would you be good enough... → 还原：You would be good enough...（主系表）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：结果状语 vs 目的状语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>对比维度</th>
+                    <th>结果状语</th>
+                    <th>目的状语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>中文测试</strong></td>
+                    <td>"你很好，结果就是..."</td>
+                    <td>"做A的目的是..."</td>
+                </tr>
+                <tr>
+                    <td><strong>本句测试</strong></td>
+                    <td>"你很好，结果就是告诉我" → 通顺 ✓</td>
+                    <td>"你很好的目的是告诉我" → 不通顺 ✗</td>
+                </tr>
+                <tr>
+                    <td><strong>结构标志</strong></td>
+                    <td>be good enough to do（好到足以做）</td>
+                    <td>do sth. to do sth.（做A的目的是做B）</td>
+                </tr>
+                <tr>
+                    <td><strong>变序</strong></td>
+                    <td>✅ 不变序（动作之后）</td>
+                    <td>✅ 不变序（动作之后）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：被动及完整（is reported 不是宾从）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>被动语态</strong></td>
+                    <td>is reported = be + 过去分词 → 被动语态</td>
+                </tr>
+                <tr>
+                    <td><strong>及物动词被动后</strong></td>
+                    <td>及物动词变为被动后，宾语已提前为主语 → 后面不缺宾语 → 不是宾从</td>
+                </tr>
+                <tr>
+                    <td><strong>It 形式主语</strong></td>
+                    <td>It is reported that... → It 代指 that 从句 → It 是形式主语</td>
+                </tr>
+                <tr>
+                    <td><strong>类似结构</strong></td>
+                    <td>It is said that / It is believed that / It is reported that...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：介词短语修饰对象的歧义辨析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>介词短语</th>
+                    <th>修饰名词 → 后置定语</th>
+                    <th>修饰动词 → 状语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>in science and technology</strong></td>
+                    <td>"科技方面的人才" → 通顺 ✓</td>
+                    <td>"在科技方面训练" → 不太通顺 ✗</td>
+                </tr>
+                <tr>
+                    <td><strong>in a short time</strong></td>
+                    <td>"短时间内的人才" → 不通顺 ✗</td>
+                    <td>"在短时间内训练" → 通顺 ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>during the sixth five-year plan period</strong></td>
+                    <td>"五年计划期间的核电站" → 不太合理 ✗</td>
+                    <td>"在五年计划期间建造" → 通顺 ✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：be interested in 的谓语构成</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>结构</th>
+                    <th>分析</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>be interested in</td>
+                    <td>系动词 be + interested（过去分词形容词化）+ in（介词）→ 整体看作一个谓语短语</td>
+                    <td>We are <code>interested in</code> the question.</td>
+                </tr>
+                <tr>
+                    <td>对谓语计数的影响</td>
+                    <td>be interested in 整体算一个谓语，不要拆开数</td>
+                    <td>What we are <code>interested in</code> is that...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>结果状语</strong></td>
+                    <td>to tell me when the art exhibition will open（修饰 good enough）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语从句</strong></td>
+                    <td>when the art exhibition will open（修饰 tell）</td>
+                    <td>需要变序</td>
+                    <td>调到 tell 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>主语从句（It 形式主语）</strong></td>
+                    <td>that China is carrying out...（做 is reported 的真正主语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>目的状语</strong></td>
+                    <td>to build two nuclear power plants（修饰 carry out）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>during the sixth five-year plan period（修饰 build）</td>
+                    <td>需要变序</td>
+                    <td>调到 build 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>表语从句</strong></td>
+                    <td>how we should train...（做 is 的表语）</td>
+                    <td>✅ 不变序</td>
+                    <td>——</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>in science and technology（修饰 personnel）</td>
+                    <td>需要变序</td>
+                    <td>调到 personnel 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>时间状语</strong></td>
+                    <td>in a short time（修饰 train）</td>
+                    <td>需要变序</td>
+                    <td>调到 train 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G58 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词 → 判断句型类型<br>
+            ↓<br>
+            第二步：疑问句 → 还原陈述语序再分析（助动词提前 → 放回主语后）<br>
+            ↓<br>
+            第三步：看到 It 开头 → 考虑形式主语（去掉 It 看是否缺主语）<br>
+            ↓<br>
+            第四步：被动语态（be + 过去分词）→ 被动及完整 → 不是宾从<br>
+            ↓<br>
+            第五步：to do → 主干完了的 → 先考虑目的状语 → 用中文测试<br>
+            &emsp;通顺"做A的目的是B" → 目的状语（不变序）<br>
+            &emsp;通顺"很好，结果就是B" → 结果状语（不变序）<br>
+            ↓<br>
+            第六步：多个介词短语 → 逐一测试修饰名词（后置定语）还是动词（状语）<br>
+            ↓<br>
+            第七步：变序操作 → 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - 疑问句 → 先还原陈述语序再分析<br>
+            - It 开头 → 考虑形式主语（去掉 It 看是否缺主语）<br>
+            - 被动语态（is reported）→ 被动及完整 → 不是宾从<br>
+            - to do → 主干完了的 → 先考虑目的状语 → 用中文测试<br>
+            - 结果状语："很好，结果就是..." → 通顺 → 结果状语（不变序）<br>
+            - 多个介词短语 → 逐一测试修饰名词还是动词<br>
+            - be interested in → 整体看作一个谓语短语<br>
+            - 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+长难句分析（1）（G58）
+├── 例句一：Would you be good enough to tell me when the art exhibition will open?
+│   ├── 疑问语序还原：You would be good enough to tell me...
+│   ├── would be = 谓语（助动词+系动词）；will open = 谓语
+│   ├── to tell = 非谓语（不定式）
+│   ├── to tell me = 结果状语（"很好，结果就是告诉我"→不变序）
+│   ├── when... = 时间状语从句（做 tell 的直宾）
+│   └── 翻译：你人真好，好心来告诉我艺术展什么时候开幕。
+│
+├── 例句二：It is reported that China is carrying out the plans to build two nuclear power plants during the sixth five-year plan period.
+│   ├── It = 形式主语（去掉 It → 主句缺主语）
+│   ├── is reported = 被动语态 → 被动及完整 → 不是宾从
+│   ├── that 从句 = 真正主语（主语从句）
+│   ├── to build = 目的状语（"实施计划的目的是建造"→不变序）
+│   ├── during... = 时间状语（修饰 build → 变序）
+│   └── 翻译：据报道，中国正在实施计划，在第六个五年计划期间建造两座核电站。
+│
+├── 例句三：The important question is how we should train enough personnel in science and technology in a short time.
+│   ├── is = 系动词 → 缺表语 → 表语从句
+│   ├── how = 副词，修饰 train
+│   ├── in science and technology → 修饰 personnel → 后置定语（变序）
+│   ├── in a short time → 修饰 train → 时间状语（变序）
+│   └── 翻译：重要的问题是，我们应该怎样在短时间内训练足够的科技方面的人才。
+│
+├── 例句四（悬念题）：What we are most interested in is that the whole equipment is operated only by one person.
+│   ├── 三个谓语 / 两个引导词
+│   ├── 主句待确定 → 下节课揭晓
+│   └── be interested in = 整体看作谓语短语
+│
+└── 核心方法
+    ├── 疑问句 → 还原陈述语序
+    ├── It 开头 → 考虑形式主语
+    ├── 被动及完整 → 不是宾从
+    ├── to do → 中文测试（目的 vs 结果）
+    ├── 介词短语 → 逐一测试修饰对象
+    └── 变序 = 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记疑问语序的还原方法：</strong>看到疑问句，先把提前的助动词/情态动词放回主语后面，恢复陈述语序再分析。Would you be... → You would be...（主系表）。</li>
+            <li><strong>牢记结果状语 vs 目的状语的测试方法：</strong>用中文辅助判断。"做A的目的是B"通顺 → 目的状语；"很好，结果就是B"通顺 → 结果状语。本句中 to tell me = 结果状语。</li>
+            <li><strong>牢记被动及完整的判断：</strong>is reported 是被动语态 → 及物动词变为被动后，宾语已提前为主语 → 后面不缺宾语 → 不是宾从。It is reported that... = It（形式主语）+ 主语从句。</li>
+            <li><strong>牢记 It 形式主语的识别：</strong>去掉 It，看主句是否缺主语 → 缺主语 → It 是形式主语，真正主语在后面。类似结构：It is said that / It is believed that...</li>
+            <li><strong>牢记介词短语修饰对象的歧义辨析：</strong>同一个位置出现多个介词短语时，逐一测试修饰名词（后置定语）还是动词（状语）。in science and technology → 修饰 personnel（后置定语）；in a short time → 修饰 train（时间状语）。</li>
+            <li><strong>牢记 be interested in 的谓语构成：</strong>整体看作一个谓语短语，不要拆开数谓语。</li>
+            <li><strong>完成悬念题：</strong>例句四 "What we are most interested in is that the whole equipment is operated only by one person." 的主句是什么？先自行分析，下节课对照答案。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G65 长难句分析4：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G65】长难句分析4</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G65 是「基础语法」系列第65课，由陈老师主讲。本节课是句子部分的<strong>长难句实战分析课（续）</strong>，紧接 G64「反向找省略连接词难点」。本节课继续通过两个高难度长难句的逐句深度分析，巩固"找谓语→判断句型→识别后置定语和状语→变序翻译"的完整操作流程，并引入新的语法难点。</p>
+        <p>本节课重点讲解两个高频考点：<strong>① 介词+which引导的定语从句</strong>（from which / of which）以及<strong>② 主语补足语（was claimed to be）</strong>，同时强化 ABB型动词判断、and连接并列谓语与并列句的区分、be bored with + doing 结构识别等核心技能。</p>
+
+        <div class="annotation">
+            本节课的核心目标：通过2个高难度长难句的逐句深度分析，掌握"介词+which"引导定语从句、"was claimed to be"主语补足语结构、"and"连接并列谓语vs并列句的区分、"stone throw"俚语理解，以及"太长就拆开"的翻译技巧（四两拨千斤）。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43-G50「从句系列」、G52「翻译公式」、G53-G64「句子成分分析及翻译/长难句分析/反向找省略连接词」的基础上。需要熟练掌握谓语动词识别、非谓语动词、后置定语、同位语、AABB型动词判断等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 核心易错点一：and连接并列谓语 vs 并列句</h2>
+        <p>老师以第一个例句切入，揭示了同学们容易犯的错误——<strong>把 and 连接的并列谓语误判为并列句</strong>：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>A man who was bored with living in London and desired to move to the country was looking for a house from which he could get to his office easily in the city.</strong></div>
+            <div class="example-item">→ 四个谓语动词：was（谓语1）+ desired（谓语2）+ was looking for（谓语3）+ could get to（谓语4）</div>
+            <div class="example-item">→ 三个连接词：who（第1个）、and（第2个）、from which（第3个）</div>
+            <div class="example-item">→ and 前面是 who was bored（主谓完整），后面是 desired（只有V，没有主谓）→ and 并列的是 was bored 和 desired → 是并列谓语，不是并列句</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——and 是并列句还是并列谓语：</strong><br>
+            - 看 and 前面有没有完整的主谓结构（S+V）<br>
+            - 有完整主谓 → 并列句（两个独立句子用 and 连接）<br>
+            - 只有 V（没有主语）→ 并列谓语（and 连接两个动词，共享同一个主语）<br>
+            - 本句中：and 前面是 who was bored（主谓完整），但 desired 前面没有主语 → and 并列的是 was bored 和 desired → 同一个 who 从句里的并列谓语
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心易错点二：ABB型动词 designed/desired 的判断</h2>
+        <p>老师强调，desire 的过去式和过去分词都是 desired（注意：原文中老师口误说成 designed，实际是 desired），属于 ABB 型动词：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>desired 的判断：</strong></div>
+            <div class="example-item">→ desire（原型）→ desired（过去式）→ desired（过去分词）→ ABB型</div>
+            <div class="example-item">→ 主动语态 → desired = did → 谓语形式 ✓</div>
+            <div class="example-item">→ 本句中：he desired to move to the country → 他向往搬到乡村 → 主动 → 谓语 ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 看到 ABB型动词 → 先看主动还是被动<br>
+            - 主动 → did → 谓语<br>
+            - 被动 → done → 非谓语（后置定语）<br>
+            - 本句中 desired 是主动语态 → 谓语 ✓
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心难点：介词+which 引导的定语从句</h2>
+        <p>老师以 from which 和 of which 为例，讲解了"介词+which"引导定语从句的识别方法：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>from which he could get to his office easily in the city</strong></div>
+            <div class="example-item">→ from which = 引导词（from + which 合在一起做引导词）</div>
+            <div class="example-item">→ 判断 from 属于谁：是 belongs to house 还是 belongs to get to？</div>
+            <div class="example-item">→ get to 本身是"到达"，from 不属于 get to → from 属于后面的从句</div>
+            <div class="example-item">→ 还原：he could get to his office from the house → from which ✓</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>of a railway station from which there were frequent trains to London</strong></div>
+            <div class="example-item">→ of a railway station = 后置定语，修饰 house（suitable house of a railway station → 火车站的房子）</div>
+            <div class="example-item">→ from which = 引导词（from + which）</div>
+            <div class="example-item">→ 还原：there were frequent trains to London from the railway station ✓</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——from which 中 from 的归属判断：</strong><br>
+            - 看 from 是属于前面的名词（house）还是属于后面的动词（get to）<br>
+            - get to = 到达（固定搭配），from 不属于 get to<br>
+            - 所以 from 属于后面的从句 → from which 引导定语从句<br>
+            - 类比：G61 中 whether...or whether... 的 all 也是第二层产生的
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 核心难点：was claimed to be（主语补足语）</h2>
+        <p>老师讲解了本句中最难理解的结构——"was claimed to be"，这是一个<strong>主语补足语</strong>结构：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>which was claimed to be within stone throw of a railway station</strong></div>
+            <div class="example-item">→ which = 主语（指代 house）</div>
+            <div class="example-item">→ was claimed = 被动语态（被声称）</div>
+            <div class="example-item">→ to be within stone throw... = 主语补足语（补充说明主语 house 的状态）</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——主语补足语的形成过程：</strong><br>
+            - 主动句：They claimed the house to be within stone throw of a railway station.<br>
+            - 主语 They = 那些（人）；谓语 claimed = 声称；宾语 the house；宾补 to be within...<br>
+            - 变成被动：the house 提前做主语 → was claimed to be within...<br>
+            - 原来的宾语补足语 → 变成主语补足语<br>
+            - 中文翻译时不需要翻译"被"：直接说"声称离火车站一步之遥"<br>
+            - 类比：房间打扫了吗？（不是"房间被打扫了吗"）→ 英语被动在中文里常省略"被"
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>stone throw 的俚语理解：</strong></div>
+            <div class="example-item">→ stone = 石头；throw = 扔</div>
+            <div class="example-item">→ within stone throw = 在扔石头能到的范围内 → 一步之遥、非常近</div>
+            <div class="example-item">→ 类比：within walking distance（步行可达的距离）、within driving distance（车程可达的距离）</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 核心难点：be bored with + doing 结构的分析</h2>
+        <p>老师讲解了"be bored with living in London"的两种分析思路：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>思路一（精细分析）：</strong></div>
+            <div class="example-item">→ who was bored（主系表结构）</div>
+            <div class="example-item">→ with living in London = 方式状语（修饰 bored，"以何种方式感到厌倦"）</div>
+            <div class="example-item">→ living in London = 动名词短语，做 with 的宾语</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>思路二（简单粗暴）：</strong></div>
+            <div class="example-item">→ 把 be bored with 整体看作一个谓语动词短语</div>
+            <div class="example-item">→ living in London = 动名词做宾语</div>
+            <div class="example-item">→ 类似结构：be surprised at / be afraid of / be interested in / be fond of</div>
+        </div>
+
+        <div class="annotation">
+            老师建议：如果同学觉得精细分析太复杂，可以直接把 be + 形容词 + with/at/of 整体看作一个谓语，后面接动名词做宾语。这样理解更简单直接，不影响翻译结果。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. 例句一完整分析：A man who was bored with living in London and desired to move to the country was looking for a house from which he could get to his office easily in the city.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：was（谓语1，be bored）+ desired（谓语2，主动→谓语）+ was looking for（谓语3，过去进行时）+ could get to（谓语4）→ 四个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 4 - 1 = 3 → who（第1个）、and（第2个）、from which（第3个）</div>
+            <div class="example-item">③ and 是并列谓语（不是并列句），因为 desired 前面没有主语</div>
+            <div class="example-item">④ who 引导定语从句：who was bored with living in London and desired to move to the country（修饰 a man）</div>
+            <div class="example-item">⑤ from which 引导定语从句：from which he could get to his office easily in the city（修饰 a house）</div>
+            <div class="example-item">⑥ 主句：A man was looking for a house（主谓宾）</div>
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>A man was looking for a house.</strong></div>
+            <div class="example-item">→ A man = 主语；was looking for = 谓语（过去进行时，look for + for 一起看作谓语）；a house = 宾语 → SVO 结构 → 不变序</div>
+        </div>
+
+        <h3>定语从句1内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>who was bored with living in London and desired to move to the country</strong></div>
+            <div class="example-item">→ who = 主语（指代 a man）</div>
+            <div class="example-item">→ was bored with living in London = 谓语1（be bored with + doing，整体看作谓语）</div>
+            <div class="example-item">→ and = 并列谓语连接词（连接 was bored 和 desired）</div>
+            <div class="example-item">→ desired to move to the country = 谓语2（desired + to do做宾语）</div>
+            <div class="example-item">→ 并列谓语 → 不变序</div>
+        </div>
+
+        <h3>定语从句2内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>from which he could get to his office easily in the city</strong></div>
+            <div class="example-item">→ from which = 引导词（from + which，修饰 house）</div>
+            <div class="example-item">→ he = 主语；could get to = 谓语；his office = 宾语 → SVO 结构</div>
+            <div class="example-item">→ easily = 方式状语（修饰 get to）→ 需要变序（调 get to 前面）</div>
+            <div class="example-item">→ in the city = 后置定语（修饰 office，"城市里的办公室"）→ 需要变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 定语从句1（who was bored with...and desired...）→ 变序（调 man 前面）<br>
+            ② 定语从句2（from which he could get to...）→ 变序（调 house 前面）<br>
+            ③ 方式状语 easily → 变序（调 get to 前面）<br>
+            ④ 后置定语 in the city → 变序（调 office 前面）<br>
+            <br>
+            <strong>翻译：一个厌倦了住在伦敦并且向往着搬到乡村的男人，在寻找一个他可以很轻松地到达城市里办公室的房子。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. 例句二完整分析：He saw an advertisement for a suitable house which was claimed to be within stone throw of a railway station from which there were frequent trains to London.</h2>
+
+        <div class="example-box">
+            <div class="example-item"><strong>分析过程：</strong></div>
+            <div class="example-item">① 找谓语：saw（谓语1）+ was claimed（谓语2，被动语态）+ were（谓语3）→ 三个谓语</div>
+            <div class="example-item">② 连接词个数 = V - 1 = 3 - 1 = 2 → which（第1个）、from which（第2个）</div>
+            <div class="example-item">③ which 引导定语从句：which was claimed to be within stone throw of a railway station（修饰 a suitable house）</div>
+            <div class="example-item">④ from which 引导定语从句：from which there were frequent trains to London（修饰 a railway station）</div>
+            <div class="example-item">⑤ 主句：He saw an advertisement for a suitable house（主谓宾）</div>
+        </div>
+
+        <h3>主句内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>He saw an advertisement for a suitable house.</strong></div>
+            <div class="example-item">→ He = 主语；saw = 谓语；an advertisement = 宾语；for a suitable house = 后置定语（修饰 advertisement，"一个合适房子的广告"）→ SVO 结构 → 不变序</div>
+        </div>
+
+        <h3>定语从句1内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>which was claimed to be within stone throw of a railway station</strong></div>
+            <div class="example-item">→ which = 主语（指代 house）；was claimed = 谓语（被动语态）；to be within stone throw... = 主语补足语</div>
+            <div class="example-item">→ within stone throw = 介词短语做表语（"在一步之遥的范围内"）</div>
+            <div class="example-item">→ of a railway station = 后置定语（修饰 stone throw，"火车站的"）→ 需要变序</div>
+        </div>
+
+        <h3>定语从句2内部精细分析</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>from which there were frequent trains to London</strong></div>
+            <div class="example-item">→ from which = 引导词（from + which，修饰 railway station）</div>
+            <div class="example-item">→ there were = 谓语（there be 句型）；frequent trains = 主语；to London = 后置定语（修饰 trains，"开往伦敦的"）→ 需要变序</div>
+        </div>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>变序操作：</strong><br>
+            ① 定语从句1（which was claimed to be...）→ 变序（调 house 前面）<br>
+            ② 后置定语 of a railway station → 变序（调 stone throw 前面）<br>
+            ③ 定语从句2（from which there were...）→ 变序（调 railway station 前面）<br>
+            ④ 后置定语 to London → 变序（调 trains 前面）<br>
+            <br>
+            <strong>直译（不拆）：他看到了一个合适房子的广告，这个房子声称离有频繁火车开往伦敦的火车站一步之遥。</strong>
+            <br><br>
+            <strong>拆分翻译（四两拨千斤）：他看到了一个合适房子的广告。这个房子声称离火车站很近。从这个火车站有频繁的火车开往伦敦。</strong>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心翻译技巧——太长就拆开（四两拨千斤）：</strong><br>
+            - 英文长句直译出来会非常拗口（"累觉不爱"的感觉）<br>
+            - 翻译技巧：太长就拆开，符合中文习惯即可<br>
+            - 方法：找到定语从句修饰的名词 → 重复该名词 → 拆成独立短句<br>
+            - 本句拆分：① 他看到了一个合适房子的广告 ② 这个房子声称离火车站很近 ③ 从这个火车站有频繁的火车开往伦敦<br>
+            - 类比：中文不说"我看到了一个声称离火车站很近有频繁火车开往伦敦的房子的广告"，而是拆成几句话
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. 两大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>句型</th>
+                    <th>关键成分</th>
+                    <th>是否变序</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A man <strong>who was bored with living in London and desired to move to the country</strong> was looking for a house <strong>from which he could get to his office easily in the city</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 两个定语从句</td>
+                    <td>who从句=定语从句（修饰man）；and=并列谓语；from which从句=定语从句（修饰house）；easily=方式状语；in the city=后置定语</td>
+                    <td>两个定语从句+方式状语+后置定语变序</td>
+                    <td>一个厌倦了住在伦敦并且向往着搬到乡村的男人，在寻找一个他可以很轻松地到达城市里办公室的房子。</td>
+                </tr>
+                <tr>
+                    <td>He saw an advertisement for a suitable house <strong>which was claimed to be within stone throw of a railway station from which there were frequent trains to London</strong>.</td>
+                    <td><strong>SVO</strong>（主谓宾）+ 两个定语从句（嵌套）</td>
+                    <td>which从句=定语从句（修饰house，含主语补足语was claimed to be）；of a railway station=后置定语；from which从句=定语从句（修饰railway station，嵌套在第一个定从中）；to London=后置定语</td>
+                    <td>所有定语从句+后置定语变序；方式状语变序</td>
+                    <td>拆分翻译：他看到了一个合适房子的广告。这个房子声称离火车站很近。从这个火车站有频繁的火车开往伦敦。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心知识点总结</h2>
+
+        <h3>知识点一：and连接并列谓语 vs 并列句</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>并列句</strong></td>
+                    <td>and 前后都有完整的主谓结构（S+V）→ 两个独立句子</td>
+                </tr>
+                <tr>
+                    <td><strong>并列谓语</strong></td>
+                    <td>and 前面只有 V（没有主语）→ and 连接两个动词，共享同一个主语</td>
+                </tr>
+                <tr>
+                    <td><strong>本句应用</strong></td>
+                    <td>who was bored with... and desired... → desired 前面没有主语 → 并列谓语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：ABB型动词 desired 的判断</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>原型</strong></td>
+                    <td>desire（渴望、向往）</td>
+                </tr>
+                <tr>
+                    <td><strong>过去式/过去分词</strong></td>
+                    <td>desired / desired（ABB型）</td>
+                </tr>
+                <tr>
+                    <td><strong>本句判断</strong></td>
+                    <td>he desired to move to the country → 主动语态 → desired = did → 谓语 ✓</td>
+                </tr>
+                <tr>
+                    <td><strong>desire to do</strong></td>
+                    <td>desire + to do 做宾语（"向往做某事"）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：介词+which 引导的定语从句</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>引导词</th>
+                    <th>修饰对象</th>
+                    <th>还原验证</th>
+                    <th>变序</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>from which</strong></td>
+                    <td>a house（例句一）</td>
+                    <td>he could get to his office from the house</td>
+                    <td>需要变序（调 house 前面）</td>
+                </tr>
+                <tr>
+                    <td><strong>from which</strong></td>
+                    <td>a railway station（例句二）</td>
+                    <td>there were frequent trains to London from the railway station</td>
+                    <td>需要变序（调 railway station 前面）</td>
+                </tr>
+                <tr>
+                    <td><strong>of which</strong></td>
+                    <td>a railway station（例句二）</td>
+                    <td>stone throw of a railway station（火车站的）</td>
+                    <td>需要变序（调 stone throw 前面）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——from 的归属判断：</strong><br>
+            - 看 from 是属于前面的名词还是属于后面的动词<br>
+            - get to = 到达（固定搭配），from 不属于 get to → from 属于从句 → from which 引导定语从句<br>
+            - 类比：G61 中 whether...or whether... 的 all 也是第二层产生的
+        </div>
+
+        <h3>知识点四：was claimed to be（主语补足语）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主动句</strong></td>
+                    <td>They claimed the house to be within stone throw of a railway station.<br>（主语 They + 谓语 claimed + 宾语 the house + 宾补 to be...）</td>
+                </tr>
+                <tr>
+                    <td><strong>被动句</strong></td>
+                    <td>The house was claimed to be within stone throw of a railway station.<br>（主语 the house + 谓语 was claimed + 主补 to be...）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾补→主补</strong></td>
+                    <td>主动句的宾语补足语 → 变成被动句的主语补足语</td>
+                </tr>
+                <tr>
+                    <td><strong>中文翻译</strong></td>
+                    <td>不需要翻译"被"：直接说"声称离火车站一步之遥"<br>（类比：房间打扫了吗？不是"房间被打扫了吗？"）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：stone throw 俚语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>表达</th>
+                    <th>含义</th>
+                    <th>类比</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>within stone throw</strong></td>
+                    <td>一步之遥、非常近</td>
+                    <td>within walking distance（步行可达）/ within driving distance（车程可达）</td>
+                </tr>
+                <tr>
+                    <td><strong>stone</strong></td>
+                    <td>石头</td>
+                    <td>扔石头的距离 = 很近</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点六：be bored with + doing 结构</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>分析思路</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>思路一（精细）</strong></td>
+                    <td>who was bored（主系表）+ with living in London（方式状语，修饰 bored）+ living in London（动名词做 with 的宾语）</td>
+                </tr>
+                <tr>
+                    <td><strong>思路二（简单）</strong></td>
+                    <td>be bored with 整体看作谓语动词短语 + living in London（动名词做宾语）</td>
+                </tr>
+                <tr>
+                    <td><strong>类似结构</strong></td>
+                    <td>be surprised at / be afraid of / be interested in / be fond of / be tired of</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点七：翻译技巧——太长就拆开（四两拨千斤）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>原则</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心原则</strong></td>
+                    <td>太长就拆开，符合中文习惯即可</td>
+                </tr>
+                <tr>
+                    <td><strong>操作方法</strong></td>
+                    <td>找到定语从句修饰的名词 → 重复该名词 → 拆成独立短句</td>
+                </tr>
+                <tr>
+                    <td><strong>本句应用</strong></td>
+                    <td>① 他看到了一个合适房子的广告 ② 这个房子声称离火车站很近 ③ 从这个火车站有频繁的火车开往伦敦</td>
+                </tr>
+                <tr>
+                    <td><strong>类比</strong></td>
+                    <td>中文不说"我看到了一个声称离火车站很近有频繁火车开往伦敦的房子的广告"，而是拆成几句话</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>11. 变序/不变序速查总结</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>成分</th>
+                    <th>例句中的位置</th>
+                    <th>是否变序</th>
+                    <th>调到</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>定语从句1（例句一）</strong></td>
+                    <td>who was bored with...and desired...（修饰 man）</td>
+                    <td>需要变序</td>
+                    <td>调 man 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句2（例句一）</strong></td>
+                    <td>from which he could get to...（修饰 house）</td>
+                    <td>需要变序</td>
+                    <td>调 house 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>方式状语（例句一）</strong></td>
+                    <td>easily（修饰 get to）</td>
+                    <td>需要变序</td>
+                    <td>调 get to 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语（例句一）</strong></td>
+                    <td>in the city（修饰 office）</td>
+                    <td>需要变序</td>
+                    <td>调 office 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句1（例句二）</strong></td>
+                    <td>which was claimed to be...（修饰 house）</td>
+                    <td>需要变序</td>
+                    <td>调 house 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语（例句二）</strong></td>
+                    <td>of a railway station（修饰 stone throw）</td>
+                    <td>需要变序</td>
+                    <td>调 stone throw 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>定语从句2（例句二，嵌套）</strong></td>
+                    <td>from which there were frequent trains...（修饰 railway station）</td>
+                    <td>需要变序</td>
+                    <td>调 railway station 前面</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语（例句二）</strong></td>
+                    <td>to London（修饰 trains）</td>
+                    <td>需要变序</td>
+                    <td>调 trains 前面</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>12. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G65 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词<br>
+            ↓<br>
+            第二步：看到 ABB型动词（desired）→ 判断主动还是被动 → 主动→谓语 / 被动→非谓语<br>
+            ↓<br>
+            第三步：看到 and → 检查前面有没有主谓 → 有主谓=并列句 / 只有V=并列谓语<br>
+            ↓<br>
+            第四步：看到 介词+which → 判断介词属于谁 → from which 引导定语从句<br>
+            ↓<br>
+            第五步：看到 was claimed to be → 主语补足语（宾补变被动→主补）<br>
+            ↓<br>
+            第六步：看到 stone throw → 理解俚语"一步之遥、很近"<br>
+            ↓<br>
+            第七步：翻译 → 太长就拆开（四两拨千斤）→ 重复名词 → 拆成独立短句
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 谓语动词是解开所有句子的钥匙<br>
+            - ABB型动词 → 先看主动还是被动 → desired 主动→谓语<br>
+            - and → 看前面有没有主谓 → 只有V→并列谓语（不是并列句）<br>
+            - 介词+which → 判断介词属于谁 → from which 引导定语从句<br>
+            - was claimed to be → 主语补足语（宾补变被动）<br>
+            - stone throw → 一步之遥、很近<br>
+            - be bored with + doing → 可整体看作谓语+宾语<br>
+            - 翻译技巧：太长就拆开（四两拨千斤）→ 重复名词 → 拆成独立短句<br>
+            - 变序 = 定语从句调名词前 + 后置定语调名词前 + 状语（除目的/结果/伴随）调动词前
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+长难句分析4（G65）
+├── 核心易错点一：and连接并列谓语 vs 并列句
+│   ├── and前面有完整主谓 → 并列句
+│   └── and前面只有V（没有主语）→ 并列谓语
+│   └── 本句：who was bored... and desired... → 并列谓语
+│
+├── 核心易错点二：ABB型动词 desired 的判断
+│   ├── desire → desired → desired（ABB型）
+│   ├── 主动 → desired = did → 谓语 ✓
+│   └── 被动 → desired = done → 非谓语
+│
+├── 核心难点：介词+which 引导的定语从句
+│   ├── from which he could get to his office（修饰house）
+│   ├── from which there were frequent trains（修饰railway station）
+│   └── 判断from归属：get to=到达（固定搭配），from不属于get to→from属于从句
+│
+├── 核心难点：was claimed to be（主语补足语）
+│   ├── 主动：They claimed the house to be within...
+│   ├── 被动：The house was claimed to be within...
+│   ├── 宾补变被动→主补
+│   ├── stone throw = 一步之遥（扔石头的距离）
+│   └── 中文翻译不翻译"被"
+│
+├── 核心难点：be bored with + doing 结构
+│   ├── 精细分析：was bored（主系表）+ with living...（方式状语）
+│   └── 简单分析：be bored with 整体作谓语 + living...（宾语）
+│
+├── 例句一：A man who was bored with living in London and desired to move to the country was looking for a house from which he could get to his office easily in the city.
+│   ├── 四个谓语：was / desired / was looking for / could get to
+│   ├── who从句=定语从句（修饰man）；and=并列谓语
+│   ├── from which从句=定语从句（修饰house）
+│   └── 翻译：一个厌倦了住在伦敦并且向往着搬到乡村的男人，在寻找一个他可以很轻松地到达城市里办公室的房子。
+│
+├── 例句二：He saw an advertisement for a suitable house which was claimed to be within stone throw of a railway station from which there were frequent trains to London.
+│   ├── 三个谓语：saw / was claimed / were
+│   ├── which从句=定语从句（修饰house，含主语补足语）
+│   ├── from which从句=定语从句（修饰railway station，嵌套）
+│   ├── stone throw = 一步之遥
+│   └── 翻译（拆分）：他看到了一个合适房子的广告。这个房子声称离火车站很近。从这个火车站有频繁的火车开往伦敦。
+│
+├── 翻译技巧：太长就拆开（四两拨千斤）
+│   ├── 找到定语从句修饰的名词 → 重复该名词 → 拆成独立短句
+│   └── 符合中文习惯即可
+│
+└── 核心口诀
+    ├── ABB型动词 → 主动被动判断
+    ├── and → 看前面有没有主谓
+    ├── 介词+which → 判断介词归属
+    ├── was claimed to be → 主语补足语
+    ├── stone throw → 一步之遥
+    ├── be bored with + doing → 整体看作谓语
+    └── 太长就拆开（四两拨千斤）
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记and连接并列谓语vs并列句的判断方法：</strong>看and前面有没有完整的主谓结构。有主谓=并列句，只有V=并列谓语。本句中 who was bored... and desired... → desired前面没有主语 → 并列谓语。</li>
+            <li><strong>牢记ABB型动词 desired 的判断：</strong>desire → desired → desired（ABB型）。主动→谓语，被动→非谓语。本句中 he desired to move to the country → 主动→谓语。</li>
+            <li><strong>牢记介词+which 引导定语从句的识别：</strong>from which / of which 合在一起做引导词。关键是判断介词的归属——看介词是属于前面的名词还是属于后面的动词。get to = 到达（固定搭配），from 不属于 get to → from 属于从句。</li>
+            <li><strong>牢记 was claimed to be 主语补足语结构：</strong>主动句的宾语补足语 → 变成被动句的主语补足语。They claimed the house to be... → The house was claimed to be...。中文翻译时不需要翻译"被"。</li>
+            <li><strong>牢记 stone throw 俚语：</strong>stone = 石头，throw = 扔。within stone throw = 在扔石头能到的范围内 → 一步之遥、非常近。类比：within walking distance / within driving distance。</li>
+            <li><strong>牢记 be bored with + doing 的两种分析思路：</strong>精细分析（was bored主系表 + with doing方式状语）vs 简单分析（be bored with整体作谓语 + doing宾语）。两种思路都可以，不影响翻译。</li>
+            <li><strong>牢记翻译技巧——太长就拆开（四两拨千斤）：</strong>英文长句直译出来非常拗口。方法：找到定语从句修饰的名词 → 重复该名词 → 拆成独立短句。符合中文习惯即可。</li>
+            <li><strong>下节课预告：</strong>下节课会继续长难句分析，建议复习本节课的"介词+which"和"was claimed to be"两个难点。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

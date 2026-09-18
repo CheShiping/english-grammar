@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G64 反向找省略连接词难点：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G64】反向找省略连接词难点（没有人会这样思考问题）</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G64 是「基础语法」系列第64课，由陈老师主讲。本节课是句子部分的<strong>高级方法论课（续）</strong>，紧接 G63「反向找省略的连接词」，专门讲解反向找连接词方法中的<strong>三大难点</strong>。</p>
+        <p>在 G63 中，老师正面讲解了"反向找省略的连接词"四步法（找到V2→找到S2→S2前面=省略的连接词），并指出这个方法对一般性句子有效。但随着句子越来越复杂，主语前面可能隔着各种"障碍物"（主语从句、后置定语、状语等），需要逐一突破。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握反向找连接词的三大难点——①主语从句做主语（绕过整个从句找引导词）②主谓相隔（绕过后置定语找主语）③主语前有状语（绕过状语找主语），真正掌握分析复杂句子的模型。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G43「从句/复合句1.0」、G61「连接词个数≠V-1」、G62「从属连词的省略」、G63「反向找省略的连接词」的基础上。需要熟练掌握谓语动词识别、宾语从句、定语从句、引导词省略、后置定语等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 三大难点总览</h2>
+        <p>老师首先回顾了 G63 的核心方法论，然后引出本节课要解决的三个难点：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>难点</th>
+                    <th>名称</th>
+                    <th>核心问题</th>
+                    <th>应对策略</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>难点一</strong></td>
+                    <td><strong>主语从句做主语</strong></td>
+                    <td>V 的主语不是简单名词，而是一个完整的句子（主语从句）</td>
+                    <td>从 V 绕过整个主语从句，再往前找才是引导词</td>
+                </tr>
+                <tr>
+                    <td><strong>难点二</strong></td>
+                    <td><strong>主谓相隔</strong></td>
+                    <td>主语和谓语之间有后置定语隔开</td>
+                    <td>从 V 绕过后置定语，再往前找到主语，主语前面才是引导词</td>
+                </tr>
+                <tr>
+                    <td><strong>难点三</strong></td>
+                    <td><strong>主语前有状语</strong></td>
+                    <td>主语前面有状语（如 from the beginning）</td>
+                    <td>从 V 绕过状语，再往前找到主语，主语前面才是引导词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心逻辑：</strong><br>
+            - 反向找的本质：找到谓语 → 找到主语 → 主语前面就是引导词<br>
+            - 但主语前面可能隔着各种"障碍物"<br>
+            - 类比：隧道挖洞——从正面挖和从反面挖，最终会合<br>
+            - 最终找到的引导词位置 = 正向找（省略规则）定位的位置
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>3. 难点一：主语从句做主语（绕过整个从句找引导词）</h2>
+        <p>老师以第一个难点切入，解释了当 V 的主语不是一个简单名词，而是一个完整的句子（主语从句）时的情况：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I think what you did is of help.</strong></div>
+            <div class="example-item">→ 找谓语：think（V1）+ did（V2，实义动词，不是助动词）+ is（V3，系动词）→ 共3个谓语</div>
+            <div class="example-item">→ 按公式应有 3-1=2 个连接词</div>
+            <div class="example-item">→ 实际找到：what（第1个连接词）→ 第2个连接词找不到！</div>
+            <div class="example-item">→ 可能原因：①多找了谓语 ②有连接词被省略了</div>
+        </div>
+
+        <h3>谓语验证</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>动词</th>
+                    <th>判断</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>think</strong></td>
+                    <td>✅ 是谓语</td>
+                    <td>实义动词，一般现在时</td>
+                </tr>
+                <tr>
+                    <td><strong>did</strong></td>
+                    <td>✅ 是谓语</td>
+                    <td>实义动词 do 的过去式（不是助动词，因为后面没有动词原形）</td>
+                </tr>
+                <tr>
+                    <td><strong>is</strong></td>
+                    <td>✅ 是谓语</td>
+                    <td>系动词，单独构成谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>help</strong></td>
+                    <td>❌ 不是谓语</td>
+                    <td>在介词 of 后面（be of help = be helpful），help 是名词</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心辨析——be of help 的语法现象：</strong><br>
+            - be of + 名词 = be + 形容词（有帮助的）<br>
+            - be of help = be helpful（有帮助的）<br>
+            - be of use = be useful（有用的）<br>
+            - 同理：be of value = be valuable, be of importance = be important
+        </div>
+
+        <h3>反向找连接词</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第一步：找到 V2 和 V3</strong></div>
+            <div class="example-item">→ V2 = did → 主语 S2 = what（what 做了 did 的宾语，同时是引导词）</div>
+            <div class="example-item">→ V3 = is → 主语 S3 = what you did（整个主语从句！）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>第二步：绕过整个主语从句找引导词</strong></div>
+            <div class="example-item">→ is 的主语是 "what you did"（整个从句）→ 从 is 绕过整个 "what you did"</div>
+            <div class="example-item">→ 绕过之后，前面就是省略的连接词 → that</div>
+            <div class="example-item">→ 还原：I think <strong>(that)</strong> [what you did] is of help.</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——难点之所在：</strong><br>
+            - is 的主语不是简单名词，而是 "what you did" 整个主语从句<br>
+            - 如果直接看 "I think what you did is of help"，会以为 is 的主语就是 did<br>
+            - 实际上：I think 后面缺宾语 → 整个 "what you did is of help" 是宾语从句<br>
+            - 这个宾语从句由 that 引导，that 被省略了<br>
+            - 从 is 绕过整个主语从句 "what you did"，前面才是省略的 that
+        </div>
+
+        <h3>完整结构分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>层级</th>
+                    <th>成分</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主句</strong></td>
+                    <td>I think [___ that what you did is of help]</td>
+                    <td>I=主语，think=谓语，that从句=宾语从句（that被省略）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句内部</strong></td>
+                    <td>[what you did] is of help</td>
+                    <td>what you did=主语从句（做is的主语），is=系动词，of help=表语</td>
+                </tr>
+                <tr>
+                    <td><strong>省略的连接词</strong></td>
+                    <td>that（宾从的第一个that，可省略）</td>
+                    <td>位置：think 后面，what you did 前面</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我认为你所做的是有帮助的。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 难点二：主谓相隔（绕过后置定语找主语）</h2>
+        <p>老师以第二个难点切入，解释了当主语和谓语之间有后置定语隔开时的情况：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I think the boy wearing a green hat is a pig.</strong></div>
+            <div class="example-item">→ 找谓语：think（V1）+ wearing（非谓语，抽象成 doing）+ is（V2）→ 共2个谓语</div>
+            <div class="example-item">→ 按公式应有 2-1=1 个连接词 → 但一个都找不到！</div>
+            <div class="example-item">→ 用反向找：找到 V2=is → 主语 S2 不是 hat（hat 不是 pig）→ 是 the boy wearing a green hat</div>
+        </div>
+
+        <h3>后置定语识别</h3>
+
+        <div class="example-box">
+            <div class="example-item">→ wearing a green hat = 现在分词短语做后置定语，修饰 the boy</div>
+            <div class="example-item">→ the boy（很笼统，很多个 boy）→ wearing a green hat（缩小范围）→ 后置定语 ✓</div>
+            <div class="example-item">→ 等价于定语从句：the boy who is wearing a green hat</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>反向找过程：</strong></div>
+            <div class="example-item">→ V2 = is → 主语 S2 = the boy（不是 hat！）</div>
+            <div class="example-item">→ 从 is 绕过后置定语 wearing a green hat → 再往前找到 the boy</div>
+            <div class="example-item">→ the boy 前面 = 省略的连接词 → that</div>
+            <div class="example-item">→ 还原：I think <strong>(that)</strong> the boy (wearing a green hat) is a pig.</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——为什么 is 的主语不是 hat：</strong><br>
+            - hat wearing a green hat is a pig → 逻辑不通（帽子不是 pig）<br>
+            - the boy wearing a green hat is a pig → the boy 是 pig（逻辑通顺）<br>
+            - wearing a green hat 是后置定语，修饰 the boy，不是主语<br>
+            - 类比：如果变成定语从句 "the boy who is wearing a hat"，也要从 is 绕过 who is wearing a hat 再往前找
+        </div>
+
+        <h3>完整结构分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>层级</th>
+                    <th>成分</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主句</strong></td>
+                    <td>I think [___ that the boy wearing a green hat is a pig]</td>
+                    <td>I=主语，think=谓语，that从句=宾语从句（that被省略）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句内部</strong></td>
+                    <td>the boy (wearing a green hat) is a pig</td>
+                    <td>the boy=主语，wearing a green hat=后置定语，is=系动词，a pig=表语</td>
+                </tr>
+                <tr>
+                    <td><strong>省略的连接词</strong></td>
+                    <td>that（宾从的第一个that，可省略）</td>
+                    <td>位置：think 后面，the boy 前面（需绕过后置定语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我认为那个戴绿帽子的男孩是个混蛋。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. 难点三：主语前有状语（绕过状语找主语）</h2>
+        <p>老师以第三个难点切入，解释了当主语前面有状语时的情况：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>I think from the beginning you are a pig.</strong></div>
+            <div class="example-item">→ 找谓语：think（V1）+ are（V2）→ 共2个谓语</div>
+            <div class="example-item">→ 按公式应有 2-1=1 个连接词 → 但一个都找不到！</div>
+            <div class="example-item">→ 用反向找：找到 V2=are → 主语 S2 = you → 但 you 前面有 from the beginning（状语）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>反向找过程：</strong></div>
+            <div class="example-item">→ V2 = are → 主语 S2 = you</div>
+            <div class="example-item">→ you 前面有 from the beginning（时间状语）→ 绕过状语 → 再往前才是引导词</div>
+            <div class="example-item">→ 引导词位置 = 省略的 that</div>
+            <div class="example-item">→ 还原：I think <strong>(that)</strong> from the beginning you are a pig.</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——状语在主语前面的识别：</strong><br>
+            - 从 are 往前找主语 → 找到 you<br>
+            - 但你前面有 from the beginning（从最开始）→ 这是时间状语<br>
+            - 状语不是主语的一部分 → 要绕过状语 → 状语前面才是省略的引导词<br>
+            - 类比：隧道挖洞——从正面挖（正向找省略规则）和从反面挖（反向找），最终会合
+        </div>
+
+        <h3>完整结构分析</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>层级</th>
+                    <th>成分</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主句</strong></td>
+                    <td>I think [___ that from the beginning you are a pig]</td>
+                    <td>I=主语，think=谓语，that从句=宾语从句（that被省略）</td>
+                </tr>
+                <tr>
+                    <td><strong>宾语从句内部</strong></td>
+                    <td>from the beginning you are a pig</td>
+                    <td>from the beginning=时间状语，you=主语，are=系动词，a pig=表语</td>
+                </tr>
+                <tr>
+                    <td><strong>省略的连接词</strong></td>
+                    <td>that（宾从的第一个that，可省略）</td>
+                    <td>位置：think 后面，from the beginning 前面（需绕过状语）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>翻译结果</h3>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>翻译：我认为从一开始你就个混蛋。</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. 三大难点完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>难点</th>
+                    <th>障碍物</th>
+                    <th>例句</th>
+                    <th>绕过什么</th>
+                    <th>省略的连接词</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>难点一</strong></td>
+                    <td><strong>主语从句</strong></td>
+                    <td>I think what you did is of help.</td>
+                    <td>绕过整个主语从句 "what you did"</td>
+                    <td>that（宾从第一个that，省略）</td>
+                </tr>
+                <tr>
+                    <td><strong>难点二</strong></td>
+                    <td><strong>后置定语</strong></td>
+                    <td>I think the boy wearing a green hat is a pig.</td>
+                    <td>绕过后置定语 "wearing a green hat"</td>
+                    <td>that（宾从第一个that，省略）</td>
+                </tr>
+                <tr>
+                    <td><strong>难点三</strong></td>
+                    <td><strong>主语前状语</strong></td>
+                    <td>I think from the beginning you are a pig.</td>
+                    <td>绕过状语 "from the beginning"</td>
+                    <td>that（宾从第一个that，省略）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>7. 核心知识点总结</h2>
+
+        <h3>知识点一：难点一——主语从句做主语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心特征</strong></td>
+                    <td>V 的主语不是一个简单名词，而是一个完整的句子（主语从句）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型标志</strong></td>
+                    <td>what/that/whether 引导的从句 + 谓语 + 表语/宾语</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找操作</strong></td>
+                    <td>从 V 绕过整个主语从句，再往前找才是引导词</td>
+                </tr>
+                <tr>
+                    <td><strong>本句验证</strong></td>
+                    <td>is 的主语是 "what you did"（整个从句）→ 绕过它 → 前面是省略的 that</td>
+                </tr>
+                <tr>
+                    <td><strong>补充语法</strong></td>
+                    <td>be of + 名词 = be + 形容词（be of help = be helpful）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：难点二——主谓相隔（后置定语隔开）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心特征</strong></td>
+                    <td>主语和谓语之间有后置定语隔开</td>
+                </tr>
+                <tr>
+                    <td><strong>典型标志</strong></td>
+                    <td>名词 + doing/done/prep短语 + 谓语（如 the boy wearing a green hat is...）</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找操作</strong></td>
+                    <td>从 V 绕过后置定语，再往前找到主语，主语前面才是引导词</td>
+                </tr>
+                <tr>
+                    <td><strong>本句验证</strong></td>
+                    <td>is 的主语是 the boy（不是 hat）→ 绕过 wearing a green hat → 前面是省略的 that</td>
+                </tr>
+                <tr>
+                    <td><strong>等价形式</strong></td>
+                    <td>the boy wearing a green hat = the boy who is wearing a green hat（定语从句）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：难点三——主语前有状语</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心特征</strong></td>
+                    <td>主语前面有状语（时间状语、地点状语等）</td>
+                </tr>
+                <tr>
+                    <td><strong>典型标志</strong></td>
+                    <td>引导词 + 状语 + 主语 + 谓语（如 that from the beginning you are...）</td>
+                </tr>
+                <tr>
+                    <td><strong>反向找操作</strong></td>
+                    <td>从 V 绕过状语，再往前找到主语，主语前面才是引导词</td>
+                </tr>
+                <tr>
+                    <td><strong>本句验证</strong></td>
+                    <td>are 的主语是 you → you 前面有 from the beginning（状语）→ 绕过它 → 前面是省略的 that</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：隧道挖洞类比法</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>类比</th>
+                    <th>语法对应</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>从隧道正面挖洞</td>
+                    <td>正向找（根据省略规则判断引导词可省略）</td>
+                </tr>
+                <tr>
+                    <td>从隧道反面挖洞</td>
+                    <td>反向找（找到V2+S2，S2前面=省略的连接词）</td>
+                </tr>
+                <tr>
+                    <td>两面挖洞最终会合</td>
+                    <td>正向找和反向找定位的引导词位置一致 → 验证正确</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>8. 三大例句完整总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>例句</th>
+                    <th>难点</th>
+                    <th>障碍物</th>
+                    <th>省略的连接词</th>
+                    <th>翻译</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I think <strong>___</strong> what you did is of help.</td>
+                    <td><strong>难点一</strong><br>主语从句做主语</td>
+                    <td>绕过整个主语从句 "what you did"</td>
+                    <td>that（宾从第一个that，可省略）</td>
+                    <td>我认为你所做的是有帮助的。</td>
+                </tr>
+                <tr>
+                    <td>I think <strong>___</strong> the boy wearing a green hat is a pig.</td>
+                    <td><strong>难点二</strong><br>主谓相隔</td>
+                    <td>绕过后置定语 "wearing a green hat"</td>
+                    <td>that（宾从第一个that，可省略）</td>
+                    <td>我认为那个戴绿帽子的男孩是个混蛋。</td>
+                </tr>
+                <tr>
+                    <td>I think <strong>___</strong> from the beginning you are a pig.</td>
+                    <td><strong>难点三</strong><br>主语前有状语</td>
+                    <td>绕过状语 "from the beginning"</td>
+                    <td>that（宾从第一个that，可省略）</td>
+                    <td>我认为从一开始你就个混蛋。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>9. 核心知识点总结</h2>
+
+        <h3>知识点一：反向找连接词的通用流程（含三大难点）</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>步骤</th>
+                    <th>操作</th>
+                    <th>注意事项</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一步</strong></td>
+                    <td>找到两个谓语动词 V1 和 V2</td>
+                    <td>注意区分 AABB 型动词、助动词、非谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>第二步</strong></td>
+                    <td>确认缺少连接词（V-1 > 0，但句中没有连接词）</td>
+                    <td>检查是否多找了谓语（如 be of help 中的 help 是名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>第三步</strong></td>
+                    <td>找到 V2 和它的主语 S2</td>
+                    <td>注意：S2 前面可能隔着障碍物</td>
+                </tr>
+                <tr>
+                    <td><strong>第四步</strong></td>
+                    <td>绕过障碍物，找到 S2 前面的位置</td>
+                    <td>障碍物可能是：主语从句/后置定语/状语</td>
+                </tr>
+                <tr>
+                    <td><strong>第五步</strong></td>
+                    <td>S2 前面的位置 = 省略的连接词所在之处</td>
+                    <td>与正向找（省略规则）验证，确认省略合法</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：三大障碍物的识别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>障碍物类型</th>
+                    <th>识别方法</th>
+                    <th>典型标志</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主语从句</strong></td>
+                    <td>V 的主语是一个完整句子（有主谓结构）</td>
+                    <td>what/that/whether + 主语 + 谓语 + 主句谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>后置定语</strong></td>
+                    <td>主语和谓语之间有修饰性短语</td>
+                    <td>名词 + doing/done/prep短语 + 谓语</td>
+                </tr>
+                <tr>
+                    <td><strong>状语</strong></td>
+                    <td>主语前面有状语（时间/地点/方式等）</td>
+                    <td>引导词 + 状语短语 + 主语 + 谓语</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：be of + 名词 = be + 形容词</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>表达</th>
+                    <th>等价形式</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>be of help</td>
+                    <td>be helpful</td>
+                    <td>有帮助的</td>
+                </tr>
+                <tr>
+                    <td>be of use</td>
+                    <td>be useful</td>
+                    <td>有用的</td>
+                </tr>
+                <tr>
+                    <td>be of value</td>
+                    <td>be valuable</td>
+                    <td>有价值的</td>
+                </tr>
+                <tr>
+                    <td>be of importance</td>
+                    <td>be important</td>
+                    <td>重要的</td>
+                </tr>
+                <tr>
+                    <td>be of interest</td>
+                    <td>be interesting</td>
+                    <td>有趣的</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>10. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G64 核心方法总结</strong><br><br>
+            第一步：找谓语动词 → 数个数 → 找连接词<br>
+            ↓<br>
+            第二步：如果找不到连接词，但 V-1 > 0 → 需要连接词 → 用反向找<br>
+            ↓<br>
+            第三步：找到 V2（第二个谓语）→ 找到 S2（V2的主语）<br>
+            ↓<br>
+            第四步：检查 S2 前面有没有障碍物<br>
+            &emsp;障碍一：主语从句（整个句子做主语）→ 绕过整个从句<br>
+            &emsp;障碍二：后置定语（doing/done/prep短语）→ 绕过后置定语<br>
+            &emsp;障碍三：状语（时间/地点/方式等）→ 绕过状语<br>
+            ↓<br>
+            第五步：S2 前面的位置 = 省略的连接词所在之处<br>
+            ↓<br>
+            第六步：与正向找（省略规则）验证 → 隧道两面挖，最终会合
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 找到谓语 → 找到主语 → 主语前面就是引导词<br>
+            - 主语前面可能隔着障碍物 → 绕过障碍物再找引导词<br>
+            - 障碍一：主语从句 → 绕过整个从句（如 what you did）<br>
+            - 障碍二：后置定语 → 绕过 doing/done/prep短语<br>
+            - 障碍三：状语 → 绕过 from the beginning 等时间/地点状语<br>
+            - 隧道挖洞类比：正向找和反向找，最终会合<br>
+            - be of + 名词 = be + 形容词（help不是谓语，是名词）<br>
+            - 正向找 + 反向找结合 → 万无一失
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+反向找省略连接词难点（G64）
+├── 理论基础（G63回顾）
+│   ├── 引导词在从句中的两种角色：做主语→接谓语 / 不做主语→接主语
+│   ├── 反向找四步法：V2 → S2 → S2前面=省略的连接词
+│   └── 从句句首的引导词不能省略
+│
+├── 难点一：主语从句做主语
+│   ├── is 的主语不是简单名词，而是整个句子（主语从句）
+│   ├── 从 is 绕过整个主语从句，再往前找才是引导词
+│   ├── 典型例句：I think what you did is of help.
+│   ├── 补充语法：be of + 名词 = be + 形容词
+│   └── 省略的连接词：that（宾从第一个that，可省略）
+│
+├── 难点二：主谓相隔（后置定语隔开）
+│   ├── 主语和谓语之间有后置定语（doing/done/prep短语）
+│   ├── 从 V 绕过后置定语，再往前找到主语，主语前面才是引导词
+│   ├── 典型例句：I think the boy wearing a green hat is a pig.
+│   ├── is 的主语是 the boy（不是 hat！）
+│   └── 省略的连接词：that（宾从第一个that，可省略）
+│
+├── 难点三：主语前有状语
+│   ├── 主语前面有状语（时间/地点/方式等）
+│   ├── 从 V 绕过状语，再往前找到主语，主语前面才是引导词
+│   ├── 典型例句：I think from the beginning you are a pig.
+│   └── 省略的连接词：that（宾从第一个that，可省略）
+│
+├── 隧道挖洞类比法
+│   ├── 正面挖洞 = 正向找（省略规则）
+│   ├── 反面挖洞 = 反向找（V2+S2）
+│   └── 两面最终会合 = 定位一致 → 验证正确
+│
+└── be of + 名词 = be + 形容词
+    ├── be of help = be helpful
+    ├── be of use = be useful
+    └── be of value = be valuable
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记反向找连接词的通用流程：</strong>找到V2 → 找到S2 → 检查S2前面有没有障碍物 → 绕过障碍物 → S2前面=省略的连接词。</li>
+            <li><strong>牢记三大障碍物：</strong>①主语从句（整个句子做主语，如 what you did）→ 绕过整个从句 ②后置定语（doing/done/prep短语）→ 绕过后置定语 ③状语（时间/地点/方式等）→ 绕过状语。</li>
+            <li><strong>牢记隧道挖洞类比法：</strong>正向找（根据省略规则）和反向找（V2+S2）就像从隧道两面挖洞，最终会合。定位一致 = 验证正确。</li>
+            <li><strong>牢记 be of + 名词 = be + 形容词：</strong>be of help = be helpful（有帮助的），be of use = be useful（有用的）。help 在 of 后面是名词，不是谓语动词！</li>
+            <li><strong>牢记难点二的核心陷阱：</strong>is 的主语不是紧挨着的名词（如 hat），而是被后置定语修饰的名词（如 the boy）。判断方法：看逻辑是否通顺（hat is a pig 不通，the boy is a pig 通）。</li>
+            <li><strong>牢记难点三的核心技巧：</strong>从 V 往前找主语时，注意主语前面可能有状语。状语不是主语的一部分，要绕过它才能找到引导词。</li>
+            <li><strong>综合练习建议：</strong>找一些长难句，先用正向找（省略规则）判断引导词是否可省略，再用反向找（V2+S2）定位省略位置，两者互相验证。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

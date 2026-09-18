@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G68 特殊疑问句：用法详解</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --note-bg: #e8f6f3;
+            --note-border: #1abc9c;
+            --warning-bg: #fff3cd;
+            --warning-border: #ffc107;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .annotation {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background-color: var(--note-bg);
+            border-left: 5px solid var(--note-border);
+            font-size: 0.95em;
+            color: #00695c;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .annotation::before {
+            content: "💡 讲师注释：";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .warning::before {
+            content: "⚠️ 重点易错：";
+            color: #856404;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>【G68】特殊疑问句</h1>
+    <p style="text-align: center; color: #666;">来源：陈老师基础语法系列 | 整理与注释版</p>
+
+    <div class="card">
+        <h2>1. 课程背景与引入</h2>
+        <p>G68 是「基础语法」系列第68课，由陈老师主讲。本节课是疑问句专题的第二课，紧接 G67「一般疑问句」，开始系统讲解<strong>特殊疑问句</strong>。在此之前，老师已简要介绍了四种疑问句类型：一般疑问句（Yes/No 问题）、选择疑问句（二选一）、反义疑问句（前肯后否/前否后肯）和特殊疑问句。</p>
+        <p>本节课重点讲解：<strong>① 疑问词的词性分类（名词/形容词/副词）</strong>、<strong>② 疑问词做主语时的特殊规则（不变序）</strong>、<strong>③ what 与 which 的区别（有范围 vs 无范围）</strong>、<strong>④ whose 做定语时的特殊规则</strong>、<strong>⑤ how 的多种组合形式（how much/many/long/far/often/soon）</strong>。</p>
+
+        <div class="annotation">
+            本节课的核心目标：掌握特殊疑问句的核心公式——疑问词 + 一般疑问句语序，以及疑问词做主语时的特殊情况（不变序），并通过"磁性角度"（词性分析法）从根本上理解每个疑问词的用法。
+        </div>
+
+        <div class="annotation warning">
+            <strong>前置知识要求：</strong><br>
+            本节课建立在 G40「五大基本句型」、G67「一般疑问句」的基础上。需要熟练掌握动词分类（助动词/实意动词/系动词）、一般疑问句的构成规则等知识。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>2. 四种疑问句总览</h2>
+        <p>老师首先回顾了四种疑问句的基本概念：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>疑问句类型</th>
+                    <th>核心特征</th>
+                    <th>回答方式</th>
+                    <th>典型例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>一般疑问句</strong></td>
+                    <td>只用回答 Yes 或 No</td>
+                    <td>Yes/No + 简短回答</td>
+                    <td>Do you love me?</td>
+                </tr>
+                <tr>
+                    <td><strong>选择疑问句</strong></td>
+                    <td>给出两个或以上选择</td>
+                    <td>从选项中选一个回答</td>
+                    <td>Do you like tea or coffee?</td>
+                </tr>
+                <tr>
+                    <td><strong>反义疑问句</strong></td>
+                    <td>前肯后否/前否后肯</td>
+                    <td>看事实回答</td>
+                    <td>He is a student, isn't he?</td>
+                </tr>
+                <tr>
+                    <td><strong>特殊疑问句</strong></td>
+                    <td>用疑问词引导，问具体问题</td>
+                    <td>给出具体信息回答</td>
+                    <td>What do you want?</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. 核心方法论：疑问词的"磁性角度"（词性分析法）</h2>
+        <p>老师从一个更根本的角度来理解疑问词——通过"磁性角度"（即把疑问词放回句子中，看它充当什么成分，从而判断词性）：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>名词词性（做主/宾/表）：</strong></div>
+            <div class="example-item">→ You want <strong>what</strong> → what 做宾语 → 名词词性</div>
+            <div class="example-item">→ You like <strong>whom</strong> → whom 做宾语 → 名词词性</div>
+            <div class="example-item">→ He is <strong>who</strong> → who 做表语 → 名词词性</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>形容词词性（做定语，修饰名词）：</strong></div>
+            <div class="example-item">→ You want <strong>what</strong> color → what 修饰 color（名词）→ 形容词词性</div>
+            <div class="example-item">→ You want <strong>which</strong> size → which 修饰 size（名词）→ 形容词词性</div>
+            <div class="example-item">→ <strong>Whose</strong> book is this → whose 修饰 book（名词）→ 形容词词性</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>副词词性（做状语，修饰动词）：</strong></div>
+            <div class="example-item">→ You came here <strong>when</strong> → when 修饰 came（动词）→ 副词词性</div>
+            <div class="example-item">→ You came here <strong>where</strong> → where 修饰 came → 副词词性</div>
+            <div class="example-item">→ You came here <strong>why</strong> → why 修饰 came → 副词词性</div>
+            <div class="example-item">→ You came here <strong>how</strong> → how 修饰 came → 副词词性</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀——疑问词词性速记：</strong><br>
+            - 名词词性：what / which / who / whom（做主语、宾语、表语）<br>
+            - 形容词词性：what / which / whose（修饰名词，做定语）<br>
+            - 副词词性：when / where / why / how（修饰动词，做状语）<br>
+            - 注意：what 和 which 既有名词词性又有形容词词性，不要搞混
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. 核心公式：特殊疑问句的构成规则</h2>
+        <p>老师提出了特殊疑问句的核心公式，但强调要从根本角度理解，而不是死记硬背：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>特殊疑问句 = 疑问词 + 一般疑问句语序</strong>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——部分倒装 vs 完全倒装：</strong><br>
+            - 特殊疑问句是"部分倒装"，不是"完全倒装"<br>
+            - 完全倒装：把谓语动词直接提到主语前面 → "Want you...?" → 语法错误<br>
+            - 部分倒装：抽象出助动词（do/does/did/be/情态等）提到主语前面 → "What do you want?" → 正确<br>
+            - 口诀：疑问词 + 助动词 + 主语 + 动词原形
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. what 的四种用法（主/宾/表/定）</h2>
+        <p>老师以 what 为例，详细讲解了名词词性疑问词的四种句子成分用法：</p>
+
+        <h3>用法一：what 做宾语 → 需要变序（抽象助动词）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>陈述句：</strong>You want a car.</div>
+            <div class="example-item">→ a car 做宾语（物体）→ 用 what 代替 → You want what（陈述句语序，不是疑问句）</div>
+            <div class="example-item">→ 变疑问句：what + 抽象助动词 do + 主语 you + 动词原形 want → <strong>What do you want?</strong></div>
+        </div>
+
+        <h3>用法二：what 做表语 → 需要变序（be 直接提前）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>陈述句：</strong>Your problem is your face.</div>
+            <div class="example-item">→ your face 做表语（物体）→ 用 what 代替 → Your problem is what</div>
+            <div class="example-item">→ 变疑问句：what + be 动词 is + 主语 you + problem → <strong>What is your problem?</strong></div>
+        </div>
+
+        <h3>用法三：what 做定语 → 需要变序（what + 名词一起提前）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>陈述句：</strong>You want size 5.</div>
+            <div class="example-item">→ size 5 做宾语 → what 修饰 size → what size 一起提前</div>
+            <div class="example-item">→ 变疑问句：what size + 抽象助动词 do + 主语 you + 动词原形 want → <strong>What size do you want?</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——what 做定语时不能单独提前：</strong><br>
+            - what 是形容词词性时，后面必须跟名词，不能单独提前<br>
+            - 错误：What do you want?（这里 what 是宾语，不是定语）<br>
+            - 正确：What size do you want?（what 修饰 size，一起做定语）
+        </div>
+
+        <h3>用法四：what 做主语 → 不需要变序（直接加谓语）</h3>
+
+        <div class="example-box">
+            <div class="example-item"><strong>陈述句：</strong>All work and no play makes Jack a dull boy.</div>
+            <div class="example-item">→ all work and no play 做主语 → 用 what 代替 → what makes Jack a dull boy</div>
+            <div class="example-item">→ what 做主语 → 不需要抽象助动词 → 直接 what + 谓语 makes → <strong>What makes Jack a dull boy?</strong></div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——what 做主语时为什么不变序：</strong><br>
+            - what 本身就是主语 → 后面直接加谓语 → 不需要再加助动词<br>
+            - 错误：What does make Jack a dull boy?（what does what → 重复主语，矛盾）<br>
+            - 口诀：疑问词做主语 → 直接加谓语，不用变序
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. what 与 which 的区别（有范围 vs 无范围）</h2>
+        <p>老师重点讲解了 what 和 which 的核心区别——范围：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>what — 没有确定范围：</strong></div>
+            <div class="example-item">→ 顾客进店：我想要买一支笔 → 我不知道你要什么 → What do you want?</div>
+            <div class="example-item">→ 在无限范围中选择 → 不知道是什么</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>which — 有确定范围：</strong></div>
+            <div class="example-item">→ 顾客说想买笔 → 我拿出几十支笔 → Which do you want?</div>
+            <div class="example-item">→ 在已确定的范围内选择 → 你想要哪一支？</div>
+            <div class="example-item">→ 你想要红色的那个 → You want the red one（已确定是笔，从各种颜色中选）→ Which do you want?</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - what = 不知道范围，在无限范围中选<br>
+            - which = 有确定范围，在有限范围中选<br>
+            - what 使用频率比 which 高<br>
+            - which 做主语/宾语/定语时，规则与 what 完全相同
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. who / whom 的用法（名词词性）</h2>
+        <p>老师讲解了 who 和 whom 的用法，两者都是名词词性：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>who — 做主语或宾语：</strong></div>
+            <div class="example-item">→ 做宾语：I choose J → <strong>Who do you choose?</strong>（抽象助动词 do）</div>
+            <div class="example-item">→ 做表语：My favorite singer is J → <strong>Who is your favorite singer?</strong>（be 直接提前）</div>
+            <div class="example-item">→ 做主语：J makes the best music → <strong>Who makes the best music?</strong>（不变序）</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>whom — 只能做宾语：</strong></div>
+            <div class="example-item">→ 做宾语：I choose J → <strong>Whom do you choose?</strong></div>
+            <div class="example-item">→ whom 是 who 的宾格形式，口语中 who 也可以做宾语</div>
+        </div>
+
+        <div class="annotation">
+            核心要点：who 做主语时，谓语动词用第三人称单数（如 Who makes...）。who/whom 做主语时不变序，直接加谓语。
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. whose 的用法（形容词词性，做定语）</h2>
+        <p>老师讲解了 whose 的用法——形容词词性，修饰名词，做定语：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>whose + 名词做宾语：</strong></div>
+            <div class="example-item">→ J's music is the best → 变疑问句：Whose music is the best?</div>
+            <div class="example-item">→ whose 修饰 music → whose music 一起提前 → 但 whose music 是主语 → 不变序</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>whose + 名词做主语（不变序）：</strong></div>
+            <div class="example-item">→ J's team will win → <strong>Whose team will win?</strong></div>
+            <div class="example-item">→ whose team 是主语 → 直接加谓语 will win → 不变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——whose + 名词做主语时不变序：</strong><br>
+            - whose + 名词（如 whose music / whose team）构成名词短语，整体做主语<br>
+            - 疑问词（或其组成部分）做主语 → 不变序 → 直接加谓语<br>
+            - 类比：what makes Jack a dull boy? / who makes the best music?
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. when / where / why / how 的用法（副词词性）</h2>
+        <p>老师讲解了副词词性疑问词的用法——全部需要变序（因为不是做主语）：</p>
+
+        <div class="example-box">
+            <div class="example-item"><strong>when（时间）：</strong></div>
+            <div class="example-item">→ I came here at eight thirty → <strong>When did you come here?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>how（方式）：</strong></div>
+            <div class="example-item">→ I came here by bus → <strong>How did you come here?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>why（原因/目的）：</strong></div>
+            <div class="example-item">→ I came here to meet her → <strong>Why did you come here?</strong></div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>where（地点）：</strong></div>
+            <div class="example-item">→ I will meet her at the gate → <strong>Where will you meet her?</strong></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. how 的多种组合形式</h2>
+        <p>老师讲解了 how 作为副词，后面可以加形容词/副词，组成多种疑问短语：</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>组合</th>
+                    <th>含义</th>
+                    <th>提问内容</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>how much</strong></td>
+                    <td>多少/多么</td>
+                    <td>不可数名词数量 / 程度</td>
+                    <td>How much do you miss him?</td>
+                </tr>
+                <tr>
+                    <td><strong>how many</strong></td>
+                    <td>多少</td>
+                    <td>可数名词数量</td>
+                    <td>How many books do you have?</td>
+                </tr>
+                <tr>
+                    <td><strong>how long</strong></td>
+                    <td>多久</td>
+                    <td>时间长度</td>
+                    <td>How long did you wait for him?</td>
+                </tr>
+                <tr>
+                    <td><strong>how soon</strong></td>
+                    <td>还要多久</td>
+                    <td>将来还需要多久</td>
+                    <td>How soon will you come back?</td>
+                </tr>
+                <tr>
+                    <td><strong>how often</strong></td>
+                    <td>多久一次</td>
+                    <td>频率</td>
+                    <td>How often do you exercise?</td>
+                </tr>
+                <tr>
+                    <td><strong>how far</strong></td>
+                    <td>多远</td>
+                    <td>距离</td>
+                    <td>How far is your house from the supermarket?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - how 是副词 → 后面可以加形容词/副词 → 组成新的疑问短语<br>
+            - how much / how many / how long / how soon / how often / how far<br>
+            - 所有 how 组合都看作副词词性 → 修饰动词 → 做状语 → 需要变序
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. 核心难点：疑问词做主语时的特殊规则</h2>
+        <p>老师重点强调了特殊疑问句中最容易出错的地方——疑问词做主语时的规则：</p>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>疑问词做主语 → 不变序 → 直接加谓语 + 问号</strong>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>who 做主语：</strong></div>
+            <div class="example-item">→ J makes the best music → <strong>Who makes the best music?</strong></div>
+            <div class="example-item">→ who 做主语 → 直接加谓语 makes（第三人称单数）→ 不变序</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>what 做主语：</strong></div>
+            <div class="example-item">→ All work and no play makes Jack a dull boy → <strong>What makes Jack a dull boy?</strong></div>
+            <div class="example-item">→ what 做主语 → 直接加谓语 makes → 不变序</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>whose + 名词做主语：</strong></div>
+            <div class="example-item">→ J's music is the best → <strong>Whose music is the best?</strong></div>
+            <div class="example-item">→ whose music 是主语 → 直接加谓语 is → 不变序</div>
+        </div>
+
+        <div class="example-box">
+            <div class="example-item"><strong>which 做主语：</strong></div>
+            <div class="example-item">→ The red one is better → <strong>Which is better?</strong></div>
+            <div class="example-item">→ which 做主语 → 直接加谓语 is → 不变序</div>
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心辨析——who 做主语时谓语用第三人称单数：</strong><br>
+            - Who makes the best music? → makes 用第三人称单数<br>
+            - 因为 who 做主语时看作单数<br>
+            - 同理：What makes Jack a dull boy? → makes 用第三人称单数
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. 完整规则总结表</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>疑问词</th>
+                    <th>词性</th>
+                    <th>句子成分</th>
+                    <th>是否变序</th>
+                    <th>例句</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>what</strong></td>
+                    <td>名词</td>
+                    <td>做宾语</td>
+                    <td>需要变序</td>
+                    <td>What do you want?</td>
+                </tr>
+                <tr>
+                    <td><strong>what</strong></td>
+                    <td>名词</td>
+                    <td>做表语</td>
+                    <td>需要变序</td>
+                    <td>What is your problem?</td>
+                </tr>
+                <tr>
+                    <td><strong>what</strong></td>
+                    <td>形容词</td>
+                    <td>做定语（+名词）</td>
+                    <td>需要变序</td>
+                    <td>What size do you want?</td>
+                </tr>
+                <tr>
+                    <td><strong>what</strong></td>
+                    <td>名词</td>
+                    <td>做主语</td>
+                    <td>不需要变序</td>
+                    <td>What makes Jack a dull boy?</td>
+                </tr>
+                <tr>
+                    <td><strong>which</strong></td>
+                    <td>名词/形容词</td>
+                    <td>做主语/宾语/定语</td>
+                    <td>做主语不变序，其他需要变序</td>
+                    <td>Which is better? / Which do you want?</td>
+                </tr>
+                <tr>
+                    <td><strong>who</strong></td>
+                    <td>名词</td>
+                    <td>做主语</td>
+                    <td>不需要变序</td>
+                    <td>Who makes the best music?</td>
+                </tr>
+                <tr>
+                    <td><strong>who</strong></td>
+                    <td>名词</td>
+                    <td>做宾语/表语</td>
+                    <td>需要变序</td>
+                    <td>Who do you choose? / Who is your favorite singer?</td>
+                </tr>
+                <tr>
+                    <td><strong>whom</strong></td>
+                    <td>名词</td>
+                    <td>做宾语</td>
+                    <td>需要变序</td>
+                    <td>Whom do you choose?</td>
+                </tr>
+                <tr>
+                    <td><strong>whose</strong></td>
+                    <td>形容词</td>
+                    <td>做定语（+名词）</td>
+                    <td>whose+名词做主语不变序，其他需要变序</td>
+                    <td>Whose music is the best? / Whose team will win?</td>
+                </tr>
+                <tr>
+                    <td><strong>when</strong></td>
+                    <td>副词</td>
+                    <td>做时间状语</td>
+                    <td>需要变序</td>
+                    <td>When did you come here?</td>
+                </tr>
+                <tr>
+                    <td><strong>where</strong></td>
+                    <td>副词</td>
+                    <td>做地点状语</td>
+                    <td>需要变序</td>
+                    <td>Where will you meet her?</td>
+                </tr>
+                <tr>
+                    <td><strong>why</strong></td>
+                    <td>副词</td>
+                    <td>做原因状语</td>
+                    <td>需要变序</td>
+                    <td>Why did you come here?</td>
+                </tr>
+                <tr>
+                    <td><strong>how</strong></td>
+                    <td>副词</td>
+                    <td>做方式状语</td>
+                    <td>需要变序</td>
+                    <td>How did you come here?</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>13. 核心知识点总结</h2>
+
+        <h3>知识点一：疑问词词性分类</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>词性</th>
+                    <th>疑问词</th>
+                    <th>句子成分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>名词</strong></td>
+                    <td>what / which / who / whom</td>
+                    <td>主语、宾语、表语</td>
+                </tr>
+                <tr>
+                    <td><strong>形容词</strong></td>
+                    <td>what / which / whose</td>
+                    <td>定语（修饰名词）</td>
+                </tr>
+                <tr>
+                    <td><strong>副词</strong></td>
+                    <td>when / where / why / how</td>
+                    <td>状语（修饰动词）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点二：特殊疑问句的两种构成方式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>情况</th>
+                    <th>构成方式</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>疑问词不做主语</strong></td>
+                    <td>疑问词 + 一般疑问句语序（倒装）</td>
+                    <td>有助动词直接提前，没有则抽象 do/does/did</td>
+                </tr>
+                <tr>
+                    <td><strong>疑问词做主语</strong></td>
+                    <td>疑问词 + 谓语（不变序）</td>
+                    <td>直接加谓语，加问号即可</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点三：what 与 which 的区别</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>疑问词</th>
+                    <th>范围</th>
+                    <th>使用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>what</strong></td>
+                    <td>无确定范围</td>
+                    <td>不知道是什么，在无限范围中选</td>
+                </tr>
+                <tr>
+                    <td><strong>which</strong></td>
+                    <td>有确定范围</td>
+                    <td>在已确定的有限范围中选</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点四：how 的组合形式</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>组合</th>
+                    <th>含义</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>how much</strong></td>
+                    <td>多少（不可数）/ 多么</td>
+                </tr>
+                <tr>
+                    <td><strong>how many</strong></td>
+                    <td>多少（可数）</td>
+                </tr>
+                <tr>
+                    <td><strong>how long</strong></td>
+                    <td>多久（时间长度）</td>
+                </tr>
+                <tr>
+                    <td><strong>how soon</strong></td>
+                    <td>还要多久（将来）</td>
+                </tr>
+                <tr>
+                    <td><strong>how often</strong></td>
+                    <td>多久一次（频率）</td>
+                </tr>
+                <tr>
+                    <td><strong>how far</strong></td>
+                    <td>多远（距离）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>知识点五：whose + 名词做主语时不变序</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>判断维度</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>核心规则</strong></td>
+                    <td>whose + 名词构成名词短语，整体做主语时 → 不变序</td>
+                </tr>
+                <tr>
+                    <td><strong>本句应用</strong></td>
+                    <td>Whose music is the best?（whose music 是主语 → 直接加 is）</td>
+                </tr>
+                <tr>
+                    <td><strong>类比</strong></td>
+                    <td>与 what / who 做主语时不变序的规则一致</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>14. 核心判断逻辑总结</h2>
+
+        <div class="example-box" style="text-align: center; font-size: 1.2em;">
+            <strong>G68 核心方法总结</strong><br><br>
+            第一步：确定疑问词 → 判断词性（名词/形容词/副词）<br>
+            ↓<br>
+            第二步：判断疑问词在句中做什么成分<br>
+            &emsp;做主语 → 不变序 → 直接加谓语 + 问号<br>
+            &emsp;做宾语/表语/定语 → 需要变序 → 疑问词 + 一般疑问句语序<br>
+            &emsp;做状语（when/where/why/how）→ 需要变序 → 疑问词 + 一般疑问句语序<br>
+            ↓<br>
+            第三步：变序时遵循 G67 的顺位公式<br>
+            &emsp;有助动词 → 助动词提前<br>
+            &emsp;没有助动词有 be → be 提前<br>
+            &emsp;都没有 → 抽象 do/does/did + 动词原形<br>
+            ↓<br>
+            第四步：注意特殊细节<br>
+            &emsp;① what/which 做定语时，+ 名词一起提前<br>
+            &emsp;② whose + 名词做主语时不变序<br>
+            &emsp;③ who 做主语时谓语用第三人称单数<br>
+            &emsp;④ what（无范围）vs which（有范围）
+        </div>
+
+        <div class="annotation warning">
+            <strong>核心口诀：</strong><br>
+            - 疑问词 + 一般疑问句语序（大部分情况）<br>
+            - 疑问词做主语 → 不变序 → 直接加谓语<br>
+            - 名词词性：what/which/who/whom（做主/宾/表）<br>
+            - 形容词词性：what/which/whose（修饰名词做定语）<br>
+            - 副词词性：when/where/why/how（修饰动词做状语）<br>
+            - what = 无范围 / which = 有范围<br>
+            - how + 形容词/副词 = how much/many/long/soon/often/far<br>
+            - whose + 名词做主语 → 不变序（类比 what/who 做主语）<br>
+            - who 做主语 → 谓语用第三人称单数
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>15. 课程总结思维导图</h2>
+        <div class="example-box" style="font-family: monospace; white-space: pre; line-height: 1.8;">
+特殊疑问句（G68）
+├── 四种疑问句总览
+│   ├── 一般疑问句 → Yes/No
+│   ├── 选择疑问句 → 二选一
+│   ├── 反义疑问句 → 前肯后否/前否后肯
+│   └── 特殊疑问句 → 疑问词引导，问具体问题
+│
+├── 核心方法论：疑问词词性分析法（磁性角度）
+│   ├── 名词词性：what/which/who/whom → 做主/宾/表
+│   ├── 形容词词性：what/which/whose → 修饰名词做定语
+│   └── 副词词性：when/where/why/how → 修饰动词做状语
+│
+├── 核心公式
+│   ├── 疑问词 + 一般疑问句语序（大部分情况）
+│   └── 疑问词做主语 → 不变序 → 直接加谓语 + 问号
+│
+├── what 的四种用法
+│   ├── 做宾语 → What do you want?（需要变序）
+│   ├── 做表语 → What is your problem?（需要变序）
+│   ├── 做定语 → What size do you want?（需要变序，+名词一起提前）
+│   └── 做主语 → What makes Jack a dull boy?（不变序）
+│
+├── what vs which
+│   ├── what = 无确定范围（无限范围中选）
+│   └── which = 有确定范围（有限范围中选）
+│
+├── who / whom
+│   ├── who = 做主语/宾语/表语
+│   ├── whom = 只能做宾语
+│   └── who 做主语 → 谓语用第三人称单数
+│
+├── whose（形容词，做定语）
+│   ├── whose + 名词 → 一起提前
+│   └── whose + 名词做主语 → 不变序
+│
+├── when / where / why / how（副词，做状语）
+│   ├── when → 时间 → When did you come here?
+│   ├── where → 地点 → Where will you meet her?
+│   ├── why → 原因 → Why did you come here?
+│   └── how → 方式 → How did you come here?
+│
+├── how 的组合形式
+│   ├── how much → 多少（不可数）/ 多么
+│   ├── how many → 多少（可数）
+│   ├── how long → 多久（时间长度）
+│   ├── how soon → 还要多久（将来）
+│   ├── how often → 多久一次（频率）
+│   └── how far → 多远（距离）
+│
+└── 核心口诀
+    ├── 疑问词 + 一般疑问句语序（大部分情况）
+    ├── 疑问词做主语 → 不变序 → 直接加谓语
+    ├── what = 无范围 / which = 有范围
+    └── who 做主语 → 谓语第三人称单数
+        </div>
+    </div>
+
+    <div class="card" style="background-color: #eef2f5; border-left: 5px solid #34495e;">
+        <h2>🎓 学习建议总结</h2>
+        <ol>
+            <li><strong>牢记疑问词词性分类：</strong>名词词性（what/which/who/whom）、形容词词性（what/which/whose）、副词词性（when/where/why/how）。这是理解特殊疑问句的根本。</li>
+            <li><strong>牢记两种构成方式：</strong>① 疑问词不做主语 → 疑问词 + 一般疑问句语序（倒装） ② 疑问词做主语 → 不变序 → 直接加谓语 + 问号。</li>
+            <li><strong>牢记 what 与 which 的区别：</strong>what = 无确定范围，which = 有确定范围。what 使用频率比 which 高。</li>
+            <li><strong>牢记 who 做主语时谓语用第三人称单数：</strong>Who makes the best music?（makes 用第三人称单数）。</li>
+            <li><strong>牢记 whose + 名词做主语时不变序：</strong>Whose music is the best?（whose music 是主语 → 直接加 is）。</li>
+            <li><strong>牢记 how 的多种组合：</strong>how much/many/long/soon/often/far，所有 how 组合都看作副词词性 → 需要变序。</li>
+            <li><strong>综合练习建议：</strong>拿到一个陈述句，先确定要问哪个成分（主语/宾语/表语/定语/状语），再选择对应的疑问词，最后判断是否需要变序。</li>
+            <li><strong>下节课预告：</strong>下节课讲选择疑问句（补充）。</li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
