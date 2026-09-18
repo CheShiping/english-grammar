@@ -57,6 +57,8 @@ const ICON_BURGER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
 const ICON_CLOSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 const ICON_ARROW_UP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
 const ICON_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+// 首页专用：跳转到本机《专升本英语语法 20 讲》文件（本地路径，仅在本机可用）
+const GUIDE_20LINK = 'file:///E:/Users/Shiping/英语语法/专升本英语语法%2020%20讲.html';
 const ICON_GH = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>';
 
 // 移动端浮动按钮：回到顶部
@@ -123,7 +125,7 @@ function renderTopbar(levelLabel, baseHome) {
       <a href="${baseHome}#中级语法"${levelLabel === "中级语法" ? ' class="cur"' : ""}>中级</a>
       <a href="${baseHome}#高级语法"${levelLabel === "高级语法" ? ' class="cur"' : ""}>高级</a>
     </nav>
-    <div class="site-searchbox" role="search">⌕&nbsp;&nbsp;搜索课程…&nbsp;&nbsp;<kbd>Ctrl K</kbd></div>
+    <div class="site-searchbox" role="search">⌕&nbsp;&nbsp;搜索课程…&nbsp;&nbsp;<kbd>Ctrl K</kbd></div>${levelLabel === null ? `<a class="site-guide-btn" href="${GUIDE_20LINK}" target="_blank" rel="noopener" title="打开《专升本英语语法 20 讲》">专升本 20 讲</a>` : ""}
     <a class="site-iconbtn site-gh" href="https://github.com/CheShiping/english-grammar" target="_blank" rel="noopener" aria-label="查看 GitHub 源码仓库" title="查看 GitHub 源码仓库">${ICON_GH}</a>
     <button class="site-iconbtn site-theme-toggle" type="button" aria-label="切换主题" title="切换主题">
       <span class="icon-sun">${ICON_SUN}</span>

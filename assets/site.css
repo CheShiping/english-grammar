@@ -96,6 +96,21 @@ body{padding:0 0 80px}
 .site-iconbtn:hover svg{transform:rotate(-8deg)}
 .site-theme-toggle:hover svg{transform:rotate(-30deg)}
 
+/* 右上角"专升本 20 讲"跳转按钮（链接形态的胶囊按钮） */
+.site-guide-btn{
+  flex-shrink:0;text-decoration:none;display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.04em;
+  color:var(--accent);background:#fff;border:1.5px solid var(--accent-soft);
+  border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap;
+  transition:
+    background .18s ease,
+    color .18s ease,
+    border-color .18s ease,
+    transform .18s ease;
+}
+.site-guide-btn:hover{background:var(--bg-soft);color:var(--accent);border-color:var(--accent)}
+.site-guide-btn:active{transform:scale(.94)}
+
 /* GitHub 仓库跳转按钮（链接形态的图标按钮） */
 .site-gh{text-decoration:none}
 .site-gh:hover svg{transform:rotate(0) scale(1.06)}
@@ -505,6 +520,7 @@ body{padding:0 0 80px}
   .site-topbar-inner{padding:8px 12px}
   .site-iconbtn{width:36px;height:36px;border-radius:9px}
   .site-searchbox{display:none}      /* 极窄屏省地，搜索后期再加 */
+  .site-guide-btn{display:none}      /* 极窄屏省地，跳转按钮放抽屉/其他入口 */
   .site-intro h1{font-size:26px}
   .site-card{padding:12px 14px;gap:10px}
   .site-card .code{padding:3px 6px;font-size:10px}
