@@ -154,7 +154,8 @@ body{padding:0 0 80px}
   max-height:0;overflow:hidden;opacity:0;
   transition:max-height .3s var(--ease-out), opacity .25s var(--ease-out), margin-top .3s var(--ease-out);
 }
-.site-aside .group.is-open ul{max-height:3600px;opacity:1;margin-top:6px}
+/* 不限最大高度：让侧栏 aside 自身的 overflow-y 接管滚动（避免课程多时被截断） */
+.site-aside .group.is-open ul{max-height:none;opacity:1;margin-top:6px;overflow:visible}
 .site-aside li a{
   display:flex;align-items:baseline;gap:10px;padding:8px 9px;color:var(--ink-soft);text-decoration:none;border-radius:10px;font-size:14px;
   border-left:3px solid transparent;
