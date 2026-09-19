@@ -60,7 +60,7 @@ const ICON_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 // 首页专用：跳转到本机《专升本英语语法 20 讲》文件。
 // 用相对路径而非 file:// —— 浏览器会拦截 http 页面跳 file:// 本地资源；
 // 相对路径在"本机以本地文件或本地服务器打开"时都能正常跳转。
-const GUIDE_20LINK = '专升本英语语法%2020%20讲.html';
+const GUIDE_20LINK = 'dist/专升本英语语法%2020%20讲.html';
 const ICON_20BOOK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.4C10.4 5 8 4.8 5.8 5.4 4.8 5.7 4 6.5 4 7.5v10c0 1 1 1.7 2 1.4 2-.6 3.8-.4 5 1 1.4-.5 3.2-.5 5 .1 1 .3 2-.4 2-1.4v-10c0-1-.8-1.8-1.8-2.1C14.2 6.3 13.4 6.4 12 6.4zM12 6.4v13.5"/></svg>';
 const ICON_GH = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>';
 
@@ -320,6 +320,14 @@ for (let i = 0; i < coursesForPages.length; i++) {
 // 8. 写首页
 fs.writeFileSync(path.join(ROOT, "index.html"), renderIndex(coursesForPages), "utf8");
 console.log(`✓ 写首页 index.html`);
+
+// 8.5 拷贝《专升本英语语法 20 讲》到 dist/，供首页按钮跳转（GitHub Pages 部署后也能访问）
+const GUIDE_20_FILE = "专升本英语语法 20 讲.html";
+const guideSrc = path.join(ROOT, GUIDE_20_FILE);
+if (fs.existsSync(guideSrc)) {
+  fs.copyFileSync(guideSrc, path.join(DIST, GUIDE_20_FILE));
+  console.log(`  · 拷贝 dist/${GUIDE_20_FILE}`);
+}
 
 // 9. 拷贝 site.css 到根目录（保证 dist/ 子页能通过 ../assets/site.css 访问到）
 //    （已经存在 ROOT/assets/site.css，无需处理）
