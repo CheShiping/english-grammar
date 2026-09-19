@@ -108,6 +108,8 @@ body{padding:0 0 80px}
     border-color .18s ease,
     transform .18s ease;
 }
+.site-guide-btn .icon{display:none}
+.site-guide-btn .icon svg{width:18px;height:18px;display:block}
 .site-guide-btn:hover{background:var(--bg-soft);color:var(--accent);border-color:var(--accent)}
 .site-guide-btn:active{transform:scale(.94)}
 
@@ -520,7 +522,9 @@ body{padding:0 0 80px}
   .site-topbar-inner{padding:8px 12px}
   .site-iconbtn{width:36px;height:36px;border-radius:9px}
   .site-searchbox{display:none}      /* 极窄屏省地，搜索后期再加 */
-  .site-guide-btn{display:none}      /* 极窄屏省地，跳转按钮放抽屉/其他入口 */
+  .site-guide-btn{width:36px;height:36px;border-radius:9px;padding:0;justify-content:center}
+  .site-guide-btn .icon{display:inline-flex}
+  .site-guide-btn .label{display:none}
   .site-intro h1{font-size:26px}
   .site-card{padding:12px 14px;gap:10px}
   .site-card .code{padding:3px 6px;font-size:10px}
